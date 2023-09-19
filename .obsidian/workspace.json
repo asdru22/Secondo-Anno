@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "be1a3c933568a080",
+        "id": "65670f54ba6d3e96",
         "type": "tabs",
         "children": [
           {
-            "id": "9faeaa0b792c2dd8",
+            "id": "453ebb72ae5034ea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Ciao.md",
+                "file": "Microeconomia/Il Mercato.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Ciao.md",
+                "file": "Microeconomia/Il Mercato.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Ciao.md",
+                "file": "Microeconomia/Il Mercato.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Ciao.md"
+                "file": "Microeconomia/Il Mercato.md"
               }
             }
           }
@@ -146,16 +146,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "64d91feac736879b",
+  "active": "453ebb72ae5034ea",
   "lastOpenFiles": [
+    "Microeconomia/_attachments/prezzo_per_quantità.png",
+    "Microeconomia/Il Mercato.md",
+    "Microeconomia/_attachments/curva_di_offerta_variabile.png",
+    "Microeconomia/_attachments/curva_di_offerta.png",
+    "Microeconomia/_attachments/curva_di_domanda.png",
+    "Microeconomia/_attachments/prezzo_riserva_numero_appartamenti.png",
+    "Microeconomia/_attachments",
     "Algoritmi e Strutture Dati/Ciao.md",
+    "Metodi Numerici/appunti/Numeri Finiti.one",
+    "Metodi Numerici/appunti/New Section 1.one",
+    "Metodi Numerici/appunti/Open Notebook.onetoc2",
+    "Metodi Numerici/appunti",
+    "Untitled.canvas",
+    "Algoritmi e Strutture Dati/asd.md",
     "2023-09-14.md",
     "Stragegia Aziendale",
     "Statistica Numerica",
     "Sistemi Operativi",
     "Microeconomia",
-    "Algoritmi e Strutture Dati",
-    "Metodi Numerici",
-    "Finanza Aziendale"
+    "Algoritmi e Strutture Dati"
   ]
 }
