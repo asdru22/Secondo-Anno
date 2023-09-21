@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "65670f54ba6d3e96",
+        "id": "fedd0d53291d01c4",
         "type": "tabs",
         "children": [
           {
-            "id": "453ebb72ae5034ea",
+            "id": "448bde3f73a3f05e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Microeconomia/Il Mercato.md",
+                "file": "Microeconomia/1 Mercato.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomia/Il Mercato.md",
+                "file": "Microeconomia/1 Mercato.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomia/Il Mercato.md",
+                "file": "Microeconomia/1 Mercato.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomia/Il Mercato.md"
+                "file": "Microeconomia/1 Mercato.md"
               }
             }
           }
@@ -146,27 +146,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "453ebb72ae5034ea",
+  "active": "448bde3f73a3f05e",
   "lastOpenFiles": [
+    "Finanza Aziendale/1 Introduzione.md",
+    "Finanza Aziendale/Untitled.md",
+    "Untitled.md",
+    "Microeconomia/1 Mercato.md",
+    "Metodi Numerici/appunti/3 Errori.one",
+    "Metodi Numerici/appunti/2 Float.one",
+    "Metodi Numerici/appunti/New Section 2.one",
+    "Metodi Numerici/appunti/New Section 1.one",
+    "Algoritmi e Strutture Dati/Introduzione.md",
+    "Algoritmi e Strutture Dati/Ciao.md",
     "Microeconomia/_attachments/prezzo_per_quantità.png",
-    "Microeconomia/Il Mercato.md",
     "Microeconomia/_attachments/curva_di_offerta_variabile.png",
     "Microeconomia/_attachments/curva_di_offerta.png",
     "Microeconomia/_attachments/curva_di_domanda.png",
     "Microeconomia/_attachments/prezzo_riserva_numero_appartamenti.png",
     "Microeconomia/_attachments",
-    "Algoritmi e Strutture Dati/Ciao.md",
-    "Metodi Numerici/appunti/Numeri Finiti.one",
-    "Metodi Numerici/appunti/New Section 1.one",
+    "Metodi Numerici/appunti/1 Numeri Finiti.one",
     "Metodi Numerici/appunti/Open Notebook.onetoc2",
     "Metodi Numerici/appunti",
     "Untitled.canvas",
     "Algoritmi e Strutture Dati/asd.md",
     "2023-09-14.md",
     "Stragegia Aziendale",
-    "Statistica Numerica",
-    "Sistemi Operativi",
-    "Microeconomia",
-    "Algoritmi e Strutture Dati"
+    "Statistica Numerica"
   ]
 }
