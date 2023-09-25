@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Microeconomia/1 Mercato.md",
+                "file": "Metodi Numerici/Formulario.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomia/1 Mercato.md",
+                "file": "Metodi Numerici/Formulario.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomia/1 Mercato.md",
+                "file": "Metodi Numerici/Formulario.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomia/1 Mercato.md"
+                "file": "Metodi Numerici/Formulario.md"
               }
             }
           }
@@ -149,28 +149,31 @@
   "active": "448bde3f73a3f05e",
   "lastOpenFiles": [
     "Finanza Aziendale/1 Introduzione.md",
+    "Metodi Numerici/Formulario.md",
+    "Microeconomia/appunti.one",
+    "Microeconomia/Microeconomia.one",
+    "Metodi Numerici/appunti.one",
+    "Metodi Numerici/Metodi Numerici.one",
+    "Algoritmi e Strutture Dati/appunti.one",
+    "Algoritmi e Strutture Dati/Algoritmi e Strutture Dati.one",
+    "Algoritmi e Strutture Dati/Introduzione.md",
+    "Microeconomia/1 Mercato.md",
+    "_appunti/Untitled/Open Notebook.onetoc2",
+    "_appunti/OneNote_RecycleBin/3 Errori.one",
+    "_appunti/OneNote_RecycleBin/Open Notebook.onetoc2",
+    "_appunti/OneNote_RecycleBin/2 Float.one",
+    "Microeconomia/2 Vincolo di Bilancio.md",
+    "Microeconomia/_attachments/pareto_efficienza_affitti.png",
+    "Microeconomia/_attachments/prezzo_riserva_numero_appartamenti.png",
     "Finanza Aziendale/Untitled.md",
     "Untitled.md",
-    "Microeconomia/1 Mercato.md",
-    "Metodi Numerici/appunti/3 Errori.one",
-    "Metodi Numerici/appunti/2 Float.one",
-    "Metodi Numerici/appunti/New Section 2.one",
-    "Metodi Numerici/appunti/New Section 1.one",
-    "Algoritmi e Strutture Dati/Introduzione.md",
     "Algoritmi e Strutture Dati/Ciao.md",
     "Microeconomia/_attachments/prezzo_per_quantità.png",
     "Microeconomia/_attachments/curva_di_offerta_variabile.png",
     "Microeconomia/_attachments/curva_di_offerta.png",
     "Microeconomia/_attachments/curva_di_domanda.png",
-    "Microeconomia/_attachments/prezzo_riserva_numero_appartamenti.png",
-    "Microeconomia/_attachments",
-    "Metodi Numerici/appunti/1 Numeri Finiti.one",
-    "Metodi Numerici/appunti/Open Notebook.onetoc2",
-    "Metodi Numerici/appunti",
     "Untitled.canvas",
     "Algoritmi e Strutture Dati/asd.md",
-    "2023-09-14.md",
-    "Stragegia Aziendale",
-    "Statistica Numerica"
+    "2023-09-14.md"
   ]
 }
