@@ -1,0 +1,3 @@
+n = input('Inserisci n: ')
+fc=factorial(n);
+fprintf("20.0f",fc);

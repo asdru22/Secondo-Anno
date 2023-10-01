@@ -68,7 +68,6 @@ Scegliere B in questo caso significa distribuire male le risorse, dandole a qual
 Possibilità di migliorare soddisfazione di qualcuno senza ridurre quella di qualcun'altro: miglioramento paretiano (MP).
 - Allocazione permette MP: pareto-inefficiente
 - Allocazione non permette MP: pareto-efficiente.
-
 Dividere una pizza a metà tra due persone affamate è pareto-efficiente. A=($\frac1 2$,$\frac1 2$)
 Se invece B=($\frac2 3,\frac1 3$), A pareto-domina B in quanto una persona è strettamente meno contenta.
 B è pareto efficiente perché almeno una persona vuole passare da A a B.
