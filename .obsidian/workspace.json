@@ -8,14 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "774f6465ed7a2e1d",
+            "id": "0398db0efa93af52",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Formulario.md",
-                "mode": "source",
-                "source": false
+                "file": "Metodi Numerici/laboratorio/lez1/mnc2324_es1.pdf"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Formulario.md",
+                "file": "Metodi Numerici/laboratorio/lez1/mnc2324_es1.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,8 +100,8 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Formulario.md",
-                "linksCollapsed": false,
+                "file": "Metodi Numerici/laboratorio/lez1/mnc2324_es1.pdf",
+                "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Formulario.md"
+                "file": "Metodi Numerici/laboratorio/lez1/mnc2324_es1.pdf"
               }
             }
           },
@@ -157,29 +155,30 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "774f6465ed7a2e1d",
+  "active": "0398db0efa93af52",
   "lastOpenFiles": [
-    "Metodi Numerici/Formulario.md",
+    "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf",
+    "Algoritmi e Strutture Dati/pdf/05-alberi.pdf",
+    "Algoritmi e Strutture Dati/pdf/05-alberi.pdf.opdownload",
+    "Algoritmi e Strutture Dati/pdf/strutture dati.pdf",
+    "Finanza Aziendale/Formulario.md",
     "Microeconomia/Formulario.md",
+    "Microeconomia/Introduzione.md",
+    "Metodi Numerici/Formulario.md",
+    "Finanza Aziendale/Definizioni.md",
+    "Finanza Aziendale/pdf/2. slide calcolo valore assoluto.pdf",
     "Algoritmi e Strutture Dati/Formulario.md",
     "Algoritmi e Strutture Dati/27D75B59-20DC-45AF-88D1-D9C04A33773B.tmp",
     "Metodi Numerici/A6F6D8D1-131F-4D17-9B69-86F27D8681C0.tmp",
-    "Microeconomia/Introduzione.md",
     "Algoritmi e Strutture Dati/pdf/analisi algoritmi.pdf",
-    "Algoritmi e Strutture Dati/pdf/strutture dati.pdf",
-    "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf",
     "Microeconomia/0A5CE0CE-FED7-48E5-9F4C-672A9C98525E.tmp",
     "Finanza Aziendale/A1491F72-ACFF-4C3D-82C8-E6FD47B418EC.tmp",
-    "Finanza Aziendale/Formulario.md",
-    "Finanza Aziendale/pdf/2. slide calcolo valore assoluto.pdf",
     "Algoritmi e Strutture Dati/pdf/alg2.pdf.opdownload",
-    "Algoritmi e Strutture Dati/pdf/strutture dati introduzione.pdf.opdownload",
-    "Finanza Aziendale/1 Introduzione.md",
+    "Finanza Aziendale/Introduzione.md",
     "Algoritmi e Strutture Dati/Introduzione.md",
     "Microeconomia/2 Vincolo di Bilancio.md",
     "Microeconomia/_attachments/pareto_efficienza_affitti.png",
     "Microeconomia/_attachments/prezzo_riserva_numero_appartamenti.png",
-    "Untitled.md",
     "Algoritmi e Strutture Dati/Ciao.md",
     "Microeconomia/_attachments/prezzo_per_quantità.png",
     "Microeconomia/_attachments/curva_di_offerta_variabile.png",

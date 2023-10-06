@@ -1,0 +1,2 @@
+Montante: somma di denaro che cresce nel tempo a causa degli interessi o dei rendimenti generati da investimenti o depositi. In altre parole, il montante rappresenta il valore futuro di una quantità di denaro che è stata investita o depositata inizialmente. Il concetto di montante è fondamentale per calcolare quanto un investimento crescerà nel tempo o quanto un prestito accumulerà interessi.
+Contango: 

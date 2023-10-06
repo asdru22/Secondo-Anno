@@ -9,4 +9,4 @@ Si applica
 1. individuando $a, b, f(n)$
 2. calcolando $n\log_ba$
 3. confrontando asintoticamente $f(n)$ con $n\log_ba$
-4. applicando opportunamente il Master Theorem
+4. applicando opportunamente il Master Theorem.

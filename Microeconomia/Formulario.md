@@ -28,3 +28,22 @@ $$u:\mathbb R^2_+\to\mathbb R_+|\begin{cases}x\succ y\Longleftrightarrow u(x)>u(
 Utilità *ordinale* non importa il valore relativo dei numeri, non c'è cardinalità nel valore.
 *Funzione di utilità Cobb-Douglas:* $u(x)=u(x_1,x_2)=x_1\times x_2$
 $$\begin{cases}x_1\times x_2>y_1\times y_2\\x_1>y_1,x_2>y_2\end{cases}$$
+### Utilità marginale ($MU$)
+$$MU_1=\frac{\delta u(x_1,x_2)}{\delta(x_1)}>0$$
+Monotonicità forte, $x_2$ fisso.
+### Variazione utilità ($\Delta u$)
+$$\Delta u=MU_1\times \Delta x_1$$
+### Concavità curve di indifferenza ($IP$)
+$$IP=\frac{\delta''u(x_1,x_2)}{\delta''(x_1)}\le0$$
+Curve sempre rivolte verso l'origine: questo indica che il consumatore è disposto a scambiare una quantità maggiore di un bene per una quantità minore dell'altro, a patto che l'utilità rimanga costante.
+### Preferenze Cobb-Douglas
+$$u(x_1,x_2)=x_1^c,x_2^d\ \ \ \ \ \ \ \ \ MRS=\frac{cx_i^{c-1}x_2^d}{dx_i^c x_2^{d-1}}=\frac{cx_1}{dx_2}$$
+### Paniere Ottimale
+$$x^*|\begin{cases}p_1x_1^*+p_2x_2^*=m\\ MRS(x_1^*,x_2^*)=\frac{p_1}{p_2}\end{cases}$$
+Entrambe le condizioni sono necessarie per un ottimo intero.
+### Massimizzare una funzione obiettivo con i moltiplicatori di Lagrange
+Calcolare
+$$\max_{x_1,x_2}\ u(x_1,x_2)|p_1x_1+p_2x_2\le m$$
+Funzione ausiliaria $\mathbb L(x_1,x_2,\lambda)=u(x_1,x_2)+\lambda(p_1x_1+p_2x_2-m)$
+- $p_1x_1+p_2x_2-m=0$
+- $\lambda$: moltiplicatore di Lagrange $=\frac{\delta\mathbb L}{\delta m}=\frac{\delta u}{\delta m}$: valore in termine di utilità della variazione del reddito
