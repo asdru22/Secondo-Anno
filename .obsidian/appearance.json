@@ -2,5 +2,6 @@
   "accentColor": "",
   "cssTheme": "Atom",
   "theme": "obsidian",
-  "translucency": false
+  "translucency": false,
+  "baseFontSize": 16
 }

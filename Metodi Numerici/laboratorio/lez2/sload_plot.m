@@ -1,16 +1,30 @@
-%script sload_plot.m esempio di disegno vettoriale
 close all
-clear all
 
-%legge i punti di un disegno da file
-%...
+figure(1)
+hold on
+title("QUACK")
 
-%apre finestra grafica
-figure(1);
-%disegna i punti con plot
-%...
+ang = pi/2;
 
-%disegna i punti con fill
-%...
+rotationMatrix = [cos(ang), -sin(ang);sin(ang), cos(ang)];
+
+% -----------
+
+a = load("paperino.txt");
+
+a = (rotationMatrix*a.')';
+
+draw_rettangolo(a*10)
 
 
+
+% -------------
+
+b = load("twitter.txt")
+c= [mean(b(:,1)), mean(b(:,2))];
+
+b=b-c;
+b = (rotationMatrix*b.')';
+b=b+c;
+
+draw_rettangolo(b)

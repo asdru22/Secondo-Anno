@@ -15,7 +15,7 @@ $$VA=\frac{C}{r}$$
 $$VA=\frac{C}{r}\bigg(1-\frac{1}{(1+t)^r}\bigg)$$
 *Rendita perpetua* (crescente):
 $$VA_t=\frac{C_{t+1}}{r-g}$$
-- $g$: tasso costante
+- $g$: tasso costante, maggiore è $g$, più vale l'azienda
 ### Valore Attuale Netto dato investimento $I$ ($VAN$)
 $$VAN=VA+C_0$$
 Il $VAN$ è uno strumento fondamentale per la valutazione finanziaria degli investimenti e dei progetti, poiché aiuta a determinare se un investimento genererà valore per l'azienda o gli investitori, tenendo conto del costo del denaro nel tempo e dei flussi di cassa futuri attesi.
@@ -23,3 +23,38 @@ $$VAN=\sum_{t=0}^{n}\bigg(\frac{CF_t}{(1+r)^t}\bigg)-C_0$$
 - $C_0$: costo iniziale di investimento
 -  $CF_t$: flusso di cassa al tempo $t$, che è il valore monetario previsto in quel momento
 
+### Tasso di crescita degli utili ($g$)
+$$g=(1-b)\times ROE$$
+- $1-b$: tasso di retenzione degli utili ($b$ è la percentuale di denaro spesa dall'azienda)
+### Interesse ($M$)
+*Capitalizzazione semplice*:
+$$M_t=C(1+ti)$$
+*Capitalizzazione composta*:
+$$M(n)=C(1+i)^n$$
+- $C$: capitale iniziale
+- $t$: periodi
+- $i$: interessi
+
+*Ammontare di un investimento ad un tasso annuo composto* $t$ *volte*:
+$$M=(1+\frac{r}{t})^t$$
+- $r$: tasso annuo
+- Maggiore è $t$, maggiore è l'interesse sugli interessi
+### Tassi di interessi nominali e reali
+$$1+\textup{tasso interesse reale}=\frac{1+\textup{tasso interesse nominale}}{1+\textup{tasso inflazione}}$$
+- $\textup{tasso interesse nominale}$: tasso di crescita del valore di un investimento
+- $\textup{tasso interesse reale}$: tasso di crescita del potere di acquisto di un investimento
+$$\textup{tasso interesse reale}\approx \textup{tasso interesse nominale}-\textup{tasso  inflazione}$$
+### Valutazione di un'obbligazione
+$$VA=\frac{C_1}{(1+r)^1}+\frac{C_2}{(1+r)^2}+\dots+\frac{1.0+C_1}{(1+t)^t}$$
+- $1.0$: valore di attualizzazione
+- $t$: periodi
+- $C$: cedole (o dividendi se si valuta un'azione)
+### Prezzo di un'obbligazione ($P$)
+$$P=CPN\times\frac{1}{y}\Big(1-\frac{1}{(1+y)^t}\Big)+\frac{VF}{(1+y)^t}$$
+- $y$: rendimento
+- $t$: periodi
+- $CPN$: Pagamento di cedola periodico
+- $VF$: valore nominale/finale
+### Duration modificata ("vera" duration)
+$$\Delta\textup{prezzo (\%)}=-\frac{\textup{duration}}{1+r}\times\Delta\textup{tassi}$$
+- $1+r$: tassi anticipati ad adesso

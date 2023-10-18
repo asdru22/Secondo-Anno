@@ -11,9 +11,11 @@
             "id": "0398db0efa93af52",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Metodi Numerici/laboratorio/lez1/mnc2324_es1.pdf"
+                "file": "Metodi Numerici/Formulario.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Metodi Numerici/laboratorio/lez1/mnc2324_es1.pdf",
+                "file": "Metodi Numerici/Formulario.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Metodi Numerici/laboratorio/lez1/mnc2324_es1.pdf",
+                "file": "Metodi Numerici/Formulario.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Metodi Numerici/laboratorio/lez1/mnc2324_es1.pdf"
+                "file": "Metodi Numerici/Formulario.md"
               }
             }
           },
@@ -157,23 +159,22 @@
   },
   "active": "0398db0efa93af52",
   "lastOpenFiles": [
-    "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf",
-    "Algoritmi e Strutture Dati/pdf/05-alberi.pdf",
-    "Algoritmi e Strutture Dati/pdf/05-alberi.pdf.opdownload",
-    "Algoritmi e Strutture Dati/pdf/strutture dati.pdf",
+    "Metodi Numerici/dispensa.pdf",
     "Finanza Aziendale/Formulario.md",
-    "Microeconomia/Formulario.md",
-    "Microeconomia/Introduzione.md",
     "Metodi Numerici/Formulario.md",
+    "Microeconomia/Formulario.md",
+    "Algoritmi e Strutture Dati/codice/alberi_binari/tree.java",
+    "Algoritmi e Strutture Dati/codice/alberi_binari/run.java",
+    "Algoritmi e Strutture Dati/codice/alberi_binari/main.java~",
+    "Algoritmi e Strutture Dati/codice/alberi_binari/main.java",
+    "Algoritmi e Strutture Dati/codice/alberi_binari",
+    "Algoritmi e Strutture Dati/codice",
+    "Metodi Numerici/dispensa.pdf.opdownload",
+    "Microeconomia/Introduzione.md",
+    "Metodi Numerici/laboratorio/lez1/mnc2324_es1.pdf",
+    "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf",
     "Finanza Aziendale/Definizioni.md",
-    "Finanza Aziendale/pdf/2. slide calcolo valore assoluto.pdf",
     "Algoritmi e Strutture Dati/Formulario.md",
-    "Algoritmi e Strutture Dati/27D75B59-20DC-45AF-88D1-D9C04A33773B.tmp",
-    "Metodi Numerici/A6F6D8D1-131F-4D17-9B69-86F27D8681C0.tmp",
-    "Algoritmi e Strutture Dati/pdf/analisi algoritmi.pdf",
-    "Microeconomia/0A5CE0CE-FED7-48E5-9F4C-672A9C98525E.tmp",
-    "Finanza Aziendale/A1491F72-ACFF-4C3D-82C8-E6FD47B418EC.tmp",
-    "Algoritmi e Strutture Dati/pdf/alg2.pdf.opdownload",
     "Finanza Aziendale/Introduzione.md",
     "Algoritmi e Strutture Dati/Introduzione.md",
     "Microeconomia/2 Vincolo di Bilancio.md",

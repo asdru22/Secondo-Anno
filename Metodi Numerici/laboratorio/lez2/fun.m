@@ -1,9 +1,8 @@
-function [y]=fun(x)
-y=boh(x)+1;
-return 
+x = 0;
+while (x<=5)
+    x=x+1
 end
 
-function [y]=boh(x)
-y=x*2;
-return
+for i = 1:5
+    x=x+i
 end

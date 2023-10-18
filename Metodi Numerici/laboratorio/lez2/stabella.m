@@ -27,3 +27,4 @@ fprintf('imin %d  min(cos(x)) = %14.7f\n',iminz,minz);
 fprintf('imax %d  max(cos(x)) = %14.7f\n',imaxz,maxz);
 fprintf('imin %d  min(sin(x)^2+cos(x)^2) = %14.7f\n',iminw,minw);
 fprintf('imax %d  max(sin(x)^2+cos(x)^2) = %14.7f\n',imaxw,maxw);
+

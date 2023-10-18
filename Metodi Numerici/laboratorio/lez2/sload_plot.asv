@@ -1,0 +1,22 @@
+close all
+
+figure(1)
+hold on
+title("QUACK")
+
+% -----------
+
+a = load("paperino.txt");
+
+a(:,1) = a(:,1).*cos(pi/2)-a(:1).*sin(pi/2);
+a(:,2) = a(:,2).*10.+10;
+
+draw_rettangolo(a)
+
+
+
+% -------------
+
+c = load("twitter.txt")
+
+draw_rettangolo(c)
