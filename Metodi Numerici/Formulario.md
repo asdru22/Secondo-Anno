@@ -80,3 +80,10 @@ $$b_i^{[j]}=b_i^{[j-1]}(1-x)+b_{i+1}^{[j-1]}$$
 con $b_i^{[0]}=b_i$, $i=0,\dots ,n$ e $j=0,\dots ,n$
 ### Derivata prima di un polinomio con base di Bernstein
 $$p'(x)=\sum^{n-1}_{i=0}d_i B_{i,n-1}(x),\ d_i=n(b_{i+1}-b_1),\ i=0,\dots,n-1$$
+### Secondo metodo per calcolare derivata di un polinomio
+$$p'(x)=\frac{1}{b-a}p'(t)$$
+in un intervallo $[a,b]$, dove $p'(t)$ è la derivata di $p(t)$ in $[0,1]$.
+### Derivata di grado $j$ di un polinomio
+$$p^{(j)}(t)=\sum^{n-j}_{i=0}b_i^{(j)}B_{i,n-j}(t),\ \ \ b_i^{(j)}(t)=(n-j+1)(b_{i+1}^{j-1}-b_i^{j-1})$$
+ con $t\in[0,1],\ \ \ j=1,\dots,n\ \ i=0,\dots,n-j$
+ 

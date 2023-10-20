@@ -69,3 +69,23 @@ $v(\cdot)$: funzione di sub-utilità
 ### Preferenze
 Le preferenze devono essere stabili nel tempo e *strettamente convesse*.
 Se $p_1x_1+p_2x_2\ge p_1y_1+p_2y_2\to x\succeq y$
+### Quantità di Pasche
+$$P_q=\frac{p_1^tx_1^t+p_2^tx_2^t}{p_1^tx_1^b+p_2^tx_2^b}$$
+$P_q>1\Longleftrightarrow p_1^tx_1^t+p_2^tx_2^t>p_1^tx_1^b+p_2^tx_2^b\implies t>b$
+### Indice di Laspeyres
+$$L_q=\frac{p_1^bx_1^t+p_2^bx_2^t}{p_1^bx_1^b+p_2^bx_2^b}$$
+$L_q<1\Longleftrightarrow p_1^bx_1^t+p_2^bx_2^t<p_1^tx_1^t+p_2^tx_2^t$ indica che il paniere oggi costa meno rispetto all'anno base.
+### Equazione di Slutsky
+- Beni ordinari: $p\uparrow\to x\downarrow$
+- Beni di Giffen: $p\uparrow\to x\uparrow$ 
+- Variazione della domanda compensata: $\Delta m=\Delta p_1x_1$: si compensa il reddito per la variazione dei prezzi.
+### Effetto di sostituzione (rotazione)
+Variazione del della domanda del bene $1$ quando il prezzo è $p_1'$ e il reddito è $m'$
+$$\Delta x_1^S=x_1(p_1',m)-x_1(p_1,m)$$
+Variazione della domanda compensata: cambiano i prezzi ma il potere d'acquisto rimane costante.
+### Effetto di reddito (spostamento)
+Variazione della domanda del bene $1$ al variare del reddito $m\to m'$ quando il prezzo è $p_1'$
+$$\Delta x_1^n=x_1(p_1',m)-x_1(p_1',m')$$
+Cambia il reddito ma i prezzi rimangono costanti.
+- Beni normali: effetto reddito positivo ($\Delta x_1^n>0$)
+- Beni inferiori: effetto reddito negativo ($\Delta x_1^n<0$)

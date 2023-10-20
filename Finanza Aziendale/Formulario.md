@@ -12,7 +12,7 @@ $$VA=C_t\times\frac{1}{(1+r)^t}$$
 *Rendita perpetua* (primo pagamento nell'anno $1$):
 $$VA=\frac{C}{r}$$
 *Rendita perpetua* (dall'anno $1$ all'anno $t$):
-$$VA=\frac{C}{r}\bigg(1-\frac{1}{(1+t)^r}\bigg)$$
+$$VA=\frac{C}{r}\bigg(1-\frac{1}{(1+r)^t}\bigg)$$
 *Rendita perpetua* (crescente):
 $$VA_t=\frac{C_{t+1}}{r-g}$$
 - $g$: tasso costante, maggiore è $g$, più vale l'azienda
@@ -45,7 +45,7 @@ $$1+\textup{tasso interesse reale}=\frac{1+\textup{tasso interesse nominale}}{1+
 - $\textup{tasso interesse reale}$: tasso di crescita del potere di acquisto di un investimento
 $$\textup{tasso interesse reale}\approx \textup{tasso interesse nominale}-\textup{tasso  inflazione}$$
 ### Valutazione di un'obbligazione
-$$VA=\frac{C_1}{(1+r)^1}+\frac{C_2}{(1+r)^2}+\dots+\frac{1.0+C_1}{(1+t)^t}$$
+$$VA=\frac{C_1}{(1+r)^1}+\frac{C_2}{(1+r)^2}+\dots+\frac{1000+C_1}{(1+t)^t}$$
 - $1.0$: valore di attualizzazione
 - $t$: periodi
 - $C$: cedole (o dividendi se si valuta un'azione)
