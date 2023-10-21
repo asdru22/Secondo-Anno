@@ -5,6 +5,8 @@ $$\epsilon_{r\alpha}=\bigg|\frac{\alpha-fl(\alpha)}\alpha\bigg|$$
 ### Unità di arrotondamento ($u$)
 $u=\beta^{1-t}$ se si tronca
 $u=\frac1 2\beta^{1-t}$ se si arrotonda
+- $\beta$: base
+- $t$: cifre di mantissa
 ### Teorema Precisione di Rappresentazione
 $$\forall\alpha\in\mathbb R,\alpha\ne0\implies\epsilon_r(\alpha)=\bigg|\frac{\alpha-fl(\alpha)}\alpha\bigg|<u$$
 #### Corollario

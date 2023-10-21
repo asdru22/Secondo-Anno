@@ -4,3 +4,4 @@ A = smmm(x);
 disp("Il massimo è "+A(1))
 disp("Il minimo è "+A(2))
 disp("La media è "+A(3))
+

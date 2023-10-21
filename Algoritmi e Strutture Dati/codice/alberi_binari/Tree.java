@@ -1,5 +1,6 @@
 import java.util.Queue;
 import java.util.Stack;
+import java.util.LinkedList;
 
 public class Tree{
     private Node root;
@@ -53,11 +54,7 @@ public class Tree{
         public int getDepth(){return depth;}
 
         private String print(){
-            String r = "\n";
-            for(int i = 0;i<=this.depth;i++){
-                r+=" ";
-            }
-            return r+ value;
+            return value;
         }
     }
     private Tree(Node root){this.root = root;}
@@ -81,7 +78,9 @@ public class Tree{
         while(!queue.isEmpty()){
             Node current = queue.remove();
             if(current!=null){
-                s+=
+                s+=current.getValue();
+                if(current.getLeft()!=null) queue.add(current.getLeft());
+                if(current.getRight()!=null) queue.add(current.getRight());
             }
         }
         return s;

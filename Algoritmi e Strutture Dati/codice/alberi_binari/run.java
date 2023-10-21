@@ -12,19 +12,12 @@ public static void main(String[] args) {
             )
         )
     );
-    /*
-     * A
-            B
-                C
-                D
-            E
-                F
-                G
-     */         
+
     System.out.println("Pre Order: "+tree.depthFirstVisitPreOrder());
     //System.out.println("Pre Order Iterativa: "+tree.depthFirstVisitPreorderIterative());
     //System.out.println("Post Order: "+tree.depthFirstVisitPostOrder());
     //System.out.println("In Order: "+tree.depthFirstVisitInOrder());
+    System.out.println("Breadth: "+tree.depthFirstVisitPreOrder());
 
     }
-}
+}  
