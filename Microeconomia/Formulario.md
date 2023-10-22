@@ -1,5 +1,8 @@
 ### Retta di Bilancio
 $$p_1x_1+p_2x_2\le m$$
+- $x_i$: quantità di bene $i$
+- $p_i$: prezzo del bene $i$
+- $p_ix_i$: quantità di moneta che il consumatore spende per il bene $i$.
 $\frac m{p_i}$: quantità che posso comprare se spendo tutto in $i$.
 $-\frac{p_1}{p_2}$: rapporto del prezzo dei beni, ovvero quanto sul mercato posso sostituire il consumo di un bene con un altro. *Costo opportunità*: costo della miglior scelta alternativa (consumo bene 1 in termini di bene 2).
 ### Tassi e sussidi

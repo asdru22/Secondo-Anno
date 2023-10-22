@@ -58,3 +58,27 @@ $$P=CPN\times\frac{1}{y}\Big(1-\frac{1}{(1+y)^t}\Big)+\frac{VF}{(1+y)^t}$$
 ### Duration modificata ("vera" duration)
 $$\Delta\textup{prezzo (\%)}=-\frac{\textup{duration}}{1+r}\times\Delta\textup{tassi}$$
 - $1+r$: tassi anticipati ad adesso
+### Reddito Operativo Lordo
+$$\textup{Reddito Operativo Lordo}=\textup{EBIT}\times(1-t)$$
+### Indici di Leva Finanziaria
+Attraverso l'utilizzo della leva finanziaria un soggetto ha la possibilità di acquistare o vendere attività finanziarie per un ammontare superiore al capitale posseduto e, conseguentemente, di beneficiare di un rendimento potenziale maggiore rispetto a quello derivante da un investimento diretto nel sottostante e, di converso, di esporsi al rischio di perdite molto significative.
+$$\textup{rapporto di indebitamento a lungo termine}=1+\frac{\textup{
+debiti a lungo termine}}{\textup{capitale netto}}$$
+$$\textup{rapporto di indebitamento totale}=\frac{\textup{debbiti a lungo termine}}{\textup{equity}}$$
+- $\textup{equity}$: capitale di rischio, ovvero il capitale sottoscritto ed apportato dai soci ad una società. Si chiama così perché indica il capitale che i soci di una società sono disposti, appunto, a rischiare per intraprendere un’attività.
+$$\textup{copertura degli interessi}=\frac{\textup{EBIT}}{\textup{interessi passivi}}$$
+Quante volte l'$\textup{EBIT}$ è multiplo degli interessi da pagare.
+$$\textup{cash covarage ratio}=\frac{\textup{EBIT}+\textup{ammortamento}}{\textup{interesi passivi}}$$
+Il "rapporto di copertura del denaro contante" è utilizzata per valutare la capacità di un'azienda di generare flussi di cassa sufficienti per coprire i suoi obblighi finanziari, in particolare i pagamenti degli interessi sul debito.
+### Indici di liquidità
+Attività e passività a breve termine sono più facilmente stimabili di attività e passività a lungo termine.
+$$\textup{quoziente di liquidità corrente}=\frac{\textup{attività correnti}}{\textup{passività correnti}}$$
+### Indici di efficenza
+$$\textup{rotazione delle attività totali}=\frac{\textup{vendite}}{\textup{attività medie totali}}$$
+Quanti soldi si generano rispetto alle immobilizzazioni fisse (efficenza in termini di rischio).
+### Indici di redditività
+$$\textup{ROS}=\frac{\textup{EBIT}-\textup{imposte}}{\textup{vendite}}$$
+- $\textup{ROS}$: *return on sales*, quanto si guadagna su una vendita. Solitamente non si vendono prodotti ad un prezzo minore del $\textup{ROS}$ medio dell'azienda.
+$$\textup{ROA}=\frac{\textup{EBIT}-\textup{imposte}}{\textup{attività totali medie}}$$
+- $\textup{ROA}$: *return on assets*. Minori sono le immobilizzazioni fisse, maggiore è il reddito.
+$$\textup{ROE}=\frac{\textup{reddito netto}}{\textup{equity medio}}$$
