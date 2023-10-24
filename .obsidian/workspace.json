@@ -11,9 +11,11 @@
             "id": "0398db0efa93af52",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Microeconomia/libro.pdf"
+                "file": "Microeconomia/Riassunto.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomia/libro.pdf",
+                "file": "Microeconomia/Riassunto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomia/libro.pdf",
+                "file": "Microeconomia/Riassunto.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomia/libro.pdf"
+                "file": "Microeconomia/Riassunto.md"
               }
             }
           },
@@ -157,9 +159,10 @@
   },
   "active": "0398db0efa93af52",
   "lastOpenFiles": [
+    "Microeconomia/libro.pdf",
+    "Microeconomia/Riassunto.md",
     "Microeconomia/Formulario.md",
     "Finanza Aziendale/Formulario.md",
-    "Microeconomia/libro.pdf",
     "Metodi Numerici/Formulario.md",
     "Metodi Numerici/laboratorio/lez3/ssquare_trans.asv",
     "Metodi Numerici/laboratorio/lez3/versore2.m",

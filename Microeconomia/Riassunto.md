@@ -1,0 +1,21 @@
+### 1. Il mercato
+- Principio di ottimizzazione: gli individui cercano di scegliere le migliori combinazioni di consumo possibili
+- Prinicipio di equilibrio: i prezzi variano finché la quantità domandata di un bene è uguale alla quantità offerta.
+- Prezzo di riserva: massima somma che un individuo è disposto a pagare, o il prezzo più elevato che un individuo accetterà di pagare per acquistare un bene.
+- Prezzo di equilibrio: determinato dall'intersezione delle curve di offerta e di domanda.
+- Statica comparata: confronto tra due equilibri "statici" senza preoccuparsi eccessivamente del modo in cui il mercato passa da un equilibrio ad un altro.
+- Vari tipi di mercato:
+	- Mercato concorrenziale: molti proprietari che agiscono in modo indipendente che cercano di ottenere il massimo e gli acquirenti sono pienamente consapevoli dei prezzi richiesti. Allora il prezzo di equilibrio dovrà essere lo stesso.
+	- Monopolista discriminante: un unico proprietario possiede tutti i beni (monopolio) venduti uno per uno al miglior offerente. Dato che gli acquirenti pagheranno prezzi diversi si parla di monopolista **discriminante**. Si vende prima ad un prezzo elevato a coloro che hanno un *prezzo di riserva* maggiore.
+	- Monopolista puro: il monopolista è costretto a vendere tutti i beni allo stesso prezzo. Fisserà un prezzo superiore al prezzo di equilibrio del mercato concorrenziale.
+	- Controllo degli affitti: se si fissa un prezzo massimo a cui vendere i prodotti, ci sarà un **eccesso di domanda**. Il numero di persone disposte ad acquistare il bene è superiore al numero di beni in vendita.  Il numero di prodotti venduti è uguale a quello del mercato concorrenziale, ma gli acquirenti sono diversi.
+-  Efficenza paretiana: criterio utilizzato per confrontare i diversi meccanismi di allocazione delle risorse. Se esiste un modo di aumentare la soddisfazione di qualcuno senza diminuire quella di qualcun altro, questo è un **miglioramento paretiano**. Una situazione è pareto-efficiente se non è possibile accrescere il benessere di alcuno dei soggetti coinvolti, se non riducendo il benessere di qualcun altro di loro. Anche se un meccanismo di allocazione presenta altri aspetti positivi, il fatto che non sia pareto-efficente è motivo sufficente per rifiutarlo.
+### 2. Il vincolo di bilancio
+- Paniere di consumo: combinazione di consumo del consumatore $(x_1,x_2)$ con $x_1$ e $x_2$ le quantità del bene 1 e del bene 2 che il consumatore sceglie di consumare.
+- Vincolo di bilancio: $p_1x_1+p_2x_2\le m$: la quantità di moneta spesa per l'acquisto dei due beni non può superare la quantità complessiva di moneta a disposizione.
+- Insieme di bilancio: l'insieme delle combinazioni di consumo acqiustabili in corrispondenza dei prezzi $(p_1,p_2)$ e del reddito $m$.
+- Bene composito: nella formula del vincolo di bilancio il bene 2 è un bene composito, che rappresenta ogni altra cosa che il consumatore desidera consumare oltre al bene 1.
+- Inclinazione della retta di bilancio: può essere interpretata come il saggio al quale il mercato consente di sostituire il bene 1 con il bene 2. Questo è chiamato **costo opportunità**: per aumentare il consumo del bene 1 è necessario rinunciare in parte al consumo del bene 2.
+- Variazione del reddito: se il reddito aumenta, la retta di bilancio si sposta verso destra, verso sinistra se diminuisce. 
+- Variazione del prezzo: se il prezzo del bene 1 aumenta, la retta di bilancio diventa più ripida. 
+- Tasse, sussidi e razionamento: modificano l'inclinazione e la posizione della retta di bilancio perché i prezzi che i consumatori devono pagare subiscono delle variazioni.
