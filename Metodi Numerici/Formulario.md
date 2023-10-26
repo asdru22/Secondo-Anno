@@ -88,4 +88,13 @@ in un intervallo $[a,b]$, dove $p'(t)$ è la derivata di $p(t)$ in $[0,1]$.
 ### Derivata di grado $j$ di un polinomio
 $$p^{(j)}(t)=\sum^{n-j}_{i=0}b_i^{(j)}B_{i,n-j}(t),\ \ \ b_i^{(j)}(t)=(n-j+1)(b_{i+1}^{j-1}-b_i^{j-1})$$
  con $t\in[0,1],\ \ \ j=1,\dots,n\ \ i=0,\dots,n-j$
- 
+### Curva
+Coppia di funzioni $x=f(t)$ e $y=g(t)$ con $t\in[a,b]$. Al variare di $t$ in $[a,b]$ si avrà una curva definita da punti $(f(t),g(t))$
+### Curva di Bezier
+Insieme dei punti $P_i=(x_i,y_i)$ con $i=0,\dots,n$.
+$$c(t)=\sum^n_{i=0}P_iB_{i,n}(t)\ \ \ t\in[0,1]\Longrightarrow \Big[\sum^n_{i=0}x_iB_{i,n}(t),\sum^n_{i=0}y_iB_{i,n}(t)\Big]$$
+### Interpolazione polinomiale di dati
+**Teorema di esistenza e unicità**: dati $n+1$ punti $(x_i,y_i),\ i=0,\dots,n$ con $x_i$ distinti, esiste ed è unico il polinomio $p\in\mathbb P_n$ che verifica le condizioni di interpolazione ($P(x_i)=y_i,\ i=0,\dots,n$)
+### Risoluzione computazionale (base di Newton)
+$$(x_i,y_i),\ i=0,\dots, n\ \ \ x\in[a,b]\ \ \ a=\min\{x_i\},b=\max\{x_i\}$$
+$$p(x)=\{1,(x-x_0),(x-x_0)\times(x-x_1),\dots,(x-x_0)\times\ldots\times(x-x_{n-1})\}$$

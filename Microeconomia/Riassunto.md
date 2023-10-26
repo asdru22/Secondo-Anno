@@ -13,7 +13,7 @@
 ### 2. Il vincolo di bilancio
 - Paniere di consumo: combinazione di consumo del consumatore $(x_1,x_2)$ con $x_1$ e $x_2$ le quantità del bene 1 e del bene 2 che il consumatore sceglie di consumare.
 - Vincolo di bilancio: $p_1x_1+p_2x_2\le m$: la quantità di moneta spesa per l'acquisto dei due beni non può superare la quantità complessiva di moneta a disposizione.
-- Insieme di bilancio: l'insieme delle combinazioni di consumo acqiustabili in corrispondenza dei prezzi $(p_1,p_2)$ e del reddito $m$.
+- Insieme di bilancio: l'insieme delle combinazioni di consumo acquistabili in corrispondenza dei prezzi $(p_1,p_2)$ e del reddito $m$.
 - Bene composito: nella formula del vincolo di bilancio il bene 2 è un bene composito, che rappresenta ogni altra cosa che il consumatore desidera consumare oltre al bene 1.
 - Inclinazione della retta di bilancio: può essere interpretata come il saggio al quale il mercato consente di sostituire il bene 1 con il bene 2. Questo è chiamato **costo opportunità**: per aumentare il consumo del bene 1 è necessario rinunciare in parte al consumo del bene 2.
 - Variazione del reddito: se il reddito aumenta, la retta di bilancio si sposta verso destra, verso sinistra se diminuisce. 

@@ -11,11 +11,9 @@
             "id": "0398db0efa93af52",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Microeconomia/Riassunto.md",
-                "mode": "source",
-                "source": false
+                "file": "Microeconomia/capitoli/capitolo_15.pdf"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomia/Riassunto.md",
+                "file": "Microeconomia/capitoli/capitolo_15.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomia/Riassunto.md",
+                "file": "Microeconomia/capitoli/capitolo_15.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomia/Riassunto.md"
+                "file": "Microeconomia/capitoli/capitolo_15.pdf"
               }
             }
           },
@@ -159,20 +157,20 @@
   },
   "active": "0398db0efa93af52",
   "lastOpenFiles": [
-    "Microeconomia/libro.pdf",
-    "Microeconomia/Riassunto.md",
+    "Microeconomia/capitoli/capitolo_14.pdf",
     "Microeconomia/Formulario.md",
-    "Finanza Aziendale/Formulario.md",
+    "Microeconomia/capitoli/capitolo_15.pdf",
+    "Microeconomia/capitoli/capitolo_9.pdf",
+    "Microeconomia/capitoli/capitolo_8.pdf",
+    "Microeconomia/capitoli/capitolo_7.pdf",
+    "Microeconomia/capitoli/capitolo_5.pdf",
+    "Microeconomia/capitoli/capitolo_4.pdf",
+    "Microeconomia/Libro/New Section 1.one",
+    "Microeconomia/Libro/Open Notebook.onetoc2",
+    "Microeconomia/Libro",
     "Metodi Numerici/Formulario.md",
-    "Metodi Numerici/laboratorio/lez3/ssquare_trans.asv",
-    "Metodi Numerici/laboratorio/lez3/versore2.m",
-    "Metodi Numerici/laboratorio/lez3/untitled.m",
-    "Metodi Numerici/laboratorio/lez3/ssquare_vers.asv",
-    "Metodi Numerici/laboratorio/lez3/versore.m",
-    "Metodi Numerici/laboratorio/lez3/sversore.m",
-    "Metodi Numerici/laboratorio/lez3/ssquare.asv",
-    "Metodi Numerici/laboratorio/anmglib_4.0/ppbez_code/UserInteractionAgent.m",
-    "Metodi Numerici/laboratorio/anmglib_4.0/ppbez_code/trapezoid_adapt.m",
+    "Microeconomia/Riassunto.md",
+    "Finanza Aziendale/Formulario.md",
     "Microeconomia/Introduzione.md",
     "Finanza Aziendale/Definizioni.md",
     "Algoritmi e Strutture Dati/Formulario.md",

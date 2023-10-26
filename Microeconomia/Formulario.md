@@ -92,3 +92,43 @@ $$\Delta x_1^n=x_1(p_1',m)-x_1(p_1',m')$$
 Cambia il reddito ma i prezzi rimangono costanti.
 - Beni normali: effetto reddito positivo ($\Delta x_1^n>0$)
 - Beni inferiori: effetto reddito negativo ($\Delta x_1^n<0$)
+### Curva prezzo-consumo
+$$p_1x_1+p_2x_2= m=p_1\omega_1+p_2\omega_2$$
+$\omega_i$: quantità bene (dotazione iniziale) $i$.
+### Effetto reddito di dotazione
+$$\Delta p=\textup{effetto sostituzione}+\textup{effetto reddito}+\textup{effetto reddito di dotazione}$$
+### Equazione di Slutsky in presenza di dotazione iniziale
+$$\frac{d x_1}{d p_1}=\frac{\delta x_1}{\delta p_1}+\frac{\delta x_1}{\delta m}(\omega_1-x_1)$$
+La quantità domandata aumenta all'aumentare del reddito
+### Offerta di lavoro
+$$pC=M+wL$$
+- $C$: quantità consumata
+- $p$: prezzo di quantità consumata
+- $M$: reddito non lavorativo
+- $\omega$: salario
+- $L$: quantità di lavoro offerta
+- $wL$: reddito lavorativo
+- $\bar L$: numero massimo ore di lavoro
+- $C=\frac M p$: massimo consumo da reddito non lavorativo
+- $R=\bar L -L$: ore di riposo
+- $\bar R= \bar L$: ore di riposo massime
+- $L$: ore effettivamente lavorate
+- $\bar C=\frac M p$: massimo che posso consumare se non lavoro ($M=p\bar C$) 
+### Variazione di salario dulle ore lavorative
+$$pC+\omega R=p\bar C+\omega \bar R$$
+- $\omega R$: costo-opportunità del riposo
+### Offerta di lavoro
+$$\frac{dR}{d\omega}=\frac{\delta R^s}{\delta\omega}+(\bar R-R)\frac{dR}{dM}$$
+- $\frac{\delta R^s}{\delta\omega}$: effetto sostituzione
+### Surplus caso utilità quasi lineare
+$$\Delta SC=\Delta u(\cdot)$$
+Il surplus è il beneficio che rimane in tasca dopo aver acquistato $n$ unità di bene.
+$$\Delta\textup{benessere}\leftrightarrow\Delta SC$$
+### Funzione di domanda partendo dai prezzi di riserva
+$$u(x,m)=v(x)+m$$
+- No effetto reddito
+- $v(\cdot)$: funzione di sub-utilità
+### Domanda inversa
+$$SC(\bar P)=\int^{\bar x}_0P(x)-\bar P dx=\int^{\bar x}_0P(x) dx-\bar P\ \ (+m)$$
+- $SC$: surplus
+- $+m$: costante di integrazione, trascurata

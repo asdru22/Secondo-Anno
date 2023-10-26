@@ -15,7 +15,7 @@ def split_pdf(input_pdf_path, output_dir, page_ranges):
                 page = pdf_reader.pages[page_num]
                 pdf_writer.add_page(page)
             
-            output_pdf_path = f"{output_dir}/capitolo_{i + 1}.pdf"
+            output_pdf_path = f"{output_dir}/capitolo_{i + 100}.pdf"
             with open(output_pdf_path, 'wb') as output_pdf_file:
                 pdf_writer.write(output_pdf_file)
                 print(f"PDF {i + 1} created: {output_pdf_path}")
