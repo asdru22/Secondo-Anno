@@ -132,3 +132,10 @@ $$u(x,m)=v(x)+m$$
 $$SC(\bar P)=\int^{\bar x}_0P(x)-\bar P dx=\int^{\bar x}_0P(x) dx-\bar P\ \ (+m)$$
 - $SC$: surplus
 - $+m$: costante di integrazione, trascurata
+
+### Domande di Mercato
+$$X^1(P_1,P_2,(M_i)^n_i)=\sum^n_{i=1}x^1_i(P_1,P_2,m_i)=x_1(P_1,P_2,m)$$
+### Elasticità
+$$\lim_{\Delta p\to0}\frac{\frac{\Delta q}{q}}{\frac{\Delta p}{p}}=\frac{\frac{dq}{q}}{\frac{dp}{p}}=\frac{dq}{dp}\frac{p}{q}=\epsilon$$
+Minore è l'elasticità, minore è la reattività dei prezzi
+$$\begin{cases}0\le\epsilon<1\to\textup{domanda rigida}\\\epsilon=1\to\textup{domanda unitaria}\\\epsilon>1\to\textup{domanda elastica}\end{cases}$$

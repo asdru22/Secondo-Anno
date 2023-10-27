@@ -13,7 +13,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_15.pdf"
+                "file": "Metodi Numerici/dispensa.pdf"
               }
             }
           }
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_15.pdf",
+                "file": "Metodi Numerici/dispensa.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_15.pdf",
+                "file": "Metodi Numerici/dispensa.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_15.pdf"
+                "file": "Metodi Numerici/dispensa.pdf"
               }
             }
           },
@@ -155,20 +155,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0398db0efa93af52",
+  "active": "64d91feac736879b",
   "lastOpenFiles": [
-    "Microeconomia/capitoli/capitolo_14.pdf",
     "Microeconomia/Formulario.md",
+    "Metodi Numerici/Formulario.md",
     "Microeconomia/capitoli/capitolo_15.pdf",
+    "Finanza Aziendale/F20FC372-E585-4C7B-BD7F-DBDD5EF831C5.tmp",
+    "Microeconomia/E4060AD2-F810-4E46-90D7-08DECCCD28E1.tmp",
+    "Microeconomia/capitoli/capitolo_14.pdf",
     "Microeconomia/capitoli/capitolo_9.pdf",
     "Microeconomia/capitoli/capitolo_8.pdf",
     "Microeconomia/capitoli/capitolo_7.pdf",
     "Microeconomia/capitoli/capitolo_5.pdf",
     "Microeconomia/capitoli/capitolo_4.pdf",
     "Microeconomia/Libro/New Section 1.one",
-    "Microeconomia/Libro/Open Notebook.onetoc2",
-    "Microeconomia/Libro",
-    "Metodi Numerici/Formulario.md",
     "Microeconomia/Riassunto.md",
     "Finanza Aziendale/Formulario.md",
     "Microeconomia/Introduzione.md",
