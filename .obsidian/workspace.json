@@ -11,9 +11,11 @@
             "id": "0398db0efa93af52",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Metodi Numerici/dispensa.pdf"
+                "file": "Microeconomia/Formulario.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Metodi Numerici/dispensa.pdf",
+                "file": "Microeconomia/Formulario.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Metodi Numerici/dispensa.pdf",
+                "file": "Microeconomia/Formulario.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Metodi Numerici/dispensa.pdf"
+                "file": "Microeconomia/Formulario.md"
               }
             }
           },
@@ -155,22 +157,22 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "64d91feac736879b",
+  "active": "0398db0efa93af52",
   "lastOpenFiles": [
-    "Microeconomia/Formulario.md",
-    "Metodi Numerici/Formulario.md",
     "Microeconomia/capitoli/capitolo_15.pdf",
-    "Finanza Aziendale/F20FC372-E585-4C7B-BD7F-DBDD5EF831C5.tmp",
-    "Microeconomia/E4060AD2-F810-4E46-90D7-08DECCCD28E1.tmp",
-    "Microeconomia/capitoli/capitolo_14.pdf",
+    "Microeconomia/capitoli/capitolo_18.pdf",
+    "Microeconomia/Formulario.md",
+    "Microeconomia/capitoli/capitolo_100.pdf",
+    "Microeconomia/capitoli/capitolo_6.pdf",
     "Microeconomia/capitoli/capitolo_9.pdf",
-    "Microeconomia/capitoli/capitolo_8.pdf",
-    "Microeconomia/capitoli/capitolo_7.pdf",
-    "Microeconomia/capitoli/capitolo_5.pdf",
-    "Microeconomia/capitoli/capitolo_4.pdf",
-    "Microeconomia/Libro/New Section 1.one",
-    "Microeconomia/Riassunto.md",
+    "Microeconomia/capitoli/capitolo_14.pdf",
+    "Metodi Numerici/Formulario.md",
     "Finanza Aziendale/Formulario.md",
+    "Algoritmi e Strutture Dati/pdf/alberi binari di ricerca.pdf",
+    "Algoritmi e Strutture Dati/pdf/analisi algoritmi.pdf",
+    "Algoritmi e Strutture Dati/pdf/strutture dati.pdf",
+    "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf",
+    "Microeconomia/Riassunto.md",
     "Microeconomia/Introduzione.md",
     "Finanza Aziendale/Definizioni.md",
     "Algoritmi e Strutture Dati/Formulario.md",

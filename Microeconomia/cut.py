@@ -25,6 +25,6 @@ if __name__ == '__main__':
     output_dir = 'capitoli'    # Replace with the directory where you want to save the output PDFs
 
     # Specify the page ranges for each output PDF as a list of tuples (start_page, end_page)
-    page_ranges = [(25, 42), (43, 54), (55, 73),(74,91),(92,112),(113,133),(134,150),(151,171),(174,192),(257,275),(276,296)]  # Example page ranges
+    page_ranges = [(330, 341)]  # Example page ranges
 
     split_pdf(input_pdf_path, output_dir, page_ranges)

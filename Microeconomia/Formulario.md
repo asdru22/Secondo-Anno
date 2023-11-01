@@ -135,7 +135,37 @@ $$SC(\bar P)=\int^{\bar x}_0P(x)-\bar P dx=\int^{\bar x}_0P(x) dx-\bar P\ \ (+m)
 
 ### Domande di Mercato
 $$X^1(P_1,P_2,(M_i)^n_i)=\sum^n_{i=1}x^1_i(P_1,P_2,m_i)=x_1(P_1,P_2,m)$$
-### Elasticità
+### Elasticità ($\epsilon$)
+$$\epsilon=\frac{\Delta q(\%)}{\Delta p(\%)}$$
 $$\lim_{\Delta p\to0}\frac{\frac{\Delta q}{q}}{\frac{\Delta p}{p}}=\frac{\frac{dq}{q}}{\frac{dp}{p}}=\frac{dq}{dp}\frac{p}{q}=\epsilon$$
 Minore è l'elasticità, minore è la reattività dei prezzi
 $$\begin{cases}0\le\epsilon<1\to\textup{domanda rigida}\\\epsilon=1\to\textup{domanda unitaria}\\\epsilon>1\to\textup{domanda elastica}\end{cases}$$
+### Funzione di domanda inversa ($P(X)$)
+Utilizzata per esprimere il prezzo in funzione della quantità: questa funzione rappresenta il prezzo del bene 1 in corrispondenza del quale ne vengono domandate $X$ unità.
+Il prezzo di un bene rappresenta il $MRS$ tra quel bene e tutti gli altri beni, ovvero la disponibilità marginale a pagare per un unità addizionale di quel bene da parte di chi lo sta domandando.
+### Ricavo ($R$)
+$$R=pq$$
+$$\frac{\Delta R}{\Delta p}=q+p\frac{\Delta q}{\Delta p}=q[1-|\epsilon(p)|]$$
+Se la domanda è molto sensibile al prezzo (molto elastica), un aumento del prezzo ridurrà talmente la domanda che i ricavi diminuiranno. 
+Se la domanda è poco sensibile al prezzo (inelastica) un aumento del prezzo non la modificherà e quindi i ricavi aumenteranno.
+### Ricavo marginale ($MR$)
+$$MR=\frac{\Delta R}{\Delta q}=p+q\frac{\Delta p}{\Delta q}=p(q)\Big[1-\frac{1}{|\epsilon(q)|}\Big]$$
+- $\epsilon=-1\implies MR=0$
+- $\epsilon<1\implies$ il ricavo diminuisce all'aumentare dell'output
+Se la domanda non è molto sensibile al prezzo, per poter aumentare l'output si dovranno ridurre i prezzi in modo consistente.
+### Curva del ricavo marginale
+Da $p(q)=a-qb$ , $\frac{\Delta p}{\Delta q}=-b$ e $\frac{\Delta R}{\Delta q}=p(q)+\frac{\Delta p(q)}{\Delta q}q$ si giunge a
+$$MR=\frac{\Delta R}{\Delta q}=a-2bq$$
+- $a$: intercetta sul prezzo
+- $b$ = -inclinazione
+### Isoquanti
+Insieme di tutte le possibili combinazioni degli input 1 e 2 esattamente sufficienti a produrre una data quantità di output (simili alle curve di indifferenza).
+- $x$: input
+- $y$: output
+### Prodotto marginale ($MP$)
+$$MP=\frac{\Delta y}{\Delta x_1}=\frac{f(x_1+\Delta x_1,x_2)-f(x_1,x_2)}{\Delta x_1}$$
+Il prodotto marginale è la quantità di output $y$ addizionale ottenuta impiegando una unità addizionale del fattore 1. Il prodotto marginale è un saggio di variazione: la quantità addizionale di output per unità di input (simile all'utilità marginale).
+**Legge della produttività marginale decrescente**: se la tecnologia è monotona, l'output totale aumenterà all'aumentare del livello del fattore 1 (mantenendo fisso il fattore 2). Il prodotto marginale diminuisce quando si utilizzano quantità crescenti.
+### Saggio tecnico di sostituzione ($TRS(x_1,x_2)$)
+$$TRS(x_1,x_2)=\frac{\Delta x_1}{\Delta x_2}=-\frac{MP_1(x_1,x_2)}{MP_2(x_1,x_2)}$$
+**Saggio tecnico di sostituzione decrescente**: se si impiega una quantità maggiore del fattore 1 e si varia l'impiego del fattore 2 in modo da rimanere sullo stesso isoquanto, il saggio tecnico di sostituzione diminuisce. L'ipotesi che il $TRS$ sia decrescente significa che l'inclinazione dell'isoquanto deve diminuire in valore assoluto man mano che ci si sposta lungo l'isoquanto nella direzione corrispondente all'aumento di $x_1$.
