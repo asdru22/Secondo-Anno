@@ -1,4 +1,4 @@
-### 1. Il mercato
+ ### 1. Il mercato
 - Principio di ottimizzazione: gli individui cercano di scegliere le migliori combinazioni di consumo possibili
 - Prinicipio di equilibrio: i prezzi variano finché la quantità domandata di un bene è uguale alla quantità offerta.
 - Prezzo di riserva: massima somma che un individuo è disposto a pagare, o il prezzo più elevato che un individuo accetterà di pagare per acquistare un bene.

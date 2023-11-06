@@ -58,12 +58,24 @@ $p=a(n)$
 for $k=n-1,\dots,0$
 	$p=a_k+x\times p$
 $p(\bar x)\leftarrow p$
+```
+% p: polinomio valutato
+% c: coefficenti polinomio
+% x: punto in cui valutare il polinomio
+
+for i=1:length(x)
+	p(i)=c(1);
+	for k=2:length(c)
+		p(i)=c(k)+x(i)*p(i);
+	end
+end
+```
 3. Algoritmo di Ruffini, costo computazionale: $n\times(\textup{moltiplicazione}+\textup{addizione})$
 $p=a_n$
 for $k=n-1,\dots,0$
 	$p=a_k+\bar x\times p$
 $p(x)=p$
-### Base polinomiale di Bernstein $p(x)$
+### Base polinomiale di Bernstein (algoritmo 1)
 $$p(x)=\sum^n_{i=0}b_i\times B_{i,n}(x)\ \ \ \ \ x\in[a,b]$$
 $$B_{i,n}(x)=\binom ni\frac{(b-x)^{n-1}(x-a)^i}{(b-a)^n}\ \ \ \ \ \ \ \ \ \ \ \binom ni=\frac{n!}{i!(n-i)!}$$
 Proprietà:
@@ -75,7 +87,7 @@ $$E_{IN}\le\sum^n_{i=0}|c_i||\epsilon_i|+|c_x||\epsilon_x|$$
 $$p(x)=\sum^n_{i=0}b_i\times B_{i,n}(x)$$
 $$B_{i,u}(t)=t\times B_{i-1,u-1}(t)+(1-t)\times B_{i,u-1}(t)$$
 con $B_{0,0}(t)=1,\ t\in[0,1]$ e $B_{i,u}(t)=0\ \forall i\notin\{0,\dots,u\}$. Ha costo computazionale $O(n^2)$, ma è più stabile rispetto a Horner perché non si fanno operazioni a rischio numerico (si lavora sempre con elementi positivi)
-### Algoritmo di Casteljau
+### Algoritmo di Casteljau (algoritmo 2)
 $$p(x)=\sum^n_{i=0}b_i\times B_{i,n}(x)\to\sum^{n=0}_{i=0}b_0^{[n]}B_{0,0}(x)=b_{0}^{[n]}$$
 Dove $B_{i,n}(x)$ è lo sviluppo della formula ricorrente. Generalizzando:
 $$b_i^{[j]}=b_i^{[j-1]}(1-x)+b_{i+1}^{[j-1]}$$
@@ -95,6 +107,22 @@ Insieme dei punti $P_i=(x_i,y_i)$ con $i=0,\dots,n$.
 $$c(t)=\sum^n_{i=0}P_iB_{i,n}(t)\ \ \ t\in[0,1]\Longrightarrow \Big[\sum^n_{i=0}x_iB_{i,n}(t),\sum^n_{i=0}y_iB_{i,n}(t)\Big]$$
 ### Interpolazione polinomiale di dati
 **Teorema di esistenza e unicità**: dati $n+1$ punti $(x_i,y_i),\ i=0,\dots,n$ con $x_i$ distinti, esiste ed è unico il polinomio $p\in\mathbb P_n$ che verifica le condizioni di interpolazione ($P(x_i)=y_i,\ i=0,\dots,n$)
-### Risoluzione computazionale (base di Newton)
-$$(x_i,y_i),\ i=0,\dots, n\ \ \ x\in[a,b]\ \ \ a=\min\{x_i\},b=\max\{x_i\}$$
+$$(x_i,y_i),\ i=0,\dots, n\ \ \ x\in[a,b]\ \ \ a=\min\{x_i\},\ b=\max\{x_i\}$$
+### Interpolazione nella base di Newton
 $$p(x)=\{1,(x-x_0),(x-x_0)\times(x-x_1),\dots,(x-x_0)\times\ldots\times(x-x_{n-1})\}$$
+### Interpolazione nella base di Bernstein
+$$p(x)=\sum^n_{i=0}b_iB_{i,n}(t)\ \ \ \ t=\frac{x-a}{b-a}\ \ \ t\in[0,1]$$
+
+### Inerpolazione nella base di Lagrange
+$$p(x)=\sum^n_{i=0}y_iL_{i,n}(x)\ \ \ L_{i,n}(x_j)=\begin{cases}1\ \textup{se}\ i=j\\0\ \textup{altrimenti}\end{cases}$$
+$$L_{i,n}(x)=\omega_i(x-x_0)(x-x_1)\dots(x-x_{i-1})(x-x_{i+1})\dots(x-x_n)$$
+$$\omega_i=\frac{1}{(x_i-x_0)(x_i-x_1)\dots(x_i-x_{i-1})(x_i-x_{i+1})\dots(x_i-x_n)}$$
+Riassumendo: 
+$$L_{i,n}(x)=\frac{\prod^n_{j=0,j\ne i}(x-x_j)}{\prod^n_{j=0,j\ne i}(x_i-x_j)}\ \ i=0,\dots,n$$
+
+### Interpolazione di punti (2D)
+$$\vec{c}(t)=\begin{cases}c_1(t)\\c_2(t)\end{cases}$$
+$$c_1(t)=\sum^n_{i=0}x_iB_{i,n}(t),\ c_2(t)=\sum^n_{i=0}y_iB_{i,n}(t),\ t\in[0,1]$$
+### Interpolazione di funzioni
+$$f(x)\in[a,b]\implies |p(x)-f(x)|<\textup{tolleranza}$$
+Si campiona la funzione in punti opportuni e si cerca di ricondursi ad un'interpolazione di dati.
