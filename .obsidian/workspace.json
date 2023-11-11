@@ -11,9 +11,11 @@
             "id": "0398db0efa93af52",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Algoritmi e Strutture Dati/pdf/hash map.pdf"
+                "file": "Metodi Numerici/Formulario.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e Strutture Dati/pdf/hash map.pdf",
+                "file": "Metodi Numerici/Formulario.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e Strutture Dati/pdf/hash map.pdf",
+                "file": "Metodi Numerici/Formulario.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e Strutture Dati/pdf/hash map.pdf"
+                "file": "Metodi Numerici/Formulario.md"
               }
             }
           },
@@ -157,24 +159,24 @@
   },
   "active": "0398db0efa93af52",
   "lastOpenFiles": [
-    "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf",
+    "Microeconomia/5F80FE09-B5B9-47FD-B7F8-B1CDF0EF20DB.tmp",
+    "Algoritmi e Strutture Dati/A9B4081C-1BB0-4C84-A6D4-60C81781F15C.tmp",
+    "Metodi Numerici/9BDDF49C-243C-4ABC-A65B-32955EA62346.tmp",
+    "Metodi Numerici/dispensa.pdf",
+    "Microeconomia/Formulario.md",
+    "Microeconomia/Introduzione.md",
+    "Metodi Numerici/Formulario.md",
+    "Metodi Numerici/laboratorio/lez5/curv2_ppbezierCC1_interp_der.m",
+    "Metodi Numerici/laboratorio/lez5/curv2_ppbezierCC1_interp.m",
+    "Metodi Numerici/laboratorio/anmglib_4.0/curv2_ppbezierCC1_interp_der.m",
+    "Metodi Numerici/laboratorio/lez5/sppbezinterp_p2d.asv",
+    "Metodi Numerici/laboratorio/lez5/sbezinterp_p2d.asv",
+    "Metodi Numerici/laboratorio/lez4/sppbezplot.asv",
+    "Metodi Numerici/laboratorio/lez5/spolint_lagr_fun.asv",
+    "Microeconomia/Riassunto.md",
     "Algoritmi e Strutture Dati/Introduzione.md",
     "Algoritmi e Strutture Dati/Formulario.md",
-    "Microeconomia/Riassunto.md",
-    "Microeconomia/Formulario.md",
-    "Metodi Numerici/Formulario.md",
-    "Metodi Numerici/dispensa.pdf",
-    "Metodi Numerici/laboratorio/lez4/sbezcurv2d_trans.asv",
-    "Metodi Numerici/laboratorio/lez4/ruota_attorno_punto.m",
-    "Metodi Numerici/laboratorio/lez4/untitled.m",
-    "Metodi Numerici/laboratorio/lez4/sbernst.asv",
-    "Metodi Numerici/laboratorio/lez4/spoly_eval2.asv",
-    "Metodi Numerici/laboratorio/lez4/gatto.m",
-    "Metodi Numerici/laboratorio/lez4/cat.m",
-    "Algoritmi e Strutture Dati/pdf/analisi algoritmi.pdf",
-    "Algoritmi e Strutture Dati/pdf/hash map.pdf",
     "Finanza Aziendale/Formulario.md",
-    "Microeconomia/Introduzione.md",
     "Finanza Aziendale/Definizioni.md",
     "Finanza Aziendale/Introduzione.md",
     "Microeconomia/2 Vincolo di Bilancio.md",

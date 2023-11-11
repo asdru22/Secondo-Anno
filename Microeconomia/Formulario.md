@@ -169,3 +169,42 @@ Il prodotto marginale è la quantità di output $y$ addizionale ottenuta impiega
 ### Saggio tecnico di sostituzione ($TRS(x_1,x_2)$)
 $$TRS(x_1,x_2)=\frac{\Delta x_1}{\Delta x_2}=-\frac{MP_1(x_1,x_2)}{MP_2(x_1,x_2)}$$
 **Saggio tecnico di sostituzione decrescente**: se si impiega una quantità maggiore del fattore 1 e si varia l'impiego del fattore 2 in modo da rimanere sullo stesso isoquanto, il saggio tecnico di sostituzione diminuisce. L'ipotesi che il $TRS$ sia decrescente significa che l'inclinazione dell'isoquanto deve diminuire in valore assoluto man mano che ci si sposta lungo l'isoquanto nella direzione corrispondente all'aumento di $x_1$.
+### Profitto di un'impresa ($\pi$)
+$$\pi=R-C$$
+- $R=\sum P_iy_i$
+- $C=\sum\omega_j x_j$
+- $i$: output
+- $j$: input
+- $\omega$: prezzo unitario
+### Massimizzazione del profitto ($BP$)
+$$\max_{x_1}\pi(x_1,\bar x_2)=p\cdot f(x_1,\bar x_2)-\omega_1 x_1-\omega_2 x_2$$
+- $\bar x_2$: valore dato, non può essere scelto
+- $\pi=p\cdot y-\sum^2_{j=1}\omega_j x_j$
+Massimizzazione del profitto nel breve periodo:
+$$pMP_1-\omega_1\Longleftrightarrow pMP_1(x_1^*,\bar x_2)=\omega_1\to x_1^*$$
+$$\frac{\delta\pi(\cdot)}{\delta x_1}\to p\frac{\delta MP_1}{\delta x_1}\le0$$
+### Curva di isoprofitto ($y$)
+$$y=\frac{\tilde \pi+\omega_2\bar x_2+\omega_1x_1}p$$
+Un'azienda vorrà stare sulla curva di isoprofitto più alta che si può scegliere data la tecnologia a disposizione, ovvero la tangente alla curva di produzione.
+### Statica comprata nel lungo periodo ($x_2$ variabile)
+$$\begin{array}{l}\uparrow\omega_1\to\downarrow x_1, y\ \ \ \ \ \ \ \downarrow\omega_1\to\uparrow x_1, y\\\uparrow p\to\uparrow x_1,y\ \ \ \ \ \ \ \ \ \downarrow p\to\downarrow x_1,y\end{array}$$
+$$\max_{x_1,x_2}\pi=\begin{cases}\frac{\delta\pi(\cdot)}{\delta x_1}=0\Longleftrightarrow pMP_1=\omega_1\\\frac{\delta\pi(\cdot)}{\delta x_2}=0\Longleftrightarrow pMP_2=\omega_2\end{cases}\Longrightarrow(x_1^*,x_2^*)$$
+### Isocosto
+$$x_2=\frac{\bar c_2}{\omega_2}-\frac{\omega_1}{\omega_2}x_1$$
+L'isocosto è l'insieme dei punti corrispondenti alle varie combinazioni di due fattori produttivi da cui risulta lo stesso costo totale, dati i prezzi dei fattori stessi.
+### Obiettivo di produzione
+$$\min_{x_1,x_2}c(x_1,x_2):f(x_1,x_2)=\bar y$$
+Costo minimo per produrre $\bar y$ unità.
+### Moltiplicatori di Lagrange
+Si usano per minimizzare i costi sotto il vincolo di produrre una quantità data. Come si passa da una funzione di produzione a una funzione di costo
+1. Leontief:
+$$c(\bar y)=\bar y(\omega_1+\omega_2)$$
+3. Fattori perfetti sostituti:
+$$\begin{cases}\omega_1>\omega_2\to c(y)=\omega_2y\\\omega_1<\omega_2\to c(y)=\omega_1y\end{cases}$$
+Si sceglie quello che costa meno
+3. Cobb-Douglas:
+$$C(x_1^*,x_2^*)=y^{\frac{1}{a+b}}A$$
+### Moltiplicatore di Lagrange $(\lambda)$
+In teoria del consumo se aumenta il reddito cosa succede all'utilità
+In teoria della produzione se aumenta la produzione cosa succede al costo
+Quanto si spende in più per produrre un unità infinitesimale in più? $\lambda=\frac{dC(y)}{dy}$

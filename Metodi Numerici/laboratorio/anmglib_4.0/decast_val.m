@@ -1,7 +1,8 @@
 function Px=decast_val(bezier,t)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %function Px=decast_val(bezier,t)
-%Calcola il valore di una curva nD nella base di Bernstein in [0,1]
+%Calcola il valore di una curva nD nella base di Bernstein in [a,b] QUINDI
+%DATO UN QUALSIASI INTERVALLO [a,b] TI COVERTE IN [0,1]
 %definita dai punti di controllo bezier.cp nei punti t mediante l'algoritmo
 %di de Casteljau
 %bezier --> struttura di una curva di Bezier:

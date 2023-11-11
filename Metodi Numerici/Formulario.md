@@ -116,8 +116,9 @@ $$p(x)=\sum^n_{i=0}b_iB_{i,n}(t)\ \ \ \ t=\frac{x-a}{b-a}\ \ \ t\in[0,1]$$
 ### Inerpolazione nella base di Lagrange
 $$p(x)=\sum^n_{i=0}y_iL_{i,n}(x)\ \ \ L_{i,n}(x_j)=\begin{cases}1\ \textup{se}\ i=j\\0\ \textup{altrimenti}\end{cases}$$
 $$L_{i,n}(x)=\omega_i(x-x_0)(x-x_1)\dots(x-x_{i-1})(x-x_{i+1})\dots(x-x_n)$$
+Prima forma di Lagrange:
 $$\omega_i=\frac{1}{(x_i-x_0)(x_i-x_1)\dots(x_i-x_{i-1})(x_i-x_{i+1})\dots(x_i-x_n)}$$
-Riassumendo: 
+Seconda forma di Lagrange: 
 $$L_{i,n}(x)=\frac{\prod^n_{j=0,j\ne i}(x-x_j)}{\prod^n_{j=0,j\ne i}(x_i-x_j)}\ \ i=0,\dots,n$$
 
 ### Interpolazione di punti (2D)
@@ -126,3 +127,43 @@ $$c_1(t)=\sum^n_{i=0}x_iB_{i,n}(t),\ c_2(t)=\sum^n_{i=0}y_iB_{i,n}(t),\ t\in[0,1
 ### Interpolazione di funzioni
 $$f(x)\in[a,b]\implies |p(x)-f(x)|<\textup{tolleranza}$$
 Si campiona la funzione in punti opportuni e si cerca di ricondursi ad un'interpolazione di dati.
+
+### Errore di interpolazione di Lagrange ($R(x)$)
+$$R(x)=f(x)-p(x),\ \bar x\in[a,b]$$
+Sia $f(x)\in C^{(n+1)}_{[a,b]}$ e sia $\bar x$ un punto qualsiasi in $[a,b]\implies\exists\xi(\in[a,b]):$
+$$f(\bar x)=p(\bar x)+\frac{\omega(\bar x)}{(n+1)!}f^{(n+1)}(\xi)$$
+con $\omega(\bar x)=(\bar x-x_0)(\bar x-x_1)\cdot\ldots\cdot(\bar x-x_n)$ e $p(x)\in\mathbb P_n$ interpolante di $(x_i,f(x_i)),\ i=0,\dots,n$
+**Corollario**:
+Sia $M_{n+1}=\max{x\in[a,b]}|f^{(n+1)}(x)|\implies|R(x)|\le\frac{|\omega(\bar x)|}{(x+1)!}M_{n+1}$
+### Condizione di Lipshitz
+$|f(\bar x)-f(\tilde x)|<k|\bar x-\tilde x|\forall\bar x,\tilde x\in[a,b]\implies$ il polinomio interpolante converge ad $f(x)$ su $I$ per $n\to\infty$
+### Costante di Lesbeghe
+$$\Lambda_n(p(x))=\max_{x\in[a,b]}C_{\textup{int}}(p(x))$$
+### Interpolazione polinomiale a tratti ($pp(x)$)
+$$pp(x)\begin{cases}p_{0,n}\ \ \ x\in[x_0,x_n]\\p_{1,n}\ \ \ x\in[x_n,x_{2n}]\\\vdots\\p_{m-1,n}\ \ \ x\in[x_{n(m-1)},x_{m-n}]\end{cases}$$
+Gode delle seguenti proprietà:
+$$f\in C^0_{[a,b]}\implies\forall x\in [a,b]\exists \delta >09:h<\delta \implies|f(x)-pp_1(x)|<\textup{tol}\forall x\in[a,b]$$
+$$f\in C^2_{[a,b]}\implies\forall x\in[a,b]\ |f(x)-pp_1(x)|<\frac1 8h^2\max_{z\in[a,b]}|f^{(2)}(z)|$$
+### Teorema di Convergenza
+$$f\in C^4_{[0,1]}\implies|f(x)-pp(x)|\le\frac1{384}h^4\max_{a\le h\le b}|f^{(4)}(z)|$$
+- $x\in[a,b]$
+- $h=\max(x_{i+1}-x_i)$
+
+### Formula di quadratura interpolatoria di Newton-Cotes
+$$\int^b_ap(x)dx=\int^b_a\sum^n_{i=0}f(x_i)L_{i,n}(x)dx=\sum^n_{i=0}f(x_i)\int^b_aL_{i,n}(x)dx$$
+$$\int^b_aL_{i,n}(x)dx=\int^b_a\prod^n_{i=0,j\ne i}\frac{x-x_j}{x_i-x_j}dx=h\int^n_0\prod^n_{i=0,j\ne i}\frac{t-j}{i-j}dt$$
+### Formula dei trapezi ($n=1$):
+$$\int^b_af(x)dx\simeq\frac h2(f(x_0)+f(x_1))$$
+### Formula generalizzata per $n=1,...,8$
+$$\int^b_af(x)dx\simeq\frac{b-a}{ns}\sum^n_{i=0}\sigma_if(x_i)$$
+
+| $n$ | $\sigma_i$ | $ns$ |
+|---|---|---|
+| 1 | 1 1 | 2 |
+| 2 | 1 4 1 | 6 |
+| 3 | 1 3 ...| 8 |
+| 4 | 7 32 12 ...| 90 |
+| 5 | 19 75 50 ...| 288 |
+| 6 | 41 216 27 272 ...| 840 |
+| 7 | 751 3577 1323 2989 ...| 17280 |
+| 8 | 989 5888 -928 10496 -4540 ...| 28350 |
