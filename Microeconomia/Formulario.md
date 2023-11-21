@@ -208,3 +208,23 @@ $$C(x_1^*,x_2^*)=y^{\frac{1}{a+b}}A$$
 In teoria del consumo se aumenta il reddito cosa succede all'utilità
 In teoria della produzione se aumenta la produzione cosa succede al costo
 Quanto si spende in più per produrre un unità infinitesimale in più? $\lambda=\frac{dC(y)}{dy}$
+### Curve di Costo Derivate
+- $AVC(y)$: costi medi variabili
+- $AFC(y)$: costi medi fissi
+- $AC(y)$: Costo medio
+$$AC(y)=\frac{c(y)}{y}=\frac{c_v(y)}{y}+\frac F y=AVC(y)+AFC(y)$$
+### Curva del Costo Marginale ($MC(y)$)
+Il costo marginale misura la la variazione dei costi corrispondente ad una variazione dell'output.
+$$MC(y)=\frac{\Delta c(y)}{\Delta y}=\frac{c(y+\Delta y)}{\Delta y}$$
+### Costo Medio di Lungo e Breve Periodo
+$$LAC=\frac{c(y)} y$$
+$$SAC=\frac{c(y,k^*)}y$$
+- $k(y)$: funzione di costo di breve periodo
+### Condizione di chiusura nel breve periodo
+$$\pi(y)=\begin{cases}p\cdot y-c_v(y)-F\ \textup{se}\ y>0\\-F\ \textup{se}\  y=0\end{cases}$$
+### Surplus ($S$)
+$$S=py-c_v(y)=\textup{profitto-costi fissi}$$
+I costi fissi (non sommersi) possono essere sempre recuperati chiudendo l'attività.
+$$S=py-c_v(y)-\textup{costi sommersi (se presenti)}$$
+### Analisi di lungo periodo
+$$\pi(y)=py-c(y)=y(P-AC(y))\ \ \max(\pi(y))\to p=MC(y)$$

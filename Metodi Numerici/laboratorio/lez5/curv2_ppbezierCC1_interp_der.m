@@ -27,7 +27,7 @@ alpha=0.5*t;
  for i=2:m
    tau(i)=tau(i-1)+sqrt((cqx(i)-cqx(i-1)).^2+(cqy(i)-cqy(i-1)).^2).^alpha;
  end
- t(1)=a;
+ t(1)=Q(1,1);
  for i=2:m
    t(i)=a+bma*tau(i)/tau(m);
  end

@@ -127,7 +127,8 @@ $$c_1(t)=\sum^n_{i=0}x_iB_{i,n}(t),\ c_2(t)=\sum^n_{i=0}y_iB_{i,n}(t),\ t\in[0,1
 ### Interpolazione di funzioni
 $$f(x)\in[a,b]\implies |p(x)-f(x)|<\textup{tolleranza}$$
 Si campiona la funzione in punti opportuni e si cerca di ricondursi ad un'interpolazione di dati.
-
+### Spazio $C$
+Si dice $C^k_{[a,b]}$ lo spazio delle funzioni continue nell'intervallo $[a,b]$ con ordine di continuità $k$. 
 ### Errore di interpolazione di Lagrange ($R(x)$)
 $$R(x)=f(x)-p(x),\ \bar x\in[a,b]$$
 Sia $f(x)\in C^{(n+1)}_{[a,b]}$ e sia $\bar x$ un punto qualsiasi in $[a,b]\implies\exists\xi(\in[a,b]):$
@@ -167,3 +168,12 @@ $$\int^b_af(x)dx\simeq\frac{b-a}{ns}\sum^n_{i=0}\sigma_if(x_i)$$
 | 6 | 41 216 27 272 ...| 840 |
 | 7 | 751 3577 1323 2989 ...| 17280 |
 | 8 | 989 5888 -928 10496 -4540 ...| 28350 |
+
+### Errore nella formula dei trapezi ($n=1$)
+$$R_T=-\frac 1{12}h^3f^2(\eta)$$
+### Errore nella formula di Simpson ($n=2$)
+$$R_t=-\frac1{90}h^5f^4(\eta)$$
+### Estrapolazione di Richardson per Trapezi
+$$\int^b_af(x)dx-T\Big(\frac{h}{2}\Big)=T\Big(\frac h 2\Big)-T(h)+O(h^4)$$
+### Estrapolazione di Richardson per Simpson
+$$\int^b_af(x)dx=\frac 1 {15}\Big(16\cdot S\Big(\frac{h}{2}-S(h)\Big)\Big)$$
