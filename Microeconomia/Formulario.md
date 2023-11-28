@@ -25,6 +25,8 @@ Ci sono altri due assiomi:
 - marginale: infinitesimale;
 - sostituzione: quante unità di bene 2 rinunciare per averne una in più di bene 1 e restare sulla stessa curva di indifferenza.
 $$MRS=\lim_{x_1\to0}(-\frac{\Delta x_2}{\Delta x_1})=-\frac{\delta x_1}{\delta x_2}$$
+**Formule alternative**:
+$$SMS=-\frac{\alpha b}{\beta a}=-\frac{\frac{\delta U(x_1,x_2)}{x_1}}{\frac{\delta U(x_1,x_2)}{x_2}}=-\frac{p_1}{p_2}$$
 Più la distanza tra $x_1$ e $x_2\to0$, più l'approssimazione sarà corretta.
 ### Utilità
 $$u:\mathbb R^2_+\to\mathbb R_+|\begin{cases}x\succ y\Longleftrightarrow u(x)>u(y)\\x\sim y \Longleftrightarrow u(x)=u(y)\end{cases}$$

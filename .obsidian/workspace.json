@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5f030534d7c679f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Microeconomia/Formulario.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Metodi Numerici/Formulario.md",
+                "file": "Microeconomia/Formulario.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Metodi Numerici/Formulario.md",
+                "file": "Microeconomia/Formulario.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Metodi Numerici/Formulario.md"
+                "file": "Microeconomia/Formulario.md"
               }
             }
           },
@@ -157,22 +170,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0398db0efa93af52",
+  "active": "5f030534d7c679f3",
   "lastOpenFiles": [
-    "Algoritmi e Strutture Dati/pdf/grafi.pdf",
+    "Microeconomia/capitoli/capitolo_24.pdf",
+    "Microeconomia/capitoli/z_capitolo_17.pdf",
+    "Microeconomia/capitoli/z_capitolo_16.pdf",
+    "Microeconomia/capitoli/capitolo_23.pdf",
+    "Microeconomia/capitoli/capitolo_22.pdf",
+    "Microeconomia/capitoli/capitolo_21.pdf",
+    "Metodi Numerici/Formulario.md",
+    "Microeconomia/capitoli/capitolo_20.pdf",
+    "Microeconomia/capitoli/capitolo_19.pdf",
     "Microeconomia/Formulario.md",
+    "Palestra.md",
+    "Algoritmi e Strutture Dati/pdf/grafi.pdf",
     "Metodi Numerici/dispensa.pdf",
     "Finanza Aziendale/es/1.pdf",
-    "Finanza Aziendale/pdf/2. slide calcolo valore assoluto.pdf",
-    "Finanza Aziendale/es/msoCF3A.tmp",
-    "Finanza Aziendale/es/msoCE10.tmp",
-    "Finanza Aziendale/es/msoF87F.tmp",
-    "Finanza Aziendale/es/msoF755.tmp",
-    "Finanza Aziendale/es/msoFFC9.tmp",
-    "Finanza Aziendale/es",
-    "Finanza Aziendale/Nuova cartella",
     "Finanza Aziendale/Formulario.md",
-    "Metodi Numerici/Formulario.md",
     "Microeconomia/Introduzione.md",
     "Microeconomia/Riassunto.md",
     "Algoritmi e Strutture Dati/Introduzione.md",
