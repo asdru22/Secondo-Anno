@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "23e0d10c795e83bf",
+        "id": "48fa3bd7920f1a2a",
         "type": "tabs",
         "children": [
           {
-            "id": "0398db0efa93af52",
+            "id": "e1c5cd597ef20b57",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Metodi Numerici/Formulario.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5f030534d7c679f3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Microeconomia/Formulario.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomia/Formulario.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomia/Formulario.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomia/Formulario.md"
+                "file": "Palestra.md"
               }
             }
           },
@@ -170,25 +151,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "5f030534d7c679f3",
+  "active": "64d91feac736879b",
   "lastOpenFiles": [
+    "Metodi Numerici/Formulario.md",
+    "Microeconomia/Riassunto.md",
+    "Microeconomia/Riassunti_annotato.pdf",
+    "Algoritmi e Strutture Dati/pdf/grafi.pdf",
+    "Microeconomia/Formulario.md",
     "Microeconomia/capitoli/capitolo_24.pdf",
     "Microeconomia/capitoli/z_capitolo_17.pdf",
     "Microeconomia/capitoli/z_capitolo_16.pdf",
     "Microeconomia/capitoli/capitolo_23.pdf",
     "Microeconomia/capitoli/capitolo_22.pdf",
     "Microeconomia/capitoli/capitolo_21.pdf",
-    "Metodi Numerici/Formulario.md",
     "Microeconomia/capitoli/capitolo_20.pdf",
     "Microeconomia/capitoli/capitolo_19.pdf",
-    "Microeconomia/Formulario.md",
     "Palestra.md",
-    "Algoritmi e Strutture Dati/pdf/grafi.pdf",
-    "Metodi Numerici/dispensa.pdf",
-    "Finanza Aziendale/es/1.pdf",
     "Finanza Aziendale/Formulario.md",
     "Microeconomia/Introduzione.md",
-    "Microeconomia/Riassunto.md",
     "Algoritmi e Strutture Dati/Introduzione.md",
     "Algoritmi e Strutture Dati/Formulario.md",
     "Finanza Aziendale/Definizioni.md",
