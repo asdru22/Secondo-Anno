@@ -8,7 +8,7 @@ function mdppBez = curv2_ppbezier_offset(ppbez,d)
 %          ppbez.deg --> grado della curva o di ogni tratto
 %          ppbez.cp  --> lista dei punti di controllo (nc*ppbez.deg+1) x 2
 %          ppbez.ab  --> partizione di [a,b]; nc + 1 elementi
-%d   --> distanza (positiva o negativa) della curva offset dalla Bezier 
+%d     --> distanza (positiva o negativa) della curva offset dalla Bezier 
 %mdppBez <-- struttura di una curva Bezier a tratti multi-degree
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -36,10 +36,8 @@ for i=1:nc
     %struttura fBezier per derivata prima delle funzioni 
     %componenti la curva di Bezier
     f.deg=bezP.deg-1;
-    f.a=bezP.ab(1);
-    f.b=bezP.ab(2);
-%     f.cp=n.*(bezP.cp(2:ncp,1)-bezP.cp(1:ncp-1,1));
-    f.cp=n.*(bezP.cp(2:ncp,1)-bezP.cp(1:ncp-1,1))./(f.b-f.a);
+    f.ab=bezP.ab;
+    f.cp=n.*(bezP.cp(2:ncp,1)-bezP.cp(1:ncp-1,1))./(f.ab(2)-f.ab(1));
     TOL=1.0e-10;
     % rootsx = bezier_clipping(f,TOL);
     rootsx = lane_riesenfeld(f,TOL);
@@ -50,10 +48,8 @@ for i=1:nc
     end
     %struttura fBezier
     f.deg=bezP.deg-1;
-    f.a=bezP.ab(1);
-    f.b=bezP.ab(2);
-%    f.cp=n.*(bezP.cp(2:ncp,2)-bezP.cp(1:ncp-1,2));
-    f.cp=n.*(bezP.cp(2:ncp,2)-bezP.cp(1:ncp-1,2))./(f.b-f.a);
+    f.ab=bezP.ab;
+    f.cp=n.*(bezP.cp(2:ncp,2)-bezP.cp(1:ncp-1,2))./(f.ab(2)-f.ab(1));
     % rootsy = bezier_clipping(f,TOL);
     rootsy = lane_riesenfeld(f,TOL);
     if (length(rootsy) >= 1)

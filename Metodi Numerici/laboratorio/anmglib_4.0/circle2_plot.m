@@ -1,6 +1,6 @@
 function [x,y]= circle2_plot(O,r,np,varargin)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%function [x,y]=circle2_plot(O,r,n,np,varargin)
+%function [x,y]=circle2_plot(O,r,np,varargin)
 %Disegna sul piano cartesiano una circonferenza di centro O e raggio r
 %O  --> centro 2D della circonferenza
 %r  --> raggio

@@ -1,18 +1,22 @@
-function roots = bezier_clipping(f,TOL)
+function roots = bezier_clipping(fun,TOL)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%function roots = bezier_clipping(f,TOL)
+%function roots = bezier_clipping(fun,TOL)
 %Determina gli zeri di una funzione polinomiale data nella base di 
 %Bernstein in un intervallo (quello di definizione della base);
 %utilizza il metodo denominato in letteratura 'Bézier Clipping'
-%f     --> struttura funzione polinomiale nella base di Bersntein 
+%fun   --> struttura funzione polinomiale nella base di Bernstein 
 %TOL   --> tolleranza
 %roots <-- vettore delle radici trovate
 %Nota. al momento questa function non viene richiamata da nessuna
 %      funzione della libreria; la si trova commentata nelle
-%      funzioni urv2_bezier_offset.m e curv2_ppbezier_offset.m
+%      funzioni curv2_bezier_offset.m e curv2_ppbezier_offset.m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %inizializzazioni
+ f.deg=fun.deg;
+ f.cp=fun.cp;
+ f.a=fun.ab(1);
+ f.b=fun.ab(2);
  nr=0;
  roots=[];
  ascisse=[];

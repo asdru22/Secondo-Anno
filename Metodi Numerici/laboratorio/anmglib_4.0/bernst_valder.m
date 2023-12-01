@@ -33,8 +33,8 @@ for k=1:m
    if i==g-1
      temp=0;
      for j=l:n
-       bsp(k,j-1)=temp-n.*bs(k,j);
-       temp=n.*bs(k,j);
+       bsp(k,j-1)=temp-g.*bs(k,j);
+       temp=g.*bs(k,j);
      end
      bsp(k,n)=temp;
    end

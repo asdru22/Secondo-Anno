@@ -1,26 +1,29 @@
-% Metodo lane_riesenfeld per zeri di polinomi nella base di Bernstein, cioè
-% in un intervallo (quello di definizione del polinomio)
-function roots = lane_riesenfeld(f,TOL)
+function roots = lane_riesenfeld(fun,TOL)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%function roots = lane_riesenfeld(f,TOL)
+%function roots = lane_riesenfeld(fun,TOL)
 %Determina gli zeri di una funzione polinomiale data nella base di 
 %Bernstein in un intervallo (quello di definizione della base);
 %utilizza il metodo denominato in letteratura 'Lane-Riesenfeld'
-%f     --> struttura funzione polinomiale nella base di Bersntein 
+%fun   --> struttura funzione polinomiale nella base di Bernstein 
 %TOL   --> tolleranza
 %roots <-- vettore delle radici trovate
 %Nota. al momento questa function viene richiamata dalle function
 %      della libreria curv2_bezier_offset.m e curv2_ppbezier_offset.m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  buf_sr = root_isolate(f,TOL);
-  roots = find_root(buf_sr,TOL);
+  f.deg=fun.deg;
+  f.cp=fun.cp;
+  f.a=fun.ab(1);
+  f.b=fun.ab(2);
+  [buf_sr, roots] = root_isolate(f, TOL);
+  roots = find_root(buf_sr, roots, TOL);
 end
 
 %isolamento di zeri; se uno zero e' multiplo non si riesce a determinare
 %un intervallo in cui ci sia una sola variazione di segno, in tal caso la
 %routine determina lei lo zero con una convergenza lineare.
-function buf_sr = root_isolate(f, TOL)
+function [buf_sr, roots] = root_isolate(f, TOL)
  nr = 0;
+ roots = [];
  buf = [];
  buf_sr = [];
 
@@ -42,9 +45,9 @@ function buf_sr = root_isolate(f, TOL)
             Bezier_idx = Remove_Bezier(Bezier_idx);
         else 
             if (p.b-p.a<TOL) %Aggiunta al programma originale per
-                             %trovare gli zeri in casi eccezionali  
-                roots(nr)=p.a+(p.b-p.a)/2;
+                             %trovare gli zeri in casi eccezionali 
                 nr=nr+1;
+                roots(nr)=p.a+(p.b-p.a)/2;
                 Bezier_idx = Remove_Bezier(Bezier_idx);
             else
                 xm=p.a+(p.b-p.a)/2;
@@ -60,10 +63,9 @@ end
 
 %Per ogni intervallo in cui c'e' una variazione di segno,
 %viene determinato uno zero.
-function roots = find_root(buf_sr,TOL)
- roots=[];
+function roots = find_root(buf_sr,roots,TOL)
  idx=length(buf_sr);
- nr = 0;
+ nr = length(roots);
 
  while (idx>0)
     p=buf_sr(idx);

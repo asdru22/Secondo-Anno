@@ -11,8 +11,10 @@
             "id": "e1c5cd597ef20b57",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "pdf",
+              "state": {
+                "file": "Metodi Numerici/dispensa.pdf"
+              }
             }
           }
         ]
@@ -81,6 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Metodi Numerici/dispensa.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Metodi Numerici/dispensa.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Palestra.md"
+                "file": "Metodi Numerici/dispensa.pdf"
               }
             }
           },
@@ -151,8 +155,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "64d91feac736879b",
+  "active": "e1c5cd597ef20b57",
   "lastOpenFiles": [
+    "Palestra.md",
     "Metodi Numerici/Formulario.md",
     "Microeconomia/Riassunto.md",
     "Microeconomia/Riassunti_annotato.pdf",
@@ -166,7 +171,6 @@
     "Microeconomia/capitoli/capitolo_21.pdf",
     "Microeconomia/capitoli/capitolo_20.pdf",
     "Microeconomia/capitoli/capitolo_19.pdf",
-    "Palestra.md",
     "Finanza Aziendale/Formulario.md",
     "Microeconomia/Introduzione.md",
     "Algoritmi e Strutture Dati/Introduzione.md",

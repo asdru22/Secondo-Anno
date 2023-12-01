@@ -12,6 +12,7 @@ function [bs]=gc_bspl_valder(g,t,x,od)
 %        il secondo e' l'indice del punto, il terzo e' l'indice della
 %        funzione base B-spline
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 ll=gc_findint(g,t,x);
 if (nargin==3 | od<0)
   od=0;
@@ -58,4 +59,3 @@ for ii=1:m
    l=l-1;
   end
 end
-

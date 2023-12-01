@@ -2,7 +2,7 @@ function point_plot(p,varargin)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %function point_plot(p,varargin)
 %Disegna punti, liste di punti o griglie di punti 2D e 3D
-%p  --> punto/i 2D o 3D
+%p  --> punto/i 2D o 3D (nx2 o nx3)
 %varargin --> argomenti opzionali di disegno da assegnare nel seguente
 %             ordine: LineSpecification, LineWidth,
 %             MarkerEdgeColor, MarkerFaceColor, MarkerSize 

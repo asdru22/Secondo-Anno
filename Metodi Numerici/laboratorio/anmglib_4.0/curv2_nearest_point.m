@@ -19,25 +19,35 @@ elseif (length(curvP.ab) == 2) flag=1;
 elseif ((length(curvP.ab)-1)*curvP.deg+1 == length(curvP.cp(:,1))) flag=2;
 else flag=3;
 end
+t=[];
 switch flag
     case 1
         P1xy = curv2_bezier_plot(curvP,np);
         a1=curvP.ab(1); b1=curvP.ab(2);
+        t=linspace(a1,b1,abs(np));
     case 2
         P1xy = curv2_ppbezier_plot(curvP,np);
         a1=curvP.ab(1); b1=curvP.ab(end);
+        nc=length(curvP.ab)-1;
+        for i=1:nc
+            t=[t,linspace(curvP.ab(i),curvP.ab(i+1),abs(np))];
+        end
     case 3
         P1xy = curv2_mdppbezier_plot(curvP,np);
         a1=curvP.ab(1); b1=curvP.ab(end);
+        for i=1:nc
+            t=[t,linspace(curvP.ab(i),curvP.ab(i+1),abs(np))];
+        end
     case 4
         P1xy = curv2_spline_plot(curvP,np);
         a1=curvP.knot(1); b1=curvP.knot(end);
+        [~,t]=gc_mesh(curvP.deg,Ps.knot,abs(np));
     case 5
         P1xy = curv2_nurbs_plot(curvP,np);
         a1=curvP.knot(1); b1=curvP.knot(end);
+        [~,t]=gc_mesh(curvP.deg,Ps.knot,abs(np));
 end
 
-t=linspace(a1,b1,abs(np));
 [s,k]=gc_dist3(x0,y0,P1xy(:,1),P1xy(:,2));
 %k contiene gli indici dei tre punti della curva più vicini al punto dato
 %cerchiamo il più vicino ancora fra np punti campionati fra questi tre
