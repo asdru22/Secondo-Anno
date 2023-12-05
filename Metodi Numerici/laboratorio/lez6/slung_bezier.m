@@ -5,6 +5,7 @@ close all
 open_figure(1);
 axis_plot(2.5,0.25);
 
+% cerca: lunghezza curva di bezier
 %definizione curva 2D di Bezier
 a=0; b=2;
 bezP.cp=[0,1;1,1;2,1;3,1];

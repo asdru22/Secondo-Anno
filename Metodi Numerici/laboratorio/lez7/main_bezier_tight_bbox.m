@@ -18,61 +18,82 @@ point_plot(bezQ.cp,'r-o',1,'k','r',8);
 [ncp,~]=size(bezQ.cp);
 
 %determina la curva aligned di una curva di Bézier
-bezP=align_curve(bezQ);
+[bezP,angle]=align_curve(bezQ);
+angle = angle;
 
-%vettore dei valori estremi
-extrema=[0];
-%struttura fBezier
-f.deg=bezP.deg-1;
-f.ab=bezP.ab;
-%coefficienti della derivata prima della prima componente della curva
-f.cp=bezP.deg*(bezP.cp(2:ncp,1)-bezP.cp(1:ncp-1,1))./(bezP.ab(2)-bezP.ab(1)); % pag 68 dispensa
+curv2_ppbezier_plot(bezP,100,'r-');
 
-TOL=1.0e-10;
-rootsx = lane_riesenfeld(f,TOL);
-if (length(rootsx) >= 1)
-    fprintf('Lista delle radici di x trovate nell''intervallo della curva:\n');
-    fprintf('%22.15e\n',rootsx);
-    extrema=[extrema,rootsx];
-    Px=decast_val(bezP,rootsx);
-%    plot(Px(:,1),Px(:,2),'ro');
+np = 100;
+t_values = linspace(0, 1, np);
+% Initialize array to store curve points
+curve_points = zeros(2, np);
+% Evaluate points on the Bezier curve using de Casteljau's algorithm
+for i = 1:np
+t = t_values(i);
+curve_points(:, i) = decast_val(bezP, t);
 end
 
-%struttura fBezier
-f.deg=bezP.deg-1;
-f.ab=bezP.ab;
-f.cp=bezP.deg*(bezP.cp(2:ncp,2)-bezP.cp(1:ncp-1,2))./(bezP.ab(2)-bezP.ab(1));
-
-TOL=1.0e-10;
-rootsy = lane_riesenfeld(f,TOL);
-if (length(rootsy) >= 1)
-    fprintf('Lista delle radici di y trovate nell''intervallo della curva:\n');
-    fprintf('%22.15e\n',rootsy);
-    extrema=[extrema,rootsy];
-    Py=decast_val(bezP,rootsy);
-%     plot(Py(:,1),Py(:,2),'ro');
-end
-
-extrema=[extrema,1];
-xy=decast_val(bezP,extrema);
+rect = bounding_box(curve_points');
 %bounding-box = più piccolo rettangolo contenente i punti
 %estremi ed il primo ed ultimo punto della curva
 %definisce il bounding-box come una curva di
-rect.deg=1;
+
+rotation_matrix = [cos(angle), -sin(angle); sin(angle), cos(angle)];
+rect = (rotation_matrix * rect')';
+rect= rect +bezQ.cp(1,:);
+
+plot(rect(:,1),rect(:,2),'g.--')
+
 %TO DO
 % TRASLARE IL PRIMO PUNTO SULL'ORIGINE E TROVARE ANGOLO DI INCLINAZIONE, 
 % APPLICARE TRASFORMAZIONI E RIPORTARE A POS INIZIALE (ALPHA = ATAN(Y,X))
 %trasformazione inversa e sua applicazione al bounding-box
 %M=...;
-tight=rect;
-tight.cp=point_trans_plot(rect.cp,M);
+
+%tight.cp=point_trans_plot(rect.cp,M);
 
 % area=curv2_ppbez_area(tight);
 % fprintf('Area = %e \n',area)
 % point_plot(rect.cp,'k-',1.5);
 
 %function per determinare una curva aligned
-    bezQ=align_curve(bezP);
+%bezQ=align_curve(bezP);
+%curv2_ppbezier_plot(bezQ,100,'r-');
 
-   curv2_ppbezier_plot(bezQ,100,'r-');
+function [bezP,angle]=align_curve(P)
+    % Trasla il primo punto di controllo all'origine
+    translation_vector = -P.cp(1, :);
+    translated_points = P.cp + translation_vector;
+    
+    % Calcola l'angolo di rotazione per portare l'ultimo punto di controllo sull'asse x
+    angle = atan2(translated_points(end, 2), translated_points(end, 1));
+    
+    % Matrice di trasformazione per la rotazione
+    rotation_matrix = [cos(-angle), -sin(-angle); sin(-angle), cos(-angle)];
+    
+    % Applica la trasformazione di rotazione
+    rotated_points = (rotation_matrix * translated_points')';
+    
+    bezP = P;
+    bezP.cp = rotated_points;
+end
 
+function out=bounding_box(v)
+    min_x = min(v(:,1));
+    min_y = min(v(:,2));
+    max_x = max(v(:,1));
+    max_y = max(v(:,2));
+    out = [
+        [min_x,min_y];
+        [max_x,min_y];
+        [max_x,max_y];
+        [min_x,max_y];
+        [min_x,min_y]
+        ];
+
+plot(out(:,1),out(:,2),'g.--')
+fill(out(:,1),out(:,2),'g')
+
+plot(v(:,1),v(:,2),'b.--')
+fill(v(:,1),v(:,2),'b')
+end

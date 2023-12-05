@@ -12,9 +12,11 @@ t = linspace(0,1,np)';
 
 % valutazione polinomio nella base di Bernstein
 % funzione bernst_valder del toolbox anmglib_4.0
-% Alg.1
 
-%TO DO
+[bs,bsp] = bernst_valder(g,t);
+
+yB = bs*cB';
+yBp = bsp*cB';
 
 figure('Name','Polinomio test e derivata')
 hold on

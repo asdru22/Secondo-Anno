@@ -5,7 +5,7 @@ hold on
 title("QUACK")
 
 ang = pi/2;
-
+% cerca: matrice rotazione
 rotationMatrix = [cos(ang), -sin(ang);sin(ang), cos(ang)];
 
 % -----------

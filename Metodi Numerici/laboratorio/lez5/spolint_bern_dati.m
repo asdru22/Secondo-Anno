@@ -28,7 +28,7 @@ c=B\y'; % c= soluzione del polinomio nella base di berstein
 bern.deg=grado;
 bern.cp=c; % punti di controllo
 bern.ab=[a,b];
-
+% cerca: interpolazione di dati
 %punti su cui valutare l'interpolante polinomiale per il grafico
 xv=linspace(a,b,100); 
 tv=(xv-a)./(b-a); % si porta xv nell'intervallo [0,1] (Ma non serve???)

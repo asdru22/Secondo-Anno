@@ -1,3 +1,5 @@
+% cerca: bounding box
+
 function[]=draw_rettangolo(v)
     min_x = min(v(:,1));
     min_y = min(v(:,2));

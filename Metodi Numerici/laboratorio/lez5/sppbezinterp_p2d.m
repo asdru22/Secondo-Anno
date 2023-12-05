@@ -13,6 +13,7 @@ Q=load('twitter.txt');
 %disegna i punti di interpolazione
 point_plot(Q,'k.',1,'k','k',12);
 
+% cerca: interpolazione punti 2d
 %chiama funzione per interpolazione a tratti della libreria anmglib_4.0
 %utilizzare l'help per info sui parametri di input
 param = 0;

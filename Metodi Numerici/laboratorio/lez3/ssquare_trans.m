@@ -14,7 +14,7 @@ point_plot(P,'k-o',1,'k');
 %definisce l'angolo alpha
 alfa=pi/6;
 %definisce la matrice di rotazione usando la get_mat2_rot
-R=get_mat2_rot(pi/4);
+R=get_mat2_rot(pi/2);
 
 for i=1:4
   P=point_trans(P,R);
@@ -25,7 +25,4 @@ for i=1:4
   versore(P(4,:),P(5,:))
 
   point_plot(P,'r-o',1,'r');
-%
-%  TO DO
-
 end

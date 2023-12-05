@@ -1,5 +1,5 @@
 function[C]= ruota_attorno_punto(P,alpha)
-% TO DO
+% cerca: ruota e trasla attorno a punto
 %calcola il baricentro
     B = mean(P(1:end-1,:));
     %definisce matrici

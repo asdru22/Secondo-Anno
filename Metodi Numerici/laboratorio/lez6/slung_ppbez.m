@@ -30,7 +30,5 @@ for i=1:nt
     val =val+integral(@(x)norm_c1_val(bez,x),bez.ab(1),bez.ab(2));
 end
 
-%TO DO
-
 fprintf('Lunghezza della curva: %e\n',val); 
 
