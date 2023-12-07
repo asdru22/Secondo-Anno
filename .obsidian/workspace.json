@@ -23,12 +23,11 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Metodi Numerici/dispensa.pdf"
+                "file": "Microeconomia/capitoli/capitolo_18.pdf"
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -78,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -166,21 +166,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2ffe5f7a7d490f97",
+  "active": "268f8d1e3e4a7ea5",
   "lastOpenFiles": [
-    "Metodi Numerici/laboratorio/lez4/sppbezplot.asv",
-    "Metodi Numerici/laboratorio/lez4/sppbezplot2.m",
-    "Metodi Numerici/laboratorio/lez4/untitled.m",
-    "Metodi Numerici/laboratorio/lez4/splitBezierCurve.m",
-    "Metodi Numerici/laboratorio/lez4/sppbezplot2.asv",
-    "Metodi Numerici/laboratorio/lez4/Copy_of_sppbezplot.m",
-    "Metodi Numerici/laboratorio/lez4/derivata.m",
+    "Metodi Numerici/Curve di bezier di grado n.md",
     "Metodi Numerici/Formulario.md",
     "Metodi Numerici/dispensa.pdf",
-    "Metodi Numerici/Curve di bezier di grado n.md",
-    "Metodi Numerici/laboratorio/es/bezier.asv",
-    "Metodi Numerici/laboratorio/es/bezier.m",
-    "Metodi Numerici/laboratorio/es/untitled.m",
+    "Microeconomia/capitoli/capitolo_18.pdf",
+    "Microeconomia/Riassunto.xopp~",
+    "Microeconomia/capitoli/capitolo_19.pdf",
+    "Microeconomia/capitoli/capitolo_15.pdf",
+    "Microeconomia/capitoli/capitolo_14.pdf",
+    "Microeconomia/capitoli/capitolo_9.pdf",
+    "Microeconomia/capitoli/capitolo_8.pdf",
+    "Microeconomia/capitoli/capitolo_7.pdf",
+    "Microeconomia/capitoli/capitolo_6.pdf",
     "Microeconomia/Formulario.md",
     "Microeconomia/Riassunto.md",
     "Palestra.md",

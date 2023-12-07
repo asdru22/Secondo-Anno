@@ -31,9 +31,7 @@ end
 function result = bezierCurve(t, controlPoints)
     n = length(controlPoints) - 1; % calcola il grado
     result = zeros(1, size(controlPoints, 2)); % inizializza matrice
-
-    for i = 0:n
-        % B(t)=sum i=0,...,n P_i*B_i,n(t)
+    for i = 0:n   % B(t)=sum i=0,...,n P_i*B_i,n(t)
         result = result + controlPoints(i + 1, :) * bernsteinTerm(n, i, t);
     end
 end
