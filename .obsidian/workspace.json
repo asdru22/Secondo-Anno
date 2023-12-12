@@ -16,16 +16,6 @@
                 "file": "Metodi Numerici/dispensa.pdf"
               }
             }
-          },
-          {
-            "id": "2ffe5f7a7d490f97",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Microeconomia/capitoli/capitolo_18.pdf"
-              }
-            }
           }
         ]
       }
@@ -168,10 +158,11 @@
   },
   "active": "268f8d1e3e4a7ea5",
   "lastOpenFiles": [
-    "Metodi Numerici/Curve di bezier di grado n.md",
-    "Metodi Numerici/Formulario.md",
+    "Microeconomia/Formulario.md",
     "Metodi Numerici/dispensa.pdf",
     "Microeconomia/capitoli/capitolo_18.pdf",
+    "Metodi Numerici/Curve di bezier di grado n.md",
+    "Metodi Numerici/Formulario.md",
     "Microeconomia/Riassunto.xopp~",
     "Microeconomia/capitoli/capitolo_19.pdf",
     "Microeconomia/capitoli/capitolo_15.pdf",
@@ -180,7 +171,6 @@
     "Microeconomia/capitoli/capitolo_8.pdf",
     "Microeconomia/capitoli/capitolo_7.pdf",
     "Microeconomia/capitoli/capitolo_6.pdf",
-    "Microeconomia/Formulario.md",
     "Microeconomia/Riassunto.md",
     "Palestra.md",
     "Finanza Aziendale/Formulario.md",

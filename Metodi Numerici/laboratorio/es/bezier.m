@@ -1,37 +1,42 @@
-% Define control points for the Bézier curve
-controlPoints = [0 0; 1 5; 5 2; -2 5;3 5];  % Add more points for higher-degree curves
+% Punti di controllo
+cp = [0 0; 1 5; 5 2; -2 5; 3 5]; 
+% Parametro t nell'intervallo [a, b]
+a = 0;
+b = 2;
 
-% Parametro t
-t_values = linspace(0, 1, 100); % Valori di t tra 0 e 1
+% Calcola i valori di t nell'intervallo [a, b]
+t_values = linspace(a, b, 100);
 
 % Inizializzazione array
 B_x = zeros(size(t_values));
-B_y = zeros(size(t_values));
+B_y = zeros(size(t_values));   
 
 for i = 1:length(t_values)
-    B_x(i) = bezierCurve(t_values(i), controlPoints(:, 1));
-    B_y(i) = bezierCurve(t_values(i), controlPoints(:, 2));
+    % t= (x-a)/(b-a)
+    t = (t_values(i) - a) / (b - a);  % Normalizza t nell'intervallo [0, 1]
+    B_x(i) = bezierCurve(t, cp(:, 1));
+    B_y(i) = bezierCurve(t, cp(:, 2));
 end
 
 % Plot della curva di Bezier e dei punti di controllo
-plot(B_x, B_y, 'b-', controlPoints(:, 1), controlPoints(:, 2), 'ro');
+plot(B_x, B_y, 'b-', cp(:, 1), cp(:, 2), 'ro');
 title('Curva di Bezier');
 xlabel('X');
 ylabel('Y');
 grid on;
 
-% Function to calculate a Bernstein term
+% Funzione per calcolare un termine di Bernstein
 function result = bernsteinTerm(n, i, t)
     binomialCoefficient = nchoosek(n, i);
     term = binomialCoefficient * ((1 - t)^(n - i)) * (t^i);
     result = term;
 end
 
-% Function to compute a Bézier curve
+% Funzione per calcolare una curva di Bézier
 function result = bezierCurve(t, controlPoints)
-    n = length(controlPoints) - 1; % calcola il grado
-    result = zeros(1, size(controlPoints, 2)); % inizializza matrice
-    for i = 0:n   % B(t)=sum i=0,...,n P_i*B_i,n(t)
+    n = length(controlPoints) - 1; % Calcola il grado
+    result = zeros(1, size(controlPoints, 2)); % Inizializza la matrice
+    for i = 0:n   % B(t) = sum i=0,...,n P_i * B_i,n(t)
         result = result + controlPoints(i + 1, :) * bernsteinTerm(n, i, t);
     end
 end
