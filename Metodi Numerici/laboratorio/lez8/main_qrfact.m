@@ -19,11 +19,9 @@ for n=nn
         %si fattorizza la matrice A
         [Q,R,C]=qr(A);
 
-        maxq=max(norm(Q(:,n)));
-
-        maxr=max(norm(R(:,n)));
-       
-        bound=2^(n-1)*max(norm(A(:,n)));
+        maxq=max(max(Q));
+        maxr=max(max(R));
+        bound=2^(n-1)*max(max(A));
 
         fprintf('%5d %2dx%2d  %14.5f  %14.5e  %14.5e\n',k,n,n,maxq,maxr,bound);
     end

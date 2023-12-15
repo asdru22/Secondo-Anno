@@ -18,12 +18,10 @@ for n=nn
               
         %si fattorizza la matrice A
         [L,U,P]=lu(A);
+        maxl=max(max(L));
+        maxu=max(max(U));
 
-        maxl=max(norm(U(:,n)));
-
-        maxu=max(norm(L(:,n)));
-       
-        bound=2^(n-1)*max(norm(A(:,n)));
+        bound=2^(n-1)*max(max(A));
 
         fprintf('%5d %2dx%2d  %14.5f  %14.5e  %14.5e\n',k,n,n,maxl,maxu,bound);
     end

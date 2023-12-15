@@ -13,7 +13,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Metodi Numerici/dispensa.pdf"
+                "file": "Microeconomia/capitoli/capitolo_1.pdf"
               }
             }
           }
@@ -67,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -84,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Metodi Numerici/dispensa.pdf",
+                "file": "Microeconomia/capitoli/capitolo_1.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Metodi Numerici/dispensa.pdf",
+                "file": "Microeconomia/capitoli/capitolo_1.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -124,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Metodi Numerici/dispensa.pdf"
+                "file": "Microeconomia/capitoli/capitolo_1.pdf"
               }
             }
           },
@@ -158,19 +157,19 @@
   },
   "active": "268f8d1e3e4a7ea5",
   "lastOpenFiles": [
-    "Microeconomia/Formulario.md",
     "Metodi Numerici/dispensa.pdf",
-    "Microeconomia/capitoli/capitolo_18.pdf",
-    "Metodi Numerici/Curve di bezier di grado n.md",
     "Metodi Numerici/Formulario.md",
-    "Microeconomia/Riassunto.xopp~",
-    "Microeconomia/capitoli/capitolo_19.pdf",
-    "Microeconomia/capitoli/capitolo_15.pdf",
-    "Microeconomia/capitoli/capitolo_14.pdf",
+    "Metodi Numerici/5. Polinomi.pdf",
     "Microeconomia/capitoli/capitolo_9.pdf",
     "Microeconomia/capitoli/capitolo_8.pdf",
+    "Microeconomia/Riassunto.xopp~",
     "Microeconomia/capitoli/capitolo_7.pdf",
     "Microeconomia/capitoli/capitolo_6.pdf",
+    "Microeconomia/capitoli/capitolo_5.pdf",
+    "Microeconomia/capitoli/capitolo_4.pdf",
+    "Microeconomia/capitoli/capitolo_3.pdf",
+    "Microeconomia/Formulario.md",
+    "Metodi Numerici/Curve di bezier di grado n.md",
     "Microeconomia/Riassunto.md",
     "Palestra.md",
     "Finanza Aziendale/Formulario.md",

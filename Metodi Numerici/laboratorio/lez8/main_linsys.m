@@ -13,7 +13,7 @@ if (n==m)
     %1.si risolve il sistema lineare utilizzando l'operatore left division
     xx=A\b;
 
-    %si stampa la soluzione xld
+    %si stampa la soluzione xx
     fprintf(" sol 1: %10.5f\n",xx);
 
     %2.si fattorizza la matrice A usando la function Matlab lu()
@@ -21,7 +21,8 @@ if (n==m)
 
     %si risolvono i due sistemi piu' semplici usando le function 
     %lsolve() e usolve() presenti nella cartella
-    y=lsolve(L,P*b);
+    % L*y=P*b, U*x=y
+    y=lsolve(L,b);
     x=usolve(U,y);
     
     %si stampa la soluzione x del sistema lineare
