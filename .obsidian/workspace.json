@@ -13,7 +13,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_1.pdf"
+                "file": "Microeconomia/capitoli/capitolo_22.pdf"
               }
             }
           }
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_1.pdf",
+                "file": "Microeconomia/capitoli/capitolo_22.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_1.pdf",
+                "file": "Microeconomia/capitoli/capitolo_22.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_1.pdf"
+                "file": "Microeconomia/capitoli/capitolo_22.pdf"
               }
             }
           },
@@ -157,17 +157,22 @@
   },
   "active": "268f8d1e3e4a7ea5",
   "lastOpenFiles": [
-    "Metodi Numerici/dispensa.pdf",
+    "Metodi Numerici/laboratorio/esame - collegamento.lnk",
+    "Metodi Numerici/laboratorio/esame/main.m",
+    "Metodi Numerici/laboratorio/esame/untitled.m",
+    "Metodi Numerici/laboratorio/esame/add_path.m",
+    "Metodi Numerici/laboratorio/esame/~ototessera.tmp",
+    "Metodi Numerici/laboratorio/esame/foto.jpeg",
+    "Metodi Numerici/laboratorio/esame/fototessera.jpeg",
+    "Metodi Numerici/laboratorio/esame/WhatsApp Image 2023-12-16 at 15.14.28.jpeg",
+    "Metodi Numerici/laboratorio/esame/WhatsApp Image 2023-12-16 at 15.14.02.jpeg",
+    "Metodi Numerici/laboratorio/esame",
+    "Metodi Numerici/laboratorio/Nuova cartella",
+    "Metodi Numerici/laboratorio/es/trans.asv",
+    "Metodi Numerici/laboratorio/es/trans.m",
+    "Metodi Numerici/laboratorio/es/untitled.m",
+    "Microeconomia/capitoli/capitolo_1.pdf",
     "Metodi Numerici/Formulario.md",
-    "Metodi Numerici/5. Polinomi.pdf",
-    "Microeconomia/capitoli/capitolo_9.pdf",
-    "Microeconomia/capitoli/capitolo_8.pdf",
-    "Microeconomia/Riassunto.xopp~",
-    "Microeconomia/capitoli/capitolo_7.pdf",
-    "Microeconomia/capitoli/capitolo_6.pdf",
-    "Microeconomia/capitoli/capitolo_5.pdf",
-    "Microeconomia/capitoli/capitolo_4.pdf",
-    "Microeconomia/capitoli/capitolo_3.pdf",
     "Microeconomia/Formulario.md",
     "Metodi Numerici/Curve di bezier di grado n.md",
     "Microeconomia/Riassunto.md",

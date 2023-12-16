@@ -42,7 +42,7 @@ bP2=curv2_bezier_interp(Q2,a,b,param);
 bP3= aumenta_grado(bP1);
 
 %join di due curve di Bézier
-ppbP=join(bP3,bP2);
+ppbP=ppbezier_join(bP3,bP2);
 curv2_ppbezier_plot(ppbP,np,'k-'); %
 % point_plot(ppbP.cp,'bo-')
 
