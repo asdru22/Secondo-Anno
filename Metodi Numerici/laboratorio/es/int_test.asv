@@ -1,0 +1,47 @@
+clear all
+close all 
+figure(1)
+hold on;
+axis equal;
+
+n = 10;
+
+points = rand(n, 2);
+points = [points; points(1, :)];
+p.cp = points;
+p.ab = [0,1];
+p.deg = n;
+point_plot(mean(p.cp(1:end-1,:)),'ro',2);
+curv2_ppbezier_plot(p,100,'c-');
+
+p2 = p;
+p2.cp = scala(p2.cp,0.5);
+rot = ruota(p2.cp,pi/2);
+p2.cp=point_trans(p2.cp,rot);
+curv2_ppbezier_plot(p2,100,'r-');
+point_plot(mean(p2.cp(1:end-1,:)),'ro',1);
+
+
+function ps = scala(p, f_scala)
+    % baricentro dei punti
+    baricentro = mean(p(1:end-1,:));
+    % differenze rispetto al baricentro
+    dx = p(:, 1) - baricentro(1);
+    dy = p(:, 2) - baricentro(2);
+    % scala
+    dxs = dx * f_scala;
+    dys = dy * f_scala;
+    % nuovi punti
+    ps = [baricentro(1) + dxs, baricentro(2) + dys];
+end
+
+function C= ruota(P,alpha)
+% cerca: ruota e trasla attorno a punto
+%calcola il baricentro
+    B = mean(P(1:end-1,:));
+    %definisce matrici
+    T = get_mat_trasl(-B);
+    M=get_mat2_rot(alpha);
+    %matrice composta 
+    C = -T*M*T;
+end

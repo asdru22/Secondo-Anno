@@ -60,6 +60,35 @@ h3 = join_disgiunte(h2,a2);
 h3.cp = h3.cp+[1,0];
 p = curv2_ppbezier_plot(h3,100,'k-');
 fill (p(:,1),p(:,2),'c');
+ppbez_int(h3)
+%%%%%%
+function tot = ppbez_int(ppP)
+somma = ppP.deg+1;
+righe = 1;
+tot = 0;
+bezP.deg = ppP.deg;
+for i= 1:length(ppP.ab)-1
+    bezP.ab = [ppP.ab(i),ppP.ab(i+1)];
+    bezP.cp = [ppP.cp(righe:somma,1),ppP.cp(righe:somma,2)];
+    righe = righe+ppP.deg;
+    somma = somma+ppP.deg;
+
+    %calcolo l'area della curva 
+    val(i)=integral(@(x)cxc1_val(bezP,x),bezP.ab(1),bezP.ab(2));
+    
+    if (val(i) < 0)
+     bezP.cp=flip(bezP.cp);
+     val(i)=-val(i);
+    end
+    tot = tot + val(i);
+end
+end
+%%%%%%
+function val = cxc1_val(bezier,t)
+Pt=decast_valder(bezier,1,t);
+val=0.5*(Pt(1,:,1).*Pt(2,:,2)-Pt(2,:,1).*Pt(1,:,2));
+end
+
 %%%%%%
 function ppbez = join_disgiunte(p1, p2)
 ppbez = [];

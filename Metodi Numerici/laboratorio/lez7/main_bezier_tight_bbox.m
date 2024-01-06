@@ -19,7 +19,6 @@ point_plot(bezQ.cp,'r-o',1,'k','r',8);
 
 %determina la curva aligned di una curva di Bézier
 [bezP,angle]=align_curve(bezQ);
-angle = angle;
 
 curv2_ppbezier_plot(bezP,100,'r-');
 

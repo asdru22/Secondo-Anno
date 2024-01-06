@@ -8,12 +8,14 @@
         "type": "tabs",
         "children": [
           {
-            "id": "268f8d1e3e4a7ea5",
+            "id": "b251ce3453997fdb",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_22.pdf"
+                "file": "Finanza Aziendale/Formulario.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_22.pdf",
+                "file": "Finanza Aziendale/Formulario.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_22.pdf",
+                "file": "Finanza Aziendale/Formulario.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Microeconomia/capitoli/capitolo_22.pdf"
+                "file": "Finanza Aziendale/Formulario.md"
               }
             }
           },
@@ -133,7 +135,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -155,42 +159,47 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "268f8d1e3e4a7ea5",
+  "active": "b251ce3453997fdb",
   "lastOpenFiles": [
-    "Metodi Numerici/laboratorio/esame - collegamento.lnk",
-    "Metodi Numerici/laboratorio/esame/main.m",
-    "Metodi Numerici/laboratorio/esame/untitled.m",
-    "Metodi Numerici/laboratorio/esame/add_path.m",
-    "Metodi Numerici/laboratorio/esame/~ototessera.tmp",
-    "Metodi Numerici/laboratorio/esame/foto.jpeg",
-    "Metodi Numerici/laboratorio/esame/fototessera.jpeg",
-    "Metodi Numerici/laboratorio/esame/WhatsApp Image 2023-12-16 at 15.14.28.jpeg",
-    "Metodi Numerici/laboratorio/esame/WhatsApp Image 2023-12-16 at 15.14.02.jpeg",
-    "Metodi Numerici/laboratorio/esame",
-    "Metodi Numerici/laboratorio/Nuova cartella",
-    "Metodi Numerici/laboratorio/es/trans.asv",
-    "Metodi Numerici/laboratorio/es/trans.m",
-    "Metodi Numerici/laboratorio/es/untitled.m",
-    "Microeconomia/capitoli/capitolo_1.pdf",
+    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/nanni.p",
+    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/Nanni Alessandro-20231220.zip",
+    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/main.m",
+    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/foto.jpeg",
+    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/fototessera.jpeg",
+    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/add_path.m",
+    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220",
+    "Finanza Aziendale/appunti/3 Indici di Bilancio.xopp~",
+    "Finanza Aziendale/appunti/2 Calcolo Valore Attuale.xopp~",
+    "Microeconomia/simulazioni_esame/Domande.pdf",
+    "Finanza Aziendale/Formulario.md",
+    "Microeconomia/note/Introduzione.md",
+    "Microeconomia/capitoli/capitolo_21.pdf",
+    "Microeconomia/capitoli/capitolo_20.pdf",
+    "Microeconomia/capitoli/capitolo_23.pdf",
+    "Microeconomia/note/Riassunto.md",
+    "Microeconomia/note/Formulario.md",
+    "Microeconomia/note/Domande.md",
+    "Microeconomia/Pasted image 20231217150255.png",
+    "Microeconomia/Pasted image 20231217150235.png",
+    "Microeconomia/Pasted image 20231217150210.png",
+    "Microeconomia/Pasted image 20231217150151.png",
+    "Microeconomia/Pasted image 20231217150149.png",
+    "Microeconomia/Pasted image 20231217150117.png",
+    "Microeconomia/Pasted image 20231217150044.png",
+    "Microeconomia/Pasted image 20231217150028.png",
+    "Microeconomia/Domande.md",
     "Metodi Numerici/Formulario.md",
     "Microeconomia/Formulario.md",
     "Metodi Numerici/Curve di bezier di grado n.md",
     "Microeconomia/Riassunto.md",
     "Palestra.md",
-    "Finanza Aziendale/Formulario.md",
     "Microeconomia/Introduzione.md",
     "Algoritmi e Strutture Dati/Introduzione.md",
     "Algoritmi e Strutture Dati/Formulario.md",
     "Finanza Aziendale/Definizioni.md",
     "Finanza Aziendale/Introduzione.md",
     "Microeconomia/2 Vincolo di Bilancio.md",
-    "Microeconomia/_attachments/pareto_efficienza_affitti.png",
-    "Microeconomia/_attachments/prezzo_riserva_numero_appartamenti.png",
     "Algoritmi e Strutture Dati/Ciao.md",
-    "Microeconomia/_attachments/prezzo_per_quantità.png",
-    "Microeconomia/_attachments/curva_di_offerta_variabile.png",
-    "Microeconomia/_attachments/curva_di_offerta.png",
-    "Microeconomia/_attachments/curva_di_domanda.png",
     "Untitled.canvas",
     "Algoritmi e Strutture Dati/asd.md",
     "2023-09-14.md"

@@ -16,56 +16,26 @@ c=curv2_bezier_interp(points*0.8,0,1,1);
 l1.ab = [0,1];
 l1.deg = 1;
 l1.cp = [-1,0.2; 1, 0.2];
+l1 = cambia_grado(l1,c.deg);
 curv2_bezier_plot(l1,100,'b-');
-[ip1,i1,~] = curv2_intersect(c,l1);
+[ip1,i1,i2] = curv2_intersect(c,l1);
+[sx,dx] = decast_subdiv(c,i1(1));
+
+%%%%% QUAAAAAAAAAAAA ?????????  
+curv2_bezier_plot(sx,100,'b-');
+curv2_bezier_plot(dx,100,'g-');
 
 % punti intersezione curva inferiore
-l2 = l1;
-l2.cp = [-1,-0.2; 1, -0.2];
-curv2_bezier_plot(l2,100,'b-');
-[ip2,i2,~] = curv2_intersect(c,l2);
+%l2 = l1;
+%l2.cp(:,2) =-l2.cp(:,2);
+%curv2_bezier_plot(l2,100,'c-');
+%[ip2,~,i2] = curv2_intersect(c,l2);
 % arco sinistro
-[sx,~] = decast_subdiv(c,i1(1));
-[~,asx] = decast_subdiv(sx,i2(1));
-asx.ab = [0,1];
+%[sx,~] = decast_subdiv(c,i1(1));
+%[~,asx] = decast_subdiv(sx,i2(1));
+%asx.ab = [0,1];
+%curv2_bezier_plot(asx,100,'c-');
 
-curv2_bezier_plot(asx,100,'c-');
-% arco destro
-adx = asx;
-adx.cp(:,1) = -asx.cp(:,1);
-curv2_bezier_plot(adx,100,'c-');
-
-% nuova curva lineare superiore 
-l1.ab = [0,1];
-l1.deg = 1;
-l1.cp = ip1';
-l1.cp= l1.cp(end:-1:1, :);
-l1 = cambia_grado(l1,asx.deg);
-curv2_bezier_plot(l1,100,'c-');
-
-% nuova curva lineare inferiore
-l2 = l1;
-l2.cp(:,2) = -l1.cp(:,2);
-curv2_bezier_plot(l2,100,'c-');
-% sistemo punti estremi degli archi
-asx.cp(1,:) = l2.cp(1,:);
-asx.cp(end,:) = l2.cp(end,:);
-
-adx.cp(1,:) = l1.cp(1,:);
-adx.cp(end,:) = l1.cp(end,:);
-
-%point_plot(asx.cp,'ko',1,'k');
-f1 = join(asx,l2);
-f2 = join(adx,l1);
-
-f1.cp(1,:)=f2.cp(1,:);
-f1.cp(end,:)=f2.cp(end,:);
-
-f = join(f1,f2);
-
-curv2_bezier_plot(f,100,'g-');
-%curv2_bezier_plot(f1,100,'g-');
-%curv2_bezier_plot(f2,100,'g-');
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

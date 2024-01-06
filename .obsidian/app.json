@@ -4,9 +4,9 @@
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "./",
   "pdfExportSettings": {
-    "pageSize": "Letter",
+    "pageSize": "A4",
     "landscape": false,
-    "margin": "0",
+    "margin": "1",
     "downscalePercent": 100
   }
 }
