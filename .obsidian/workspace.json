@@ -4,18 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "48fa3bd7920f1a2a",
+        "id": "0c52297819219b5f",
         "type": "tabs",
         "children": [
           {
-            "id": "b251ce3453997fdb",
+            "id": "bc2a7fc628c51b50",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Finanza Aziendale/Formulario.md",
-                "mode": "source",
-                "source": false
+                "file": "Finanza Aziendale/Formule.canvas",
+                "viewState": {
+                  "x": 347.96077230883776,
+                  "y": 1057.9208254245286,
+                  "zoom": -0.65200309344505
+                }
               }
             }
           }
@@ -69,7 +72,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -85,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Finanza Aziendale/Formulario.md",
+                "file": "Finanza Aziendale/Formule.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +106,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Finanza Aziendale/Formulario.md",
+                "file": "Finanza Aziendale/Formule.canvas",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +129,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finanza Aziendale/Formulario.md"
+                "file": "Finanza Aziendale/Formule.canvas"
               }
             }
           },
@@ -159,23 +163,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b251ce3453997fdb",
+  "active": "bc2a7fc628c51b50",
   "lastOpenFiles": [
-    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/nanni.p",
-    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/Nanni Alessandro-20231220.zip",
-    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/main.m",
+    "Finanza Aziendale/appunti/2 Calcolo Valore Attuale.xopp~",
+    "Finanza Aziendale/slide/5 Valore Attuale Netto e Concorrenti.pdf",
+    "Finanza Aziendale/slide/4 Valutazione delle Azioni.pdf",
+    "Finanza Aziendale/Formule.canvas",
+    "Finanza Aziendale/tabella2.pdf",
+    "Finanza Aziendale/es/tabella1.xopp~",
+    "Finanza Aziendale/es/tabella3.xopp~",
+    "Finanza Aziendale/mso937A.tmp",
+    "Finanza Aziendale/mso929F.tmp",
+    "Finanza Aziendale/mso5640.tmp",
+    "Finanza Aziendale/msoAA03.tmp",
+    "Finanza Aziendale/msoA928.tmp",
+    "Finanza Aziendale/Formulario.md",
+    "Finanza Aziendale/es/Domande Esame.md",
+    "asdrulet 4c.md",
     "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/foto.jpeg",
     "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/fototessera.jpeg",
-    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/add_path.m",
-    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220",
-    "Finanza Aziendale/appunti/3 Indici di Bilancio.xopp~",
-    "Finanza Aziendale/appunti/2 Calcolo Valore Attuale.xopp~",
-    "Microeconomia/simulazioni_esame/Domande.pdf",
-    "Finanza Aziendale/Formulario.md",
     "Microeconomia/note/Introduzione.md",
-    "Microeconomia/capitoli/capitolo_21.pdf",
-    "Microeconomia/capitoli/capitolo_20.pdf",
-    "Microeconomia/capitoli/capitolo_23.pdf",
     "Microeconomia/note/Riassunto.md",
     "Microeconomia/note/Formulario.md",
     "Microeconomia/note/Domande.md",
