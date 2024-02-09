@@ -15,9 +15,9 @@
               "state": {
                 "file": "Finanza Aziendale/Formule.canvas",
                 "viewState": {
-                  "x": 347.96077230883776,
-                  "y": 1057.9208254245286,
-                  "zoom": -0.65200309344505
+                  "x": 832.7848330486921,
+                  "y": 639.5644757569904,
+                  "zoom": -0.8640410354572015
                 }
               }
             }
@@ -72,8 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -165,10 +164,12 @@
   },
   "active": "bc2a7fc628c51b50",
   "lastOpenFiles": [
+    "Finanza Aziendale/test.canvas",
+    "Untitled.md",
+    "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/appunti/2 Calcolo Valore Attuale.xopp~",
     "Finanza Aziendale/slide/5 Valore Attuale Netto e Concorrenti.pdf",
     "Finanza Aziendale/slide/4 Valutazione delle Azioni.pdf",
-    "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/tabella2.pdf",
     "Finanza Aziendale/es/tabella1.xopp~",
     "Finanza Aziendale/es/tabella3.xopp~",
@@ -176,7 +177,6 @@
     "Finanza Aziendale/mso929F.tmp",
     "Finanza Aziendale/mso5640.tmp",
     "Finanza Aziendale/msoAA03.tmp",
-    "Finanza Aziendale/msoA928.tmp",
     "Finanza Aziendale/Formulario.md",
     "Finanza Aziendale/es/Domande Esame.md",
     "asdrulet 4c.md",

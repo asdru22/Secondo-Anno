@@ -8,4 +8,3 @@ function C= ruota_attorno_punto(P,alpha)
     %matrice composta 
     C = -T*M*T;
 end
-
