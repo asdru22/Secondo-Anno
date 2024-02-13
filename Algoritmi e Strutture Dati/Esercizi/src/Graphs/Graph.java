@@ -97,12 +97,12 @@ public class Graph {
 		return toGraphviz(Set.of());
 	}
 
-	public String toGraphviz(Set<String> hilight) {
+	public String toGraphviz(Set<String> highlight) {
 		String s = "graph {";
 		Set<Set<String>> visitedLinks = new HashSet<>();
 		for(String value: this.graph.keySet()) {
 			s += " " + value + " ";
-			if(hilight.contains(value)) {
+			if(highlight.contains(value)) {
 				s += "[color=red] ";
 			}
 		}

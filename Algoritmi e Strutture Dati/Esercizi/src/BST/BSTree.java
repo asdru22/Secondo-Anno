@@ -217,11 +217,11 @@ public class BSTree {
 		Node previous = null;
 		boolean found = false;
 		while(current != null && !found) {
-			if(current.getValue() == value) {
+			if(current.value == value) {
 				found = true;
 			} else {
 				previous = current;
-				current = value < current.getValue() ? current.getLeft() : current.getRight();
+				current = ( value < current.getValue() ) ? current.getLeft() : current.getRight();
 			}
 		}
 		if(!found) {
