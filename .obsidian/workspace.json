@@ -4,21 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "0c52297819219b5f",
+        "id": "91c33582be81c60e",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
-            "id": "bc2a7fc628c51b50",
+            "id": "17ae140fcdef4d70",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Finanza Aziendale/Formule.canvas",
-                "viewState": {
-                  "x": 832.7848330486921,
-                  "y": 639.5644757569904,
-                  "zoom": -0.8640410354572015
-                }
+                "file": "Stragegia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "e8236655d3d5371d",
+        "type": "tabs",
+        "dimension": 50,
+        "children": [
+          {
+            "id": "27d7937a4b8323fa",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Stragegia Aziendale/pdf/1 Il concetto di strategia.pdf"
               }
             }
           }
@@ -72,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -88,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Finanza Aziendale/Formule.canvas",
+                "file": "Stragegia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Finanza Aziendale/Formule.canvas",
+                "file": "Stragegia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Finanza Aziendale/Formule.canvas"
+                "file": "Stragegia Aziendale/1 Perché le aziende hanno bisogno di strategia.md"
               }
             }
           },
@@ -154,29 +170,30 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
+      "switcher:Open quick switcher": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false
     }
   },
-  "active": "bc2a7fc628c51b50",
+  "active": "17ae140fcdef4d70",
   "lastOpenFiles": [
+    "Stragegia Aziendale/pdf/1 Il concetto di strategia.pdf",
+    "Stragegia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
+    "Stragegia Aziendale/pdf/01-02-il-concetto-di-strategia.pdf.crdownload",
+    "Stragegia Aziendale/pdf",
+    "Stragegia Aziendale/Nuova cartella",
+    "Stragegia Aziendale/libro.pdf",
+    "Stragegia Aziendale/capitoli/cut.py",
+    "Stragegia Aziendale/capitoli",
+    "Finanza Aziendale/Formule.canvas",
+    "Stragegia Aziendale/Strategia aziendale libro.pdf",
     "Finanza Aziendale/test.canvas",
     "Untitled.md",
-    "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/appunti/2 Calcolo Valore Attuale.xopp~",
     "Finanza Aziendale/slide/5 Valore Attuale Netto e Concorrenti.pdf",
-    "Finanza Aziendale/slide/4 Valutazione delle Azioni.pdf",
-    "Finanza Aziendale/tabella2.pdf",
-    "Finanza Aziendale/es/tabella1.xopp~",
-    "Finanza Aziendale/es/tabella3.xopp~",
-    "Finanza Aziendale/mso937A.tmp",
-    "Finanza Aziendale/mso929F.tmp",
-    "Finanza Aziendale/mso5640.tmp",
-    "Finanza Aziendale/msoAA03.tmp",
     "Finanza Aziendale/Formulario.md",
     "Finanza Aziendale/es/Domande Esame.md",
     "asdrulet 4c.md",
