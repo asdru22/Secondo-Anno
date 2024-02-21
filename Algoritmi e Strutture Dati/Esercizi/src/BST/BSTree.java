@@ -258,14 +258,14 @@ public class BSTree {
 		}
 	}
 
-	public void remove(int value) {
+	public void removeValue(int value) { // rimove valore
 		Node node = findNode(value);
 		if(node != null) {
 			remove(node);
 		}
 	}
 
-	public void remove2(Node node) {
+	public void removeNode(Node node) { // rimuove nodo
 		if(node.getLeft() == null && node.getRight() == null) {
 			//case 1: node with no children
 			detach(node.getParent(), node);
@@ -289,40 +289,10 @@ public class BSTree {
 		}
 	}
 
-	public void remove2(int value) {
+	public void removeNode(int value) {
 		Node node = findNode(value);
 		if(node != null) {
-			remove2(node);
+			removeNode(node);
 		}
-	}
-
-	public static void main(String[] args) {
-		BSTree tree = new BSTree(10);
-		System.out.println("Create:\n" + tree.dfPreVisit());
-		tree.insert(5);
-		System.out.println("Add 5:\n" + tree.dfPreVisit());
-		tree.insert(15);
-		System.out.println("Add 15:\n" + tree.dfPreVisit());
-		Node node12 = tree.insert(12);
-		System.out.println("Add 12:\n" + tree.dfPreVisit());
-		tree.insert(18);
-		System.out.println("Add 18:\n" + tree.dfPreVisit());
-		tree.insert(1);
-		System.out.println("Add 1:\n" + tree.dfPreVisit());
-		tree.insert(8);
-		System.out.println("Add 8:\n" + tree.dfPreVisit());
-		System.out.println("Min: "+tree.min());
-		System.out.println("Max: "+tree.max());
-		System.out.println("Succ(12): "+tree.successor(node12));
-		System.out.println("Succ(12): "+tree.successor(tree.findNode(12)));
-		System.out.println("Pre(12): "+tree.predecessor(tree.findNode(12)));
-		tree.remove(18);
-		System.out.println("Remove 18:\n" + tree.dfPreVisit());
-		tree.remove(15);
-		System.out.println("Remove 15:\n" + tree.dfPreVisit());
-		tree.remove(5);
-		System.out.println("Remove 5:\n" + tree.dfPreVisit());
-		tree.remove(10);
-		System.out.println("Remove 10:\n" + tree.dfPreVisit());
 	}
 }

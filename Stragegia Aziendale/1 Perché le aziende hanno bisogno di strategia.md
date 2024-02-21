@@ -68,3 +68,24 @@ Si origina nel leader di un'organizzazione e viene comunicata in 4 modi:
 - nella dichiarazione dei principi o dei valori dove viene delineato il comportamento
 - con la dichiarazione della visione esplicita
 - nell'esposizione della strategia viene articolato il piano competitivo (obiettivi, ambito e vantaggio)
+Ruoli della gestione strategica dell'impresa:
+- Supporto alle decisioni
+- Strumenti di coordinamento e comunicazione
+- Obiettivo per il raggiungimento della visione
+### Diversi tipi di strategia
+- Deliberata: concezione dei dirigenti
+- Realizzata: quella implementata
+- Emergente: dalle decisioni si capisce anche l'ambiente che la circonda. 
+Una strategia è di successo solo se è in grado di adattarsi ai cambiamenti
+La strategia viene formulata in 4 fasi:
+1. Definizione dell'agenda strategica:
+	- identificazione della strategia che si sta adoperando
+	- valutazione del risultato
+2. Analisi della situazione (o del risultato)
+	- si guardano i risultati
+	- si analizza il settore per cambiamenti
+	- si analizzano le risorse e competenze
+3. Formulazione della strategia
+4. Implementazione della strategia
+	- se le risorse non sono motivate a implementare la strategia non si raggiungerà mai il risultato
+La strategia riguarda anche no-profit

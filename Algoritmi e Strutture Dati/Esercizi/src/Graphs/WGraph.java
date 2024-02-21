@@ -8,6 +8,7 @@ import java.util.Objects;
 import java.util.PriorityQueue;
 import java.util.Set;
 public class WGraph {
+	// string sono i valori, edges sono i vertici
 	private Map<String, Set<Edge>> edges = new HashMap<>();
 
 	private static class Edge implements Comparable<Edge> {
@@ -117,7 +118,7 @@ public class WGraph {
 		return s + "}";
 	}
 
-	public String toGraphviz() {
+	public String toGraphviz() { // print in formato Graphviz
 		String s = "graph {";
 		Set<Edge> allEdges = new HashSet<>();
 		for(String vertex: this.edges.keySet()) {
@@ -132,7 +133,7 @@ public class WGraph {
 		return s + "}";
 	}
 
-	public WGraph primMST() {
+	public WGraph primMST() { // algoritmo di Pirm per il minimum spanning tree
 		WGraph mst = new WGraph();
 		if(size() == 0) {
 			return mst;
