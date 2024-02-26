@@ -9,7 +9,7 @@
   "tag-pane": true,
   "page-preview": true,
   "daily-notes": true,
-  "templates": true,
+  "templates": false,
   "note-composer": true,
   "command-palette": true,
   "slash-command": true,
@@ -19,12 +19,12 @@
   "zk-prefixer": false,
   "random-note": false,
   "outline": true,
-  "word-count": false,
+  "word-count": true,
   "slides": false,
   "audio-recorder": false,
   "workspaces": false,
   "file-recovery": true,
   "publish": false,
-  "sync": true,
+  "sync": false,
   "properties": true
 }

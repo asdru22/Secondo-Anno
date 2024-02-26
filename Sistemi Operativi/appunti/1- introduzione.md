@@ -1,0 +1,6 @@
+### Gestione della CPU e altre risorse fisiche
+L'interazione con la memoria secondaria varia in base al modello e alla ditta che la ha prodotta. Certe cose non possono essere delegate ai programmi di alto livello in quanto aumenterebbe il rischio di errori o si  scriverebbero programmi poco portabili. Le interfacce fornite dai sistemi operativi sono discrete. Richiede un utilizzo efficiente delle risorse fisiche, sia per motivi di correttezza che per motivi di efficienza.
+Se più processi sono in esecuzione concorrente, tutti sono in esecuzione sulla memoria centrale, che va gestita per fare in modo che tutti i programmi possono essere eseguiti in concorrenza senza andare in conflitto.
+Un altra ragione per l'uso efficiente delle risorse fisiche è la sicurezza e protezione. Il sistema operativo deve tenere conto di eventuale software prodotto per arrecare danni alla macchina.
+Se non ci fosse il sistema operativo, tutte queste cose dovrebbero essere gestite dalle singole applicazioni.
+Si utilizzano sistemi operativi anche per motivi di convenienza: deve garantire agli utenti un facile utilizzo della macchina.

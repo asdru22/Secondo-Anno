@@ -6,34 +6,14 @@
       {
         "id": "91c33582be81c60e",
         "type": "tabs",
-        "dimension": 50,
         "children": [
           {
             "id": "17ae140fcdef4d70",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Stragegia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "e8236655d3d5371d",
-        "type": "tabs",
-        "dimension": 50,
-        "children": [
-          {
-            "id": "27d7937a4b8323fa",
-            "type": "leaf",
-            "state": {
               "type": "pdf",
               "state": {
-                "file": "Stragegia Aziendale/pdf/1 Il concetto di strategia.pdf"
+                "file": "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf"
               }
             }
           }
@@ -87,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -99,29 +78,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "de983cabcd400284",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Stragegia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
             "id": "0f4559cd781d9840",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Stragegia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
+                "file": "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Stragegia Aziendale/1 Perché le aziende hanno bisogno di strategia.md"
+                "file": "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf"
               }
             }
           },
@@ -159,9 +121,33 @@
                 "searchQuery": ""
               }
             }
+          },
+          {
+            "id": "3cc5e23cc7f1e157",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "459b0c65568c6707",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -170,30 +156,33 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
+      "graph:Open graph view": false,
       "switcher:Open quick switcher": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "17ae140fcdef4d70",
+  "active": "64d91feac736879b",
   "lastOpenFiles": [
-    "Stragegia Aziendale/pdf/1 Il concetto di strategia.pdf",
-    "Stragegia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
-    "Stragegia Aziendale/pdf/01-02-il-concetto-di-strategia.pdf.crdownload",
-    "Stragegia Aziendale/pdf",
-    "Stragegia Aziendale/Nuova cartella",
-    "Stragegia Aziendale/libro.pdf",
-    "Stragegia Aziendale/capitoli/cut.py",
-    "Stragegia Aziendale/capitoli",
+    "Algoritmi e Strutture Dati/pdf/analisi algoritmi.pdf",
+    "Algoritmi e Strutture Dati/pdf/05-alberi.pdf",
+    "Algoritmi e Strutture Dati/pdf/alberi binari di ricerca.pdf",
+    "Algoritmi e Strutture Dati/Formulario.md",
+    "Algoritmi e Strutture Dati/m3 appunti/L00-4-Esercitazioni.xopp~",
+    "Sistemi Operativi/appunti/1- introduzione.md",
+    "Sistemi Operativi/appunti/1-introduzione.xopp~",
+    "Sistemi Operativi/appunti/1-introduzione.xopp",
+    "Sistemi Operativi/appunti",
+    "Sistemi Operativi/pdf/1-introduzione.pdf",
+    "Sistemi Operativi/pdf/1-introduzione.pdf.crdownload",
+    "Sistemi Operativi/pdf",
+    "Algoritmi e Strutture Dati/pdf/grafi.pdf",
+    "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
     "Finanza Aziendale/Formule.canvas",
-    "Stragegia Aziendale/Strategia aziendale libro.pdf",
     "Finanza Aziendale/test.canvas",
     "Untitled.md",
-    "Finanza Aziendale/appunti/2 Calcolo Valore Attuale.xopp~",
-    "Finanza Aziendale/slide/5 Valore Attuale Netto e Concorrenti.pdf",
     "Finanza Aziendale/Formulario.md",
     "Finanza Aziendale/es/Domande Esame.md",
     "asdrulet 4c.md",
@@ -219,7 +208,6 @@
     "Palestra.md",
     "Microeconomia/Introduzione.md",
     "Algoritmi e Strutture Dati/Introduzione.md",
-    "Algoritmi e Strutture Dati/Formulario.md",
     "Finanza Aziendale/Definizioni.md",
     "Finanza Aziendale/Introduzione.md",
     "Microeconomia/2 Vincolo di Bilancio.md",

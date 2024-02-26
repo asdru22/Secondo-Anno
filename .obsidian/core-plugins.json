@@ -10,13 +10,12 @@
   "properties",
   "page-preview",
   "daily-notes",
-  "templates",
   "note-composer",
   "command-palette",
   "slash-command",
   "editor-status",
   "bookmarks",
   "outline",
-  "file-recovery",
-  "sync"
+  "word-count",
+  "file-recovery"
 ]

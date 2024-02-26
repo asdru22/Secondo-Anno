@@ -1,3 +1,4 @@
-from numpy import sin
+import numpy as np
 
-d = sin (5)
+v = np.linspace(0,1,11)
+print(v)

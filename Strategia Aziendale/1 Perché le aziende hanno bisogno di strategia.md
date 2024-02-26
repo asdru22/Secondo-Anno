@@ -21,11 +21,11 @@ Una strategia è di successo quando vince su ogni altro competitor, il successo 
 Un'implementazione efficace si rivela in una strategia di successo.
 La strategia viene usata in ogni momento della propria vita; viene applicata sia all'impresa che all'ambiente settoriale.
 
-|Impresa | Ambiente Settoriale |
-|---|---|
-|Obiettivi e valori | Concorrenti|
-|Risorse (umane, finanziarie) e competenze | Clienti|
-|Struttura e sistemi organizzativi: senza organizzazione le risorse non vengono utilizzate al massimo  | Fornitori: le aziende dipendono dai fornitori, se i fornitori sono in ritardo l'impresa ritarda la produzione |
+|                                               Impresa                                                |                                              Ambiente Settoriale                                              |
+|:----------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
+|                                          Obiettivi e valori                                          |                                                  Concorrenti                                                  |
+|                              Risorse (umane, finanziarie) e competenze                               |                                                    Clienti                                                    |
+| Struttura e sistemi organizzativi: senza organizzazione le risorse non vengono utilizzate al massimo | Fornitori: le aziende dipendono dai fornitori, se i fornitori sono in ritardo l'impresa ritarda la produzione |
 La strategia cerca di prevenire quello che potrebbe capitare.
 ### Analisi SWOT
 Nell'analisi interna si analizzano
