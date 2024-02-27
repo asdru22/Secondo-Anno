@@ -89,3 +89,5 @@ La strategia viene formulata in 4 fasi:
 4. Implementazione della strategia
 	- se le risorse non sono motivate a implementare la strategia non si raggiungerà mai il risultato
 La strategia riguarda anche no-profit
+
+Un bisogno è sensazione penosa di insoddisfazione dalla quale ci si può liberare con uso e consumo di un bene (scala dei beni di Maslov)

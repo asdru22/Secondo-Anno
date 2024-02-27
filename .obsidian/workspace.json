@@ -4,16 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "91c33582be81c60e",
+        "id": "2bdc4a0e740c0ec4",
         "type": "tabs",
         "children": [
           {
-            "id": "17ae140fcdef4d70",
+            "id": "49be24e3aad56f99",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "canvas",
               "state": {
-                "file": "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf"
+                "file": "Strategia Aziendale/Grafico.canvas",
+                "viewState": {
+                  "x": -1071.6268997509464,
+                  "y": -971.6462978077926,
+                  "zoom": -1.5
+                }
               }
             }
           }
@@ -83,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf",
+                "file": "Strategia Aziendale/Grafico.canvas",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -106,7 +111,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf"
+                "file": "Strategia Aziendale/Grafico.canvas"
               }
             }
           },
@@ -136,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e Strutture Dati/pdf/strutture dati elementari.pdf",
+                "file": "Strategia Aziendale/Grafico.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,26 +165,27 @@
       "daily-notes:Open today's daily note": false,
       "graph:Open graph view": false,
       "switcher:Open quick switcher": false,
-      "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "64d91feac736879b",
+  "active": "49be24e3aad56f99",
   "lastOpenFiles": [
-    "Algoritmi e Strutture Dati/pdf/analisi algoritmi.pdf",
-    "Algoritmi e Strutture Dati/pdf/05-alberi.pdf",
-    "Algoritmi e Strutture Dati/pdf/alberi binari di ricerca.pdf",
-    "Algoritmi e Strutture Dati/Formulario.md",
-    "Algoritmi e Strutture Dati/m3 appunti/L00-4-Esercitazioni.xopp~",
-    "Sistemi Operativi/appunti/1- introduzione.md",
-    "Sistemi Operativi/appunti/1-introduzione.xopp~",
-    "Sistemi Operativi/appunti/1-introduzione.xopp",
-    "Sistemi Operativi/appunti",
-    "Sistemi Operativi/pdf/1-introduzione.pdf",
-    "Sistemi Operativi/pdf/1-introduzione.pdf.crdownload",
-    "Sistemi Operativi/pdf",
-    "Algoritmi e Strutture Dati/pdf/grafi.pdf",
+    "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
+    "Strategia Aziendale/pdf/3. Analisi di settore.pdf",
+    "Strategia Aziendale/Grafico.canvas",
+    "Strategia Aziendale/pdf/4. Analisi dei concorrenti.pdf",
+    "Strategia Aziendale/pdf/4. Analisi dei concorrenti.pdf.crdownload",
     "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
+    "Strategia Aziendale/pdf/3. Analisi di settore.pdf.crdownload",
+    "Strategia Aziendale/2 Analisi di settore.md",
+    "Strategia Aziendale/appunti/3. Analisi di Settore.xopp~",
+    "Strategia Aziendale/capitoli/3. Analisi di Settore.pdf",
+    "Strategia Aziendale/appunti/3. Analisi di Settore.xopp",
+    "Strategia Aziendale/appunti",
+    "Strategia Aziendale/libro.pdf",
+    "Strategia Aziendale/pdf/1 Il concetto di strategia.pdf",
+    "Algoritmi e Strutture Dati/Formulario.md",
+    "Sistemi Operativi/appunti/1- introduzione.md",
     "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/test.canvas",
     "Untitled.md",
@@ -213,7 +219,6 @@
     "Microeconomia/2 Vincolo di Bilancio.md",
     "Algoritmi e Strutture Dati/Ciao.md",
     "Untitled.canvas",
-    "Algoritmi e Strutture Dati/asd.md",
-    "2023-09-14.md"
+    "Algoritmi e Strutture Dati/asd.md"
   ]
 }
