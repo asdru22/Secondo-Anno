@@ -11,14 +11,9 @@
             "id": "49be24e3aad56f99",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "pdf",
               "state": {
-                "file": "Strategia Aziendale/Grafico.canvas",
-                "viewState": {
-                  "x": -1071.6268997509464,
-                  "y": -971.6462978077926,
-                  "zoom": -1.5
-                }
+                "file": "Sistemi Operativi/pdf/4-processi.pdf"
               }
             }
           }
@@ -88,7 +83,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Strategia Aziendale/Grafico.canvas",
+                "file": "Sistemi Operativi/pdf/4-processi.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -111,7 +106,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Strategia Aziendale/Grafico.canvas"
+                "file": "Sistemi Operativi/pdf/4-processi.pdf"
               }
             }
           },
@@ -141,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Strategia Aziendale/Grafico.canvas",
+                "file": "Sistemi Operativi/pdf/4-processi.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -170,9 +165,12 @@
   },
   "active": "49be24e3aad56f99",
   "lastOpenFiles": [
+    "Sistemi Operativi/appunti/5-threads.xopp~",
+    "Algoritmi e Strutture Dati/Formulario.md",
+    "Algoritmi e Strutture Dati/m3 appunti/L00-4-Esercitazioni.xopp~",
+    "Strategia Aziendale/Grafico.canvas",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
     "Strategia Aziendale/pdf/3. Analisi di settore.pdf",
-    "Strategia Aziendale/Grafico.canvas",
     "Strategia Aziendale/pdf/4. Analisi dei concorrenti.pdf",
     "Strategia Aziendale/pdf/4. Analisi dei concorrenti.pdf.crdownload",
     "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
@@ -183,8 +181,6 @@
     "Strategia Aziendale/appunti/3. Analisi di Settore.xopp",
     "Strategia Aziendale/appunti",
     "Strategia Aziendale/libro.pdf",
-    "Strategia Aziendale/pdf/1 Il concetto di strategia.pdf",
-    "Algoritmi e Strutture Dati/Formulario.md",
     "Sistemi Operativi/appunti/1- introduzione.md",
     "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/test.canvas",
@@ -218,7 +214,6 @@
     "Finanza Aziendale/Introduzione.md",
     "Microeconomia/2 Vincolo di Bilancio.md",
     "Algoritmi e Strutture Dati/Ciao.md",
-    "Untitled.canvas",
-    "Algoritmi e Strutture Dati/asd.md"
+    "Untitled.canvas"
   ]
 }
