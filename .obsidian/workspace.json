@@ -11,9 +11,11 @@
             "id": "49be24e3aad56f99",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/pdf/4-processi.pdf"
+                "file": "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/pdf/4-processi.pdf",
+                "file": "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -106,7 +108,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi Operativi/pdf/4-processi.pdf"
+                "file": "Sistemi Operativi/riassunti/2-Struttura e Processi.md"
               }
             }
           },
@@ -136,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/pdf/4-processi.pdf",
+                "file": "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,22 +167,34 @@
   },
   "active": "49be24e3aad56f99",
   "lastOpenFiles": [
+    "Sistemi Operativi/riassunti/1-Architettura.md",
+    "Sistemi Operativi/libro_ed9.pdf",
+    "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
+    "Sistemi Operativi/riassunti/2-Struttura e Processi.pdf",
+    "Sistemi Operativi/riassunti/1-Architettura.pdf",
+    "Sistemi Operativi/riassunti/3-Thread.md",
+    "Sistemi Operativi/appunti finali/2-Struttura e Processi.xopp",
+    "Sistemi Operativi/appunti finali/1-Architettura.xopp",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240303133231.png",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240303132511.png",
+    "Sistemi Operativi/riassunti/Pasted image 20240303132452.png",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240303132314.png",
+    "Sistemi Operativi/appunti finali",
+    "Sistemi Operativi/riassunti/1 Intro+Architettura.xopp~",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240303131642.png",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240303131442.png",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240303131339.png",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240303131305.png",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240303131127.png",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240303131030.png",
+    "Sistemi Operativi/riassunti/img",
+    "Sistemi Operativi/pdf/4-processi.pdf",
     "Sistemi Operativi/appunti/5-threads.xopp~",
     "Algoritmi e Strutture Dati/Formulario.md",
-    "Algoritmi e Strutture Dati/m3 appunti/L00-4-Esercitazioni.xopp~",
     "Strategia Aziendale/Grafico.canvas",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
-    "Strategia Aziendale/pdf/3. Analisi di settore.pdf",
-    "Strategia Aziendale/pdf/4. Analisi dei concorrenti.pdf",
-    "Strategia Aziendale/pdf/4. Analisi dei concorrenti.pdf.crdownload",
     "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
-    "Strategia Aziendale/pdf/3. Analisi di settore.pdf.crdownload",
     "Strategia Aziendale/2 Analisi di settore.md",
-    "Strategia Aziendale/appunti/3. Analisi di Settore.xopp~",
-    "Strategia Aziendale/capitoli/3. Analisi di Settore.pdf",
-    "Strategia Aziendale/appunti/3. Analisi di Settore.xopp",
-    "Strategia Aziendale/appunti",
-    "Strategia Aziendale/libro.pdf",
     "Sistemi Operativi/appunti/1- introduzione.md",
     "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/test.canvas",
@@ -188,20 +202,10 @@
     "Finanza Aziendale/Formulario.md",
     "Finanza Aziendale/es/Domande Esame.md",
     "asdrulet 4c.md",
-    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/foto.jpeg",
-    "Metodi Numerici/laboratorio/Nanni Alessandro-20231220/fototessera.jpeg",
     "Microeconomia/note/Introduzione.md",
     "Microeconomia/note/Riassunto.md",
     "Microeconomia/note/Formulario.md",
     "Microeconomia/note/Domande.md",
-    "Microeconomia/Pasted image 20231217150255.png",
-    "Microeconomia/Pasted image 20231217150235.png",
-    "Microeconomia/Pasted image 20231217150210.png",
-    "Microeconomia/Pasted image 20231217150151.png",
-    "Microeconomia/Pasted image 20231217150149.png",
-    "Microeconomia/Pasted image 20231217150117.png",
-    "Microeconomia/Pasted image 20231217150044.png",
-    "Microeconomia/Pasted image 20231217150028.png",
     "Microeconomia/Domande.md",
     "Metodi Numerici/Formulario.md",
     "Microeconomia/Formulario.md",
@@ -211,9 +215,6 @@
     "Microeconomia/Introduzione.md",
     "Algoritmi e Strutture Dati/Introduzione.md",
     "Finanza Aziendale/Definizioni.md",
-    "Finanza Aziendale/Introduzione.md",
-    "Microeconomia/2 Vincolo di Bilancio.md",
-    "Algoritmi e Strutture Dati/Ciao.md",
     "Untitled.canvas"
   ]
 }
