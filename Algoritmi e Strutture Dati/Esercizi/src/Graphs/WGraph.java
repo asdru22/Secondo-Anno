@@ -20,25 +20,25 @@ public class WGraph {
 			vertices.add(second);
 			this.weight = weight;
 		}
-		
+
 		@SuppressWarnings("unused")
 		public boolean contains(String vertex) {
 			return this.vertices.contains(vertex);
 		}
-		
+
 		public int getWeight() {
 			return weight;
 		}
-		
+
 		@SuppressWarnings("unused")
 		public Set<String> getVertices() {
 			return this.vertices;
 		}
-		
+
 		public String getOneVertex() {
 			return this.vertices.iterator().next();
 		}
-		
+
 		public String getOtherVertex(String vertex) {
 			Iterator<String> iterator = this.vertices.iterator();
 			String first = iterator.next();
@@ -48,12 +48,12 @@ public class WGraph {
 				return first;
 			}
 		}
-		
+
 		@Override
 		public int hashCode() {
 			return Objects.hash(this.vertices, this.weight);
 		}
-		
+
 		@Override
 		public boolean equals(Object obj) {
 			if(obj == null) {
@@ -65,12 +65,12 @@ public class WGraph {
 				return this.vertices.equals(otherEdge.vertices) && getWeight() == otherEdge.getWeight();
 			}
 		}
-		
+
 		@Override
 		public int compareTo(Edge other) {
 			return getWeight() - other.getWeight();
 		}
-		
+
 		@Override
 		public String toString() {
 			Iterator<String> iterator = this.vertices.iterator();
@@ -81,7 +81,7 @@ public class WGraph {
 	public void addVertex(String value) {
 		this.edges.put(value, new HashSet<>());
 	}
-	
+
 	public void addEdge(String first, String second, int weight) {
 		Edge edge = new Edge(first, second, weight);
 		this.getEdges(first).add(edge);
@@ -98,11 +98,11 @@ public class WGraph {
 	public Set<Edge> getEdges(String node) {
 		return this.edges.get(node);
 	}
-	
+
 	private int size() {
 		return this.edges.size();
 	}
-	
+
 	@Override
 	public String toString() {
 		String s = "{";
@@ -116,6 +116,10 @@ public class WGraph {
 			sep = ", ";
 		}
 		return s + "}";
+	}
+
+	public int getSize(){
+		return edges.size();
 	}
 
 	public String toGraphviz() { // print in formato Graphviz

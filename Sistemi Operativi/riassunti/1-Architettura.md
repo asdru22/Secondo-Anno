@@ -27,7 +27,8 @@ Il tempo di overhead è la percentuale di tempo in cui la CPU è utilizzata da p
   La memoria virtuale è un'architettura di sistema capace di simulare uno spazio di memoria centrale (memoria primaria) maggiore di quello fisicamente presente o disponibile, dando l'illusione all'utente di una quantità maggiore di memoria.
 # Architettura Computer
   ![[Pasted image 20240303131030.png]]Il SO invia alla CPU le istruzioni, e questa in cicli esegure parte di esse.
-### Computer di Von Neumann![[Pasted image 20240303131127.png]]
+### Computer di Von Neumann
+![[Pasted image 20240303131127.png]]
 La ALU esegue le operazioni aritmetiche e booleane. La control unit è il cervello del processore, determina la prossima istruzione da eseguire dalla memoria centrale e invia i calcoli da fare alla ALU. La memoria centrale è un insieme ordinato di celle, e ad ogni cella corrisponde un indirizzo di memoria. In ogni cella è memorizzato un valore o un'istruzione.
 ### Register
 I registri sono una piccola memoria ad alta velocita' utilizzata per memorizzare i risultati temporanei e le informazioni di controllo necessarie al funzionamento dell'ALU. I più importanti sono:

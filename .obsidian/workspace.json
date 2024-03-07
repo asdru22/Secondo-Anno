@@ -11,11 +11,9 @@
             "id": "49be24e3aad56f99",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
-                "mode": "source",
-                "source": false
+                "file": "Algoritmi e Strutture Dati/m3 pdf/L03-1-Minimum-Spanning-Tree.pdf"
               }
             }
           }
@@ -43,6 +41,16 @@
             }
           },
           {
+            "id": "b8ba3cde3086f47a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Algoritmi e Strutture Dati/m3 pdf/L03-1-Minimum-Spanning-Tree.pdf"
+              }
+            }
+          },
+          {
             "id": "fa6b6dff0ac8aede",
             "type": "leaf",
             "state": {
@@ -55,14 +63,6 @@
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
-            }
-          },
-          {
-            "id": "326b7329e65991e3",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {}
             }
           }
         ]
@@ -85,7 +85,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
+                "file": "Algoritmi e Strutture Dati/m3 pdf/L03-1-Minimum-Spanning-Tree.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -99,16 +99,6 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "b8ba3cde3086f47a",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Sistemi Operativi/riassunti/2-Struttura e Processi.md"
               }
             }
           },
@@ -138,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
+                "file": "Algoritmi e Strutture Dati/m3 pdf/L03-1-Minimum-Spanning-Tree.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +139,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -167,33 +158,38 @@
   },
   "active": "49be24e3aad56f99",
   "lastOpenFiles": [
-    "Sistemi Operativi/riassunti/1-Architettura.md",
-    "Sistemi Operativi/libro_ed9.pdf",
-    "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
+    "Algoritmi e Strutture Dati/m3 appunti/L03-1-Minimum-Spanning-Tree.xopp~",
+    "Algoritmi e Strutture Dati/Esercizi/src/Graphs/WGraph.java~",
+    "Algoritmi e Strutture Dati/Esercizi/src/Graphs/Prim.java",
+    "Algoritmi e Strutture Dati/m3 pdf/L03-2-Strutture-Merge-Find.pdf",
+    "Algoritmi e Strutture Dati/m3 pdf/L00-4-Esercitazioni.pdf",
+    "Sistemi Operativi/riassunti/3-Concorrenza.md",
     "Sistemi Operativi/riassunti/2-Struttura e Processi.pdf",
-    "Sistemi Operativi/riassunti/1-Architettura.pdf",
+    "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
+    "Sistemi Operativi/riassunti/img/processor_affinity.svg",
+    "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
+    "Strategia Aziendale/Appunti.md",
+    "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
+    "Sistemi Operativi/riassunti/1-Architettura.md",
+    "Sistemi Operativi/appunti/6-scheduling cpu.xopp~",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240306153858.png",
+    "Sistemi Operativi/riassunti/img/Pasted image 20240306153823.png",
     "Sistemi Operativi/riassunti/3-Thread.md",
-    "Sistemi Operativi/appunti finali/2-Struttura e Processi.xopp",
-    "Sistemi Operativi/appunti finali/1-Architettura.xopp",
+    "Strategia Aziendale/appunti/06-fondamenti-dell-implementazione-della-strategia.xopp~",
+    "Strategia Aziendale/img/ciclo_pianificazione_strategica.svg",
+    "Strategia Aziendale/appunti/05-risorse-e-competenze.xopp~",
+    "Strategia Aziendale/Grafico.canvas",
+    "Strategia Aziendale/img/fasi_analisi.svg",
+    "Strategia Aziendale/img",
+    "Strategia Aziendale/Nuova cartella",
+    "Statistica Numerica/Relazioni.canvas",
+    "Untitled.canvas",
     "Sistemi Operativi/riassunti/img/Pasted image 20240303133231.png",
     "Sistemi Operativi/riassunti/img/Pasted image 20240303132511.png",
     "Sistemi Operativi/riassunti/Pasted image 20240303132452.png",
     "Sistemi Operativi/riassunti/img/Pasted image 20240303132314.png",
-    "Sistemi Operativi/appunti finali",
-    "Sistemi Operativi/riassunti/1 Intro+Architettura.xopp~",
     "Sistemi Operativi/riassunti/img/Pasted image 20240303131642.png",
-    "Sistemi Operativi/riassunti/img/Pasted image 20240303131442.png",
-    "Sistemi Operativi/riassunti/img/Pasted image 20240303131339.png",
-    "Sistemi Operativi/riassunti/img/Pasted image 20240303131305.png",
-    "Sistemi Operativi/riassunti/img/Pasted image 20240303131127.png",
-    "Sistemi Operativi/riassunti/img/Pasted image 20240303131030.png",
-    "Sistemi Operativi/riassunti/img",
-    "Sistemi Operativi/pdf/4-processi.pdf",
-    "Sistemi Operativi/appunti/5-threads.xopp~",
     "Algoritmi e Strutture Dati/Formulario.md",
-    "Strategia Aziendale/Grafico.canvas",
-    "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
-    "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
     "Strategia Aziendale/2 Analisi di settore.md",
     "Sistemi Operativi/appunti/1- introduzione.md",
     "Finanza Aziendale/Formule.canvas",
@@ -212,9 +208,6 @@
     "Metodi Numerici/Curve di bezier di grado n.md",
     "Microeconomia/Riassunto.md",
     "Palestra.md",
-    "Microeconomia/Introduzione.md",
-    "Algoritmi e Strutture Dati/Introduzione.md",
-    "Finanza Aziendale/Definizioni.md",
-    "Untitled.canvas"
+    "Microeconomia/Introduzione.md"
   ]
 }
