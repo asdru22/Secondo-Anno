@@ -12,7 +12,7 @@ Tramite
 Tramite
 - Durata
 - Trasferibilità: il vantaggio è minore se può essere facilmente imitato dai concorrenti
-- Replicabilità: le tecnologie non protette da brevetti possono essere imitate facilmente dai concorrenti
+- Replicabilità: le tecnologie non protette da brevetti possono essere imitate facilmente dai concorrenti 
 ### 3. Sfruttamento del vantaggio competitivo
 Tramite
 - Appropriabilità: l'impresa deve poter acquisire un controllo proprietario escludendone i concorrenti
