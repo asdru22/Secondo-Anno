@@ -1,4 +1,4 @@
- nLa concorrenza riguarda la gestione di processi multipli, come:
+ La concorrenza riguarda la gestione di processi multipli, come:
 - Multiprogramming: più processi su un solo processore
 - Multiprocessing: più processi su una macchina con processori multipli
 - Distributed Processing: più processi su un insieme di computer.
@@ -92,5 +92,46 @@ public static class Algorithm_3 extends MutualExclusion {
     }  
     private volatile int turn;  
     private volatile boolean[] flag = new boolean[2];  
+}
+```
+
+### Semafori 
+I semafori aiutano i programmatori a gestire le CS, indicato da un intero S e può essere modificato solamente tramite due operazioni indivisibili.
+```java
+P(S):
+	while (S <= 0) do no-op
+	S--
+
+V(S):
+	S++
+```
+Vanno ignorate le interrupt all'interno delle operazioni di incremento e decremento e tra il `while` e il decremento. Se ci fosse un context switch tra queste due, verrebbe eseguita la CS di un altro processo. Si può sfruttare il SO per rendere operazioni semplici all'interno del SO stesso atomiche. Questo non si può fare per codice arbitrario ed è il motivo per cui bisogna scrivere programmi apposta che riducano le CS il più possibile e gestirle correttamente. 
+Questo è un esempio di semaforo binario, ma esistono anche semafori n-ari ($S\ge2$).
+Si dice spinlock un semaforo con attesa attiva tramite ciclo `while`, ed è usato in sezioni dove la CS è breve (il busy waiting non dura molto)
+```java
+Semaphore S; // initialized to 1
+P(S) // decremento, si chiede permesso al semaforo di entrare in sez. critica
+CriticalSection()
+V(S)// incremento e notifica fine sezione critica
+```
+Un processo alla volta può accedere alla sezione condivisa (mutual exclusion). Bisogna acquisire una chiave per entrare (`P(S`). Se un processo vuole eseguire la sua CS non può farlo se $S=0$ e quindi verrà messo in attesa.
+### Semaforo senza busy waiting
+Il busy waiting è utilizzato per istruzioni estremamente brevi e semplici, ma quando non è più affidabile si usano istruzioni di incremento e decremento più complesse.
+Il semaforo $S$ ha associato una lista dei processi bloccati su di esso.
+```java
+P(S) {
+	S-- // il decremento può essere prima o dopo l'operazione di blocco
+	if (S < 0) {
+		S.add(P) // add this process to list
+		block(P) // blocca il processo
+	}
+}
+
+V(S) {
+	S++
+	if (S <= 0) {
+		S.remove(P) // rimuove il processo dalla lista
+		wakeup(P)
+	}
 }
 ```
