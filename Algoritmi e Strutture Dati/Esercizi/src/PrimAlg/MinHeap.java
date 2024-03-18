@@ -1,18 +1,15 @@
-package PrimAlg; /****************************************************************************
- *
- * MinHeap.java 
- *
+package PrimAlg;
+/**
+ * MinHeap.java
  * Written in 2020 by Moreno Marzolla <moreno.marzolla(at)unibo.it>
- *
- * To the extent possible under law, the author(s) have dedicated all 
- * copyright and related and neighboring rights to this software to the 
+ * To the extent possible under law, the author(s) have dedicated all
+ * copyright and related and neighboring rights to this software to the
  * public domain worldwide. This software is distributed without any warranty.
- *
  * You should have received a copy of the CC0 Public Domain Dedication
- * along with this software. If not, see 
- * <http://creativecommons.org/publicdomain/zero/1.0/>. 
- *
- ****************************************************************************/
+ * along with this software. If not, see
+ * <http://creativecommons.org/publicdomain/zero/1.0/>.
+ */
+
 import java.util.*;
 
 /**
@@ -21,24 +18,23 @@ import java.util.*;
  * in the range 0..n-1, and priority is any real value.
  */
 class MinHeap {
-    
-    heapElem heap[];    
+    heapElem[] heap;
     /* pos[id] is the position of "id" inside the heap. Specifically,
        heap[pos[id]].key == id. This array is required to make
        decreaseKey() run in log(n) time. */
-    int pos[]; 
+    int[] pos; // pos[id]: posizione del nodo "id" nel heap
+               // == pos[heap[i]].data != heap[i].prio
     int size, maxSize;
 
     /**
      * A heap element is a pair (id, priority), where
      * id is an integer in 0..(maxSize-1)
      */
-    private class heapElem {	
+    private class heapElem {
         public final int data;
-        public double prio;
-        
-        public heapElem(int data, double prio)
-        {
+        public double prio; // priorità
+
+        public heapElem(int data, double prio) {
             this.data = data;
             this.prio = prio;
         }
@@ -47,104 +43,94 @@ class MinHeap {
     /**
      * Build an empty heap with at most maxSize elements
      */
-    public MinHeap(int maxSize)
-    {
-	this.heap = new heapElem[maxSize];
-	this.maxSize = maxSize; 
-        this.size = 0;
-        this.pos = new int[maxSize];
-        Arrays.fill(this.pos, -1);
+    public MinHeap(int maxSize) {
+        this.heap = new heapElem[maxSize];
+        this.maxSize = maxSize;
+        this.size = 0; // perchè è vuoto
+        this.pos = new int[maxSize]; // capacità massima
+        Arrays.fill(this.pos, -1); // riempito di -1
     }
 
-    
+
     /**
      * Return true iff index i is a valid index in the heap,
      * i.e., i>=0 and i<size
-     */ 
-    private boolean valid(int i)
-    {
+     */
+    private boolean valid(int i) {
         return ((i >= 0) && (i < size));
     }
 
     /**
      * swap heap[i] with heap[j]
      */
-    private void swap(int i, int j)
-    {
+    private void swap(int i, int j) {
         assert (pos[heap[i].data] == i);
         assert (pos[heap[j].data] == j);
-        
+
         heapElem elemTmp = heap[i];
-        heap[i] = heap[j];
+        heap[i] = heap[j]; // cambio posizioni
         heap[j] = elemTmp;
-        pos[heap[i].data] = i;
+        pos[heap[i].data] = i; // aggiorno posizione del nodo
         pos[heap[j].data] = j;
     }
 
     /**
      * Return the index of the parent of heap[i]
      */
-    private int parent(int i)
-    {
+    private int parent(int i) {
         assert (valid(i));
-        
-        return (i+1)/2 - 1;
+
+        return (i + 1) / 2 - 1; // i figli di un albero si trovano con il procedimento inverso
     }
 
     /**
      * Return the index of the left child of heap[i]
      */
-    private int lchild(int i)
-    {
+    private int lchild(int i) {
         assert (valid(i));
-        
-        return (i+1)*2 - 1;
+
+        return (i + 1) * 2 - 1;
     }
 
     /**
      * Return the index of the right child of heap[i]
      */
-    private int rchild(int i)
-    {
+    private int rchild(int i) {
         assert (valid(i));
-        
+
         return lchild(i) + 1;
     }
-    
+
     /**
      * Return true iff the heap is empty
      */
-    public boolean isEmpty( )
-    {
-	return (size==0);
+    public boolean isEmpty() {
+        return (size == 0);
     }
 
     /**
      * Return true iff the heap is full, i.e., no more available slots
      * are available.
      */
-    public boolean isFull( )
-    {
+    public boolean isFull() {
         return (size > maxSize);
     }
 
     /**
      * Return the data of the element with lowest priority
      */
-    public int min( )
-    {
-        assert ( !isEmpty() );
-	return heap[0].data;
-    } 
+    public int min() { // O(1)
+        assert (!isEmpty());
+        return heap[0].data;
+    }
 
     /**
      * Return the position of the child of i (if any) with minimum
      * priority. If i has no childs, return -1.
      */
-    private int minChild(int i)
-    {
+    private int minChild(int i) {
         assert (valid(i));
-        
+
         final int l = lchild(i);
         final int r = rchild(i);
         int result = -1;
@@ -156,21 +142,21 @@ class MinHeap {
         }
         return result;
     }
-    
+
     /**
      * Exchange heap[i] with the parent element until it reaches the
      * correct position into the heap. This method requires time O(log n).
      */
-    private void moveUp(int i)
-    {
+    private void moveUp(int i) {
+        // scambi finché il nodo che sto cercando di far salire arriva alla posizione voluta
         assert (valid(i));
-        
-        int p = parent(i);
-	while ( (p >= 0) && (heap[i].prio < heap[p].prio) ) {
+
+        int p = parent(i); // p: pos del array
+        while ((p >= 0) && (heap[i].prio < heap[p].prio)) {
             swap(i, p);
             i = p;
             p = parent(i);
-        }        
+        }
     }
 
     /**
@@ -178,60 +164,56 @@ class MinHeap {
      * exists, until it reaches the correct position into the heap.
      * This method requires time O(log n).
      */
-    private void moveDown(int i)
-    {
+    private void moveDown(int i) {
         assert (valid(i));
 
         boolean done = false;
-	do {
+        do {
             int dst = minChild(i);
             if (valid(dst) && (heap[dst].prio < heap[i].prio)) {
                 swap(i, dst);
                 i = dst;
-	    } else {
+            } else {
                 done = true;
             }
- 	} while (!done);
+        } while (!done);
     }
 
     /**
      * Insert a new pair (data, prio) into the queue.
      * This method requires time O(log n).
      */
-    public void insert(int data, double prio)
-    {
+    public void insert(int data, double prio) {
         assert ((data >= 0) && (data < maxSize));
         assert (pos[data] == -1);
-        assert ( !isFull() );        
+        assert (!isFull());
 
         final int i = size++;
         pos[data] = i;
         heap[i] = new heapElem(data, prio);
         moveUp(i);
-    } 
+    }
 
     /**
      * Delete the element with minimum priority. This method requires
      * time O(log n).
      */
-    public void deleteMin( )
-    {
-        assert ( !isEmpty() );
-        
-        swap(0, size-1);
-        pos[heap[size-1].data] = -1;
+    public void deleteMin() {
+        assert (!isEmpty());
+
+        swap(0, size - 1);
+        pos[heap[size - 1].data] = -1;
         size--;
-        if (size>0) moveDown(0);
-    } 
+        if (size > 0) moveDown(0);
+    }
 
     /**
      * Chenage the priority associated to |data|. This method requires
      * time O(log n).
      */
-    public void changePrio(int data, double newprio)
-    {
-	int j = pos[data];
-        assert ( valid(j) );
+    public void changePrio(int data, double newprio) {
+        int j = pos[data];
+        assert (valid(j));
         final double oldprio = heap[j].prio;
         heap[j].prio = newprio;
         if (newprio > oldprio) {
@@ -239,5 +221,5 @@ class MinHeap {
         } else {
             moveUp(j);
         }
-    } 
+    }
 }

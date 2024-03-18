@@ -4,18 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "2bdc4a0e740c0ec4",
+        "id": "dd3cb63315667b5d",
         "type": "tabs",
         "children": [
           {
-            "id": "49be24e3aad56f99",
+            "id": "4ba5eeec2fb0af5d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Sistemi Operativi/riassunti/3-Concorrenza.md",
-                "mode": "source",
-                "source": false
+                "file": "Statistica Numerica/Relazioni.canvas",
+                "viewState": {
+                  "x": 253.0284155884117,
+                  "y": 119.40726458413275,
+                  "zoom": -0.8452344922363233
+                }
               }
             }
           }
@@ -48,7 +51,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi Operativi/riassunti/3-Concorrenza.md"
+                "file": "Statistica Numerica/Relazioni.canvas"
               }
             }
           },
@@ -95,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/riassunti/3-Concorrenza.md",
+                "file": "Statistica Numerica/Relazioni.canvas",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +141,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/riassunti/3-Concorrenza.md",
+                "file": "Statistica Numerica/Relazioni.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -166,31 +169,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "49be24e3aad56f99",
+  "active": "4ba5eeec2fb0af5d",
   "lastOpenFiles": [
-    "Algoritmi e Strutture Dati/m3 pdf/L03-1-Minimum-Spanning-Tree.pdf",
-    "Sistemi Operativi/riassunti/3-Concorrenza.md",
     "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
-    "Sistemi Operativi/riassunti/2-Struttura e Processi.pdf",
+    "Sistemi Operativi/riassunti/4-Semafori.md",
+    "Sistemi Operativi/riassunti/4-Semafori.pdf",
+    "Sistemi Operativi/riassunti/3-Concorrenza.pdf",
+    "Sistemi Operativi/Laboratorio/src/PrimitiveJava/Database.java",
+    "Sistemi Operativi/Laboratorio/src/PrimitiveJava/ReadingWriting.java~",
+    "Sistemi Operativi/Laboratorio/src/PrimitiveJava/ReadingWriting.java",
+    "Sistemi Operativi/Laboratorio/src/PrimitiveJava/EnterRemove.java~",
+    "Sistemi Operativi/Laboratorio/src/PrimitiveJava/EnterRemove.java",
+    "Sistemi Operativi/riassunti/img/entry_wait_set.svg",
+    "Sistemi Operativi/riassunti/3-Concorrenza.md",
+    "Algoritmi e Strutture Dati/m3 pdf/L04-1-Strutture speciali.pdf",
+    "Algoritmi e Strutture Dati/m3 pdf/L03-1-Minimum-Spanning-Tree.pdf",
+    "Algoritmi e Strutture Dati/m3 pdf/L03-2-Strutture-Merge-Find.pdf",
+    "Sistemi Operativi/riassunti/img/semaforI_delay.svg",
+    "Sistemi Operativi/riassunti/1-Architettura.md",
     "Statistica Numerica/Relazioni.canvas",
     "Strategia Aziendale/lab/intro.md",
     "Strategia Aziendale/Appunti.md",
-    "Strategia Aziendale/lab",
     "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
-    "Algoritmi e Strutture Dati/m3 pdf/L04-1-Strutture speciali.pdf",
-    "Strategia Aziendale/libro_riassunto.pdf",
     "Strategia Aziendale/Grafico.canvas",
-    "Strategia Aziendale/libro_riassunto.xopp~",
     "Strategia Aziendale/Strategia Aziendale.md",
-    "Strategia Aziendale/libro_riassunto.xopp",
-    "Strategia Aziendale/mso3F2F.tmp",
-    "Strategia Aziendale/mso2E36.tmp",
-    "Statistica Numerica/appunti/04_03.xopp~",
-    "Statistica Numerica/Esercizi/20_02/es.py",
     "Sistemi Operativi/riassunti/img/buffer.svg",
     "Sistemi Operativi/riassunti/img/processor_affinity.svg",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
-    "Sistemi Operativi/riassunti/1-Architettura.md",
     "Sistemi Operativi/riassunti/img/Pasted image 20240306153858.png",
     "Sistemi Operativi/riassunti/img/Pasted image 20240306153823.png",
     "Sistemi Operativi/riassunti/3-Thread.md",
@@ -199,8 +204,6 @@
     "Untitled.canvas",
     "Sistemi Operativi/riassunti/img/Pasted image 20240303133231.png",
     "Sistemi Operativi/riassunti/img/Pasted image 20240303132511.png",
-    "Sistemi Operativi/riassunti/Pasted image 20240303132452.png",
-    "Sistemi Operativi/riassunti/img/Pasted image 20240303132314.png",
     "Algoritmi e Strutture Dati/Formulario.md",
     "Strategia Aziendale/2 Analisi di settore.md",
     "Sistemi Operativi/appunti/1- introduzione.md",
@@ -217,7 +220,6 @@
     "Microeconomia/Domande.md",
     "Metodi Numerici/Formulario.md",
     "Microeconomia/Formulario.md",
-    "Metodi Numerici/Curve di bezier di grado n.md",
-    "Microeconomia/Riassunto.md"
+    "Metodi Numerici/Curve di bezier di grado n.md"
   ]
 }

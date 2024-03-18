@@ -114,7 +114,7 @@ P(S) // decremento, si chiede permesso al semaforo di entrare in sez. critica
 CriticalSection()
 V(S)// incremento e notifica fine sezione critica
 ```
-Un processo alla volta può accedere alla sezione condivisa (mutual exclusion). Bisogna acquisire una chiave per entrare (`P(S`). Se un processo vuole eseguire la sua CS non può farlo se $S=0$ e quindi verrà messo in attesa.
+Un processo alla volta può accedere alla sezione condivisa (mutual exclusion). Bisogna acquisire una chiave per entrare (`P(S)`). Se un processo vuole eseguire la sua CS non può farlo se $S=0$ e quindi verrà messo in attesa.
 ### Semaforo senza busy waiting
 Il busy waiting è utilizzato per istruzioni estremamente brevi e semplici, ma quando non è più affidabile si usano istruzioni di incremento e decremento più complesse.
 Il semaforo $S$ ha associato una lista dei processi bloccati su di esso.
@@ -135,3 +135,20 @@ V(S) {
 	}
 }
 ```
+> $P(S)$: Decrementa $S$ , se $S<0$ blocca il processo
+> $V(S)$: Incrementa $S$, se $S<=0$ sveglia il processo
+
+### Metodo `remove` chiamato dal consumatore
+```java
+public Object remove() {
+	Object item;
+	while (count == 0)
+		; // do nothing
+// remove an item from the buffer
+	--count;
+	item = buffer[out];
+	out = (out + 1) % BUFFER_SIZE;
+	return item;
+}
+```
+Vogliamo eliminare i costrutti che bloccano i processi `while` loop. La gestione delle sezioni condivise deve essere lasciata interamente ai semafori, che devono bloccare i consumatori quando il buffer è vuoto e i produttori quando è pieno. Se c'è un buffer vuoto, `count == 0` e `Semaforo == 1`, decrementando il produttore con `Semaforo==0` rischia di rimanere bloccato in attesa che torni ad 1. Questo può causare deadlock.

@@ -1,21 +1,18 @@
-package PrimAlg; /**
+package PrimAlg;
+
+/**
  * Implementation of Prim's algorithm to find a Minimum Spanning Tree
  * (MST) of a weighted, undirected graph.
- * <p>
  * The input file must be formatted as follows: an initial line
  * contains two integers, the number n of nodes and the number m of
  * edges, respectively.  Then m lines follow: each line contains three
  * numbers, two integers between 0 and n-1 (the nodes connected by an
  * edge) and a double (the corresponding weight).
- * <p>
  * To compile: javac Prim.java MinHeap.java
- * <p>
  * To execute: java Prim <fileIn>
- * <p>
  * (C) 2017 Gianluigi Zavattaro (https://www.unibo.it/sitoweb/gianluigi.zavattaro)
  * (C) 2020, 2021 Moreno Marzolla (https://www.moreno.marzolla.name/)
  * (C) 2022 Jocelyne Elias (https://www.unibo.it/sitoweb/jocelyne.elias)
- * <p>
  * Distributed under the CC-zero 1.0 license
  * https://creativecommons.org/publicdomain/zero/1.0/
  */
@@ -23,10 +20,9 @@ package PrimAlg; /**
 import java.io.*;
 import java.util.*;
 
-/*****************************************************************************
-
+/**
  Implementation of Prim's algorithm
- ******************************************************************************/
+ */
 public class Prim {
 
     int n;       // number of nodes in the input graph
@@ -50,6 +46,10 @@ public class Prim {
         }
 
         public int opposite(int v) {
+            /*
+            usato per raggiungere l'altra estremità:
+            head restituisce tail e viceversa
+             */
             assert ((src == v) || (dst == v));
 
             return (v == src ? dst : src);
@@ -82,21 +82,30 @@ public class Prim {
         Locale.setDefault(Locale.US);
 
         try {
-            Scanner f = new Scanner(new FileReader(inputf));
+            Scanner f = new Scanner(new FileReader("C:\\Users\\Ale\\Documents\\GitHub\\Secondo-Anno\\Algoritmi e Strutture Dati\\Esercizi\\src\\PrimAlg\\"+inputf));
             n = f.nextInt();
             m = f.nextInt();
 
-            adjList = new Vector<LinkedList<Edge>>(n);
+            adjList = new Vector<LinkedList<Edge>>(n); // vettore di n Linked list con gli edge
 
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < n; i++) { // iterazione sui nodi
                 adjList.add(i, new LinkedList<Edge>());
             }
 
-            for (int i = 0; i < m; i++) {
+            for (int i = 0; i < m; i++) { // iterazione sugli edge
+                // lettura 3 valori di una riga
                 final int src = f.nextInt();
                 final int dst = f.nextInt();
                 final double weight = f.nextDouble();
-                final Edge newEdge = new Edge(src, dst, weight);
+                // vettore liste di adiacenza ha stessa dimensione dei nodi del grafo
+                /* adjlist:
+                0   1   2   3   4   5   6   7   8
+                a   b   c   d   e   f   g   h   i
+                b   a
+                h   c
+                    h
+                 */
+                final Edge newEdge = new Edge(src, dst, weight); // Aggiunta nuovo edge
                 adjList.get(src).add(newEdge);
                 adjList.get(dst).add(newEdge);
             }
@@ -123,9 +132,9 @@ public class Prim {
            with the pseudocode */
         int[] parents = new int[n];
 
-        Arrays.fill(weights, Double.POSITIVE_INFINITY);
+        Arrays.fill(weights, Double.POSITIVE_INFINITY); // tutti i pesi inizializzati a infinito
         Arrays.fill(parents, -1);
-        Arrays.fill(added, false);
+        Arrays.fill(added, false); // tutti i nodi inizializzati a "non aggiunti"
 
         weights[s] = 0.0; // s è il nodo di partenza
         wtot = 0.0;
@@ -137,17 +146,19 @@ public class Prim {
         }
 
         while (!minHeap.isEmpty()) {
-            final int u = minHeap.min();
-            minHeap.deleteMin();
-            added[u] = true;
-            wtot += weights[u];
+            final int u = minHeap.min(); // valore min del minheap
+            minHeap.deleteMin(); // cancella valore min
+            added[u] = true; // segnalo come aggiunto
+            wtot += weights[u]; // aggiungi il suo peso a quello totale
             if (mst_edges[u] != null) {
                 mst.add(mst_edges[u]);
             }
-            for (Edge edge : adjList.get(u)) {
+            for (Edge edge : adjList.get(u)) { // itera su ogni arco adiacente della lista di adiacenza del nodo u
                 final double w = edge.w;
-                final int v = edge.opposite(u);
-                if (!added[v] && (w < weights[v])) {
+                final int v = edge.opposite(u); // vai al nodo opposto connesso da quell'arco
+                if (!added[v] && (w < weights[v])) { // se il nodo opposto non è stato aggiunto all'mst e
+                                                     // SE IL PESO DELL'ARCO è MINORE DEL PESO ATTUALE DEL NODO !!!!
+                                                     // allora modifico la priorità
                     weights[v] = w;
                     minHeap.changePrio(v, weights[v]);
                     parents[v] = u;
