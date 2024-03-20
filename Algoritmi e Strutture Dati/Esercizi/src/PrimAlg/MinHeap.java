@@ -1,4 +1,7 @@
 package PrimAlg;
+
+import java.util.*;
+
 /**
  * MinHeap.java
  * Written in 2020 by Moreno Marzolla <moreno.marzolla(at)unibo.it>
@@ -8,11 +11,7 @@ package PrimAlg;
  * You should have received a copy of the CC0 Public Domain Dedication
  * along with this software. If not, see
  * <http://creativecommons.org/publicdomain/zero/1.0/>.
- */
-
-import java.util.*;
-
-/**
+ *
  * This class implements a min-heap of a given maximum initial size n.
  * The heap contains pairs (data, priority) where data is an integer
  * in the range 0..n-1, and priority is any real value.
@@ -23,7 +22,7 @@ class MinHeap {
        heap[pos[id]].key == id. This array is required to make
        decreaseKey() run in log(n) time. */
     int[] pos; // pos[id]: posizione del nodo "id" nel heap
-               // == pos[heap[i]].data != heap[i].prio
+    // == pos[heap[i]].data != heap[i].prio
     int size, maxSize;
 
     /**
@@ -44,13 +43,12 @@ class MinHeap {
      * Build an empty heap with at most maxSize elements
      */
     public MinHeap(int maxSize) {
-        this.heap = new heapElem[maxSize];
+        this.heap = new heapElem[maxSize]; // array vuoto
         this.maxSize = maxSize;
         this.size = 0; // perchè è vuoto
         this.pos = new int[maxSize]; // capacità massima
         Arrays.fill(this.pos, -1); // riempito di -1
     }
-
 
     /**
      * Return true iff index i is a valid index in the heap,
@@ -78,7 +76,7 @@ class MinHeap {
      * Return the index of the parent of heap[i]
      */
     private int parent(int i) {
-        assert (valid(i));
+        assert (valid(i)); // se i non è valido arresto l'esecuzione
 
         return (i + 1) / 2 - 1; // i figli di un albero si trovano con il procedimento inverso
     }
@@ -89,7 +87,7 @@ class MinHeap {
     private int lchild(int i) {
         assert (valid(i));
 
-        return (i + 1) * 2 - 1;
+        return (i + 1) * 2 - 1; // formula figlio destro dell'sottoalbero
     }
 
     /**
@@ -98,7 +96,7 @@ class MinHeap {
     private int rchild(int i) {
         assert (valid(i));
 
-        return lchild(i) + 1;
+        return lchild(i) + 1; // (i + 1) * 2
     }
 
     /**
@@ -164,7 +162,7 @@ class MinHeap {
      * exists, until it reaches the correct position into the heap.
      * This method requires time O(log n).
      */
-    private void moveDown(int i) {
+    private void  moveDown(int i) {
         assert (valid(i));
 
         boolean done = false;
@@ -185,8 +183,8 @@ class MinHeap {
      */
     public void insert(int data, double prio) {
         assert ((data >= 0) && (data < maxSize));
-        assert (pos[data] == -1);
-        assert (!isFull());
+        assert (pos[data] == -1); // controllo se dove voglio inserire è vuoto
+        assert (!isFull()); // e il min heap non è pieno
 
         final int i = size++;
         pos[data] = i;
@@ -203,6 +201,10 @@ class MinHeap {
 
         swap(0, size - 1);
         pos[heap[size - 1].data] = -1;
+        /*
+        heap[size - 1].data: ultimo elemento del minheap
+        lo pongo = -1 (vuoto)
+         */
         size--;
         if (size > 0) moveDown(0);
     }
@@ -212,7 +214,7 @@ class MinHeap {
      * time O(log n).
      */
     public void changePrio(int data, double newprio) {
-        int j = pos[data];
+        int j = pos[data]; // posizione di data nell'heap
         assert (valid(j));
         final double oldprio = heap[j].prio;
         heap[j].prio = newprio;

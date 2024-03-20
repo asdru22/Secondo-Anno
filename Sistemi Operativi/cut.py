@@ -21,10 +21,10 @@ def split_pdf(input_pdf_path, output_dir, page_ranges):
                 print(f"PDF {i + 1} created: {output_pdf_path}")
 
 if __name__ == '__main__':
-    input_pdf_path = 'Strategia Aziendale/libro.pdf'  # Replace with the path to your input PDF
-    output_dir = 'Strategia Aziendale/capitoli'    # Replace with the directory where you want to save the output PDFs
+    input_pdf_path = 'Sistemi Operativi/libro_ed9.pdf'  # Replace with the path to your input PDF
+    output_dir = 'Sistemi Operativi/capitoli'    # Replace with the directory where you want to save the output PDFs
 
     # Specify the page ranges for each output PDF as a list of tuples (start_page, end_page)
-    page_ranges = [(103,144)]  # Example page ranges
+    page_ranges = [(375,417)]  # Example page ranges
 
     split_pdf(input_pdf_path, output_dir, page_ranges)

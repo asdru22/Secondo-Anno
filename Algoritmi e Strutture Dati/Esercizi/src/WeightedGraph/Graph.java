@@ -65,7 +65,7 @@ public class Graph {
             return mst;
         }
         String initial = this.edges.keySet().iterator().next();
-        Set<String> visited = new HashSet<String>();
+        Set<String> visited = new HashSet<>();
         visited.add(initial);
         mst.addVertex(initial);
         PriorityQueue<Edge> priorityQueue = new PriorityQueue<>();
