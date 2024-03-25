@@ -19,12 +19,56 @@ Un indirizzo generato dalla CPU è l'indirizzo logico, mentre quello caricato ne
 ### Memory Management Unit (MMU)
 La MMU è un dispositivo hardware che converte gli indirizzi virtuali in indirizzi fisici. Il valore del registro di rilocazione è generato da un processo dell'utente quando viene inviato in memoria. Il programma dell'utente usa indirizzi logici, non vede mai gli indirizzi fisici.
 ![[memory_management_unit.svg]]
-### Librerie collegate dinamicamente
-Una libreria dinamicamente collegata è una libreria di sistema che viene collegata a un programma utente solo quando il programma viene eseguito, anziché essere incorporata nell'immagine binaria del programma stesso durante la fase di compilazione.
-Con il collegamento dinamico, quando un programma ha bisogno di utilizzare una funzione da una libreria di sistema, non carica immediatamente tutta la libreria in memoria. Invece, quando viene eseguito il programma, viene inserito un piccolo pezzo di codice chiamato "stub" nell'immagine del programma. Lo stub contiene istruzioni su come trovare o caricare la funzione di libreria necessaria quando viene chiamata.
-
-Quando il programma raggiunge quel punto e necessita della funzione della libreria, lo stub controlla se quella funzione è già caricata in memoria. Se non lo è, il programma la carica. In entrambi i casi, lo stub si sostituisce con l'indirizzo della funzione e l'esegue. In questo modo, quando quel segmento di codice viene raggiunto di nuovo, la funzione della libreria viene eseguita direttamente, senza dover ricorrere nuovamente al collegamento dinamico. Questo processo permette una gestione efficiente delle risorse di sistema, poiché le funzioni della libreria vengono caricate solo quando necessario, riducendo la quantità di memoria e spazio su disco utilizzati.
 ### Swapping
 Un processo deve trovarsi in memoria per essere eseguito, ma può essere temporaneamente spostato dalla memoria a uno spazio di archiviazione secondario (detto backing store) e successivamente riportato in memoria per continuare l'esecuzione. Lo swapping rende possibile superare lo spazio fisico totale della memoria disponibile nel sistema, permettendo così un maggior grado di multiprogrammazione.
 
 Quando il sistema ha esaurito la memoria fisica dedicata ai processi (RAM), può utilizzare lo swapping per liberare memoria spostando momentaneamente alcuni processi su uno spazio di archiviazione secondario, come un disco rigido. In questo modo, la memoria fisica viene liberata per l'esecuzione di nuovi processi. Quando un processo spostato è richiamato, viene riportato in memoria principale dallo spazio di archiviazione secondario.
+### Protezione Memoria
+Per evitare che un processo acceda ad un indirizzo di memoria non suo si utilizza sia il relocation register che contiene l'indirizzo più piccolo che il limit register che contiene l'intervallo degli indirizzi logici.
+![[limit_relocation_register.drawio.svg]]
+Inizialmente tutta la memoria disponibile ai processi dell'utente è vuota: è costituita da un unico **hole**. Il SO gestisce l'allocazione della memoria, decidendo quali processi ricevono spazio di memoria e quali devono attendere in coda. Quando un processo termina, rilascia la memoria utilizzata, che può essere riutilizzata per caricare un nuovo processo dalla coda di input.
+La memoria viene allocata ai processi finché lo spazio di memoria richiesto da un processo non è disponibile (non esistono hole abbastanza grandi). Il SO può allora aspettare che si liberi un blocco sufficientemente grandi o può scorrere la coda degli input per controllare se c'è un processo con requisiti di memoria più piccoli. Soluzioni per gestire questo tipo di richieste (dynamic storage allocation) sono:
+- First fit: Si alloca il primo buco abbastanza grande
+- Best fit: si alloca il più piccolo buco sufficientemente grande
+- Worst fit: si alloca il buco più grande. Questa strategia produce buchi più grandi, che sono preferiti a quelli piccoli.
+### Frammentazione
+Con il first fit e best fit si incorre in un problema di frammentazione esterna. Mentre i processi vengono caricati nella memoria disponibile, si formano piccoli buchi non contigui di memoria, e nessuno di questi è in grado di avere un processo allocato. Questi buchi sono molto numerosi, e per ogni $n$ processi che occupano memoria, altri $n/2$ blocchi vengono persi per colpa della frammentazione.
+Una soluzione a questo problema è la compattazione: si mischiano i contenuti per piazzare tutta la memoria libera in un unico grande blocco, tuttavia questo processo è costoso.
+### Paginazione
+La paginazione permette di gestire la memoria in modo flessibile, consentendo ai processi di avere spazi di indirizzi non contigui. La paginazione risolve problemi come la frammentazione esterna, dove la memoria libera è divisa in blocchi non contigui, riducendo la complessità del sistema e semplificando la gestione della memoria. Inoltre evita la necessità di compattare la memoria per riorganizzare i blocchi di memoria libera, che può essere un'operazione dispendiosa in termini di tempo e risorse del sistema.
+Si implementa suddividendo la memoria fisica in blocchi di dimensioni fisse detti **frame**, e suddividendo la memoria logica in blocchi detti **pagine**. Ogni indirizzo generato dalla CPU ha un numero di pagina (p) e un offset (d). Il numero della pagina è usato come indice della **tabella delle pagine**, che contiene gli indirizzi di ogni pagina in memoria fisica che vengono poi combinati con l'offset per determinare l'indirizzo nella memoria fisica.
+La dimensione della memoria logica è $2^m$, mentre quello di una pagina è $2^n$. Esempio con $m=2$ e $n=4$.
+![[paginazione.svg]] 
+Per trovare la posizione di un processo da memoria fisica $f$ conoscendo la sua posizione in memoria logica $l$: 
+- `dim_pagina=2^m`
+- `pagina=l/dim_pagina`
+- `offset=l%dim_pagina`
+- `frame=page_table[pagina]`
+- `f=(frame*m)+offset`
+Questo processo richiede operazioni costose come la divisione e la moltiplicazione, e può essere semplificato per sfruttare la natura binaria del calcolatore.
+- base 10 per trovare la posizione in memoria fisica di 6: $6/4=1r2\ \ \ pag1\to frame6\ \ \ f=(6*4)+2=26$
+- base 2 per trovare la posizione in memoria fisica di 6: $110/100=1r10\ \ \ pag1\to frame6\ \ \ f=(100*100)+10=11010$
+Questo processo in binario si semplifica in: 
+- `exp= x` del divisore scritto in forma $2^x$ in base 10
+- `offset=prime x cifre di l` (da destra)
+- `pagina= resstanti cifre di l`
+- `f=page_table[pagina] + offset` dove la somma è un unione dei due numeri.
+![[paginazione_hardware.svg]]
+### Implementazione della Tabella di Paginazione
+- La tabella di paginazione viene mantenuta nella memoria principale.
+- Il registro base della tabella di pagina (PTBR) punta alla tabella di pagina.
+- Il registro di lunghezza della tabella di pagina (PRLR) indica la dimensione della tabella di pagina. In questo schema, ogni accesso ai dati/istruzioni richiede **due accessi alla memoria**. Uno per la tabella di pagina e uno per i dati/istruzioni.
+Il problema dei due accessi alla memoria può essere risolto utilizzando una cache hardware speciale per la rapida ricerca chiamata memoria associativa o buffer di traduzione (translation look-aside buffer, TLB).
+Quando alla memoria associativa viene presentato un oggetto, questo viene subito comparato con tutte le chiavi contemporaneamente. Se l'oggetto è presente sulla TLB allora il suo valore viene restituito (TLB hit). Se non è presente (TLB miss), bisogna fare una richiesta di accesso alla memoria principale.
+![[paginazione_hardware_tlb.svg]]
+### Tempo di Accesso Effettivo
+- $\epsilon$: tempo per fare ricerca associativa
+- $x$: durata ciclo di memoria
+- $\alpha$: hit ratio (percentuale di volte che un numero è trovato sui registri associativi)
+$$EAT=(1+\epsilon)\alpha+(2\times x+\epsilon)(1-\alpha)=2\times x+\epsilon-\alpha$$
+### Protezione Memoria
+La protezione di memoria viene implementata estendendo la tabella della pagina per includere un bit di validità. Se il bit di validità di un elemento è "valido" significa che la pagina associata è nello spazio logico e dunque è una pagina legale. "invalido" indica che la pagina non è nello spazio logico del processo.
+### Pagine Condivise
+Un vantaggio della paginazione è la possibilità di condividere il codice comune. Questo è particolarmente utile in un ambiente con time-sharing. Il codice **re-entrante** può essere condiviso. Del codice re-entrante è progettato in modo tale da essere sicuro per l'uso in ambienti concorrenti. Quindi può essere chiamato da più parti del programma o da più thread simultaneamente senza causare conflitti o corruzioni dei dati. Questo viene realizzato spesso evitando l'uso di dati globali condivisi e assicurandosi che il codice non abbia effetti collaterali imprevisti quando viene interrotto e ripreso in un altro contesto.
+Solo una copia del codice re-entrante viene condivisa tra i processi. Tuttavia per funzionare il codice condiviso deve apparire nella stessa posizione in memoria logica per tutti i processi.
+![[pagine_condivise.svg]]

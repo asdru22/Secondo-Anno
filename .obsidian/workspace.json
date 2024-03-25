@@ -18,6 +18,16 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "15ce55a36d1abffd",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "Sistemi Operativi/riassunti/img/pagine_condivise.svg"
+              }
+            }
           }
         ]
       }
@@ -79,8 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -169,38 +178,39 @@
   },
   "active": "0c9ad3fc66524c21",
   "lastOpenFiles": [
-    "Sistemi Operativi/appunti/9-gestione di memoria.xopp~",
-    "Sistemi Operativi/capitoli/8.pdf",
+    "Sistemi Operativi/riassunti/img/pagine_condivise.svg",
     "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+    "Sistemi Operativi/riassunti/img/paginazione_hardware_tlb.svg",
+    "Sistemi Operativi/riassunti/img/paginazione_hardware - Copia.svg",
+    "Sistemi Operativi/capitoli/8.xopp~",
+    "Sistemi Operativi/riassunti/5-Gestione memoria.pdf",
+    "CIAO.md",
+    "Sistemi Operativi/riassunti/sample.pdf",
+    "Sistemi Operativi/appunti/9-gestione di memoria.xopp~",
+    "Sistemi Operativi/riassunti/img/paginazione_hardware.svg",
+    "Sistemi Operativi/riassunti/4-Semafori.md",
+    "Sistemi Operativi/riassunti/img/paginazione.svg",
+    "Sistemi Operativi/riassunti/img/paginazione.drawio.svg",
+    "Sistemi Operativi/riassunti/img/limit_relocation_register.drawio.svg",
+    "Sistemi Operativi/capitoli/8.pdf",
     "Sistemi Operativi/riassunti/img/Diagramma senza titolo.drawio.svg",
     "Sistemi Operativi/riassunti/img/memory_management_unit.svg",
     "Sistemi Operativi/riassunti/img/controlli_indirizzi_memoria.svg",
-    "Sistemi Operativi/riassunti/img/registri_limit_base.svg",
     "Sistemi Operativi/libro_ed9.pdf",
     "Sistemi Operativi/capitoli/capitolo_100.pdf",
     "Sistemi Operativi/capitoli",
     "Strategia Aziendale/capitoli/cut 1.py",
     "Algoritmi e Strutture Dati/m3 pdf/L04-1-Strutture speciali.pdf",
-    "Algoritmi e Strutture Dati/m3 pdf/L03-2-Strutture-Merge-Find.pdf",
-    "Algoritmi e Strutture Dati/m3 pdf/L00-introduzione-modulo3.pdf",
-    "Algoritmi e Strutture Dati/m3 pdf/L03-1-Minimum-Spanning-Tree.pdf",
     "Strategia Aziendale/Grafico.canvas",
     "Statistica Numerica/Relazioni.canvas",
     "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
-    "Sistemi Operativi/riassunti/4-Semafori.md",
-    "Sistemi Operativi/riassunti/img/entry_wait_set.svg",
     "Sistemi Operativi/riassunti/3-Concorrenza.md",
-    "Sistemi Operativi/riassunti/img/semaforI_delay.svg",
     "Sistemi Operativi/riassunti/1-Architettura.md",
     "Strategia Aziendale/lab/intro.md",
     "Strategia Aziendale/Appunti.md",
     "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
     "Strategia Aziendale/Strategia Aziendale.md",
-    "Sistemi Operativi/riassunti/img/buffer.svg",
-    "Sistemi Operativi/riassunti/img/processor_affinity.svg",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
-    "Sistemi Operativi/riassunti/img/Pasted image 20240306153858.png",
-    "Sistemi Operativi/riassunti/img/Pasted image 20240306153823.png",
     "Sistemi Operativi/riassunti/3-Thread.md",
     "Untitled.canvas",
     "Algoritmi e Strutture Dati/Formulario.md",
@@ -208,7 +218,6 @@
     "Sistemi Operativi/appunti/1- introduzione.md",
     "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/test.canvas",
-    "Untitled.md",
     "Finanza Aziendale/Formulario.md",
     "Finanza Aziendale/es/Domande Esame.md",
     "asdrulet 4c.md",
