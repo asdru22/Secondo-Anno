@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cd802340a533f8a3",
+        "id": "8a7ce056c70e537a",
         "type": "tabs",
         "children": [
           {
-            "id": "0c9ad3fc66524c21",
+            "id": "9541d2caf85e868a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Sistemi Operativi/riassunti/5-Gestione memoria.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "15ce55a36d1abffd",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "Sistemi Operativi/riassunti/img/pagine_condivise.svg"
+                "file": "Sistemi Operativi/capitoli/5.pdf"
               }
             }
           }
@@ -58,7 +46,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi Operativi/riassunti/5-Gestione memoria.md"
+                "file": "Sistemi Operativi/capitoli/5.pdf"
               }
             }
           },
@@ -105,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+                "file": "Sistemi Operativi/capitoli/5.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+                "file": "Sistemi Operativi/capitoli/5.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,35 +164,37 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0c9ad3fc66524c21",
+  "active": "64d91feac736879b",
   "lastOpenFiles": [
+    "Sistemi Operativi/pdf/7-concorrenza.pdf",
+    "Sistemi Operativi/riassunti/3-Concorrenza.pdf",
+    "Sistemi Operativi/riassunti/3-Concorrenza.md",
+    "Sistemi Operativi/pdf/3-struttura so.pdf",
+    "Sistemi Operativi/pdf/4-processi.pdf",
+    "Sistemi Operativi/pdf/5-threads.pdf",
+    "Sistemi Operativi/pdf/6-scheduling cpu.pdf",
+    "Sistemi Operativi/pdf/2-strutture.pdf",
+    "Sistemi Operativi/riassunti/2-Struttura e Processi.pdf",
+    "Algoritmi e Strutture Dati/Formulario.md",
+    "Sistemi Operativi/Esercizi 03_27.xopp~",
+    "Sistemi Operativi/Esercizi 03_27.xopp",
+    "Sistemi Operativi/riassunti/4-Semafori.md",
+    "Statistica Numerica/pdf/05_03.pdf",
+    "Statistica Numerica/Relazioni.canvas",
     "Sistemi Operativi/riassunti/img/pagine_condivise.svg",
     "Sistemi Operativi/riassunti/5-Gestione memoria.md",
     "Sistemi Operativi/riassunti/img/paginazione_hardware_tlb.svg",
     "Sistemi Operativi/riassunti/img/paginazione_hardware - Copia.svg",
-    "Sistemi Operativi/capitoli/8.xopp~",
-    "Sistemi Operativi/riassunti/5-Gestione memoria.pdf",
     "CIAO.md",
-    "Sistemi Operativi/riassunti/sample.pdf",
-    "Sistemi Operativi/appunti/9-gestione di memoria.xopp~",
     "Sistemi Operativi/riassunti/img/paginazione_hardware.svg",
-    "Sistemi Operativi/riassunti/4-Semafori.md",
     "Sistemi Operativi/riassunti/img/paginazione.svg",
     "Sistemi Operativi/riassunti/img/paginazione.drawio.svg",
     "Sistemi Operativi/riassunti/img/limit_relocation_register.drawio.svg",
-    "Sistemi Operativi/capitoli/8.pdf",
     "Sistemi Operativi/riassunti/img/Diagramma senza titolo.drawio.svg",
     "Sistemi Operativi/riassunti/img/memory_management_unit.svg",
     "Sistemi Operativi/riassunti/img/controlli_indirizzi_memoria.svg",
-    "Sistemi Operativi/libro_ed9.pdf",
-    "Sistemi Operativi/capitoli/capitolo_100.pdf",
-    "Sistemi Operativi/capitoli",
-    "Strategia Aziendale/capitoli/cut 1.py",
-    "Algoritmi e Strutture Dati/m3 pdf/L04-1-Strutture speciali.pdf",
     "Strategia Aziendale/Grafico.canvas",
-    "Statistica Numerica/Relazioni.canvas",
     "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
-    "Sistemi Operativi/riassunti/3-Concorrenza.md",
     "Sistemi Operativi/riassunti/1-Architettura.md",
     "Strategia Aziendale/lab/intro.md",
     "Strategia Aziendale/Appunti.md",
@@ -213,7 +203,6 @@
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
     "Sistemi Operativi/riassunti/3-Thread.md",
     "Untitled.canvas",
-    "Algoritmi e Strutture Dati/Formulario.md",
     "Strategia Aziendale/2 Analisi di settore.md",
     "Sistemi Operativi/appunti/1- introduzione.md",
     "Finanza Aziendale/Formule.canvas",
