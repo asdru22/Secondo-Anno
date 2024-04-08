@@ -1,6 +1,6 @@
 package PrimitiveJava;
 
-
+/*
 public class Database {
     private int readerCount;
     private boolean dbReading;
@@ -28,7 +28,7 @@ public class Database {
     public synchronized int endRead() {
         --readerCount;
         if (readerCount == 0)
-            db.notifyAll();
+            //db.notifyAll();
         return readerCount;
     }
 
@@ -46,3 +46,5 @@ public class Database {
         notifyAll();
     }
 }
+
+ */

@@ -1,5 +1,5 @@
 package PrimitiveJava;
-
+/*
 public class EnterRemove {
     public synchronized void enter(Object item) {
         while (count == BUFFER_SIZE)
@@ -19,3 +19,6 @@ public class EnterRemove {
         return item;
     }
 }
+
+
+ */
