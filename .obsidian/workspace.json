@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+                "file": "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi Operativi/riassunti/5-Gestione memoria.md"
+                "file": "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md"
               }
             }
           },
@@ -79,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -95,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+                "file": "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+                "file": "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,9 +169,13 @@
   },
   "active": "9541d2caf85e868a",
   "lastOpenFiles": [
+    "Sistemi Operativi/riassunti/Paginazione.py",
+    "Algoritmi e Strutture Dati/Es divide et impera.md",
+    "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
+    "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+    "Sistemi Operativi/appunti finali/5-Gestione memoria.xopp~",
     "Sistemi Operativi/appunti finali/5-Gestione memoria.xopp",
     "Sistemi Operativi/riassunti/5-Gestione memoria.pdf",
-    "Sistemi Operativi/riassunti/5-Gestione memoria.md",
     "Sistemi Operativi/capitoli/5.pdf",
     "Strategia Aziendale/Satispay.md",
     "Sistemi Operativi/Progetto.md",
@@ -182,8 +187,6 @@
     "Sistemi Operativi/pdf/3-struttura so.pdf",
     "Sistemi Operativi/pdf/4-processi.pdf",
     "Sistemi Operativi/pdf/5-threads.pdf",
-    "Sistemi Operativi/pdf/6-scheduling cpu.pdf",
-    "Sistemi Operativi/pdf/2-strutture.pdf",
     "Algoritmi e Strutture Dati/Formulario.md",
     "Sistemi Operativi/riassunti/4-Semafori.md",
     "Statistica Numerica/Relazioni.canvas",
@@ -216,8 +219,6 @@
     "Finanza Aziendale/es/Domande Esame.md",
     "asdrulet 4c.md",
     "Microeconomia/note/Introduzione.md",
-    "Microeconomia/note/Riassunto.md",
-    "Microeconomia/note/Formulario.md",
-    "Microeconomia/note/Domande.md"
+    "Microeconomia/note/Riassunto.md"
   ]
 }
