@@ -1,7 +1,7 @@
 Esempio su Page Table (PT), in cui la taglia della PT è più grande della taglia dei frame e quindi sara' necessaria una paginazione della PT stessa.
-> Un'entry è una singola voce nella tabella di paginazione
+> Un'entry è una singola riga nella tabella di paginazione (coppia numero pagina e numero frame)
 
-Dati:
+Dati: 
 - Cerchiamo gli indirizzi logici su $32b$
 - La taglia delle pagine è di $32KB = 2^{15}B$, da cui $15b$ per l'offset
 - Abbiamo $0.5GB = 2^{29}B$ di RAM.

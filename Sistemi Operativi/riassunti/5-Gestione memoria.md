@@ -72,3 +72,21 @@ La protezione di memoria viene implementata estendendo la tabella della pagina p
 Un vantaggio della paginazione è la possibilità di condividere il codice comune. Questo è particolarmente utile in un ambiente con time-sharing. Il codice **re-entrante** può essere condiviso. Del codice re-entrante è progettato in modo tale da essere sicuro per l'uso in ambienti concorrenti. Quindi può essere chiamato da più parti del programma o da più thread simultaneamente senza causare conflitti o corruzioni dei dati. Questo viene realizzato spesso evitando l'uso di dati globali condivisi e assicurandosi che il codice non abbia effetti collaterali imprevisti quando viene interrotto e ripreso in un altro contesto.
 Solo una copia del codice re-entrante viene condivisa tra i processi. Tuttavia per funzionare il codice condiviso deve apparire nella stessa posizione in memoria logica per tutti i processi.
 ![[pagine_condivise.svg]]
+# Struttura della paginazione
+### Paginazione gerarchica
+Nei SO moderni con $2^{32}$ o $2^{64}$  indirizzi logici, la tabella di paginazione diventa eccessivamente grande, dunque si vuole evitare di allocarla tutta nella memoria principale. Si può usare una paginazione a 2 livelli, dove la page table è a sua volta paginata.
+### Tabelle di paginazione Hashed
+Un'altra alternativa sono le tabelle di paginazione hashed, dove l'hash è il numero della pagina virtuale. Ogni elemento della page table è composto da 3 campi:
+1. Numero di pagina virtuale
+2. Valore del frame della pagina mappata
+3. Puntatore all'elemento successivo della linked list.
+L'algoritmo funziona così:
+1. II numero della pagina virtuale nell'indirizzo virtuale è mappato nella hash table.
+2. Si controlla se il numero della pagina virtuale è uguale al primo elemento della lista.
+3. Se è uguale il frame corrispondente è usato per creare l'indirizzo fisico richiesto. 
+4. Se è diverso, si scorre tutta la lista per cercare un valore uguale.
+### Tabelle di paginazione invertite
+Le tabelle di paginazione invertite hanno un'entry per ogni frame di memoria (reale). Ogni entry consiste nell'indirizzo virtuale della pagina memorizzata in quella locazione di memoria e informazioni sul processo di cui fa parte la pagina.
+Poiché una singola tabella di paginazione invertita può essere condivisa tra più processi, è fondamentale includere un identificatore dello spazio degli indirizzi in ogni voce della tabella per distinguere quali indirizzi virtuali appartengono a quale processo. Questo identificatore dello spazio degli indirizzi consente al sistema operativo di determinare correttamente a quale processo appartiene un dato indirizzo virtuale quando viene richiesta una traduzione da indirizzo virtuale a indirizzo fisico.
+Per trovare questo identificatore bisogna accedere alla memoria centrale ogni volta che si cerca sulla tabella di paginazione, quindi per evitare di fare tante richieste quante sono le entry nella tabella, si usa una hash map al posto di una lista.
+Le tabelle di paginazione invertita non furono mai ampiamente diffuse.
