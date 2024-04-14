@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
+                "file": "Strategia Aziendale/Riassunto.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md"
+                "file": "Strategia Aziendale/Riassunto.md"
               }
             }
           },
@@ -79,7 +79,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -95,7 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
+                "file": "Strategia Aziendale/Riassunto.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,19 +139,18 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
+                "file": "Strategia Aziendale/Riassunto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
+                "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -168,11 +168,17 @@
   },
   "active": "9541d2caf85e868a",
   "lastOpenFiles": [
+    "Strategia Aziendale/Appunti.md",
+    "Strategia Aziendale/Riassunto.md",
+    "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
+    "Strategia Aziendale/img/ciclo_pianificazione_strategica.svg",
+    "Strategia Aziendale/img/fasi_analisi.svg",
+    "Strategia Aziendale/libro_riassunto.xopp~",
+    "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
     "Sistemi Operativi/riassunti/img/least_recently_used.svg",
     "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
     "Sistemi Operativi/riassunti/img/bit_sporco.svg",
     "Sistemi Operativi/riassunti/img/buffer.svg",
-    "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
     "Sistemi Operativi/riassunti/img/page_fault.svg",
     "Sistemi Operativi/capitoli/9.pdf",
     "Sistemi Operativi/capitoli/9.xopp~",
@@ -188,7 +194,6 @@
     "Strategia Aziendale/Satispay.md",
     "Sistemi Operativi/Progetto.md",
     "Sistemi Operativi/Laboratorio/Note.md",
-    "Sistemi Operativi/Laboratorio/src/deadlock.java",
     "Sistemi Operativi/riassunti/3-Concorrenza.md",
     "Algoritmi e Strutture Dati/Formulario.md",
     "Sistemi Operativi/riassunti/4-Semafori.md",
@@ -198,17 +203,12 @@
     "Sistemi Operativi/riassunti/img/paginazione_hardware - Copia.svg",
     "CIAO.md",
     "Sistemi Operativi/riassunti/img/paginazione_hardware.svg",
-    "Sistemi Operativi/riassunti/img/paginazione.svg",
-    "Sistemi Operativi/riassunti/img/paginazione.drawio.svg",
-    "Sistemi Operativi/riassunti/img/limit_relocation_register.drawio.svg",
     "Strategia Aziendale/Grafico.canvas",
     "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
     "Sistemi Operativi/riassunti/1-Architettura.md",
     "Strategia Aziendale/lab/intro.md",
-    "Strategia Aziendale/Appunti.md",
     "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
     "Strategia Aziendale/Strategia Aziendale.md",
-    "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
     "Sistemi Operativi/riassunti/3-Thread.md",
     "Untitled.canvas",
     "Strategia Aziendale/2 Analisi di settore.md",
@@ -217,7 +217,6 @@
     "Finanza Aziendale/test.canvas",
     "Finanza Aziendale/Formulario.md",
     "Finanza Aziendale/es/Domande Esame.md",
-    "asdrulet 4c.md",
-    "Microeconomia/note/Introduzione.md"
+    "asdrulet 4c.md"
   ]
 }
