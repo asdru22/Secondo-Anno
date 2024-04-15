@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8a7ce056c70e537a",
+        "id": "45432e6c100c4869",
         "type": "tabs",
         "children": [
           {
-            "id": "9541d2caf85e868a",
+            "id": "5c71eec7aac8dbcc",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -79,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -166,14 +165,16 @@
       "command-palette:Open command palette": true
     }
   },
-  "active": "9541d2caf85e868a",
+  "active": "5c71eec7aac8dbcc",
   "lastOpenFiles": [
     "Strategia Aziendale/Appunti.md",
     "Strategia Aziendale/Riassunto.md",
+    "Strategia Aziendale/libro_riassunto.xopp~",
+    "Untitled.canvas",
+    "Strategia Aziendale/libro.pdf",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
     "Strategia Aziendale/img/ciclo_pianificazione_strategica.svg",
     "Strategia Aziendale/img/fasi_analisi.svg",
-    "Strategia Aziendale/libro_riassunto.xopp~",
     "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
     "Sistemi Operativi/riassunti/img/least_recently_used.svg",
     "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
@@ -190,7 +191,6 @@
     "Sistemi Operativi/appunti finali/5-Gestione memoria.xopp~",
     "Sistemi Operativi/appunti finali/5-Gestione memoria.xopp",
     "Sistemi Operativi/riassunti/5-Gestione memoria.pdf",
-    "Sistemi Operativi/capitoli/5.pdf",
     "Strategia Aziendale/Satispay.md",
     "Sistemi Operativi/Progetto.md",
     "Sistemi Operativi/Laboratorio/Note.md",
@@ -210,7 +210,6 @@
     "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
     "Strategia Aziendale/Strategia Aziendale.md",
     "Sistemi Operativi/riassunti/3-Thread.md",
-    "Untitled.canvas",
     "Strategia Aziendale/2 Analisi di settore.md",
     "Sistemi Operativi/appunti/1- introduzione.md",
     "Finanza Aziendale/Formule.canvas",

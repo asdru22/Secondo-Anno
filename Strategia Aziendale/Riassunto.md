@@ -61,7 +61,7 @@ Si analizzano
 - Weaknesses: aree in cui l'azienda è meno efficace o efficiente
 - Opportunities: tendenze del mercato o cambiamenti nel contesto competitivo che potrebbero offrire all'azienda opportunità
 - Threats: forze esterne che potrebbero limitare la capacità di crescita o di successo dell'azienda
-# 2. Strumenti dell'analisi strategica
+# 2 Strumenti dell'analisi strategica
 ### 2.1 Strategia e creazione di valore
 Con valore si intende il valore monetario di un prodotto o bene aziendale. Lo scopo dell'attività dell'impresa è di creare valore per i clienti tramite
 - produzione: crea valore trasformando fisicamente prodotti che hanno meno valore per il cliente in prodotti che hanno più valore
@@ -76,7 +76,7 @@ La massimizzazione del valore dell'impresa avviene tramite la massimizzazione de
 - la concorrenza: è necessario che nel lungo termine ottenga un tasso di profitto che copra il suo costo del capitale
 - l'acquisizione
 - la convergenza degli interessi degli stakeholder
-# 3. Analisi di settore
+# 3 Analisi di settore
 ### 3.1 Dall'analisi dell'ambiente all'analisi di settore
 L'analisi **PEST** considera i fattori politici, economici, sociali e tecnologici che hanno un impatto sull'azienda.
 I fattori che giocano un ruolo chiave per le decisioni strategiche di un impresa sono
@@ -136,13 +136,12 @@ Bisogna identificare quali caratteristiche strutturali di un settore sono respon
 #### 3.3.2 Posizionamento dell'impresa
 Essere consapevoli delle pressioni competitive che un'impresa è soggetta nel proprio settore consente ai manager di collocare l'azienda dove queste pressioni sono più deboli.
 ### 3.4 Definizione dei confini del settore
-L'analisi di settore ha come oggetto la redditività del settore come esito del gioco della concorrenza nei mercati dei prodotti e quelli degli input. Il problema centrale nel definire i confini è stabilire chi compete con chi. Per farlo si delineano i confini tramite il **principio della sostituibilità**.
-Per stabilire i confini geografici si usa il prezzo.
+L'analisi di settore ha come oggetto la redditività del settore come esito del gioco della concorrenza nei mercati dei prodotti e quelli degli input. Il problema centrale nel definire i confini è stabilire chi compete con chi. Per farlo si delineano i confini tramite il **principio della sostituibilità**. Per stabilire i confini geografici si usa il prezzo.
 ### 3.5 Individuazione dei fattori critici di successo
 Sono quei fattori che influenzano la capacità di un impresa di ottenere risultati migliori dei propri rivali, attraendo clienti chiedendosi
 - cosa essi desiderano
 - cosa deve fare l'impresa per sopravvivere alla concorrenza
-# 4. Dall'analisi di settore all'analisi dei concorrenti
+# 4 Dall'analisi di settore all'analisi dei concorrenti
 ### 4.1 I limiti dell'analisi di settore
 Bisogna riconoscere i limiti dello schema (delle 5 forze competitive) di Porter e aggiungere nuovi elementi all'anlisi di settore. Questo ignora che la concorrenza mette in moto l'innovazione e l'imprenditorialità, capaci di trasformare settori. Se i settori sono ipercompetitivi le loro strutture tendono a essere instabili e le basi del vantaggio competitivo transitorie. Il vantaggio di un'impresa è dato dalla sua **esternalità di rete**: in generale un impresa con una quota di mercato dominante riesce a convogliare verso di se risorse che vengono tolte ai suoi concorrenti. Nei settori *winner takes all* l'analisi delle dinamiche del vantaggio competitivo ha la precedenza sugli strumenti di analisi settoriale convenzionali.
 ### 4.2 Estensioni alla schema delle cinque forze
@@ -193,7 +192,7 @@ La segmentazione può essere
 - orizzontale: disaggregazione per prodotti
 - verticale: individuazione di attività con differenti catene del valore
 Il **gruppo strategico** è un gruppo di imprese che, all'interno di un settore, fanno scelte strategiche simili.
-# 5. Le risorse e le competenze come base della strategia
+# 5 Le risorse e le competenze come base della strategia
 ### 5.1 Risorse e competenze nella formulazione strategica
 Per poter confermare degli ottimi risultati nel tempo è necessario che il vantaggio competitivo sia sostenibile. La strategia deve sfruttare le risorse e le competenze migliori di una persona o di un'organizzazione, con particolare attenzione sul loro ruolo come base per la strategia.
 Le risorse e le competenze interne sono una base più sicura per la strategia rispetto ai mercati esterni. Si è affermata come fonte principale di redditività il vantaggio competitivo.
@@ -235,7 +234,7 @@ L'analisi svolta fin ora può essere riassunta in
 - sfruttare i punti di forza
 - trasformare i punti deboli in punti di forza per costruire un obiettivo di lungo termine
 La soluzione migliore è l'**esternalizzazione**, concentrandosi sui propri punti di forza e lasciando all'esternalizzazione le altre attività.
-# 6. Fondamenti dell'implementazione strategica
+# 6 Fondamenti dell'implementazione strategica
 ### 6.1 Formulazione e implementazione della strategia
 La formulazione e l'implementazione dipendono l'una dall'altra. La **strategia deliberata** viene definita seguendo un processo di pianificazione strutturato, coerente nel perseguimento degli obiettivi di lungo termine (ma incompleta). La **strategia emergente** è un insieme di decisioni strategiche che adattano la strategia deliberata a cambiamenti delle circostanze esterne.
 La formulazione strategica deve considerare e le condizioni in cui avviene l'implementazione.
@@ -281,7 +280,7 @@ Negli ultimi anni si sono presentati cambiamenti all'interno delle strutture ger
 - strutture a rete: reti sociali formate dall'insieme delle interazioni tra i membri dell'organizzazione, dove il coordinamento nasce spontaneo.
 - frontiere organizzative permeabili
 Caratteristiche comuni a queste strutture sono il focus sul coordinamento, sistemi informali di coordinamento e individui che ricoprono molteplici ruoli organizzativi
-### 7. Fonti e dimensioni del vantaggio competitivo
+# 7 Fonti e dimensioni del vantaggio competitivo
 ### 7.1 Cambiamenti interni ed esterni
 Il vantaggio competitivo rappresenta la capacità di un'impresa di ottenere risultati migliori dei suoi concorrenti. Ma si può definire meglio come il **potenziale** di un impresa di ottenere un tasso di redditività maggiore dei suoi concorrenti diretti.
 I cambiamenti che generano vantaggio competitivo si differenziano in interni ed esterni, quelli esterni generano vantaggio competitivo quando hanno effetti diversi sulle imprese. Più grandi sono, più grande è la possibilità che il cambiamento generi un vantaggio competitivo.
@@ -320,4 +319,173 @@ I **determinanti di costo**, ovvero le principali fonti di costo di un'azienda s
 	- all'aumentare del grado di specializzazione dei macchinari e delle attrezzature, aumenta il costo che le imprese devono sostenere per acquistarli
 	Per questo all'aumentare della produzione il costo sostenuto inizialmente cala, per poi aumentare una volta raggiunto il punto di **scala minima efficiente**
 2. economie di apprendimento: l'apprendimento è sia individuale, acquisendo una migliore capacità di risoluzione dei problemi, che di gruppo, sviluppando routine organizzative
-3. tecnologie e progettazione di processo:
+3. tecnologie e progettazione di processo: maggiori sono i processi maggiori sono le economie di scala associate. Se l'innovazione del processo è incorporata in nuovi impianti e attrezzature, allora è probabile che la sua diffusione sia rapida
+4. progettazione del prodotto: la progettazione per la produzione può offrire un risparmio di costo, specialmente quando è associata all'introduzione di un nuovo processo tecnologico
+5. utilizzo della capacità produttiva: la capacità produttiva è più o meno fissa e le variazioni dell'output sono associate all'utilizzo degli impianti. Il sottoutilizzo può causare un aumento del costo unitario.
+6. costi di approvigionamento: un'azienda può pagare un input meno dei concorrenti se ha
+	- differenze nei prezzi a causa della localizzazione geografica
+	- fonti di approvigionamento a basso costo
+	- un lavoro non sindacalizzato
+	- potere contrattuale
+7. efficienza residuale: quanto un'azienda è in grado di utilizzare i suoi input in modo efficiente per generare output
+### 7.4 Catena del valore di Porter
+Scompone il business nelle sue attività principali per evidenziare in che modo ciascuna di esse contribuisca alla generazione del valore aggiunto complessivo e alla costruzione dei vantaggi competitivi. L'analisi è composta da
+1. disaggregazione dell'impresa in attività separate
+2. individuazione delle determinanti di costo (per provare a ridurlo)
+3. individuazione dei legami fra le attività
+4. individuazione delle opportunità di riduzione dei costi
+### 7.5 Il vantaggio di differenziazione
+Si realizza quando il premio sul prezzo che un impresa riesce a conseguire eccede il costo sostenuto per ottenere la differenziazione stessa. I prodotti privi di differenziazione sono detti ***commodities***. La differenziazione richiede una comprensione dei clienti e di come il prodotto possa soddisfarli. L'impresa deve essere consapevole delle risorse e delle competenze con cui può creare unicità. La differenziazione può essere
+- tangibile: riguarda le caratteristiche visibili di un prodotto o servizio, rilevanti nelle scelte dei consumatori
+- intangibile: riguarda il valore che i clienti attribuiscono a un prodotto o a un servizio, indipendentemente dai loro aspetti tangibili
+La differenziazione è diversa dalla segmentazione. La segmentazione è una caratteristica della struttura del mercato, mentre la differenziazione è una scelta strategica attuata dall’impresa.
+L'analisi della domanda permette di determinare quali caratteristiche di prodotto sono in grado di creare valore per il cliente. Inizia con la comprensione dei motivi che spingono i consumatori ad acquistare un prodotto o servizio. Per comprendere i bisogni del cliente si fa affidamento su
+- *multidimensional scaling*: comparazione dei prodotti concorrenti
+- *conjoint analysis*: misurazione dell'intensità delle preferenze del consumatore per diversi prodotti
+- analisi dei prezzi edonistici: considerazione dei prodotti come insiemi di caratteristiche
+L'analisi della differenziazione non considera le motivazioni sociali e psicologiche degli acquisti.
+Per offrire un prodotto differenziato bisogna
+- offrire un bene unico
+- mettere a punto un pacchetto di interventi complementari di differenziazione
+- avere una reputazione, dato che non sempre i consumatori avranno informazioni sulle qualità e caratteristiche dei beni
+- avere un marchio, che è segno della qualità del prodotto e un incentivo a mantenerla
+- sostenere costi di differenziazione
+Porter identifica fattori di unicità che stanno alla base delle decisioni dell'impresa
+- caratteristiche e prestazioni
+- **servizi complementari**
+- intensità delle attività di marketing
+- tecnologia impiegata
+- **qualità degli input** acquisiti
+- procedure che influenzano la gestione di ciascuna attività
+- competenze ed esperienze dei dipendenti
+- **collocazione geografica**
+- livello di integrazione verticale
+Per differenziare con successo bisogna trovare una corrispondenza tra la capacità di differenziazione dell'impresa e le caratteristiche maggiormente gradite ai clienti. Si può allora usare l'analisi della catena del valore di beni strumentali per individuare vantaggi di differenziazione, suddivisa in
+- costruzione di una catena del valore
+- individuazione dei fattori che determinano l'unicità di ogni attività
+- individuazione dei punti di collegamento tra la catena del valore dell'impresa e quella dell'acquirente
+L'analisi della catena sul valore dei beni di consumo
+- durevoli è lunga e può includere attività di ricerca, acquisto e finanziamenti
+- non durevoli è altrettanto lunga
+Per Porter il vantaggio di costo e la differenziazione costituiscono strategie tra loro
+alternative e mutualmente escludibili.
+# 8 Evoluzione del settore e cambiamento strategico
+### 8.1 Ciclo di vita di un settore
+Se i prodotti hanno un ciclo di vita, anche i settori ne hanno una. Il ciclo di vita è diviso in
+- introduzione: le vendite sono ridotte e il tasso di penetrazione del mercato è basso, ha una varietà di categorie di prodotti che riflettono la diversità di tecnologie e modelli
+- sviluppo: la penetrazione del mercato è sempre più rapida, il mercato è in espansione
+- maturità: la crescente saturazione del mercato fa si che col tempo tutta la domanda diventa (ingressi, fusione, uscita). Il tasso di fallimento diminuisce e si ricerca l'efficenza di costo
+- declino: causato dai prodotti sostitutivi, la differenziazione diventa difficile. 
+Due fattori fondamentali sono lo sviluppo della domanda e la creazione la **diffusione di coscienza**.
+La concorrenza tra tecnologie e modelli alternativi porta a un modello dominante, che definisce l'aspetto, funzionalità e metodo di produzione.
+Uno standard tecnico è una tecnologia o specificazione importante per la compatibilità, emergono dove sono presenti economie di rete.
+L'emergere di un modello dominante segna un punto di svolta nel processo di evoluzione di un settore: il passaggio dall'innovazione radicale a quella incrementale del prodotto.
+I cambiamenti nello sviluppo della domanda e della tecnologia nel corso del suo ciclo di vita hanno implicazioni per la struttura del settore.
+### 8.2 La sfida dell'adattamento organizzativo e e e del cambiamento strategico
+Il cambiamento è difficile da attuare a causa di
+- routine organizzative: maggiori sono, più difficile è svilupparne nuove
+- strutture politiche e sociali
+- conformismo: l'isomorfismo istituzionale blocca le organizzazioni all'interno di strutture e strategia sempre uguali che rendono difficile adattarsi al cambiamento
+- ricerca limitata: la capacità di attuare cambiamenti è limitata da fattori cognitivi e comportamentali
+- strategie, strutture e sistemi complementari: queste configurazioni iniziali diventano un ostacolo al cambiamento
+Fattori critici di successo hanno implicazioni per le principali fonti di vantaggio competitivo in ciascuna fase dell'evoluzione del settore.
+Il cambiamento evolutivo è visto come un processo che prevede variazione, selezione e assimilazioni.
+Alcuni cambiamenti tecnologici costituiscono una minaccia per le risorse e competenze delle aziende consolidate. La facilità con cui le imprese consolidate si adattano all'innovazione dipende dall'impatto che la tecnologia ha sull'architettura e sulle componenti.
+Le **tecnologie dirompenti** si distinguono in
+- tecnologie di rafforzamento, che arricchiscono le caratteristiche di performance già esistenti
+- tecnologie di rottura, che incorporano caratteristiche di performance diverse da quelle disponibili al momento.
+### 8.3 La gestione del cambiamento strategico
+Abell sostiene che strategie dual richiedono sistemi di pianificazione duali
+- una a breve termine, che si focalizza sulla coerenza strategica e sui risultati entro 1-2 anni.
+- una a lungo termine per sviluppare una visione, dare nuova forma al portafoglio aziendale e ridefinire e riposizionare i singoli business.
+Con **ambidestrismo organizzativo** si intende la capacità delle imprese di sfruttare competenze esistenti ed esplorare nuove opportunità. Per il top management la sfida è quella di intraprendere un cambiamento su larga scala prima che risultati deludenti mettano pressione sull'azienda, tramite
+- percezione dello stato di crisi: a volte può essere che il momento in cui l'azienda si ritrova coinvolta in una crisi può essere già troppo tardi
+- fissazione di obiettivi sempre più ambiziosi
+- iniziative di cambiamento
+- riorganizzazione della struttura aziendale
+- nuova leadership
+- analisi degli scenari per riflettere sulle possibili evoluzioni future della situazione corrente. Può essere
+	- quantitativa se usa modelli e simulazioni
+	- qualitativa descrive gli scenari in forma narrativa ed è utile per stimolare le competenze analitiche di chi deve prendere decisioni
+L'adattamento a un mondo che cambia richiede lo sviluppo di competenze necessarie per rinnovare il vantaggio competitivo. Queste competenze possono originarsi da
+- prime esperienze e "path dependency", ovvero le circostanze prevalenti al momento della fondazione e sviluppo dell'impresa
+- sviluppo sequenziale di competenze: la sfida chiave è integrare risorse per creare e sviluppare processi per mezzo della ripetibilità e dell'apprendimento.
+Le competenze dinamiche sono le capacità di un impresa di integrare, costruire e riconfigurare le competenze interne ed esterne per rispondere ai mutamenti degli ambienti con cui interagisce.
+### 8.4 Gestione della conoscenza
+La gestione della conoscenza include le funzioni consolidate di un'organizzazione, quali
+- utilizzo dell'*information technology* per gestire i processi
+- trasferimento delle *best practices* e del *know-how*
+- attività di gestione della conoscenza che forniscono lo sviluppo di competenze
+Il contributo della gestione della conoscenza allo sviluppo delle competenze nelle organizzazioni riguarda più le intuizioni che la teoria dell'impresa basata sulla conoscenza
+# 9 Tecnologie e gestione dell'innovazione
+### 9.1 Vantaggio competitivo nei settori ad alta tecnologia
+L'invenzione è la creazione di nuovi prodotti e nuovi processi sviluppando nuove conoscenze. L'innovazione è la commercializzazione iniziale di un'invenzione o di un'idea sottoforma di nuovo prodotto o nuovo processo.
+Per l'autore di un'innovazione la redditività dipende dal valore creato dall'innovazione e dalla percentuale di cui l'innovatore riesce ad appopriarsi.
+Il **regime di appropriabilità** descrive le condizioni che influenzano la distribuzione della redditività derivante dall'innovazione. Se è forte l'innovatore è in grado di catturare una quota sostanziale del valore creato, se è debole altre parti in causa otterranno parte del valore.
+I fattori che stabiliscono quanto possono appropriarsi gli innovatori sono
+- diritti di proprietà: diritto sui brevetti, marchi registrati, segreti industriali
+- modificabilità e complessità della tecnologia: la capacità di un concorrente di imitare un'innovazione dipende dalla facilità con cui la tecnologia può essere compresa e replicata.
+- vantaggio temporale: l'innovazione conferisce un vantaggio competitivo temporaneo che offre una finestra di opportunità su cui l'innovatore può fare affidamento per capitalizzare il vantaggio iniziale
+- risorse complementari: risorse e capacità necessarie per finanziare, produrre e commercializzare un'innovazione. Vi si può accedere attraverso alleanze con altre imprese
+### 9.2 Come e quando entrare in un settore sfruttando l'innovazione
+La scelta dell'impresa dipende da
+- caratteristiche dell'innovazione: l'impresa deve poter far valere specifici diritti di proprietà su un'invenzione. Una licenza multipla può agevolare una rapida diffusione su scala globale. Tuttavia il successo dell'innovazione dipende dall'impegno e dall'efficacia di chi acquista la licenza
+- risorse e competenze: scelte strategiche richiedono risorse e competenze differenti
+La scelta del momento ottimale per l'entrata in un settore emergente e per l'introduzione di nuove tecnologie dipende da
+- la possibilità di tutelare l'innovazione con i diritti di proprietà
+- l'importanza delle risorse complementari: più sono importanti, più sono alti i costi e rischi associati
+- il potenziale per imporre standard tecnici: più sono i vantaggi tecnici, più saranno i vantaggi associati all'essere tra i pioneri e al poter influenzare questi standard
+Imprese differenti hanno **finestre strategiche** differenti, ovvero periodi di tempo in cui le loro risorse e competenze sono allineate con le opportunità che mette a disposizione il mercato.
+### 9.3 Standard, piattaforme ed esternalità di rete
+Uno standard, un sistema che permette l'interoperabilità, può essere
+- pubblico, tra cui 
+	- obbligatorio, stabilito dai singoli stati
+	- consensuali, fissati da associazioni settoriali
+- provati: di proprietà di imprese o individui.
+Col tempo gli standard diventano *de facto*, vengono adottati volontariamente da produttori e consumatori.
+Si ha un'**esternalità di rete** quando per l'utente il valore di un prodotto o servizio dipende dal numero degli altri utenti che lo utilizzano. Le fonti sono
+- prodotti i cui utenti sono collegati da una rete
+- la disponibilità di risorse e servizi complementari
+- il risparmio dei costi legati al cambiamento: acquistando il prodotto più usato, c'è una minore probabilità che si debba affrontare un ulteriore costo legato al cambiamento.
+L'esternalità di rete creano circoli virtuosi, che accresce la leadership di mercato.
+La perdita di leadership invece provoca un *tipping*: l'effetto cumulativo di tutte le forze in gioco diventa inarrestabile e si crea un mercato *winner takes all*.
+Gli standard sono difficilmente sostituibili a causa di
+- effetti di apprendimento
+- effetti di rete, che rendono difficile l'affermarsi di uno standard superiore
+Uno standard proprietario può costruire la base per dominare il mercato ed essere un enorme fonte di profitto. Per raggiungere per primi la leadership bisogna
+- radunare gli alleati prima di partire (consumatori, fornitori)
+- anticipare il mercato, stringere accordi con i clienti chiave e adottare una strategia di penetrazione del mercato
+- gestire le aspettative
+Le risorse per vincere la corsa agli standard sono
+- controllo di un bacino di utenza consolidata
+- titolarità della proprietà intellettuale
+- capacità di innovazione
+- vantaggio della prima mossa
+- posizione di forza nelle risorse complementari
+- reputazione e marchio
+### 9.4 Implementazione della tecnologia, fonti interne ed esterne dell'innovazione
+L'innovazione richiede **creatività**. Il gioco contribuisce a creare un ambiente favorevole alla ricerca
+Come già detto, la creatività richiede sistemi gestionali diversi da quelli indicati per la massima efficienza. Bisogna usare i clienti come fonte di innovazione tramite il loro feedback. Questo coinvolgimento dei clienti è un passo verso l'*open innovation*, che sfrutta e applica la conoscenza sia interna che esterna dell'organizzazione. Per molte grandi imprese, la fonte principale di innovazione è l'acquisizione di piccole realtà.
+### 9.5 Organizzare per innovare
+Le aziende hanno bisogno di un sistema di innovazione. Per creare valore è necessaria una chiara comprensione di come l'innovazione si possa adattare alla strategia d'impresa. Bisogna riconoscere le ricadute dell'innovazione sulle competenze sul modello di business dell'impresa. Strategie per lo sviluppo e sfruttamento dell'innovazione sono
+- gruppi interfunzionali di sviluppo del prodotto per integrare creatività e funzionalità
+- *product champions*: consentono di incorporare la creatività individuale all'interno dei processi organizzativi e di collegare l'invenzione con la sua successiva commercializzazione
+- incubatori aziendali: programmi di sviluppo di nuove attività
+# 10. Analisi dell'integrazione verticale
+### 10.1 L'approccio ai costi di transazione
+### 10.2 Benefici e costi dell'integrazione verticale
+### 10.3 Natura e forma delle relazioni verticali
+# 11 Strategie globali e imprese multinazionali
+### 11.1 Concorrenza internazionale e analisi di settore
+### 11.2 Vantaggio competitivo nel contesto internazionale
+### 11.3 Entrata in un mercato estero
+# 12 Strategia di diversificazione
+### 12.1 Motivi della diversificazione
+### 12.2 Diversificazione e vantaggio competitivo
+### 12.3 Correlazione nella diversificazione
+# 13 Applicare la strategia di gruppo: gestione delle imprese diversificate
+### 13.1 Il ruolo dei vertici del gruppo
+### 13.2 La gestione del portafoglio delle attività
+### 13.3 La gestione delle interdipendenze tra diverse attività
+### 13.4 La gestione di singole attività
+### 13.5 La governance dell'impresa diversificata
