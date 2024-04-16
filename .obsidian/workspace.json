@@ -75,7 +75,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -167,9 +168,9 @@
   },
   "active": "5c71eec7aac8dbcc",
   "lastOpenFiles": [
+    "Strategia Aziendale/libro_riassunto.xopp~",
     "Strategia Aziendale/Appunti.md",
     "Strategia Aziendale/Riassunto.md",
-    "Strategia Aziendale/libro_riassunto.xopp~",
     "Untitled.canvas",
     "Strategia Aziendale/libro.pdf",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
