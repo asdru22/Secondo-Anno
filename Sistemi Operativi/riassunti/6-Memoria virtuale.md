@@ -64,3 +64,20 @@ Dato che pochi computer sono progettati per eseguire una LRU, si usa un'alternat
 In alternativa si possono usare 8 bit (1 byte) che tiene traccia degli ultimi 8 periodi di tempo per quella pagina, dove $00000000$ significa che la pagina non è mai stata utilizzata negli ultimi 8 periodi. Se si tratta questo byte come un intero, quello con il valore piccolo è la pagina che non è stata utilizzata da più tempo e può dunque essere sostituita.
 ### Algoritmo di sostituzione seconda chance
 Questo algoritmo è simile al FIFO, ma usa un bit di riferimento. Se questo è 0 si sostituisce la pagina, altrimenti si da un'altra chance alla pagina di proseguire e selezionare un'altra pagina. Questa struttura è implementata con una lista circolare. 
+### Allocazione di frame
+Quanti frame si allocano a un singolo processo? Si usano algoritmo di allocazione: 
+- equal allocation: vengono assentati li stessi frame a tutti i processi
+- proportional allocation: a un processo vengono allocati frame in base al peso che ha rispetto a tutti i processi in esecuzione.
+$$a_i=\frac{s_i}{S}\times m$$
+- $a_i$: numero di frame allocati a $p_i$
+- $p_i$: processo
+- $s_i$: dimensione della memoria virtuale per il processo $p_i$
+- $m$: numero di frame disponibili
+### Allocazione globale e allocazione locale
+L'allocazione globale permette a un processo di scegliere una frame di sostituzione dall'insieme di tutti i frame, anche se è già allocata in un altro processo. Un problema di questo tipo di sostituzione è che non può controllare il suo tasso di page fault.
+La sostituzione locale richiede che ogni processo sia scelto solamente dal suo insieme di frame allocati. Questo approccio permette a un processo con priorità elevata di aumentare il suo numero di frame al costo di un processo di bassa priorità.
+### Trashing
+Cosa succede alla memoria virtuale al variare del livello di multiprogrammazione? 
+Con trashing si intende quando un processo sta continuamente facendo swapping di pagine, mettendo la CPU in attesa. Quindi il SO si accorge che il processore è usato poco e aumenta il livello di multiprogrammazione togliendo frame a processi esistenti. C'è un monitoraggio dei page fault per ogni processo, il SO sa che su un certo arco di tempo un processo va bene se produce un numero di page fault molto ridotto.
+Se il SO si accorge che un processo produce un page fault molto basso gli si può togliere
+qualche frame.

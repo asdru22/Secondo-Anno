@@ -11,11 +11,9 @@
             "id": "5c71eec7aac8dbcc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "Strategia Aziendale/Riassunto.md",
-                "mode": "source",
-                "source": false
+                "file": "Sistemi Operativi/libro_ed9.pdf"
               }
             }
           }
@@ -48,7 +46,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Strategia Aziendale/Riassunto.md"
+                "file": "Sistemi Operativi/libro_ed9.pdf"
               }
             }
           },
@@ -75,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -96,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Strategia Aziendale/Riassunto.md",
+                "file": "Sistemi Operativi/libro_ed9.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Strategia Aziendale/Riassunto.md",
+                "file": "Sistemi Operativi/libro_ed9.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,27 +165,28 @@
   },
   "active": "5c71eec7aac8dbcc",
   "lastOpenFiles": [
+    "Sistemi Operativi/riassunti/7-Crittografia.md",
+    "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
+    "Sistemi Operativi/capitoli/9.xopp~",
+    "Algoritmi e Strutture Dati/Es divide et impera.md",
+    "Strategia Aziendale/Riassunto.md",
     "Strategia Aziendale/libro_riassunto.xopp~",
     "Strategia Aziendale/Appunti.md",
-    "Strategia Aziendale/Riassunto.md",
     "Untitled.canvas",
     "Strategia Aziendale/libro.pdf",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
     "Strategia Aziendale/img/ciclo_pianificazione_strategica.svg",
     "Strategia Aziendale/img/fasi_analisi.svg",
-    "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
     "Sistemi Operativi/riassunti/img/least_recently_used.svg",
     "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
     "Sistemi Operativi/riassunti/img/bit_sporco.svg",
     "Sistemi Operativi/riassunti/img/buffer.svg",
     "Sistemi Operativi/riassunti/img/page_fault.svg",
     "Sistemi Operativi/capitoli/9.pdf",
-    "Sistemi Operativi/capitoli/9.xopp~",
     "Sistemi Operativi/riassunti/5-Gestione memoria.md",
     "Sistemi Operativi/libro_ed9.pdf",
     "Sistemi Operativi/capitoli/8.pdf",
     "Sistemi Operativi/riassunti/Paginazione.py",
-    "Algoritmi e Strutture Dati/Es divide et impera.md",
     "Sistemi Operativi/appunti finali/5-Gestione memoria.xopp~",
     "Sistemi Operativi/appunti finali/5-Gestione memoria.xopp",
     "Sistemi Operativi/riassunti/5-Gestione memoria.pdf",

@@ -37,3 +37,22 @@ int indice(double A[1..n], int i, int j){
 ```
 Dato che è una variante dell'agloritmo di ricerca binaria, ha il suo stesso costo computazionale $T(n)=\Theta(\log n)$
  
+4. Consideriamo un insieme di n variabili $x_1,…,x_n$. Sono dati un insieme di vincoli di uguaglianza della forma $x_i = x_j$, e un altro insieme di vincoli di disuguaglianza della forma $x_i ≠ x_j$. Il problema consiste nel capire se tutti i vincoli possono essere soddisfatti. Ad esempio, considerando quattro variabili $x_1, x_2, x_3, x_4$ soggette ai vincoli seguenti:
+ $$x1 = x2;\  x2 = x3;\  x3 = x4;\  x1 ≠ x4$$
+ risulta che in questo caso i vincoli non sono soddisfacibili. Descrivere a parole un algoritmo efficiente che, dati in input il numero n di variabili e le liste dei vincoli di uguaglianza e disuguaglianza, restituisce true se e solo se i vincoli sono soddisfacibili.
+Si costruisce una struttura merge find con $n$ elementi che rappresentano le variabili. Per ogni vincolo di uguaglianza si fa la merge delle variabili corrispondenti. Poi si verifica che i vincoli di disuguaglianza siano tra le variabili in componenti diverse. La complessità è $O(n\log n)$
+
+5. Si consideri un array` A[1..n]` contenente valori reali ordinati in senso non decrescente/crescente; l'array può contenere valori duplicati. Scrivere un algoritmo ricorsivo di tipo divide-et-impera che, dato `A` e due valori reali `low` ed `up` (`low < up`), calcola quanti valori di `A` appartengono all'intervallo `[low, up]`. Determinare il costo computazionale dell'algoritmo proposto.
+
+```java
+int conta(int A[1,...,n], int low, int up, int i, int j){
+	if(i>j) return 0
+	else if(A[i]>up || A[j]<low) return 0
+	else if(i=j) return 1
+	else{
+		int m = floor((i+j)/2)
+		return conta(A,low,up,i,m) + conta(A, low, up, m+1,j)
+	}
+}
+```
+Ha costo $T(n)=O()$
