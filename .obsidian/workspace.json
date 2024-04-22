@@ -13,7 +13,7 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Sistemi Operativi/libro_ed9.pdf"
+                "file": "Strategia Aziendale/libro_riassunto.pdf"
               }
             }
           }
@@ -46,7 +46,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi Operativi/libro_ed9.pdf"
+                "file": "Strategia Aziendale/libro_riassunto.pdf"
               }
             }
           },
@@ -93,7 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/libro_ed9.pdf",
+                "file": "Strategia Aziendale/libro_riassunto.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/libro_ed9.pdf",
+                "file": "Strategia Aziendale/libro_riassunto.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,11 +165,15 @@
   },
   "active": "5c71eec7aac8dbcc",
   "lastOpenFiles": [
+    "Strategia Aziendale/Riassunto.md",
     "Sistemi Operativi/riassunti/7-Crittografia.md",
+    "Algoritmi e Strutture Dati/Es Greedy.md",
+    "Algoritmi e Strutture Dati/Es divide et impera.md",
+    "Strategia Aziendale/Riassunto.pdf",
+    "Strategia Aziendale/Satispay.md",
+    "Sistemi Operativi/libro_ed9.pdf",
     "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
     "Sistemi Operativi/capitoli/9.xopp~",
-    "Algoritmi e Strutture Dati/Es divide et impera.md",
-    "Strategia Aziendale/Riassunto.md",
     "Strategia Aziendale/libro_riassunto.xopp~",
     "Strategia Aziendale/Appunti.md",
     "Untitled.canvas",
@@ -184,13 +188,10 @@
     "Sistemi Operativi/riassunti/img/page_fault.svg",
     "Sistemi Operativi/capitoli/9.pdf",
     "Sistemi Operativi/riassunti/5-Gestione memoria.md",
-    "Sistemi Operativi/libro_ed9.pdf",
     "Sistemi Operativi/capitoli/8.pdf",
     "Sistemi Operativi/riassunti/Paginazione.py",
     "Sistemi Operativi/appunti finali/5-Gestione memoria.xopp~",
     "Sistemi Operativi/appunti finali/5-Gestione memoria.xopp",
-    "Sistemi Operativi/riassunti/5-Gestione memoria.pdf",
-    "Strategia Aziendale/Satispay.md",
     "Sistemi Operativi/Progetto.md",
     "Sistemi Operativi/Laboratorio/Note.md",
     "Sistemi Operativi/riassunti/3-Concorrenza.md",
@@ -214,7 +215,6 @@
     "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/test.canvas",
     "Finanza Aziendale/Formulario.md",
-    "Finanza Aziendale/es/Domande Esame.md",
-    "asdrulet 4c.md"
+    "Finanza Aziendale/es/Domande Esame.md"
   ]
 }
