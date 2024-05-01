@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "45432e6c100c4869",
+        "id": "026c41da60f04dbb",
         "type": "tabs",
         "children": [
           {
-            "id": "5c71eec7aac8dbcc",
+            "id": "4f74a0e9707ba4a1",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Strategia Aziendale/libro_riassunto.pdf"
+                "file": "Statistica Numerica/es/Simulazione Esame.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -46,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Strategia Aziendale/libro_riassunto.pdf"
+                "file": "Statistica Numerica/es/Simulazione Esame.md"
               }
             }
           },
@@ -93,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Strategia Aziendale/libro_riassunto.pdf",
+                "file": "Statistica Numerica/es/Simulazione Esame.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -136,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Strategia Aziendale/libro_riassunto.pdf",
+                "file": "Statistica Numerica/es/Simulazione Esame.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,21 +165,30 @@
       "command-palette:Open command palette": true
     }
   },
-  "active": "5c71eec7aac8dbcc",
+  "active": "4f74a0e9707ba4a1",
   "lastOpenFiles": [
-    "Strategia Aziendale/Riassunto.md",
+    "Statistica Numerica/Esercizi/22_04/FraudDetection.py~",
+    "Sistemi Operativi/riassunti/8-File system.md",
+    "Statistica Numerica/es/Simulazione Esame.md",
+    "Statistica Numerica/Simulazione.md",
+    "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
     "Sistemi Operativi/riassunti/7-Crittografia.md",
+    "Sistemi Operativi/appunti/1- introduzione.md",
+    "Sistemi Operativi/pdf/1-introduzione.pdf",
+    "Sistemi Operativi/capitoli/11.pdf",
+    "Sistemi Operativi/libro_ed9.pdf",
+    "Relazione Spacca.md",
+    "Strategia Aziendale/Satispay.md",
+    "Strategia Aziendale/Riassunto.md",
+    "Strategia Aziendale/libro.pdf",
+    "Strategia Aziendale/libro_riassunto.pdf",
     "Algoritmi e Strutture Dati/Es Greedy.md",
     "Algoritmi e Strutture Dati/Es divide et impera.md",
     "Strategia Aziendale/Riassunto.pdf",
-    "Strategia Aziendale/Satispay.md",
-    "Sistemi Operativi/libro_ed9.pdf",
-    "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
     "Sistemi Operativi/capitoli/9.xopp~",
     "Strategia Aziendale/libro_riassunto.xopp~",
     "Strategia Aziendale/Appunti.md",
     "Untitled.canvas",
-    "Strategia Aziendale/libro.pdf",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
     "Strategia Aziendale/img/ciclo_pianificazione_strategica.svg",
     "Strategia Aziendale/img/fasi_analisi.svg",
@@ -189,9 +200,6 @@
     "Sistemi Operativi/capitoli/9.pdf",
     "Sistemi Operativi/riassunti/5-Gestione memoria.md",
     "Sistemi Operativi/capitoli/8.pdf",
-    "Sistemi Operativi/riassunti/Paginazione.py",
-    "Sistemi Operativi/appunti finali/5-Gestione memoria.xopp~",
-    "Sistemi Operativi/appunti finali/5-Gestione memoria.xopp",
     "Sistemi Operativi/Progetto.md",
     "Sistemi Operativi/Laboratorio/Note.md",
     "Sistemi Operativi/riassunti/3-Concorrenza.md",
@@ -208,13 +216,7 @@
     "Sistemi Operativi/riassunti/1-Architettura.md",
     "Strategia Aziendale/lab/intro.md",
     "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
-    "Strategia Aziendale/Strategia Aziendale.md",
-    "Sistemi Operativi/riassunti/3-Thread.md",
-    "Strategia Aziendale/2 Analisi di settore.md",
-    "Sistemi Operativi/appunti/1- introduzione.md",
     "Finanza Aziendale/Formule.canvas",
-    "Finanza Aziendale/test.canvas",
-    "Finanza Aziendale/Formulario.md",
-    "Finanza Aziendale/es/Domande Esame.md"
+    "Finanza Aziendale/test.canvas"
   ]
 }
