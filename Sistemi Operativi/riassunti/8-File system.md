@@ -32,14 +32,12 @@ I dischi hanno una dimensione di blocco definita, ma spesso la dimensione del re
 Dati nel file vengono processati in ordine, un record dopo l'altro. Si usano operazioni di `read_next()` per leggere una porzione di file e far avanzare il puntatore. `write_next()` aggiunge alla fine del file i nuovi dati e avanza il puntatore alla fine di essi.
 #### Accesso diretto
 Un file è composto da indirizzi logici di lunghezza fissa che permettono ai programmi di leggere e scrivere record velocemente in un ordine qualsiasi. Il metodo di accesso diretto è basato sul modello del file su disco, dato che i dischi permettono accesso casuale ad ogni blocco di file. 
-
 ### Struttura della directory e del disco
 Un dispositivo di memorizzazione può essere utilizzato interamente per un sistema di file o suddiviso per un controllo più dettagliato. Ad esempio, un disco può essere partizionato e ogni parte può contenere un sistema di file separato. La partizione è utile per limitare le dimensioni dei singoli sistemi di file, mettere più tipi di sistemi di file sullo stesso dispositivo, o lasciare parte del dispositivo disponibile per altri usi. Ogni entità che contiene un sistema di file è chiamata volume e può essere una parte di un dispositivo, l'intero dispositivo o più dispositivi collegati in un set RAID. Ogni volume può essere considerato un disco virtuale e può anche memorizzare più sistemi operativi. Ogni volume deve contenere informazioni sui file nel sistema, mantenute in una directory del dispositivo o una tabella dei contenuti del volume. La directory registra informazioni come nome, posizione, dimensione e tipo per tutti i file su quel volume.
 ### Directory di grafo aciclico
 Una struttura ad albero vieta la condivisione di file o cartelle. Un grafo aciclico permette alle cartelle di condividere sottocartelle e file. Il grafo aciclico è una generalizzazione della struttura a ad albero delle directory.
 Le modifiche fatte al file condiviso verranno percepite all'interno di entrambe le cartelle dato che non si tratta semplicemente di una copia del file.
 
-  
 Una struttura di directory a grafo aciclico è più flessibile delle struttura ad albero, ma è anche più complessa.
 Un file può avere più percorsi assoluti. Di conseguenza, nomi di file distinti possono fare riferimento allo stesso file. Questa situazione è simile al problema dell'aliasing per i linguaggi di programmazione. Se stiamo cercando di attraversare l'intero sistema di file - per trovare un file, accumulare statistiche su tutti i file o copiare tutti i file su un archivio di backup - questo problema diventa significativo, poiché non vogliamo attraversare strutture condivise più di una volta.
 

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "026c41da60f04dbb",
+        "id": "42ed1aea8b6d8335",
         "type": "tabs",
         "children": [
           {
-            "id": "4f74a0e9707ba4a1",
+            "id": "cabd96235c7c9a47",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Statistica Numerica/es/Simulazione Esame.md",
+                "file": "Strategia Aziendale/Riassunto.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Statistica Numerica/es/Simulazione Esame.md"
+                "file": "Strategia Aziendale/Riassunto.md"
               }
             }
           },
@@ -58,7 +58,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "access time",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Statistica Numerica/es/Simulazione Esame.md",
+                "file": "Strategia Aziendale/Riassunto.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Statistica Numerica/es/Simulazione Esame.md",
+                "file": "Strategia Aziendale/Riassunto.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,57 +165,57 @@
       "command-palette:Open command palette": true
     }
   },
-  "active": "4f74a0e9707ba4a1",
+  "active": "cabd96235c7c9a47",
   "lastOpenFiles": [
-    "Statistica Numerica/Esercizi/22_04/FraudDetection.py~",
+    "Strategia Aziendale/esame 2.docx",
+    "Strategia Aziendale/esame 1.docx",
+    "Strategia Aziendale/~$rategia Esame.docx",
+    "Strategia Aziendale/~$MANDE STRATEGIA.docx",
+    "Strategia Aziendale/Strategia Esame.docx",
+    "Strategia Aziendale/DOMANDE STRATEGIA.docx",
+    "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+    "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
+    "Strategia Aziendale/Riassunto.md",
+    "Relazione Spacca.md",
+    "Pasted image 20240509231927.png",
+    "Pasted image 20240509231828.png",
+    "Pasted image 20240509231303.png",
+    "Pasted image 20240509231225.png",
+    "Sistemi Operativi/Esercizi 03_27.xopp~",
+    "Sistemi Operativi/riassunti/final-2023-05-01-testo.pdf",
+    "Sistemi Operativi/riassunti/final-2023-05-01-testo.pdf.crdownload",
+    "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
+    "Sistemi Operativi/riassunti/4-Semafori.md",
+    "Sistemi Operativi/riassunti/2-Struttura e Processi.pdf",
+    "Sistemi Operativi/riassunti/3-Concorrenza.md",
+    "relazione spacca/Pasted image 20240507210832.png",
+    "relazione spacca/Pasted image 20240507210820.png",
+    "relazione spacca/Pasted image 20240507210803.png",
+    "relazione spacca/Pasted image 20240507210737.png",
+    "relazione spacca/Pasted image 20240507210728.png",
+    "relazione spacca/Pasted image 20240507210716.png",
+    "relazione spacca",
     "Sistemi Operativi/riassunti/8-File system.md",
+    "Sistemi Operativi/riassunti/7-Crittografia.md",
     "Statistica Numerica/es/Simulazione Esame.md",
     "Statistica Numerica/Simulazione.md",
-    "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
-    "Sistemi Operativi/riassunti/7-Crittografia.md",
     "Sistemi Operativi/appunti/1- introduzione.md",
-    "Sistemi Operativi/pdf/1-introduzione.pdf",
-    "Sistemi Operativi/capitoli/11.pdf",
-    "Sistemi Operativi/libro_ed9.pdf",
-    "Relazione Spacca.md",
+    "relazione spacca/Relazione Spacca.md",
     "Strategia Aziendale/Satispay.md",
-    "Strategia Aziendale/Riassunto.md",
-    "Strategia Aziendale/libro.pdf",
-    "Strategia Aziendale/libro_riassunto.pdf",
     "Algoritmi e Strutture Dati/Es Greedy.md",
     "Algoritmi e Strutture Dati/Es divide et impera.md",
-    "Strategia Aziendale/Riassunto.pdf",
-    "Sistemi Operativi/capitoli/9.xopp~",
-    "Strategia Aziendale/libro_riassunto.xopp~",
     "Strategia Aziendale/Appunti.md",
     "Untitled.canvas",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
-    "Strategia Aziendale/img/ciclo_pianificazione_strategica.svg",
-    "Strategia Aziendale/img/fasi_analisi.svg",
-    "Sistemi Operativi/riassunti/img/least_recently_used.svg",
     "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
-    "Sistemi Operativi/riassunti/img/bit_sporco.svg",
-    "Sistemi Operativi/riassunti/img/buffer.svg",
-    "Sistemi Operativi/riassunti/img/page_fault.svg",
-    "Sistemi Operativi/capitoli/9.pdf",
-    "Sistemi Operativi/riassunti/5-Gestione memoria.md",
-    "Sistemi Operativi/capitoli/8.pdf",
     "Sistemi Operativi/Progetto.md",
     "Sistemi Operativi/Laboratorio/Note.md",
-    "Sistemi Operativi/riassunti/3-Concorrenza.md",
     "Algoritmi e Strutture Dati/Formulario.md",
-    "Sistemi Operativi/riassunti/4-Semafori.md",
     "Statistica Numerica/Relazioni.canvas",
-    "Sistemi Operativi/riassunti/img/pagine_condivise.svg",
-    "Sistemi Operativi/riassunti/img/paginazione_hardware_tlb.svg",
-    "Sistemi Operativi/riassunti/img/paginazione_hardware - Copia.svg",
     "CIAO.md",
-    "Sistemi Operativi/riassunti/img/paginazione_hardware.svg",
     "Strategia Aziendale/Grafico.canvas",
-    "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
     "Sistemi Operativi/riassunti/1-Architettura.md",
     "Strategia Aziendale/lab/intro.md",
-    "Strategia Aziendale/1 Perché le aziende hanno bisogno di strategia.md",
     "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/test.canvas"
   ]
