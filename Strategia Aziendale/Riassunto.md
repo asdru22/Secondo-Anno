@@ -1,4 +1,3 @@
-# 1 Introduzione alla strategia
 ### 1.1 Strategia e successo delle organizzazioni <!>
 Componenti chiave dell'analisi della strategia di business
 1. Obiettivi a lungo termine
@@ -239,10 +238,10 @@ Le risorse sono i beni produttivi posseduti dall'impresa, possono essere
 Le risorse non sono utili da sole, la **competenza organizzativa** è la capacità di un impresa di di destinare risorse per raggiungere un obiettivo finale desiderato, si dividono in 
 - competenze distintive: attività e processi che l'impresa è in grado di fare meglio dei concorrenti
 - competenze strategiche: attività e processi che hanno un importanza strategica in uno specifico business. Porter differenzia
-- classificazione: analisi sistematica delle competenze, si usano criteri per classificare le attività
-	- analisi funzionale: identifica le competenze in relazione alle principali aree funzionali dell'impresa
-	- analisi della catena del valore: identifica una catena sequenziale delle principali attività dell'impresa, che distingue tra **attività primarie** e **attività di supporto**.
-- gerarchia: le competenze implicano coordinamento tra i comportamenti dei membri. Questo distingue una competenza organizzativa da una capacità individuale. Le competenze dinamiche permettono la modifica e l'adattamento delle competenze operative e funzionali di livello inferiore.
+	- classificazione: analisi sistematica delle competenze, si usano criteri per classificare le attività
+		- analisi funzionale: identifica le competenze in relazione alle principali aree funzionali dell'impresa
+		- analisi della catena del valore: identifica una catena sequenziale delle principali attività dell'impresa, che distingue tra **attività primarie** e **attività di supporto**.
+	- gerarchia: le competenze implicano coordinamento tra i comportamenti dei membri. Questo distingue una competenza organizzativa da una capacità individuale. Le competenze dinamiche permettono la modifica e l'adattamento delle competenze operative e funzionali di livello inferiore.
 ### 5.3 Risorse, competenze e risultati economici
 La risorse e le competenze importanti sono quelle che hanno il potenziale per generare flussi consistenti di profitto per l'impresa che le possiede, che è determinato da
 1. conseguimento del vantaggio competitivo, tramite
@@ -644,7 +643,7 @@ Secondo gli studi, le due principali misure di performance sono il rendimento de
 Il management può essere incentivato
 - psicologicamente: l'acquisizione è la modalità di crescita più rapida
 - finanziariamente: informazioni di mercato privilegiate possono fornire una base per identificare e acquistare le aziende sottovalutate
-# 13 Applicare la strategia di gruppo: gestione dell e imprese diversificate
+# 13 Applicare la strategia di gruppo: gestione delle imprese diversificate
 Quattro modalità di gestione di gruppo che aggiungono valore alle attività
 ### 13.1 La gestione del portafoglio delle attività
 L'azienda diversificata più semplice è quella che assembla attività indipendenti sotto una proprietà comune senza intervenire direttamente nella gestione. Affinché la gestione del portafoglio generi valore è essenziale che i dirigenti siano abili nell'individuare imprese sottovalutate ed essere più efficienti del mercato finanziario nell'allocare capitale alle diverse attività.

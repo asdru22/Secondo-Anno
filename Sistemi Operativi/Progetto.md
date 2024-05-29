@@ -1,5 +1,0 @@
--  servizio publish/subscribe
-- client si connette a server o come lettore o publisher
-- un topic è creato dal server quando il topic non esiste quando un publisher crea il messaggio
--  un publisher è publisher di un solo topic e il subscriber è subscriber di un solo topic
-- 

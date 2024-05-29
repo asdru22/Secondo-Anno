@@ -4,18 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "42ed1aea8b6d8335",
+        "id": "453919e5e37510e8",
         "type": "tabs",
         "children": [
           {
-            "id": "cabd96235c7c9a47",
+            "id": "a54329e86f3d9c28",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Strategia Aziendale/Riassunto.md",
+                "file": "Sistemi Operativi/Domande Teoria.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "8588cefc7db75806",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf"
               }
             }
           }
@@ -48,7 +58,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Strategia Aziendale/Riassunto.md"
+                "file": "Sistemi Operativi/Domande Teoria.md"
               }
             }
           },
@@ -58,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "access time",
+                "query": "page replacement",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Strategia Aziendale/Riassunto.md",
+                "file": "Sistemi Operativi/Domande Teoria.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +148,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Strategia Aziendale/Riassunto.md",
+                "file": "Sistemi Operativi/Domande Teoria.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,28 +175,36 @@
       "command-palette:Open command palette": true
     }
   },
-  "active": "cabd96235c7c9a47",
+  "active": "a54329e86f3d9c28",
   "lastOpenFiles": [
-    "Strategia Aziendale/esame 2.docx",
-    "Strategia Aziendale/esame 1.docx",
-    "Strategia Aziendale/~$rategia Esame.docx",
-    "Strategia Aziendale/~$MANDE STRATEGIA.docx",
-    "Strategia Aziendale/Strategia Esame.docx",
-    "Strategia Aziendale/DOMANDE STRATEGIA.docx",
-    "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+    "Sistemi Operativi/Pasted image 20240528201914.png",
+    "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
+    "Sistemi Operativi/Domande Teoria.md",
+    "Sistemi Operativi/Es file system.md",
+    "Sistemi Operativi/capitoli/12.pdf",
+    "Sistemi Operativi/capitoli/12.xopp",
+    "Sistemi Operativi/libro_ed9.pdf",
+    "Sistemi Operativi/Importante.md",
+    "Sistemi Operativi/capitoli/11.xopp~",
+    "Sistemi Operativi/capitoli/14.pdf",
+    "Sistemi Operativi/riassunto/appunti-sistemi-operativi.xopp~",
+    "Strategia Aziendale/esame 1.pdf",
+    "Strategia Aziendale/appunti-strategia-aziendale.pdf",
+    "Sistemi Operativi/riassunti/6-Memoria virtuale.pdf",
+    "Sistemi Operativi/riassunti/8-File system.md",
+    "Sistemi Operativi/riassunti/7-Crittografia.md",
     "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
+    "Sistemi Operativi/Progetto.md",
+    "Strategia Aziendale/Importante.md",
     "Strategia Aziendale/Riassunto.md",
+    "Sistemi Operativi/riassunti/5-Gestione memoria.md",
     "Relazione Spacca.md",
     "Pasted image 20240509231927.png",
     "Pasted image 20240509231828.png",
     "Pasted image 20240509231303.png",
     "Pasted image 20240509231225.png",
-    "Sistemi Operativi/Esercizi 03_27.xopp~",
-    "Sistemi Operativi/riassunti/final-2023-05-01-testo.pdf",
-    "Sistemi Operativi/riassunti/final-2023-05-01-testo.pdf.crdownload",
     "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
     "Sistemi Operativi/riassunti/4-Semafori.md",
-    "Sistemi Operativi/riassunti/2-Struttura e Processi.pdf",
     "Sistemi Operativi/riassunti/3-Concorrenza.md",
     "relazione spacca/Pasted image 20240507210832.png",
     "relazione spacca/Pasted image 20240507210820.png",
@@ -194,9 +212,6 @@
     "relazione spacca/Pasted image 20240507210737.png",
     "relazione spacca/Pasted image 20240507210728.png",
     "relazione spacca/Pasted image 20240507210716.png",
-    "relazione spacca",
-    "Sistemi Operativi/riassunti/8-File system.md",
-    "Sistemi Operativi/riassunti/7-Crittografia.md",
     "Statistica Numerica/es/Simulazione Esame.md",
     "Statistica Numerica/Simulazione.md",
     "Sistemi Operativi/appunti/1- introduzione.md",
@@ -208,14 +223,9 @@
     "Untitled.canvas",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
     "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
-    "Sistemi Operativi/Progetto.md",
     "Sistemi Operativi/Laboratorio/Note.md",
-    "Algoritmi e Strutture Dati/Formulario.md",
     "Statistica Numerica/Relazioni.canvas",
-    "CIAO.md",
     "Strategia Aziendale/Grafico.canvas",
-    "Sistemi Operativi/riassunti/1-Architettura.md",
-    "Strategia Aziendale/lab/intro.md",
     "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/test.canvas"
   ]
