@@ -4,23 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "453919e5e37510e8",
+        "id": "8e6693cba666e6bf",
         "type": "tabs",
         "children": [
           {
-            "id": "a54329e86f3d9c28",
+            "id": "a63d65d995cee959",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf"
+              }
+            }
+          },
+          {
+            "id": "dce0564687d466b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/Domande Teoria.md",
+                "file": "Sistemi Operativi/Importante.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "8588cefc7db75806",
+            "id": "60fb84ab7d3ba950",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -29,7 +39,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -58,7 +69,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi Operativi/Domande Teoria.md"
+                "file": "Sistemi Operativi/Importante.md"
               }
             }
           },
@@ -105,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/Domande Teoria.md",
+                "file": "Sistemi Operativi/Importante.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/Domande Teoria.md",
+                "file": "Sistemi Operativi/Importante.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,22 +186,23 @@
       "command-palette:Open command palette": true
     }
   },
-  "active": "a54329e86f3d9c28",
+  "active": "dce0564687d466b6",
   "lastOpenFiles": [
-    "Sistemi Operativi/Pasted image 20240528201914.png",
     "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
-    "Sistemi Operativi/Domande Teoria.md",
-    "Sistemi Operativi/Es file system.md",
-    "Sistemi Operativi/capitoli/12.pdf",
-    "Sistemi Operativi/capitoli/12.xopp",
-    "Sistemi Operativi/libro_ed9.pdf",
     "Sistemi Operativi/Importante.md",
-    "Sistemi Operativi/capitoli/11.xopp~",
+    "Sistemi Operativi/Domande Teoria.md",
+    "Sistemi Operativi/appunti finali/6-Memoria virtuale.xopp~",
+    "Sistemi Operativi/-Note-22-21.xopp",
+    "Sistemi Operativi/pdf/10-memoria virtuale.pdf",
     "Sistemi Operativi/capitoli/14.pdf",
+    "Sistemi Operativi/pdf/14-sicurezza.pdf",
+    "Sistemi Operativi/Es file system.md",
+    "Sistemi Operativi/appunti/1- introduzione.md",
+    "Sistemi Operativi/pdf/1-introduzione.pdf",
     "Sistemi Operativi/riassunto/appunti-sistemi-operativi.xopp~",
-    "Strategia Aziendale/esame 1.pdf",
-    "Strategia Aziendale/appunti-strategia-aziendale.pdf",
-    "Sistemi Operativi/riassunti/6-Memoria virtuale.pdf",
+    "Sistemi Operativi/capitoli/12.pdf",
+    "Sistemi Operativi/capitoli/9.xopp~",
+    "Sistemi Operativi/Pasted image 20240528201914.png",
     "Sistemi Operativi/riassunti/8-File system.md",
     "Sistemi Operativi/riassunti/7-Crittografia.md",
     "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
@@ -211,10 +223,8 @@
     "relazione spacca/Pasted image 20240507210803.png",
     "relazione spacca/Pasted image 20240507210737.png",
     "relazione spacca/Pasted image 20240507210728.png",
-    "relazione spacca/Pasted image 20240507210716.png",
     "Statistica Numerica/es/Simulazione Esame.md",
     "Statistica Numerica/Simulazione.md",
-    "Sistemi Operativi/appunti/1- introduzione.md",
     "relazione spacca/Relazione Spacca.md",
     "Strategia Aziendale/Satispay.md",
     "Algoritmi e Strutture Dati/Es Greedy.md",
