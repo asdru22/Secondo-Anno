@@ -11,9 +11,11 @@
             "id": "a63d65d995cee959",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf"
+                "file": "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -40,7 +42,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -69,7 +71,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi Operativi/Importante.md"
+                "file": "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf"
               }
             }
           },
@@ -79,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "page replacement",
+                "query": "Memory Management",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -96,7 +98,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -116,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/Importante.md",
+                "file": "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/Importante.md",
+                "file": "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,10 +189,11 @@
       "command-palette:Open command palette": true
     }
   },
-  "active": "dce0564687d466b6",
+  "active": "60fb84ab7d3ba950",
   "lastOpenFiles": [
-    "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
     "Sistemi Operativi/Importante.md",
+    "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
+    "Sistemi Operativi/riassunti/5-Gestione memoria.md",
     "Sistemi Operativi/Domande Teoria.md",
     "Sistemi Operativi/appunti finali/6-Memoria virtuale.xopp~",
     "Sistemi Operativi/-Note-22-21.xopp",
@@ -209,7 +213,6 @@
     "Sistemi Operativi/Progetto.md",
     "Strategia Aziendale/Importante.md",
     "Strategia Aziendale/Riassunto.md",
-    "Sistemi Operativi/riassunti/5-Gestione memoria.md",
     "Relazione Spacca.md",
     "Pasted image 20240509231927.png",
     "Pasted image 20240509231828.png",

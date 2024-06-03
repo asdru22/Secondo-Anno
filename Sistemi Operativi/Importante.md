@@ -61,7 +61,7 @@
 	- Problema alg2: ci può essere un deadlock se i flag di entrambi i thread sono settati a true e rimangono bloccati sul while (deadlock)
 	- Problema alg3: se entrambi i thread provano ad accedere in contemporanea alla sezione critica.
 - Semafori: operazioni di incremento e decremento. Sono implementati a livello del SO, quindi il SO decide che quando vengono eseguite le operazioni di somma e sottrazione del semaforo non possono avvenire context switch, garantendo cosi l'atomicità delle operazioni.
-- Memory management unit (MMU): a livello hardware, implementa la circuiteria per effettuare controlli sugli indirizzi.
+- Memory management unit (MMU): La MMU è un dispositivo hardware che converte gli indirizzi virtuali in indirizzi fisici. Il valore del registro di rilocazione è generato da un processo dell'utente quando viene inviato in memoria. Il programma dell'utente usa indirizzi logici, non vede mai gli indirizzi fisici.
 - **Strategie per limitare i buchi di memoria**
 	- First fit: il processo viene allocato nel primo buco di memoria abbastanza grande da conterlo.
 	- Best fit: si cerca il hole che meglio approssima il processo.
