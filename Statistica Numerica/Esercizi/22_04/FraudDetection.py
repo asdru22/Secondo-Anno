@@ -45,8 +45,11 @@ X = data_train[["amount", "oldbalanceOrg", "newbalanceOrig",
 # y = output
 y = data_train[["isFraud"]]
 
+print("Shape of X:", X.shape)
+print("Shape of y:", y.shape)
+
 from sklearn import linear_model
-# model = linear_model.LogisticRegression()
+model = linear_model.LogisticRegression()
 from sklearn import svm
 
 for d in range(1, 11):

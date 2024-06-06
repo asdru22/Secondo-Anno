@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
                 "mode": "source",
                 "source": false
               }
@@ -35,14 +35,15 @@
             "id": "60fb84ab7d3ba950",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf"
+                "file": "Sistemi Operativi/Domande Teoria.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -71,7 +72,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf"
+                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md"
               }
             }
           },
@@ -81,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Memory Management",
+                "query": "Trash",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -119,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
+                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
+                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -189,18 +190,18 @@
       "command-palette:Open command palette": true
     }
   },
-  "active": "60fb84ab7d3ba950",
+  "active": "a63d65d995cee959",
   "lastOpenFiles": [
-    "Sistemi Operativi/Importante.md",
     "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
     "Sistemi Operativi/riassunti/5-Gestione memoria.md",
+    "Sistemi Operativi/Importante.md",
     "Sistemi Operativi/Domande Teoria.md",
+    "Sistemi Operativi/Es file system.md",
     "Sistemi Operativi/appunti finali/6-Memoria virtuale.xopp~",
     "Sistemi Operativi/-Note-22-21.xopp",
     "Sistemi Operativi/pdf/10-memoria virtuale.pdf",
     "Sistemi Operativi/capitoli/14.pdf",
     "Sistemi Operativi/pdf/14-sicurezza.pdf",
-    "Sistemi Operativi/Es file system.md",
     "Sistemi Operativi/appunti/1- introduzione.md",
     "Sistemi Operativi/pdf/1-introduzione.pdf",
     "Sistemi Operativi/riassunto/appunti-sistemi-operativi.xopp~",
