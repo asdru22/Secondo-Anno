@@ -4,6 +4,7 @@ import pandas as pd
 import seaborn as sb
 from sklearn import model_selection
 from sklearn import linear_model
+from sklearn.metrics import mean_squared_error, r2_score
 
 """
 1. Scelta del dataset
@@ -13,12 +14,12 @@ data_init = pd.read_csv("data.csv")
 """
 2. Preprocessing
 """
-data = data_init.drop(columns=["#","video_transcription_text"])
+data = data_init.drop(columns=["#", "video_transcription_text"])
 data = data.dropna()
 print(data.isna().any())
 print(data.info())
 
-non_num_col = ["video_id","claim_status", "verified_status", "author_ban_status"]
+non_num_col = ["video_id", "claim_status", "verified_status", "author_ban_status"]
 """
 3. EDA
 """
@@ -32,11 +33,10 @@ like = data['video_like_count']
 visualizzazioni = data['video_view_count']
 
 # Scatterplot
-sb.scatterplot(data=data, x=visualizzazioni, y=like,hue="claim_status")
+sb.scatterplot(data=data, x=visualizzazioni, y=like, hue="claim_status")
 plt.xlabel('Views')
 plt.ylabel('Likes')
 plt.show()
-
 
 """
 4. Splitting
@@ -53,7 +53,7 @@ data_val, data_test = model_selection.train_test_split(
 """
 # X = input
 X = data_train[["video_view_count", "video_share_count",
-                "video_download_count","video_comment_count"]]
+                "video_download_count", "video_comment_count"]]
 # y = output
 y = data_train[["video_like_count"]]
 
@@ -64,26 +64,25 @@ print(f"{y.shape=}")
 model = linear_model.LinearRegression()
 model.fit(X, y["video_like_count"])
 
-
 # Stima dei coefficienti
 coefficients = model.coef_
 intercept = model.intercept_
 print("Coefficiente angolare:", coefficients)
 print("Intercetta:", intercept)
 
+y_pred = model.predict(X)
+
 # Calcola il coefficiente R^2
-r2 = model.score(X, y)
+r2 = r2_score(y, y_pred)
 print("Coefficiente R^2:", r2)
 
 # Calcola il Mean Squared Error (MSE)
-y_pred = model.predict(X)
-#mse = mean_squared_error(y, y_pred)
-#print("Mean Squared Error (MSE):", mse)
+mse = mean_squared_error(y, y_pred)
+print("Mean Squared Error (MSE):", mse)
 
 # Grafico dei punti e della retta di regressione
 plt.scatter(X["video_view_count"], y, color='blue', label='Data')
 plt.plot(X["video_view_count"], y_pred, color='red', linewidth=2, label='Regression Line')
 plt.xlabel('Views')
 plt.ylabel('Likes')
-plt.legend()
 plt.show()
