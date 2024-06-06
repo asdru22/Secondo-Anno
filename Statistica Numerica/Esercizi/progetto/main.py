@@ -5,6 +5,7 @@ import seaborn as sb
 from sklearn import model_selection
 from sklearn import linear_model
 from sklearn.metrics import mean_squared_error, r2_score
+from scipy import stats
 
 """
 1. Scelta del dataset
@@ -57,13 +58,6 @@ X = data_train[["video_view_count", "video_share_count",
 # y = output
 y = data_train[["video_like_count"]]
 
-
-# Sort X and y by video_view_count
-sorted_indices = np.argsort(X["video_view_count"])
-X = X.iloc[sorted_indices]
-y = y.iloc[sorted_indices]
-
-
 print(f"{X.shape=}")
 print(f"{y.shape=}")
 
@@ -71,19 +65,18 @@ print(f"{y.shape=}")
 model = linear_model.LinearRegression()
 model.fit(X, y["video_like_count"])
 
-# Stima dei coefficienti
-coefficients = model.coef_
-intercept = model.intercept_
-print("Coefficiente angolare:", coefficients)
-print("Intercetta:", intercept)
+# Stima dei coefficienti/intercetta
+print("Coefficienti stimati:", model.coef_)
+print("Intercetta:", model.intercept_)
 
-y_pred = model.predict(X)
+# 0 perchè video_view_count è il primo elemento
+y_pred = model.coef_[0] * X["video_view_count"] + model.intercept_
 
-# Calcola il coefficiente R^2
+# Calcolo del coefficente R^2
 r2 = r2_score(y, y_pred)
 print("Coefficiente R^2:", r2)
 
-# Calcola il Mean Squared Error (MSE)
+# Calcolo dell'errore quadratico medio (MSE)
 mse = mean_squared_error(y, y_pred)
 print("Mean Squared Error (MSE):", mse)
 
@@ -93,3 +86,17 @@ plt.plot(X["video_view_count"], y_pred, color='red', linewidth=2, label='Regress
 plt.xlabel('Views')
 plt.ylabel('Likes')
 plt.show()
+
+# Analisi di normalità dei residui con Sapiro-Wilk
+residui = y - y_pred
+# Perform Shapiro-Wilk test
+shapiro_test = stats.shapiro(residui)
+print(residui)
+print('Shapiro-Wilk Test')
+print('Statistica:', shapiro_test[0])
+print('p-value:', shapiro_test[1])
+
+if shapiro_test[1] > 0.05:
+    print("Distribuzione normale dei residui (accetto H0)")
+else:
+    print("I residui non sono normalmente distribuiti (rifiuto H0)")
