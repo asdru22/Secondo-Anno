@@ -57,6 +57,13 @@ X = data_train[["video_view_count", "video_share_count",
 # y = output
 y = data_train[["video_like_count"]]
 
+
+# Sort X and y by video_view_count
+sorted_indices = np.argsort(X["video_view_count"])
+X = X.iloc[sorted_indices]
+y = y.iloc[sorted_indices]
+
+
 print(f"{X.shape=}")
 print(f"{y.shape=}")
 
