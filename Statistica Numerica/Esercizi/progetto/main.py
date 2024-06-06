@@ -32,11 +32,9 @@ like = data['video_like_count']
 visualizzazioni = data['video_view_count']
 
 # Scatterplot
-plt.figure(figsize=(8, 6))
 sb.scatterplot(data=data, x=visualizzazioni, y=like,hue="claim_status")
-plt.title('Like vs views')
-plt.xlabel('views')
-plt.ylabel('like')
+plt.xlabel('Views')
+plt.ylabel('Likes')
 plt.show()
 
 
@@ -59,8 +57,33 @@ X = data_train[["video_view_count", "video_share_count",
 # y = output
 y = data_train[["video_like_count"]]
 
-print("Shape of X:", X.shape)
-print("Shape of y:", y.shape)
+print(f"{X.shape=}")
+print(f"{y.shape=}")
 
-model = linear_model.LogisticRegression()
+# Addestramento del modello
+model = linear_model.LinearRegression()
 model.fit(X, y["video_like_count"])
+
+
+# Stima dei coefficienti
+coefficients = model.coef_
+intercept = model.intercept_
+print("Coefficiente angolare:", coefficients)
+print("Intercetta:", intercept)
+
+# Calcola il coefficiente R^2
+r2 = model.score(X, y)
+print("Coefficiente R^2:", r2)
+
+# Calcola il Mean Squared Error (MSE)
+y_pred = model.predict(X)
+#mse = mean_squared_error(y, y_pred)
+#print("Mean Squared Error (MSE):", mse)
+
+# Grafico dei punti e della retta di regressione
+plt.scatter(X["video_view_count"], y, color='blue', label='Data')
+plt.plot(X["video_view_count"], y_pred, color='red', linewidth=2, label='Regression Line')
+plt.xlabel('Views')
+plt.ylabel('Likes')
+plt.legend()
+plt.show()
