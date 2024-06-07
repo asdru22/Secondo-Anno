@@ -7,6 +7,10 @@ from sklearn import linear_model
 from sklearn.metrics import mean_squared_error, r2_score
 from scipy import stats
 
+grafici = True
+
+file = open("output.txt", "w")
+
 
 def correlazione():
     plt.matshow(mat_corr, vmin=-1, vmax=1)
@@ -23,45 +27,53 @@ def correlazione():
     plt.show()
 
 
+def qqplot(r):
+    stats.probplot(r, dist="norm", plot=plt)
+    plt.title('Q-Q Plot dei residui')
+    plt.show()
+
+
 def regressione(x_scelta, y_scelta):
-    print(f"\nRegressione con X={x_scelta} e y={y_scelta}")
+    file.write(f"\n\nRegressione con X={x_scelta} e y={y_scelta}\n")
     X = data_train[[x_scelta]]
     y = data_train[y_scelta]
 
     model = linear_model.LinearRegression()
     model.fit(X, y)
 
-    print(f"Coefficienti stimati: {model.coef_}")
-    print(f"Intercetta: {model.intercept_}")
+    file.write(f"Coefficienti stimati: {model.coef_}\n")
+    file.write(f"Intercetta: {model.intercept_}\n")
 
     # Predizione
     y_pred = model.predict(X)
 
     # Calcolo del coefficiente R^2
     r2 = r2_score(y, y_pred)
-    print(f"Coefficiente R^2: {r2}")
+    file.write(f"Coefficiente R^2: {r2}\n")
 
     # Calcolo dell'errore quadratico medio (MSE)
     mse = mean_squared_error(y, y_pred)
-    print(f"Mean Squared Error (MSE): {mse}")
+    file.write(f"Mean Squared Error (MSE): {mse}\n")
 
-    retta_di_regressione(X, y, y_pred,x_scelta)
+    if grafici: retta_di_regressione(X, y, y_pred, x_scelta)
 
     # Residui
     residui = y - y_pred
 
     # qq plot dei residui
-    stats.probplot(residui, dist="norm", plot=plt)
-    plt.title('Q-Q Plot dei residui')
-    plt.show()
+    if grafici: qqplot(residui)
 
     residui_min = np.random.choice(residui, size=4000, replace=False)
     shapiro_test = stats.shapiro(residui_min)
-    print(f"Shapiro-Wilk Test su un sotto campione"
-          f"\nstatistica: {shapiro_test[0]},\np-value: {shapiro_test[1]}")
+    file.write(f"Test di Shapiro-Wilk su un sotto campione\nstatistica: {shapiro_test[0]},\np-value: "
+               f"{shapiro_test[1]}\n")
+    if shapiro_test[1] > 0.05:
+        file.write("Distribuzione normale dei residui (accetto H0)\n")
+    else:
+        file.write("I residui non sono normalmente distribuiti (rifiuto H0)\n")
 
 
-def retta_di_regressione(X, y, y_pred,x_scelta):
+def retta_di_regressione(X, y, y_pred, x_scelta):
     plt.figure(figsize=(10, 6))
     plt.scatter(X[x_scelta], y, color='blue', label='Data')
     plt.plot(X[x_scelta], y_pred, color='red', linewidth=2, label='Regression Line')
@@ -87,8 +99,8 @@ data["claim_status"] = data["claim_status"].astype("category")
 data["verified_status"] = data["verified_status"].astype("category")
 data["author_ban_status"] = data["author_ban_status"].astype("category")
 
-#print(data.isna().any())
-#print(data.info())
+file.write(f"Dati:\n{data}\n\n")
+file.write(f"NaN trovati:\n{data.isna().any()}")
 
 """
 3. EDA
@@ -97,8 +109,7 @@ data["author_ban_status"] = data["author_ban_status"].astype("category")
 data_num = data.drop(columns=non_num_col)
 mat_corr = data_num.corr()
 
-#correlazione()
-
+if grafici: correlazione()
 
 """
 4. Splitting
