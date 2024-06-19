@@ -27,23 +27,68 @@ video_download_count    False
 video_comment_count     False
 dtype: bool
 
-Regressione con X=video_view_count e y=video_like_count
+Colonna 'video_view_count': 0 valori negativi
+Colonna 'video_like_count': 0 valori negativi
+Colonna 'video_share_count': 0 valori negativi
+Colonna 'video_download_count': 0 valori negativi
+Colonna 'video_comment_count': 0 valori negativi
+
+
+> Regressione con X=video_view_count e y=video_like_count
 Coefficienti stimati: [0.33538031]
 Intercetta: -500.6339385318279
 Coefficiente R^2: 0.6481893265330756
-Mean Squared Error (MSE): 6394487239.400973
+Errore quadratico medio (MSE): 6394487239.400973
 Test di Shapiro-Wilk su un sotto campione
 statistica: 0.8148850766554967,
 p-value: 1.0402750750950724e-55
 I residui non sono normalmente distribuiti (rifiuto H0)
 
 
-Regressione con X=video_like_count e y=video_comment_count
+> Regressione con X=video_like_count e y=video_comment_count
 Coefficienti stimati: [0.00414611]
 Intercetta: 2.98502114940203
 Coefficiente R^2: 0.4719091969412126
-Mean Squared Error (MSE): 349645.55347023753
+Errore quadratico medio (MSE): 349645.55347023753
 Test di Shapiro-Wilk su un sotto campione
 statistica: 0.6357944320720752,
 p-value: 1.9487556479935565e-68
 I residui non sono normalmente distribuiti (rifiuto H0)
+
+> Addestramento con regressione logistica
+
+Report di classificazione:
+              precision    recall  f1-score   support
+
+       claim       1.00      0.96      0.98      1905
+     opinion       0.96      1.00      0.98      1912
+
+    accuracy                           0.98      3817
+   macro avg       0.98      0.98      0.98      3817
+weighted avg       0.98      0.98      0.98      3817
+
+Matrice di confusione:
+[[1828   77]
+ [   0 1912]]
+
+> Addestramento con SVC
+
+Report di classificazione:
+              precision    recall  f1-score   support
+
+       claim       1.00      0.97      0.99      1905
+     opinion       0.97      1.00      0.99      1912
+
+    accuracy                           0.99      3817
+   macro avg       0.99      0.99      0.99      3817
+weighted avg       0.99      0.99      0.99      3817
+
+Matrice di confusione:
+[[1851   54]
+ [   0 1912]]
+
+>Analisi accuratezza con 10 iterazioni
+Media: 0.9937647367042179, mediana: 0.9939743253864292,
+deviazione standard: 0.0014671207754781176,minimo: 0.9913544668587896, massimo: 0.9958082263557768
+
+Intervallo di confidenza con alpha = 0.05: [0.7813382788417379, 1.2061911945666979]

@@ -11,35 +11,14 @@
             "id": "a63d65d995cee959",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "dce0564687d466b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sistemi Operativi/Importante.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "60fb84ab7d3ba950",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Sistemi Operativi/Domande Teoria.md",
-                "mode": "source",
-                "source": false
+                "file": "Statistica Numerica/Relazioni.canvas",
+                "viewState": {
+                  "x": 839.6826301228524,
+                  "y": -557.1603248580925,
+                  "zoom": -0.09896605495027089
+                }
               }
             }
           }
@@ -72,7 +51,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md"
+                "file": "Statistica Numerica/Relazioni.canvas"
               }
             }
           },
@@ -99,12 +78,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -120,7 +99,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
+                "file": "Statistica Numerica/Relazioni.canvas",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -163,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
+                "file": "Statistica Numerica/Relazioni.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -192,9 +171,15 @@
   },
   "active": "a63d65d995cee959",
   "lastOpenFiles": [
+    "Statistica Numerica/riassunti/Introduzione.xopp~",
+    "Statistica Numerica/Esercizi/progetto/main.py~",
+    "Statistica Numerica/Esercizi/progetto/t.py",
+    "Sistemi Operativi/Importante.md",
+    "Statistica Numerica/Relazioni.canvas",
+    "Statistica Numerica/riassunti/Distribuzioni Continue.xopp~",
+    "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
     "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
     "Sistemi Operativi/riassunti/5-Gestione memoria.md",
-    "Sistemi Operativi/Importante.md",
     "Sistemi Operativi/Domande Teoria.md",
     "Sistemi Operativi/Es file system.md",
     "Sistemi Operativi/appunti finali/6-Memoria virtuale.xopp~",
@@ -204,13 +189,9 @@
     "Sistemi Operativi/pdf/14-sicurezza.pdf",
     "Sistemi Operativi/appunti/1- introduzione.md",
     "Sistemi Operativi/pdf/1-introduzione.pdf",
-    "Sistemi Operativi/riassunto/appunti-sistemi-operativi.xopp~",
-    "Sistemi Operativi/capitoli/12.pdf",
-    "Sistemi Operativi/capitoli/9.xopp~",
     "Sistemi Operativi/Pasted image 20240528201914.png",
     "Sistemi Operativi/riassunti/8-File system.md",
     "Sistemi Operativi/riassunti/7-Crittografia.md",
-    "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
     "Sistemi Operativi/Progetto.md",
     "Strategia Aziendale/Importante.md",
     "Strategia Aziendale/Riassunto.md",
@@ -238,7 +219,6 @@
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
     "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
     "Sistemi Operativi/Laboratorio/Note.md",
-    "Statistica Numerica/Relazioni.canvas",
     "Strategia Aziendale/Grafico.canvas",
     "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/test.canvas"
