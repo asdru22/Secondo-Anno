@@ -10,6 +10,7 @@ from scipy import stats
 from math import sqrt
 
 grafici = False
+SVC_POLY = True
 file = open('output.txt', 'w')
 
 
@@ -90,14 +91,32 @@ def retta_di_regressione(X, y, y_pred, x_scelta):
     plt.title('Retta di regressione')
     plt.show()
 
+def metriche(n,y_pred,y_test):
+    # Misclassification error
+    ME = np.sum(y_pred != y_test)
+    file.write(f'{n}. {ME=}, ')
+    # Misclassification rate
+    MR = ME / len(y_pred)
+    file.write(f'{MR=}, ')
+    # Accuratezza
+    Acc = 1 - MR
+    file.write(f"{Acc=}\n")
 
-def addestra(nome_modello, model, X_test, y_test):
-    file.write(f'\n> Addestramento con {nome_modello}\n\n')
+
+def addestra(nome_modello, model, X_test, y_test, semplice):
     model.fit(X_train, y_train)
 
     # Predizione sui dati di test
     y_pred = model.predict(X_test)
+    accuratezza = accuracy_score(y_test, y_pred)
 
+    if 'Regressione logistica' in nome_modello:
+        metriche(nome_modello.replace("Regressione logistica n.", ""),y_pred,y_test)
+
+    if semplice:
+        return accuratezza
+
+    file.write(f'\n> Addestramento con {nome_modello}\n\n')
     # Report di classificazione
     file.write(f'Report di classificazione:\n{classification_report(y_test, y_pred)}\n')
 
@@ -110,6 +129,8 @@ def addestra(nome_modello, model, X_test, y_test):
         plt.xlabel('Predetti')
         plt.ylabel('Veri')
         plt.show()
+
+
 
 
 def grafici_accuratezza(acc):
@@ -151,7 +172,7 @@ file.write(f'Dati:\n{data}\n\n')
 file.write(f'NaN trovati:\n{data.isna().any()}\n\n')
 
 # Controllo eventuali valori negativi
-cont_negativi = {} # dizionario vuoto ('nome colonna', num negativi)
+cont_negativi = {}  # dizionario vuoto ('nome colonna', num negativi)
 for col in col_num:
     # Conta i valori negativi di una colonna
     cont_negativi[col] = (data[col] < 0).sum()
@@ -203,16 +224,24 @@ X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
 logistic_model = linear_model.LogisticRegression()
-addestra('regressione logistica', logistic_model, X_test, y_test)
+addestra('regressione logistica', logistic_model, X_test, y_test, False)
 
 '''
 7. Hyperparameter tuning
 '''
 # Addestramento con Support Vector Classification
-# ciclo per controllare accuratezza al variare del grado
+# Kernel lineare
 svc_model = svm.SVC(kernel='linear', C=1)
-addestra('SVC', svc_model, X_test, y_test)
-
+addestra(f'SVC linear', svc_model, X_test, y_test, False)
+# ciclo per controllare accuratezza al variare del grado
+if (SVC_POLY):
+    acc = []
+    for g in range(1, 6):
+        svc_model = svm.SVC(kernel='poly', degree=g, C=1)
+        a = addestra(f'SVC poly, grado {g}', svc_model, X_test, y_test, True)
+        acc.append(a)
+    file.write(f"\nAccuratezza di SVC poly dal grado 1 al grado 5:\n {acc}\n")
+    # il grado con accuratezza migliore è 1
 '''
 9. Studio sui risultati della valutazione
 '''
@@ -220,16 +249,11 @@ addestra('SVC', svc_model, X_test, y_test)
 k = 10
 model = linear_model.LogisticRegression(max_iter=1000)
 acc = []
-
+file.write("\n> Metriche con regressione logistica (max iter=1000)\n")
 for i in range(k):
     # Divisione di X e y in train e test
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=i * 10)
-    model.fit(X_train, y_train)
-
-    y_pred = model.predict(X_test)
-    score = accuracy_score(y_test, y_pred)
-
-    acc = np.append(acc, score)
+    acc.append(addestra(f"Regressione logistica n.{i}", model, X_test, y_test, True))
 
 acc_media = 0
 
@@ -237,7 +261,7 @@ for a in acc:
     acc_media = acc_media + a
 acc_media = acc_media / len(acc)
 
-file.write(f'\n>Analisi accuratezza con {k} iterazioni\nMedia: {np.mean(acc)}, mediana: {np.median(acc)},\n'
+file.write(f'> Analisi accuratezza\nMedia: {np.mean(acc)}, mediana: {np.median(acc)},\n'
            f'deviazione standard: {np.std(acc)},'
            f'minimo: {np.min(acc)}, massimo: {np.max(acc)}\n')
 
