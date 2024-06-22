@@ -11,14 +11,11 @@
             "id": "a63d65d995cee959",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Statistica Numerica/Relazioni.canvas",
-                "viewState": {
-                  "x": 839.6826301228524,
-                  "y": -557.1603248580925,
-                  "zoom": -0.09896605495027089
-                }
+                "file": "Statistica Numerica/relazione/Relazione Progetto Statistica Numerica.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -51,7 +48,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Statistica Numerica/Relazioni.canvas"
+                "file": "Statistica Numerica/relazione/Relazione Progetto Statistica Numerica.md"
               }
             }
           },
@@ -82,8 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "27e6d2f6f1cccef0",
@@ -99,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Statistica Numerica/Relazioni.canvas",
+                "file": "Statistica Numerica/relazione/Relazione Progetto Statistica Numerica.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Statistica Numerica/Relazioni.canvas",
+                "file": "Statistica Numerica/relazione/Relazione Progetto Statistica Numerica.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,43 +167,44 @@
   },
   "active": "a63d65d995cee959",
   "lastOpenFiles": [
-    "Statistica Numerica/riassunti/Introduzione.xopp~",
+    "Statistica Numerica/Esercizi/formule/distribuzioni_continue/esempio_tra_due_prob.py~",
+    "Statistica Numerica/Esercizi/formule/distribuzioni_continue/esempio_tra_due_prob.py",
+    "Statistica Numerica/Esercizi/formule/distribuzioni_continue/esponenziale.py~",
+    "Statistica Numerica/Esercizi/formule/distribuzioni_continue/esponenziale.py",
+    "Statistica Numerica/relazione/Relazione Progetto Statistica Numerica.pdf",
     "Statistica Numerica/Esercizi/progetto/main.py~",
-    "Statistica Numerica/Esercizi/progetto/t.py",
-    "Sistemi Operativi/Importante.md",
+    "Statistica Numerica/relazione/boxplot_accuratezze.png",
+    "Statistica Numerica/relazione/distribuzione_accuratezze.png",
+    "Statistica Numerica/relazione/matrice_di_confusione_svc.png",
+    "Statistica Numerica/relazione/matrice_di_confusione.png",
+    "Statistica Numerica/relazione/qq_plot.png",
+    "Statistica Numerica/relazione/regressione_like_commenti.png",
+    "Statistica Numerica/relazione/regressione_zoom.png",
+    "Statistica Numerica/relazione/regressione_views_like.png",
+    "Statistica Numerica/relazione/matrice_di_correlazione.png",
+    "Statistica Numerica/relazione/Relazione Progetto Statistica Numerica.md",
+    "Statistica Numerica/relazione/like_commenti.png",
     "Statistica Numerica/Relazioni.canvas",
-    "Statistica Numerica/riassunti/Distribuzioni Continue.xopp~",
+    "Statistica Numerica/relazione",
+    "Statistica Numerica/Esercizi/formule/distribuzioni_continue/normale.py",
+    "Statistica Numerica/Esercizi/formule/distribuzioni_continue/uniforme.py~",
+    "Statistica Numerica/Esercizi/formule/distribuzioni_continue/uniforme.py",
+    "Statistica Numerica/Esercizi/formule/distribuzioni_continue/integrazione.py~",
+    "Sistemi Operativi/Importante.md",
     "Sistemi Operativi/riassunti/6-Memoria virtuale.md",
-    "Sistemi Operativi/riassunto/appunti-sistemi-operativi.pdf",
     "Sistemi Operativi/riassunti/5-Gestione memoria.md",
     "Sistemi Operativi/Domande Teoria.md",
     "Sistemi Operativi/Es file system.md",
-    "Sistemi Operativi/appunti finali/6-Memoria virtuale.xopp~",
-    "Sistemi Operativi/-Note-22-21.xopp",
-    "Sistemi Operativi/pdf/10-memoria virtuale.pdf",
-    "Sistemi Operativi/capitoli/14.pdf",
-    "Sistemi Operativi/pdf/14-sicurezza.pdf",
     "Sistemi Operativi/appunti/1- introduzione.md",
-    "Sistemi Operativi/pdf/1-introduzione.pdf",
-    "Sistemi Operativi/Pasted image 20240528201914.png",
     "Sistemi Operativi/riassunti/8-File system.md",
     "Sistemi Operativi/riassunti/7-Crittografia.md",
     "Sistemi Operativi/Progetto.md",
     "Strategia Aziendale/Importante.md",
     "Strategia Aziendale/Riassunto.md",
     "Relazione Spacca.md",
-    "Pasted image 20240509231927.png",
-    "Pasted image 20240509231828.png",
-    "Pasted image 20240509231303.png",
-    "Pasted image 20240509231225.png",
     "Sistemi Operativi/riassunti/2-Struttura e Processi.md",
     "Sistemi Operativi/riassunti/4-Semafori.md",
     "Sistemi Operativi/riassunti/3-Concorrenza.md",
-    "relazione spacca/Pasted image 20240507210832.png",
-    "relazione spacca/Pasted image 20240507210820.png",
-    "relazione spacca/Pasted image 20240507210803.png",
-    "relazione spacca/Pasted image 20240507210737.png",
-    "relazione spacca/Pasted image 20240507210728.png",
     "Statistica Numerica/es/Simulazione Esame.md",
     "Statistica Numerica/Simulazione.md",
     "relazione spacca/Relazione Spacca.md",
@@ -218,7 +215,6 @@
     "Untitled.canvas",
     "Strategia Aziendale/appunti/4.1 Analisi borsa Eni.md",
     "Sistemi Operativi/riassunti/Esempio paginazione a più livelli.md",
-    "Sistemi Operativi/Laboratorio/Note.md",
     "Strategia Aziendale/Grafico.canvas",
     "Finanza Aziendale/Formule.canvas",
     "Finanza Aziendale/test.canvas"

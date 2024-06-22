@@ -7,10 +7,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score, classification_report, confusion_matrix, accuracy_score
 from scipy import stats
-from math import sqrt
 
 grafici = False
-SVC_POLY = True
+SVC_POLY = False
 file = open('output.txt', 'w')
 
 
@@ -30,9 +29,18 @@ def correlazione(mat_corr):
     plt.ylabel('Like')
     plt.show()
 
+    # plot del grafico della relazione tra visualizzazioni e like
+    sns.scatterplot(data=data, x='video_like_count',
+                    y='video_comment_count', hue='claim_status')
+    plt.xlabel('Like')
+    plt.ylabel('Commenti')
+    plt.show()
+
 
 def qqplot(r):
     stats.probplot(r, dist='norm', plot=plt)
+    plt.xlabel("Quantili teorici")
+    plt.ylabel("Residui")
     plt.title('Q-Q Plot dei residui')
     plt.show()
 
@@ -62,7 +70,7 @@ def regressione(x_scelta, y_scelta):
     file.write(f'Errore quadratico medio (MSE): {mse}\n')
 
     if grafici:
-        retta_di_regressione(X, y, y_pred, x_scelta)
+        retta_di_regressione(X, y, y_pred, x_scelta,y_scelta)
 
     # Residui
     residui = y - y_pred
@@ -82,12 +90,13 @@ def regressione(x_scelta, y_scelta):
         file.write('I residui non sono normalmente distribuiti (rifiuto H0)\n')
 
 
-def retta_di_regressione(X, y, y_pred, x_scelta):
+def retta_di_regressione(X, y, y_pred, x_scelta,y_scelta):
     # Disegna la retta di regressione
     plt.figure(figsize=(10, 6))
     plt.scatter(X[x_scelta], y, color='blue', label='Data')
-    plt.plot(X[x_scelta], y_pred, color='red', linewidth=2, label='Regression Line')
-    plt.legend()
+    plt.xlabel(x_scelta)
+    plt.ylabel(y_scelta)
+    plt.plot(X[x_scelta], y_pred, color='red', linewidth=2, label='Retta di regressione')
     plt.title('Retta di regressione')
     plt.show()
 
@@ -159,6 +168,8 @@ data_init = pd.read_csv('data.csv')
 '''
 data = data_init.drop(columns=['#', 'video_transcription_text'])
 data = data.dropna()
+# Eliminazione righe con "#N/A"
+data = data.dropna(subset=data.columns[data.isin(['#N/A']).any()])
 
 non_num_col = ['video_id', 'claim_status', 'verified_status', 'author_ban_status']
 col_num = ['video_view_count', 'video_like_count', 'video_share_count',
@@ -169,16 +180,20 @@ data['claim_status'] = data['claim_status'].astype('category')
 data['verified_status'] = data['verified_status'].astype('category')
 data['author_ban_status'] = data['author_ban_status'].astype('category')
 file.write(f'Dati:\n{data}\n\n')
-file.write(f'NaN trovati:\n{data.isna().any()}\n\n')
+file.write(f'NaN trovati:\n{data.isna().any()}\n')
+# Numero di claim e opinioni
+n_claim = data['claim_status'].value_counts().get('claim', 0)
+n_opinion = data['claim_status'].value_counts().get('opinion', 0)
+file.write(f"Numero affermazioni: {n_claim}, numero opinioni: {n_opinion}\n\n")
 
 # Controllo eventuali valori negativi
 cont_negativi = {}  # dizionario vuoto ('nome colonna', num negativi)
 for col in col_num:
     # Conta i valori negativi di una colonna
-    cont_negativi[col] = (data[col] < 0).sum()
+    cont_negativi[col] = (data[col] <= 0).sum()
 file.write('Controllo valori negativi:\n')
 for col, count in cont_negativi.items():
-    file.write(f'Colonna "{col}": {count} valori negativi\n')
+    file.write(f'Colonna "{col}": {count} valori negativi o uguali a 0\n')
 
 '''
 3. EDA
@@ -219,20 +234,19 @@ y = data['claim_status']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # La standardizzazione migliora la convergenza dell'algoritmo e le performance del modello.
-scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
+standard = StandardScaler()
+X_train = standard.fit_transform(X_train)
+X_test = standard.transform(X_test)
 
-logistic_model = linear_model.LogisticRegression()
-addestra('regressione logistica', logistic_model, X_test, y_test, False)
-
-'''
-7. Hyperparameter tuning
-'''
+reg_logistica = linear_model.LogisticRegression()
+addestra('regressione logistica', reg_logistica, X_test, y_test, False)
 # Addestramento con Support Vector Classification
 # Kernel lineare
 svc_model = svm.SVC(kernel='linear', C=1)
 addestra(f'SVC linear', svc_model, X_test, y_test, False)
+'''
+7. Hyperparameter tuning
+'''
 # ciclo per controllare accuratezza al variare del grado
 if (SVC_POLY):
     acc = []
@@ -242,6 +256,9 @@ if (SVC_POLY):
         acc.append(a)
     file.write(f"\nAccuratezza di SVC poly dal grado 1 al grado 5:\n {acc}\n")
     # il grado con accuratezza migliore è 1
+
+svc_model = svm.SVC(kernel='poly', degree=1, C=1)
+a = addestra(f'SVC poly, grado 1', svc_model, X_test, y_test, False)
 '''
 9. Studio sui risultati della valutazione
 '''
@@ -268,5 +285,8 @@ file.write(f'> Analisi accuratezza\nMedia: {np.mean(acc)}, mediana: {np.median(a
 if grafici:
     grafici_accuratezza(acc)
 
-intervallo_confidenza = [acc_media - (0.95 * sqrt(0.5 / k)), acc_media + (0.95 * sqrt(0.5 / k))]
-file.write(f'\nIntervallo di confidenza con alpha = 0.05: {intervallo_confidenza}')
+confidenza = 0.95
+z = stats.norm.ppf(1 - (1 - confidenza) / 2)  # valore critico Z,
+# stats.norm.ppf restituisce Z per una distr. standard.
+intervallo_confidenza = [acc_media - (z * np.std(acc) / np.sqrt(k)), acc_media + (z * np.std(acc) / np.sqrt(k))]
+file.write(f'\nIntervallo di confidenza con alpha = {1-confidenza}: {intervallo_confidenza}')

@@ -4,10 +4,10 @@
   "alwaysUpdateLinks": true,
   "attachmentFolderPath": "./",
   "pdfExportSettings": {
-    "includeName": false,
+    "includeName": true,
     "pageSize": "A4",
     "landscape": false,
-    "margin": "2",
+    "margin": "0",
     "downscalePercent": 80
   },
   "rightToLeft": false

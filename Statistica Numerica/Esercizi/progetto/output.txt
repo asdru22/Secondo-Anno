@@ -26,13 +26,14 @@ video_share_count       False
 video_download_count    False
 video_comment_count     False
 dtype: bool
+Numero affermazioni: 9608, numero opinioni: 9476
 
 Controllo valori negativi:
-Colonna "video_view_count": 0 valori negativi
-Colonna "video_like_count": 0 valori negativi
-Colonna "video_share_count": 0 valori negativi
-Colonna "video_download_count": 0 valori negativi
-Colonna "video_comment_count": 0 valori negativi
+Colonna "video_view_count": 0 valori negativi o uguali a 0
+Colonna "video_like_count": 4 valori negativi o uguali a 0
+Colonna "video_share_count": 99 valori negativi o uguali a 0
+Colonna "video_download_count": 977 valori negativi o uguali a 0
+Colonna "video_comment_count": 3434 valori negativi o uguali a 0
 
 
 > Regressione con X=video_view_count e y=video_like_count
@@ -88,10 +89,23 @@ Matrice di confusione:
 [[1851   54]
  [   0 1912]]
 
-Accuratezza di SVC poly dal grado 1 al grado 5:
- [0.9800890751899397, 0.9041131778883941, 0.9779931883678281, 0.8467382761330888, 0.9753733298401887]
+> Addestramento con SVC poly, grado 1
 
->Metriche con regressione logistica (max iter=1000)
+Report di classificazione:
+              precision    recall  f1-score   support
+
+       claim       1.00      0.96      0.98      1905
+     opinion       0.96      1.00      0.98      1912
+
+    accuracy                           0.98      3817
+   macro avg       0.98      0.98      0.98      3817
+weighted avg       0.98      0.98      0.98      3817
+
+Matrice di confusione:
+[[1829   76]
+ [   0 1912]]
+
+> Metriche con regressione logistica (max iter=1000)
 0. ME=21, MR=0.005501702908042965, Acc=0.994498297091957
 1. ME=16, MR=0.004191773644223212, Acc=0.9958082263557768
 2. ME=18, MR=0.004715745349751114, Acc=0.9952842546502488
@@ -102,8 +116,8 @@ Accuratezza di SVC poly dal grado 1 al grado 5:
 7. ME=26, MR=0.006811632171862719, Acc=0.9931883678281372
 8. ME=24, MR=0.006287660466334818, Acc=0.9937123395336652
 9. ME=33, MR=0.008645533141210375, Acc=0.9913544668587896
->Analisi accuratezza
+> Analisi accuratezza
 Media: 0.9937647367042179, mediana: 0.9939743253864292,
 deviazione standard: 0.0014671207754781176,minimo: 0.9913544668587896, massimo: 0.9958082263557768
 
-Intervallo di confidenza con alpha = 0.05: [0.7813382788417379, 1.2061911945666979]
+Intervallo di confidenza con alpha = 0.05: [0.9928554225357857, 0.9946740508726502]
