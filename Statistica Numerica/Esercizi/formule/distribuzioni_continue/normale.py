@@ -22,7 +22,5 @@ media_calcolata = distribuzione_normale.mean()
 varianza_calcolata = distribuzione_normale.var()
 
 # Stampa dei risultati
-print(f"Funzione di densità di probabilità (PDF) di {x}: {pdf_valore:.6f}")
+print(f"PDF di {x}: {pdf_valore:.6f}")
 print(f"Probabilità cumulativa (CDF) di {x}: {cdf_valore:.6f}")
-print(f"Media della distribuzione normale: {media_calcolata:.6f}")
-print(f"Varianza della distribuzione normale: {varianza_calcolata:.6f}")
