@@ -26,7 +26,6 @@ Regressione con `X=video_view_count` e `y=video_like_count` (fortemente correlat
 	- p-value: $1.0402750750950724\times10^{-55}$. C'è una probabilità molto bassa che i dati siano distribuiti normalmente.
 	Quindi si rifiuta l'ipotesi di normalità $H0$.
 ![[regressione_views_like.png]]![[regressione_zoom.png]]
-In questo Q-Q plot si può notare come i residui non seguano la distribuzione teorica. In particolare alle estremità i dati mostrano una divergenza dalla distribuzione teorica.
 ![[qq_plot.png]]
 Regressione con `X=video_like_count` e `y=video_comment_count` (debolmente correlati)
 - Coefficienti stimati: $[0.00414611]$. Minuscola pendenza della retta, correlazione tra le due variabili molto bassa. 
@@ -69,7 +68,7 @@ Eseguendo la fase di addestramento 10 volte con la regressione logistica usando 
 | 9          | 24  | 0.006287660466334818 | 0.9937123395336652 |
 | 10         | 33  | 0.008645533141210375 | 0.9913544668587896 |
 ![[distribuzione_accuratezze.png]]
-L'accuretezza media è $0.9937647367042179$, che è molto simile alla mediana: $0.9939743253864292$. Questo suggerisce che le accuratezze non sono influenzate da valori estremi. Una deviazione standard dello $0.15\%$ indica che c'è una bassa variazione nei valori delle precisioni, dovuta a un modello corretto e valori estremi assenti.
+L'accuretezza media è $0.9937647367042179$, che è molto simile alla mediana: $0.9939743253864292$. Questo suggerisce che le accuratezze non sono influenzate da valori estremi. Una deviazione standard dello $0.15\%$ indica che c'è una bassa variazione nei valori delle precisioni, dovuta a un modello corretto e valori estremi assenti. Dato che l'istogramma non è simmetrico, si può affermare che la distribuzione dei residui non è normale.
 ![[boxplot_accuratezze.png]]
 Questi valori sono evidenziati dal boxplot, che con la linea arancione indica la mediana. Il rettangolo nel boxplot rappresenta l’intervallo interquartile, che è l'intervallo tra il primo e il terzo quartile. I baffi indicano l'intervallo complessivo dei dati, escludendo eventuali outlier. 
 Intervallo di confidenza con $\alpha = 0.05: [0.9928554225357857, 0.9946740508726502]$.

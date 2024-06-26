@@ -1,8 +1,10 @@
+import math
+
 from scipy.stats import poisson
 
-lambd = 25  # Media della distribuzione di Poisson
+lambd = math.e**-4  # Media della distribuzione di Poisson
 
-x = 10  # Numero di eventi di interesse
+x = 5  # Numero di eventi di interesse
 
 # Calcolo della probabilità utilizzando la distribuzione di Poisson
 probabilita = poisson.pmf(x, mu=lambd)

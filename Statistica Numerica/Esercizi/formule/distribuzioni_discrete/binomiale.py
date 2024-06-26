@@ -1,9 +1,9 @@
 from scipy.special import comb
 
 # Parametri del problema
-n = 5
-p = 1/6
-x = 3
+n = 12
+p = 0.4
+x = 7
 
 
 # Calcolo del coefficiente binomiale
