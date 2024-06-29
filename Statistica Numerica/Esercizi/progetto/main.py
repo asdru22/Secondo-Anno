@@ -70,7 +70,7 @@ def regressione(x_scelta, y_scelta):
     file.write(f'Errore quadratico medio (MSE): {mse}\n')
 
     if grafici:
-        retta_di_regressione(X, y, y_pred, x_scelta,y_scelta)
+        retta_di_regressione(X, y, y_pred, x_scelta, y_scelta)
 
     # Residui
     residui = y - y_pred
@@ -90,7 +90,7 @@ def regressione(x_scelta, y_scelta):
         file.write('I residui non sono normalmente distribuiti (rifiuto H0)\n')
 
 
-def retta_di_regressione(X, y, y_pred, x_scelta,y_scelta):
+def retta_di_regressione(X, y, y_pred, x_scelta, y_scelta):
     # Disegna la retta di regressione
     plt.figure(figsize=(10, 6))
     plt.scatter(X[x_scelta], y, color='blue', label='Data')
@@ -100,7 +100,8 @@ def retta_di_regressione(X, y, y_pred, x_scelta,y_scelta):
     plt.title('Retta di regressione')
     plt.show()
 
-def metriche(n,y_pred,y_test):
+
+def metriche(n, y_pred, y_test):
     # Misclassification error
     ME = np.sum(y_pred != y_test)
     file.write(f'{n}. {ME=}, ')
@@ -120,7 +121,7 @@ def addestra(nome_modello, model, X_test, y_test, semplice):
     accuratezza = accuracy_score(y_test, y_pred)
 
     if 'Regressione logistica' in nome_modello:
-        metriche(nome_modello.replace("Regressione logistica n.", ""),y_pred,y_test)
+        metriche(nome_modello.replace("Regressione logistica n.", ""), y_pred, y_test)
 
     if semplice:
         return accuratezza
@@ -138,8 +139,6 @@ def addestra(nome_modello, model, X_test, y_test, semplice):
         plt.xlabel('Predetti')
         plt.ylabel('Veri')
         plt.show()
-
-
 
 
 def grafici_accuratezza(acc):
@@ -174,7 +173,7 @@ data = data.dropna(subset=data.columns[data.isin(['#N/A']).any()])
 non_num_col = ['video_id', 'claim_status', 'verified_status', 'author_ban_status']
 col_num = ['video_view_count', 'video_like_count', 'video_share_count',
            'video_download_count', 'video_comment_count']
-# converto in dato categorico
+# converto in dato categorico/classe
 data['video_id'] = data['video_id'].astype('category')
 data['claim_status'] = data['claim_status'].astype('category')
 data['verified_status'] = data['verified_status'].astype('category')
@@ -289,4 +288,4 @@ confidenza = 0.95
 z = stats.norm.ppf(1 - (1 - confidenza) / 2)  # valore critico Z,
 # stats.norm.ppf restituisce Z per una distr. standard.
 intervallo_confidenza = [acc_media - (z * np.std(acc) / np.sqrt(k)), acc_media + (z * np.std(acc) / np.sqrt(k))]
-file.write(f'\nIntervallo di confidenza con alpha = {1-confidenza}: {intervallo_confidenza}')
+file.write(f'\nIntervallo di confidenza con alpha = {1 - confidenza}: {intervallo_confidenza}')

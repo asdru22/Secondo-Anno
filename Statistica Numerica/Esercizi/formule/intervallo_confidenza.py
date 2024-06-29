@@ -2,9 +2,9 @@ import numpy as np
 from scipy.stats import norm, t
 
 # Parametri della distribuzione
-n = 64         # Dimensione del campione
+n = 90         # Dimensione del campione
 mu = 70        # Media della popolazione
-sigma = 2      # Deviazione standard (nota)
+sigma = 1.5      # Deviazione standard (nota)
 alpha = 0.05   # Livello di significatività
 
 # Generazione del campione

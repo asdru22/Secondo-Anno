@@ -4,11 +4,11 @@ from scipy.integrate import quad
 
 # Definizione della PDF
 def f(x):
-    return 3/x**4
+    return 2*x
 
 # Definizione dei limiti di integrazione
-limite_inferiore = 0.2
-limite_superiore = 0.65
+limite_inferiore = 1
+limite_superiore = 1.2
 
 # Calcolo dell'integrale
 risultato, errore_assoluto = integrate.quad(f, limite_inferiore, limite_superiore)

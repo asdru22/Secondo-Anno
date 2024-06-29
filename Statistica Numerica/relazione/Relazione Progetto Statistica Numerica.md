@@ -49,7 +49,7 @@ Guardando la matrice di confusione si nota che:
 Con la Support Vector Classification (SVC) lineare, i risultati sono leggermente migliori. La precisioni delle affermazioni resta al $100\%$, mentre quella delle opinioni è del $97\%$, portando cosi a una precisione complessiva del $99\%$.
 ![[matrice_di_confusione_svc.png]]
 ### 7. Hyperparameter Tuning
-Per trovare il grado con accuratezza migliore in una SVC poly, si eseguono più addestramenti aumentando il grado e tenendo traccia delle varie precisioni. Si nota che il grado che produce il migliore è il primo, con risultati pressoché identici alla regressione logistica (precisione del $98,008\%$).
+Per trovare il grado con accuratezza migliore in una SVC poly, si eseguono più operazioni fit aumentando il grado e tenendo traccia delle varie precisioni. Si nota che il grado che produce il migliore è il primo, con risultati pressoché identici alla regressione logistica (precisione del $98,008\%$).
 ### 8. Valutazione della performance
 In conclusione possiamo affermare che il modello che produce i valori più vicini al test set è l'SVC lineare, seguito da SVC poly di grado 1 e regressione logistica. Gradi maggiori di 1 con SVC poly hanno le seguenti accuratezze: $0.9041131778883941, 0.9779931883678281, 0.8467382761330888, 0.9753733298401887$.
 ### 9. Studio statistico sui risultati della valutazione

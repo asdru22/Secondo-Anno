@@ -1,22 +1,15 @@
-from scipy.special import comb
+import math
 
-# Parametri del problema
-n = 12
-p = 0.4
-x = 7
+def binomial_coefficient(n, k):
+    return math.factorial(n) // (math.factorial(k) * math.factorial(n - k))
 
+def probability_of_failure(n, k, p):
+    q = 1 - p
+    return binomial_coefficient(n, k) * (q ** k) * (p ** (n - k))
 
-# Calcolo del coefficiente binomiale
-coeff_binomiale = comb(n, x)
+n = 120
+k = 50
+p = 0.67 # probabilità
 
-# Calcolo della probabilità binomiale
-probabilita = coeff_binomiale * (p ** x) * ((1 - p) ** (n - x))
-
-print(f"Probabilità: {probabilita}")
-
-# Calcolo della media e della varianza
-media = n * p
-varianza = n * p * (1 - p)
-
-print(f"Media: {media:.6f}")
-print(f"Varianza: {varianza:.6f}")
+prob_failure = probability_of_failure(n, k, p)
+print(f"La probabilità di {k} su {n} è: {prob_failure:.6f}")
