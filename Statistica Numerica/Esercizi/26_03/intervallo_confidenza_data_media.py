@@ -18,4 +18,4 @@ intervallo_inferiore = media_campionaria - z_alpha_2 * errore_standard
 intervallo_superiore = media_campionaria + z_alpha_2 * errore_standard
 
 # Output
-print(f"Intervallo di confidenza al {livello_confidenza*100}% per la media μ: [{intervallo_inferiore:.4f}, {intervallo_superiore:.4f}]")
+print(f"Intervallo di confidenza al {livello_confidenza*100}%: [{intervallo_inferiore:.4f}, {intervallo_superiore:.4f}]")

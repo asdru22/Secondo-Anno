@@ -1,1 +1,0 @@
-import math# Dati fornitidata = [1, 2, 3, 4, 5]# Calcolo della mediamean = sum(data) / len(data)# Calcolo della somma dei quadrati delle deviazioni dalla mediasum_squares = sum((x - mean) ** 2 for x in data)# Calcolo della deviazione standardstd_dev = math.sqrt(sum_squares / len(data))print(f"La deviazione standard dei dati forniti è: {std_dev:.4f}")

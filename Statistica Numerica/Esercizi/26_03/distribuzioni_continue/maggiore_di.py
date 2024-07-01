@@ -2,7 +2,7 @@ import scipy.stats as stats
 
 # Parametri della distribuzione
 mu = 1.5  # media
-sigma = 0.8**2  # deviazione standard
+sigma = 0.8  # deviazione standard
 
 # Valore al di sopra del quale vogliamo calcolare la probabilità
 x = 1.45
