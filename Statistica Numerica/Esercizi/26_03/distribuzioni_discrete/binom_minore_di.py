@@ -1,12 +1,12 @@
 import scipy.stats as stats
 
 # Parametri
-n = 120     # Numero di prove
-k = 82    # Numero di successi desiderati
-p = 0.67   # Probabilità di successo
+n = 100     # Numero di prove
+k = 15      # Numero di successi desiderati
+p = 0.1   # Probabilità di successo
 
 # Calcola la probabilità usando la distribuzione binomiale
-probabilita = stats.binom.pmf(k, n, p)
+probabilita = 1-stats.binom.cdf(k-1, n, p)
 media = n*p
 varianza = (n*p)*(1-p)
 
