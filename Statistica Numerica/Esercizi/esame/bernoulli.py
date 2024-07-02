@@ -1,13 +1,11 @@
-p = 0.1  # Probabilità di successo
-x = 1  # Valore del processo di Bernoulli (può essere 0 o 1)
+x = 2 # numero esperimenti di bernoulli
+p = 0.6
 
-# Calcolo della probabilità di Bernoulli
-fx = (p**x) * ((1 - p)**(1 - x))
-print(f"Bernoulli: {fx:.6f}")
+fx = (p**x)*(1-p)**(1-x)
 
-# Calcolo della media e varianza
-media = (1-p)/p
-varianza = (1-p)/(p**2)
+mu = p
+var = x*p*(1-p)
 
-print(f"Media: {media:.6f}")
-print(f"Varianza: {varianza:.6f}")
+print(f"Probabilità di successo (p): {fx:.4f}")
+print(f"Media (μ): {mu:.4f}")
+print(f"Varianza (σ^2): {var:.4f}")
