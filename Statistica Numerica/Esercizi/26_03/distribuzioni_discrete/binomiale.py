@@ -1,15 +1,11 @@
-import math
+import scipy.stats as stats
 
-def binomial_coefficient(n, k):
-    return math.factorial(n) // (math.factorial(k) * math.factorial(n - k))
+# Parametri
+n = 15      # Numero di prove
+k = 7       # Numero di successi desiderati
+p = 0.75    # Probabilità di successo
 
-def probability_of_failure(n, k, p):
-    q = 1 - p
-    return binomial_coefficient(n, k) * (q ** k) * (p ** (n - k))
+# Calcola la probabilità usando la distribuzione binomiale
+probabilita = stats.binom.pmf(k, n, p)
 
-n = 120
-k = 50
-p = 0.67 # probabilità
-
-prob_failure = probability_of_failure(n, k, p)
-print(f"La probabilità di {k} su {n} è: {prob_failure:.6f}")
+print(f"P di {k} su {n} è: {probabilita:.4f}")

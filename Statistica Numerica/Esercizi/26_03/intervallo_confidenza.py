@@ -1,36 +1,21 @@
 import numpy as np
-from scipy.stats import norm, t
+import scipy.stats as stats
 
-# Parametri della distribuzione
-n = 90         # Dimensione del campione
-mu = 70        # Media della popolazione
-sigma = 1.5      # Deviazione standard (nota)
-alpha = 0.05   # Livello di significatività
+# Dati
+media_campionaria = 70
+deviazione_standard_popolazione = 2
+dimensione_campione = 90
+livello_confidenza = 0.95
 
-# Generazione del campione
-np.random.seed(0)  # Per riproducibilità
-x = np.random.normal(mu, sigma, n)
+# Calcolo del valore critico Z
+z_alpha_2 = stats.norm.ppf(1 - (1 - livello_confidenza) / 2)
 
-# Calcolo della media del campione
-m = np.mean(x)
+# Calcolo dell'errore standard
+errore_standard = deviazione_standard_popolazione / np.sqrt(dimensione_campione)
 
-# Calcolo della deviazione standard del campione
-s = np.std(x, ddof=1)  # ddof=1 per la deviazione standard campionaria
+# Calcolo dei limiti dell'intervallo di confidenza
+intervallo_inferiore = media_campionaria - z_alpha_2 * errore_standard
+intervallo_superiore = media_campionaria + z_alpha_2 * errore_standard
 
-# Calcolo del valore critico (quantile) per la distribuzione normale (σ noto)
-z_alpha = norm.ppf(1 - alpha / 2)
-
-# Calcolo del valore critico (quantile) per la distribuzione t di Student (σ sconosciuto)
-t_alpha = t.ppf(1 - alpha / 2, df=n-1)
-
-# Calcolo degli estremi dell'intervallo di confidenza con σ noto
-c1_sigma_noto = m - z_alpha * sigma / np.sqrt(n)
-c2_sigma_noto = m + z_alpha * sigma / np.sqrt(n)
-
-# Calcolo degli estremi dell'intervallo di confidenza con σ sconosciuto
-c1_sigma_sconosciuto = m - t_alpha * s / np.sqrt(n)
-c2_sigma_sconosciuto = m + t_alpha * s / np.sqrt(n)
-
-# Stampa dei risultati
-print(f'Intervallo di confidenza (σ noto): [{c1_sigma_noto:.6f}, {c2_sigma_noto:.6f}]')
-print(f'Intervallo di confidenza (σ sconosciuto): [{c1_sigma_sconosciuto:.6f}, {c2_sigma_sconosciuto:.6f}]')
+# Output
+print(f"Intervallo di confidenza al {livello_confidenza*100}%: [{intervallo_inferiore:.4f}, {intervallo_superiore:.4f}]")

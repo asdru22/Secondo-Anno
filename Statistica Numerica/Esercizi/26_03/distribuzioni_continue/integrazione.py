@@ -7,8 +7,8 @@ def f(x):
     return 2*x
 
 # Definizione dei limiti di integrazione
-limite_inferiore = 1
-limite_superiore = 1.2
+limite_inferiore = 0.1
+limite_superiore = 1
 
 # Calcolo dell'integrale
 risultato, errore_assoluto = integrate.quad(f, limite_inferiore, limite_superiore)
