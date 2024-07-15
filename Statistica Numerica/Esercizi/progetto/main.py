@@ -80,6 +80,12 @@ def regressione(x_scelta, y_scelta):
     # QQ-plot dei residui
     if grafici:
         qqplot(residui)
+        x_graf = X_test.to_numpy().ravel()
+        y_graf = y_pred.ravel()
+        sns.scatterplot(x=x_graf.ravel(),y=y_graf.ravel())
+        plt.xlabel('Visualizzazioni')
+        plt.ylabel('Like predetti')
+        plt.show()
 
     shapiro_test = stats.shapiro(residui)
     file.write(f'Test di Shapiro-Wilk\nstatistica: {shapiro_test[0]},\np-value: '
@@ -113,25 +119,25 @@ def metriche(n, y_pred, y_test):
     file.write(f"{Acc=}\n")
 
 
-def addestra(nome_modello, model, X_test, y_test, semplice):
+def addestra(nome_modello, model, X_test, y_val, semplice):
     model.fit(X_train, y_train)
 
     # Predizione sui dati di test
     y_pred = model.predict(X_test)
-    accuratezza = accuracy_score(y_test, y_pred)
+    accuratezza = accuracy_score(y_val, y_pred)
 
     if 'Regressione logistica' in nome_modello:
-        metriche(nome_modello.replace("Regressione logistica n.", ""), y_pred, y_test)
+        metriche(nome_modello.replace("Regressione logistica n.", ""), y_pred, y_val)
 
     if semplice:
         return accuratezza
 
     file.write(f'\n> Addestramento con {nome_modello}\n\n')
     # Report di classificazione
-    file.write(f'Report di classificazione:\n{classification_report(y_test, y_pred)}\n')
+    file.write(f'Report di classificazione:\n{classification_report(y_val, y_pred)}\n')
 
     # Matrice di confusione
-    mat_conf = confusion_matrix(y_test, y_pred)
+    mat_conf = confusion_matrix(y_val, y_pred)
     file.write(f'Matrice di confusione:\n{mat_conf}\n')
     # visualizzazione
     if grafici:
@@ -230,7 +236,8 @@ X = data_num
 y = data['claim_status']
 
 # Divisione in training e test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.3)
+X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5)
 
 # La standardizzazione migliora la convergenza dell'algoritmo e le performance del modello.
 standard = StandardScaler()
@@ -238,11 +245,11 @@ X_train = standard.fit_transform(X_train)
 X_test = standard.transform(X_test)
 
 reg_logistica = linear_model.LogisticRegression()
-addestra('regressione logistica', reg_logistica, X_test, y_test, False)
+addestra('regressione logistica', reg_logistica, X_test, y_val, False)
 # Addestramento con Support Vector Classification
 # Kernel lineare
 svc_model = svm.SVC(kernel='linear', C=1)
-addestra(f'SVC linear', svc_model, X_test, y_test, False)
+addestra(f'SVC linear', svc_model, X_test, y_val, False)
 '''
 7. Hyperparameter tuning
 '''
@@ -251,13 +258,13 @@ if (SVC_POLY):
     acc = []
     for g in range(1, 6):
         svc_model = svm.SVC(kernel='poly', degree=g, C=1)
-        a = addestra(f'SVC poly, grado {g}', svc_model, X_test, y_test, True)
+        a = addestra(f'SVC poly, grado {g}', svc_model, X_test, y_val, True)
         acc.append(a)
     file.write(f"\nAccuratezza di SVC poly dal grado 1 al grado 5:\n {acc}\n")
-    # il grado con accuratezza migliore è 1
+    # il grado con accuratezza migliore è 4
 
-svc_model = svm.SVC(kernel='poly', degree=1, C=1)
-a = addestra(f'SVC poly, grado 1', svc_model, X_test, y_test, False)
+svc_model = svm.SVC(kernel='poly', degree=4, C=1)
+a = addestra(f'SVC poly, grado 1', svc_model, X_test, y_val, False)
 '''
 9. Studio sui risultati della valutazione
 '''
@@ -267,9 +274,10 @@ model = linear_model.LogisticRegression(max_iter=1000)
 acc = []
 file.write("\n> Metriche con regressione logistica (max iter=1000)\n")
 for i in range(k):
-    # Divisione di X e y in train e test
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=i * 10)
-    acc.append(addestra(f"Regressione logistica n.{i}", model, X_test, y_test, True))
+    # Divisione di X e y in train e test e val
+    X_train, X_temp, y_train, y_temp = train_test_split(X, y, test_size=0.3)
+    X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5)
+    acc.append(addestra(f"Regressione logistica n.{i}", model, X_test, y_val, True))
 
 acc_media = 0
 

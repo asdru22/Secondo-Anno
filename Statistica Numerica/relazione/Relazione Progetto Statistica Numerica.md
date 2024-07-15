@@ -29,38 +29,40 @@ Eseguendo la regressione tra like e commenti, anch'essi correlati positivamente,
 ![[regressione_like_commenti.png]]
 ### 6. Addestramento del modello
 Si addestra il modello con regressione logistica per predire, dato il numero di visualizzazioni, like, commenti e condivisioni se un video è un'affermazione o un'opinione. Le $X$ sono state standardizzate per far convergere l'algoritmo e migliorare la performance del modello.
-Il report di classificazione afferma che c'è una precisione del $100\%$ nel predire affermazioni, e del $96\%$ per quanto riguarda le opinioni. Il $98\%$ Delle predizioni totali sono risultate corrette.
+![[like_commenti_reg_log.png]]
+Il report di classificazione afferma che c'è una precisione del $47\%$ nel predire affermazioni, e del $49\%$ per quanto riguarda le opinioni. Il $48\%$ Delle predizioni totali sono risultate corrette.
 Guardando la matrice di confusione si nota che:
-- $1828$ è il numero di veri positivi per la classe affermazione.
-- $77$ è il numero di falsi negativi per la classe affermazione.
-- $0$ è il numero di falsi positivi per la classe opinione.
-- $1912$ è il numero di veri positivi per la classe opinione.
+- $641$ è il numero di veri positivi per la classe affermazione.
+- $765$ è il numero di falsi negativi per la classe affermazione.
+- $726$ è il numero di falsi positivi per la classe opinione.
+- $731$ è il numero di veri positivi per la classe opinione.
 ![[matrice_di_confusione.png]]
-Con la Support Vector Classification (SVC) lineare, i risultati sono leggermente migliori. La precisioni delle affermazioni resta al $100\%$, mentre quella delle opinioni è del $97\%$, portando cosi a una precisione complessiva del $98.5\%$.
+Con la Support Vector Classification (SVC) lineare, i risultati sono pressoché identici. Le precisioni nell'individuare le opinioni e le affermazioni rimane la stessa, e i valori nella matrice di confusione variano solo di qualche decina
 ![[matrice_di_confusione_svc.png]]
 ### 7. Hyperparameter Tuning
-Per trovare il grado con accuratezza migliore in una SVC poly, si eseguono più fasi di addestramento aumentando il grado e tenendo traccia delle varie precisioni. Si nota che il grado che produce il risultato migliore è il primo, con risultati pressoché identici alla regressione logistica (precisione del $98,008\%$).
+Per trovare il grado con accuratezza migliore in una SVC poly si eseguono più fasi di addestramento, con grado tra $1$ e $5$, tenendo traccia delle varie precisioni. Si nota che il grado che produce il risultato migliore è il quarto, anch'esso con precisione complessiva del $49\%$
 ### 8. Valutazione della performance
-In conclusione possiamo affermare che il modello che produce i valori più vicini al test set è l'SVC lineare, seguito da SVC poly di grado 1 e regressione logistica. Gradi maggiori di 1 con SVC poly hanno le seguenti accuratezze: $0.9041131778883941, 0.9779931883678281, 0.8467382761330888, 0.9753733298401887$.
+In conclusione possiamo affermare che il modello che produce i valori più vicini al test set è l'SVC lineare, seguito da SVC poly di grado $4$ e regressione logistica. SVC poly con grado dal primo al quinto ha le seguenti accuratezze: $0.479217603911, 0.485504715333, 0.479217603911, 0.487251135172, 0.477820468040$.
 ### 9. Studio statistico sui risultati della valutazione
-Eseguendo la fase di addestramento 10 volte con la regressione logistica usando test e train set casuali ogni volta si hanno i seguenti risultati.
+Eseguendo la fase di addestramento 10 volte con la regressione logistica usando train, test e validation set casuali ogni volta si hanno i seguenti risultati.
 
-| Iterazione | Errore di classificazione (ME) | Tasso di errore di classificazione (MR) | Accuratezza (ACC)    |
-| ---------- | ------------------------------ | --------------------------------------- | -------------------- |
-| $1$        | $21$                           | $0.005501702908042965$                  | $0.994498297091957$  |
-| $2$        | $16$                           | $0.004191773644223212$                  | $0.9958082263557768$ |
-| $3$        | $18$                           | $0.004715745349751114$                  | $0.9952842546502488$ |
-| $4$        | $18$                           | $0.004715745349751114$                  | $0.9952842546502488$ |
-| $5$        | $28$                           | $0.007335603877390621$                  | $0.9926643961226094$ |
-| $6$        | $22$                           | $0.005763688760806916$                  | $0.9942363112391931$ |
-| $7$        | $32$                           | $0.008383547288446425$                  | $0.9916164527115536$ |
-| $8$        | $26$                           | $0.006811632171862719$                  | $0.9931883678281372$ |
-| $9$        | $24$                           | $0.006287660466334818$                  | $0.9937123395336652$ |
-| $10$       | $33$                           | $0.008645533141210375$                  | $0.9913544668587896$ |
+| Iaterazione | Errore di classificazione (ME) | Tasso di errore di classificazione (MR) | Accuratezza (ACC)     |
+| ----------- | ------------------------------ | --------------------------------------- | --------------------- |
+| $1$         | $1450$                         | $0.5064617534055187$                    | $0.4935382465944813$  |
+| $2$         | $1440$                         | $0.5029689137268599$                    | $0.4970310862731401$  |
+| $3$         | $1433$                         | $0.5005239259517988$                    | $0.49947607404820116$ |
+| $4$         | $1438$                         | $0.5022703457911282$                    | $0.49772965420887183$ |
+| $5$         | $1417$                         | $0.4949353824659448$                    | $0.5050646175340552$  |
+| $6$         | $1442$                         | $0.5036674816625917$                    | $0.4963325183374083$  |
+| $7$         | $1366$                         | $0.47712190010478517$                   | $0.5228780998952148$  |
+| $8$         | $1445$                         | $0.5047153335661894$                    | $0.49528466643381064$ |
+| $9$         | $1432$                         | $0.5001746419839329$                    | $0.4998253580160671$  |
+| $10$        | $1469$                         | $0.5130981487949703$                    | $0.4869018512050297$  |
+
 ![[distribuzione_accuratezze.png]]
-L'accuretezza media è $0.9937647367042179$, che è molto simile alla mediana: $0.9939743253864292$. Questo suggerisce che le accuratezze non sono influenzate da valori estremi (perché la media è molto sensibile agli outlier e la mediana no). Una deviazione standard dello $0.15\%$ indica che c'è una bassa variazione nei valori delle precisioni, dovuta a un modello corretto e valori estremi assenti. Dato che l'istogramma non ha la forma di una campana gaussiana, si può affermare che la distribuzione dei residui non è normale.
+L'accuretezza media è $0.49940621725462797$, che è molto simile alla mediana: $0.49738037024100595$. Questo suggerisce che le accuratezze non sono influenzate da valori estremi (perché la media è molto sensibile agli outlier e la mediana no). Una deviazione standard dello $0.08\%$ indica che c'è una bassa variazione nei valori delle precisioni, dovuta a un modello corretto e valori estremi assenti. Dato che l'istogramma non ha la forma di una campana gaussiana, si può affermare che la distribuzione dei residui non è normale.
 ![[boxplot_accuratezze.png]]
-Questi valori sono ritrovabili nel boxplot, che con la linea arancione indica la mediana. Il rettangolo nel boxplot rappresenta l’intervallo interquartile, che è l'intervallo tra il primo e il terzo quartile. I baffi indicano l'intervallo complessivo dei dati, escludendo eventuali outlier. 
-L'intervallo di confidenza con $\alpha = 0.05: [0.9928554225357857, 0.9946740508726502]$ indica l'intervallo dove ci si aspetta di trovare il vero valore medio dell'accuratezza con un livello di confidenza del $95\%$, tenendo conto di variazioni dei dati nelle diverse iterazioni.
+Questi valori sono ritrovabili nel boxplot, che con la linea arancione indica la mediana. Il rettangolo nel boxplot rappresenta l’intervallo interquartile, che è l'intervallo tra il primo e il terzo quartile. I baffi indicano l'intervallo complessivo dei dati, al di fuori dei quali sono presenti due outlier (valori estremi) che tuttavia non sembrano influenzare molto la media, forse a causa del segno opposto. 
+L'intervallo di confidenza con $\alpha = 0.05: [0.4938321730836435, 0.5049802614256125]$ indica l'intervallo dove ci si aspetta di trovare il vero valore medio dell'accuratezza con un livello di confidenza del $95\%$, tenendo conto di variazioni dei dati nelle diverse iterazioni.
 ### 10. Conclusioni
-Si può affermare che data la tendenza delle affermazioni ad avere visualizzazioni e altri indici di interazione molto alti rispetto alle opinioni, tutti i modelli sono in grado di predire con accuratezza le due classi. Ad esclusione della regressione lineare, dato che un solo dato in input non è sufficiente per fare predizioni corrette sull'andamento delle visualizzazioni in base al numero di like.
+Si può affermare che data la tendenza delle opinioni ad avere visualizzazioni e altri indici di interazione molto più bassi rispetto alle affermazioni, tutti i modelli sono in grado di predire correttamente quasi la metà delle volte la classe. Per quanto riguarda la regressione lineare, dato che un solo dato in input non è sufficiente per fare predizioni corrette sull'andamento delle visualizzazioni in base al numero di like, ci si ritrova con dati che non seguono assolutamente l'andamento atteso. Un numero maggiore di dati in addestramento potrebbe portare ad un'aumento dell'acuratezza da parte di tutti i modelli.
