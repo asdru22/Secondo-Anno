@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, r2_score, classification_report, confusion_matrix, accuracy_score
 from scipy import stats
 
-grafici = False
+grafici = True
 SVC_POLY = False
 file = open('output.txt', 'w')
 
@@ -50,39 +50,39 @@ def regressione(x_scelta, y_scelta):
     # Variabile (numerica) in input X, variabile (numerica) in output y
     X = data_train[[x_scelta]]
     y = data_train[y_scelta]
+    X_test = data_test[[x_scelta]]
+    y_val = data_val[y_scelta]
 
     # Addestramento modello
     model = linear_model.LinearRegression()
     model.fit(X, y)
 
-    file.write(f'Coefficienti stimati: {model.coef_}\n')
+    file.write(f'Coefficiente angolare: {model.coef_[0]}\n')
     file.write(f'Intercetta: {model.intercept_}\n')
 
     # Predizione
-    y_pred = model.predict(X)
+    y_pred = model.predict(X_test)
 
     # Calcolo del coefficiente R^2
-    r2 = r2_score(y, y_pred)
+    r2 = r2_score(y_val, y_pred)
     file.write(f'Coefficiente R^2: {r2}\n')
 
     # Calcolo dell'errore quadratico medio
-    mse = mean_squared_error(y, y_pred)
+    mse = mean_squared_error(y_val, y_pred)
     file.write(f'Errore quadratico medio (MSE): {mse}\n')
 
     if grafici:
-        retta_di_regressione(X, y, y_pred, x_scelta, y_scelta)
+        retta_di_regressione(X_test, y_val, y_pred, x_scelta, y_scelta)
 
     # Residui
-    residui = y - y_pred
+    residui = y_val - y_pred
 
     # QQ-plot dei residui
     if grafici:
         qqplot(residui)
 
-    # Estrazione di un sotto-campione di 4000 residui dal totale in grado da essere gestito dal test di shapiro wilk
-    residui_min = np.random.choice(residui, size=4000, replace=False)
-    shapiro_test = stats.shapiro(residui_min)
-    file.write(f'Test di Shapiro-Wilk su un sotto campione\nstatistica: {shapiro_test[0]},\np-value: '
+    shapiro_test = stats.shapiro(residui)
+    file.write(f'Test di Shapiro-Wilk\nstatistica: {shapiro_test[0]},\np-value: '
                f'{shapiro_test[1]}\n')
     if shapiro_test[1] > 0.05:
         file.write('Distribuzione normale dei residui (accetto H0)\n')
@@ -90,13 +90,13 @@ def regressione(x_scelta, y_scelta):
         file.write('I residui non sono normalmente distribuiti (rifiuto H0)\n')
 
 
-def retta_di_regressione(X, y, y_pred, x_scelta, y_scelta):
-    # Disegna la retta di regressione
+def retta_di_regressione(X_test, y_val, y_pred, x_scelta, y_scelta):
+    # Disegna scatterplot e retta di regressione
     plt.figure(figsize=(10, 6))
-    plt.scatter(X[x_scelta], y, color='blue', label='Data')
+    plt.scatter(X_test, y_val, color='blue', label='Data')
     plt.xlabel(x_scelta)
     plt.ylabel(y_scelta)
-    plt.plot(X[x_scelta], y_pred, color='red', linewidth=2, label='Retta di regressione')
+    plt.plot(X_test, y_pred, color='red', linewidth=2, label='Retta di regressione')
     plt.title('Retta di regressione')
     plt.show()
 
@@ -286,6 +286,6 @@ if grafici:
 
 confidenza = 0.95
 z = stats.norm.ppf(1 - (1 - confidenza) / 2)  # valore critico Z,
-# stats.norm.ppf restituisce Z per una distr. standard.
+# scypy.norm.ppf restituisce Z per una distr. standard.
 intervallo_confidenza = [acc_media - (z * np.std(acc) / np.sqrt(k)), acc_media + (z * np.std(acc) / np.sqrt(k))]
 file.write(f'\nIntervallo di confidenza con alpha = {1 - confidenza}: {intervallo_confidenza}')

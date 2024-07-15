@@ -2,10 +2,10 @@ import numpy as np
 from scipy.stats import norm
 
 # Parametri del problema
-n = 64          # Dimensione del campione
-sigma = 2     # Deviazione standard della popolazione (nota)
+n = 90          # Dimensione del campione
+sigma = 1.5     # Deviazione standard della popolazione (nota)
 alpha = 0.95    # Livello di significatività
-mu = 70      # Media campionaria
+mu = 0.95      # Media campionaria
 
 # Calcolo del valore critico (quantile) per la distribuzione normale
 z_alpha = norm.ppf(1 - (1-alpha) / 2)

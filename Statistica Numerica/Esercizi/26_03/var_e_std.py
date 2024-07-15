@@ -1,1 +1,1 @@
-import numpy as npimport math# Per un campione di dati n-1, per una popolazione nx = np.array([1,2,3,4,5])media = np.mean(x)var = np.var(x)std = math.sqrt(var)mediana = np.median(x)print(f"{media=}")print(f"{var=}")print(f"{std=}")print(f"{mediana=}")
+import numpy as npimport math# Per un campione di dati n-1, per una popolazione nx = np.array([2,4,6,8,10,12,14,16,18])media = np.mean(x)var = np.var(x)std = math.sqrt(var)mediana = np.median(x)print(f"{media=}")print(f"{var=}")print(f"{std=}")print(f"{mediana=}")
