@@ -83,8 +83,8 @@ def regressione(x_scelta, y_scelta):
         x_graf = X_test.to_numpy().ravel()
         y_graf = y_pred.ravel()
         sns.scatterplot(x=x_graf.ravel(),y=y_graf.ravel())
-        plt.xlabel('Visualizzazioni')
-        plt.ylabel('Like predetti')
+        plt.xlabel(x_scelta)
+        plt.ylabel(y_scelta+' predetta')
         plt.show()
 
     shapiro_test = stats.shapiro(residui)

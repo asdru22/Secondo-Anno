@@ -18,7 +18,7 @@ Il dataset è stato diviso in training set (70%), test set (15%) e validation se
 ### 5. Regressione Lineare
 Si è eseguita la regressione lineare con `X=video_view_count` e `y=video_like_count` (fortemente correlati).
 ![[regressione_views_like.png]]
-- Coefficiente angolare: $0.0041461075784415295$. Questo valore indica la pendenza della retta di regressione. Più tende a 1, più sono correlate le due variabili.
+- Coefficiente angolare: $0.0041461075784415295$. Questo valore indica la pendenza della retta di regressione.
 - Intercetta: $2.98502114940203$. Il dataset fornito non contiene entry con 0 visualizzazioni. Dato che l'intercetta richiede che $X=0$, non può fare predizioni corrette per quel valore in quanto non ha dati sufficienti (ci si aspetta che video con 0 visualizzazioni non possano avere like).
 - Coefficiente $R^2$: $-0.5507904468192637$. $R^2$ è stato calcolato con la funzione `r2_score` di `sklearn`, usando come input le $y$ predette e le $y$ del validation set. Il fatto che $R^2\notin[0,1]$ indica che la regressione lineare non è adatta a fare previsioni corrette su questo dataset. Per migliorare l'accuratezza del modello sono necessarie altre variabili in input, come vedremo con la regressione logistica e SVC.
 - Errore quadratico medio (MSE): $896603.745500345$. Indica che c'è una grande discrepanza tra i valori predetti dal modello e i valori effettivi.
@@ -32,9 +32,9 @@ Si addestra il modello con regressione logistica per predire, dato il numero di 
 ![[like_commenti_reg_log.png]]
 Il report di classificazione afferma che c'è una precisione del $47\%$ nel predire affermazioni, e del $49\%$ per quanto riguarda le opinioni. Il $48\%$ Delle predizioni totali sono risultate corrette.
 Guardando la matrice di confusione si nota che:
-- $641$ è il numero di veri positivi per la classe affermazione.
-- $765$ è il numero di falsi negativi per la classe affermazione.
-- $726$ è il numero di falsi positivi per la classe opinione.
+- $641$ è il numero di veri negativi per la classe affermazione.
+- $765$ è il numero di falsi positivi per la classe affermazione.
+- $726$ è il numero di falsi negativi per la classe opinione.
 - $731$ è il numero di veri positivi per la classe opinione.
 ![[matrice_di_confusione.png]]
 Con la Support Vector Classification (SVC) lineare, i risultati sono pressoché identici. Le precisioni nell'individuare le opinioni e le affermazioni rimane la stessa, e i valori nella matrice di confusione variano solo di qualche decina
@@ -61,8 +61,8 @@ Eseguendo la fase di addestramento 10 volte con la regressione logistica usando 
 
 ![[distribuzione_accuratezze.png]]
 L'accuretezza media è $0.49940621725462797$, che è molto simile alla mediana: $0.49738037024100595$. Questo suggerisce che le accuratezze non sono influenzate da valori estremi (perché la media è molto sensibile agli outlier e la mediana no). Una deviazione standard dello $0.08\%$ indica che c'è una bassa variazione nei valori delle precisioni, dovuta a un modello corretto e valori estremi assenti. Dato che l'istogramma non ha la forma di una campana gaussiana, si può affermare che la distribuzione dei residui non è normale.
-![[boxplot_accuratezze.png]]
-Questi valori sono ritrovabili nel boxplot, che con la linea arancione indica la mediana. Il rettangolo nel boxplot rappresenta l’intervallo interquartile, che è l'intervallo tra il primo e il terzo quartile. I baffi indicano l'intervallo complessivo dei dati, al di fuori dei quali sono presenti due outlier (valori estremi) che tuttavia non sembrano influenzare molto la media, forse a causa del segno opposto. 
+  
+Questi valori sono ritrovabili nel boxplot, che con la linea arancione indica la mediana. La base e altezza del rettangolo nel rappresentano gli estremi dell’intervallo interquartile (i valori maggiori del $25\%$ e minori del $75\%$ dei valori totali. I baffi indicano l'intervallo complessivo dei dati, al di fuori dei quali sono presenti due outlier (valori estremi) che tuttavia non sembrano influenzare molto la media, forse a causa del segno opposto. 
 L'intervallo di confidenza con $\alpha = 0.05: [0.4938321730836435, 0.5049802614256125]$ indica l'intervallo dove ci si aspetta di trovare il vero valore medio dell'accuratezza con un livello di confidenza del $95\%$, tenendo conto di variazioni dei dati nelle diverse iterazioni.
 ### 10. Conclusioni
 Si può affermare che data la tendenza delle opinioni ad avere visualizzazioni e altri indici di interazione molto più bassi rispetto alle affermazioni, tutti i modelli sono in grado di predire correttamente quasi la metà delle volte la classe. Per quanto riguarda la regressione lineare, dato che un solo dato in input non è sufficiente per fare predizioni corrette sull'andamento delle visualizzazioni in base al numero di like, ci si ritrova con dati che non seguono assolutamente l'andamento atteso. Un numero maggiore di dati in addestramento potrebbe portare ad un'aumento dell'acuratezza da parte di tutti i modelli.
