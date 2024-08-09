@@ -15,38 +15,11 @@ public class Esercizio1 {
         Tree t1 = readParentChildPairs("src/" + args[0]);
         Tree t2 = readNestedList("src/" + args[1]);
 
-        // restituiscono due stringhe diverse
-        // dato che l'ordine dei figli nella lista è diverso
-        System.out.println(t1.visit());
-        System.out.println(t2.visit());
-
-        System.out.println(areEqual(t1, t2));
+        System.out.println(t1.isEqualTo(t2));
     }
 
     public static boolean areEqual(Tree t1, Tree t2) {
-        /*
-        Converto i due alberi in dizionari del tipo
-        Key = depth, value = Lista di nodi a quella profondità/livello
-        Confronto se i due dizionari hanno lo stesso numero di chiavi (= stessa profondità)
-        Se è falso è ovvio che i due alberi sono diversi e non sono richiesti altri controlli
-        Se è vero si controlla che le liste corrispondenti a ogni livello di profondità del dizionario
-        siano uguali
-        */
-        Map<Integer, List<Integer>> d1 = t1.toDict(), d2 = t2.toDict();
-        int size = d1.keySet().size();
 
-        if (size != d2.keySet().size()) return false;
-        List<Integer> l1, l2;
-        for (int i = 0; i < size; i++) {
-            l1 = d1.get(i);
-            l2 = d2.get(i);
-
-            // se tutti gli elementi di l2 sono in l1 e viceversa, allora
-            // le due liste hanno gli stessi elementi (non serve ordinarla)
-            if (!l1.containsAll(l2) && l2.containsAll(l1)) {
-                return false;
-            }
-        }
         return true;
     }
 
@@ -114,10 +87,14 @@ public class Esercizio1 {
     }
 
     private static Node treeFromNestedList(List<Object> children) {
+        // Caso base: se la lista contiene un solo elemento, questo è un nodo dell'albero
         if (children.size() == 1) return new Node((Integer) children.get(0));
         else {
+            // Il primo elemento della lista rappresenta sempre il genitore del sotto albero
+            // Viene rimosso e si ripete l'algoritmo con i suoi figli
             Node parent = new Node((Integer) children.remove(0));
             for (Object o : children) parent.addChild(treeFromNestedList((List<Object>) o));
+            // Si restituisce il nodo genitore con tutti i suoi figli
             return parent;
         }
     }
@@ -170,7 +147,6 @@ public class Esercizio1 {
                 if (parents.contains(childValue)) {
                     parents.remove((Integer) childValue);
                 }
-
             }
 
             return new Tree(nodes.get(parents.get(0)));
@@ -184,51 +160,12 @@ public class Esercizio1 {
     public static class Tree {
         private Node root;
 
-        public Tree() {
-        }
-
         public Tree(Node root) {
             this.root = root;
         }
 
         public Node getRoot() {
             return root;
-        }
-
-        public Map<Integer, List<Integer>> toDict() {
-            /*
-            Visita per livello dell'albero (BFS)
-            Si usa una coda per tenere traccia dei nodi del livello.+
-            Inizialmente vi è solo la radice, all'iterazione successiva ci saranno i
-            figli della radice, e cosi via. Il ciclo while termina quando la coda
-            è vuota, ovvero nessuno dei nodi del livello ha figli.
-            */
-
-            Map<Integer, List<Integer>> dict = new HashMap<>();
-            Queue<Node> nodeQueue = new LinkedList<>();
-            nodeQueue.add(root);
-            int depth = 0, levelSize;
-            Node currentNode;
-            List<Integer> currentLevel;
-
-            while (!nodeQueue.isEmpty()) {
-                // nodeQueue contiene già i nodi corrispondenti a questo livello
-                levelSize = nodeQueue.size();
-                currentLevel = new ArrayList<>();
-
-                // itera su ogni nodo della lisa per rimuoverlo e aggiungerlo
-                // ai nodi di quel livello
-                for (int i = 0; i < levelSize; i++) {
-                    currentNode = nodeQueue.peek();
-                    currentLevel.add(currentNode.getValue());
-
-                    // aggiungi tutti i figli allo stack
-                    nodeQueue.addAll(currentNode.children);
-                }
-                dict.put(depth, currentLevel);
-                depth++;
-            }
-            return dict;
         }
 
         String visit() {
@@ -245,37 +182,25 @@ public class Esercizio1 {
             }
             return s;
         }
+
+        private boolean isEqualTo(Tree other) {
+            String t1 = visit(), t2 = other.visit();
+            return Objects.equals(t1, t2);
+        }
+
     }
 
     public static class Node {
         private int value;
         private List<Node> children;
-        private Node parent = null;
 
         public Node(int value) {
             this.value = value;
             this.children = new LinkedList<>();
         }
 
-        public Node(int value, List<Node> children) {
-            this.value = value;
-            this.children = children;
-        }
-
-        public void setValue(int value) {
-            this.value = value;
-        }
-
         public int getValue() {
             return value;
-        }
-
-        public void setParent(Node parent) {
-            this.parent = parent;
-        }
-
-        public Node getParent() {
-            return parent;
         }
 
         public List<Node> getChildren() {
@@ -284,7 +209,8 @@ public class Esercizio1 {
 
         public void addChild(Node child) {
             this.children.add(child);
-            child.setParent(this);
+            // ogni volta che viene aggiunto un figlio si riordina la lista
+            children.sort(Comparator.comparingInt(Node::getValue));
         }
     }
 }
