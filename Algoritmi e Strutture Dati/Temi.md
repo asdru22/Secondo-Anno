@@ -1,0 +1,18 @@
+- Complessità di tempo
+- Algoritmi di ordinamento
+- Tipi di dati e strutture dati
+- Strutture dati elementari
+- Alberi
+- Alberi binari di ricerca
+- Alberi red-black
+- Hash map
+- Grafi
+- Heap/minheap
+- Priority queue
+- Minimum spanning tree
+- Cammini di costo minimo
+- divide et impera
+- Algoritmi greedy
+- programmazione dinamica
+- analisi ammortizzata
+- macchina di turing

@@ -1,0 +1,54 @@
+Node nodo
+Tree albero = new Albero()
+Hashmap<int,Node> nodi = new Hashmap()
+List<int> padri = New List()
+
+// coppia parent e figlio
+
+foreach(r riga del file)
+    Node p = new Node(parent), Node c = new Node(child) = r.parse()
+
+    if(!nodi.contains(p.value)){
+        nodi.put(p.value,p)
+        padri.add(p.value)
+    }
+    nodi.get(p.value).addChild(c)
+
+    if(padri.contains(c.value)) padri.remove(c.value)
+
+    if(!nodi.contains(c.value)){
+            nodi.put(c.value,c)
+    }
+
+albero.root = nodi.get(padri.get(0))
+
+
+// nested list
+
+Tree t = new Tree(leggi([1, [2, [6, [12], [13]], [7]], [3, [8, [14]]], [4, [9, [15]], [10]], [5, [11]]]))
+
+
+Node leggi(List<Object> figli){
+    if(figli.size()==1){
+    Nodo n = new Node(figli.get(0))
+    return n
+    } else {
+    padre p = figli.remove(0);
+    for(Object o : figli){
+        p.addChildren(leggi(o));
+    }
+    return p
+    }
+}
+
+for(int i = 0; i<livelli;i++){
+    guarda se i livelli dei due alberi sono uguali
+
+    List<int> n1 = T1.bfs(i)
+    List<int> n2 = T2.bfs(i)
+
+    n1.sort()
+    n2.sort()
+
+    n1 = n2
+}
