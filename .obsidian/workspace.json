@@ -75,7 +75,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -165,7 +166,7 @@
       "command-palette:Open command palette": true
     }
   },
-  "active": "3380276c165f2ac3",
+  "active": "b8ba3cde3086f47a",
   "lastOpenFiles": [
     "Algoritmi e Strutture Dati/Formulario.md",
     "Algoritmi e Strutture Dati/Temi.md",

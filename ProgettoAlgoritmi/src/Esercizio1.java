@@ -12,17 +12,11 @@ import java.util.*;
 public class Esercizio1 {
 
     public static void main(String[] args) {
-        Tree t1 = readParentChildPairs("src/" + args[0]);
-        Tree t2 = readNestedList("src/" + args[1]);
+        Tree t1 = readParentChildPairs(args[0]);
+        Tree t2 = readNestedList(args[1]);
 
-        System.out.println(t1.isEqualTo(t2));
+        t1.isEqualTo(t2);
     }
-
-    public static boolean areEqual(Tree t1, Tree t2) {
-
-        return true;
-    }
-
 
     private static List<Object> parseNestedList(String str) {
         /*
@@ -113,7 +107,7 @@ public class Esercizio1 {
             String line;
             Node parent, child;
             String[] pairs;
-            HashMap<Integer, Node> nodes = new HashMap();
+            HashMap<Integer, Node> nodes = new HashMap<>();
             ArrayList<Integer> parents = new ArrayList<>();
             int parentValue, childValue;
             while ((line = reader.readLine()) != null) {
@@ -173,19 +167,24 @@ public class Esercizio1 {
         }
 
         private String visit(Node node) {
-            String s = "";
+            StringBuilder s = new StringBuilder();
             if (node != null) {
-                s = node.getValue() + " ";
+                s = new StringBuilder(node.getValue() + " ");
                 for (Node child : node.getChildren()) {
-                    s += visit(child);
+                    s.append(visit(child));
                 }
             }
-            return s;
+            return s.toString();
         }
 
-        private boolean isEqualTo(Tree other) {
+        private void isEqualTo(Tree other) {
             String t1 = visit(), t2 = other.visit();
-            return Objects.equals(t1, t2);
+            if (Objects.equals(t1, t2)){
+                System.out.println("I due alberi sono uguali.");
+            } else {
+                System.out.println("I due alberi sono diversi.");
+
+            }
         }
 
     }
