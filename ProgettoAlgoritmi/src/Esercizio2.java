@@ -32,7 +32,7 @@ public class Esercizio2 {
         */
 
         // se il file di input è vuoto, c'è solo una combinazione possibile: la stringa vuota "".
-        int n = Objects.equals(binaryString, "") ? binaryString.length() : 0;
+        int n = (binaryString == null) ? 0 : binaryString.length();
 
         int keyLength;
         // Lista di liste per memorizzare le sequenze di caratteri per ogni prefisso
