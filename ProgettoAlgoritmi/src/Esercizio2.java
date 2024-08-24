@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 
 /*
  * Nanni Alessandro
@@ -31,40 +30,43 @@ public class Esercizio2 {
         k: numero di elementi nel dizionario
         */
 
-        // se il file di input è vuoto, c'è solo una combinazione possibile: la stringa vuota "".
+        // Se il file di input è vuoto, c'è solo una combinazione possibile: la stringa vuota "".
         int n = (binaryString == null) ? 0 : binaryString.length();
 
-        int keyLength;
-        // Lista di liste per memorizzare le sequenze di caratteri per ogni prefisso
-        List<String>[] paths = new ArrayList[n + 1];
-        for (int i = 0; i <= n; i++) {
-            paths[i] = new ArrayList<>();
-        }
-        paths[0].add("");  // La stringa vuota corrisponde a una sola sequenza di caratteri
+        // Mappa per memorizzare le sequenze di caratteri per ogni prefisso.
+        // Integer corrisponde alla lunghezza della stringa e la lista sono
+        // tutte le combinazioni possibili.
+        HashMap<Integer, List<String>> sequences = new HashMap<>();
+        sequences.put(0, new ArrayList<>());
+        sequences.get(0).add("");  // La stringa vuota corrisponde a una sola sequenza di caratteri
 
         // Itera su ogni posizione della stringa binaria
         for (int i = 1; i <= n; i++) {
+            // Aggiunge una lista vuota per la posizione i, se non esiste
+            sequences.put(i, new ArrayList<>());
+
             // Controlla tutti i codici disponibili
             for (String key : codes.keySet()) {
-                keyLength = key.length();
-               /*
-               Se "code" è sottostringa di "binaryString" ed esiste una sottostringa nell'intervallo
-               [i-codeLength, i] che corrisponde a un carattere del dizionario, creo una nuova
-               sottostringa che è formata da tutte quelle precedenti e quella nuova (con
-               lunghezze compatibili).
-               */
+                int keyLength = key.length();
+                // Se "key" è sottostringa di "binaryString" ed esiste una sottostringa nell'intervallo
+                // [i-keyLength, i] che corrisponde a un carattere del dizionario, creo una nuova
+                // sottostringa che è formata da tutte quelle precedenti e quella nuova (con
+                // lunghezze compatibili).
                 if (i >= keyLength && binaryString.substring(i - keyLength, i).equals(key)) {
-                    // Aggiunge le sequenze precedenti a quello corrente
-                    for (String prefix : paths[i - keyLength]) {
-                        paths[i].add(prefix + codes.get(key));
+                    // Aggiunge le sequenze precedenti a quelle correnti
+                    if (sequences.containsKey(i - keyLength)) {
+                        for (String prefix : sequences.get(i - keyLength)) {
+                            sequences.get(i).add(prefix + codes.get(key));
+                        }
                     }
                 }
             }
         }
 
         // Ritorna tutte le sequenze di caratteri per il prefisso di lunghezza n,
-        // che corrisponde alla lunghezza della stringa in input.
-        return paths[n];
+        // che corrisponde alla lunghezza della stringa in input. Quindi restituisce tutte
+        // le combinazioni per la stringa in input.
+        return sequences.get(n);
     }
 
     static String readBinary(String filename) {

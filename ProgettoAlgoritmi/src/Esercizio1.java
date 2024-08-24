@@ -15,6 +15,7 @@ public class Esercizio1 {
         Tree t1 = readParentChildPairs(args[0]);
         Tree t2 = readNestedList(args[1]);
 
+        assert t1 != null && t2 != null;
         t1.isEqualTo(t2);
     }
 
@@ -74,7 +75,7 @@ public class Esercizio1 {
             return new Tree(treeFromNestedList(list));
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("File not found");
         }
         return null;
     }
@@ -87,7 +88,9 @@ public class Esercizio1 {
             // Il primo elemento della lista rappresenta sempre il genitore del sotto albero
             // Viene rimosso e si ripete l'algoritmo con i suoi figli
             Node parent = new Node((Integer) children.remove(0));
-            for (Object o : children) parent.addChild(treeFromNestedList((List<Object>) o));
+            for (Object o : children){
+                parent.addChild(treeFromNestedList((List<Object>) o));
+            }
             // Si restituisce il nodo genitore con tutti i suoi figli
             return parent;
         }
@@ -151,7 +154,7 @@ public class Esercizio1 {
             return new Tree(nodes.get(parents.get(0)));
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("File not found");
             return null;
         }
     }
