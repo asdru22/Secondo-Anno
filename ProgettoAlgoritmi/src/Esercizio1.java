@@ -16,33 +16,63 @@ public class Esercizio1 {
         Tree t2 = readNestedList(args[1]);
 
         assert t1 != null && t2 != null;
+
+        //System.out.println(t1.visit());
+        //System.out.println(t2.visit());
+
         t1.isEqualTo(t2);
     }
 
-    private static List<Object> parseNestedList(String str) {
+    // classe di utilità per gestire la creazione di un albero da una "nested list"
+    public static class NestedElement {
+        int value;
+        List<NestedElement> children;
+
+        NestedElement() {
+            this.value = -1;
+            this.children = new ArrayList<>();
+        }
+
+        void addChild(NestedElement child) {
+            children.add(child);
+        }
+    }
+
+    private static Tree readNestedList(String filename) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+            String line = reader.readLine();
+            NestedElement root = parseNestedList(line);
+            return new Tree(treeFromNestedList(root));
+        } catch (IOException e) {
+            System.err.println("File non trovato");
+        }
+        return null;
+    }
+
+    private static NestedElement parseNestedList(String str) {
         /*
-        Converte una stringa in una lista di oggetti. Ha costo computazionale O(n),
+        Converte una stringa in un NestedElement. Ha costo computazionale O(n),
         dove n è la lunghezza della stringa.
 
-        Lo stack tiene traccia delle liste in base al livello di nesting.
+        Lo stack tiene traccia degli elementi in base al livello di nesting.
         Lo stringBuilder viene usato per creare i numeri (in particolare se hanno più di
         una cifra). Viene resettato ogni volta che si incontra una virgola o una ].
-        currentList indica la lista che è stata prelevata in cima allo stack.
+        nestedElement indica l'elemento che si trova in cima allo stack.
         */
 
-        Stack<List<Object>> stack = new Stack<>();
-        List<Object> currentList = new ArrayList<>(), nestedList;
+        Stack<NestedElement> stack = new Stack<>();
+        NestedElement nestedElement = null, newElement;
         StringBuilder stringBuilder = new StringBuilder();
 
         for (char ch : str.toCharArray()) {
-
             if (ch == '[') {
-                // Crea un nuovo livello di nesting, aggiungendo alla lista nel livello superiore
-                // quella nuova. La lista nuova poi viene messa in cima allo stack,
-                // indicando il nuovo livello di nesting.
-                nestedList = new ArrayList<>();
-                if (!stack.isEmpty()) stack.peek().add(nestedList);
-                stack.push(nestedList);
+
+                // Crea un nuovo "livello" di nesting, aggiungendo all'elemento nel livello superiore
+                // quello nuovo. L'elemento nuovo poi viene messo in cima allo stack,
+                // indicando il nuovo "contesto" dove si sta operando.
+                newElement = new NestedElement();
+                if (!stack.isEmpty()) stack.peek().addChild(newElement);
+                stack.push(newElement);
 
             } else if (Character.isDigit(ch)) {
                 // Lo string builder serve ad assicurarsi che numeri con
@@ -53,57 +83,43 @@ public class Esercizio1 {
             } else if (ch == ',' || ch == ']') {
                 if (!stringBuilder.isEmpty()) {
                     // viene fatto il parsing del numero costruito e aggiunto alla lista
-                    stack.peek().add(Integer.parseInt(stringBuilder.toString()));
+                    // si aggiorna il valore del contesto corrente.
+                    stack.peek().value = Integer.parseInt(stringBuilder.toString());
                     stringBuilder.setLength(0);
                 }
 
-            } if (ch == ']') {
-                // si torna al livello di nesting precedente/superiore
-                currentList = stack.pop();
+                if (ch == ']') {
+                    // si torna al livello di nesting precedente/superiore
+                    nestedElement = stack.pop();
+                }
             }
         }
-        // alla fine dell'esecuzione, currentList indica la lista più esterna,
+        // alla fine dell'esecuzione, nestedElement indica la struttura più esterna,
         // ovvero quella che contiene tutto l'albero.
-        return currentList;
+        return nestedElement;
     }
 
-    private static Tree readNestedList(String filename) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
-            String line;
-            line = reader.readLine();
-            List<Object> list = parseNestedList(line);
-            return new Tree(treeFromNestedList(list));
-
-        } catch (IOException e) {
-            System.err.println("File not found");
-        }
-        return null;
-    }
-
-    private static Node treeFromNestedList(List<Object> children) {
+    private static Node treeFromNestedList(NestedElement element) {
         // Questo algoritmo ha costo computazionale O(n^2), dove n è il numero di nodi nell'albero
-        // Caso base: se la lista contiene un solo elemento, questo è un nodo dell'albero
-        if (children.size() == 1) return new Node((Integer) children.get(0));
-        else {
-            // Il primo elemento della lista rappresenta sempre il genitore del sotto albero
-            // Viene rimosso e si ripete l'algoritmo con i suoi figli
-            Node parent = new Node((Integer) children.remove(0));
-            for (Object o : children){
-                parent.addChild(treeFromNestedList((List<Object>) o));
-            }
-            // Si restituisce il nodo genitore con tutti i suoi figli
-            return parent;
+        Node parent = new Node(element.value);
+        // Per ogni figlio, la funzione chiama se stessa ricorsivamente,
+        // il parametro child diventerà padre del suo sotto-albero (se ha figli).
+        for (NestedElement child : element.children) {
+            parent.addChild(treeFromNestedList(child));
         }
+        // quando element.children è vuoto (element non ha figli) termina l'esecuzione
+        return parent;
     }
 
     private static Tree readParentChildPairs(String filename) {
         /*
         Legge ogni riga del file per trovare il valore dei due nodi.
-        Il primo, che corrisponde al genitore viene aggiunto ad un dizionario, che ha come chiave il suo valore
-        Il secondo, che corrisponde al figlio viene aggiunto alla lista dei figli del nodo padre, ottenendo l'oggetto
+        Il primo, che corrisponde al genitore viene aggiunto a un dizionario,
+        che ha come chiave il suo valore Il secondo, che corrisponde al figlio
+        viene aggiunto alla lista dei figli del nodo padre, ottenendo l'oggetto
         del nodo padre tramite il valore del padre usato nel dizionario.
-        Se il figlio era stato messo in precedenza nella lista dei padri, si elimina. In questo modo si ottiene una
-        lista con un solo valore, quello che è mappato al nodo padre.
+        Se il figlio era stato messo in precedenza nella lista dei padri, si elimina.
+        In questo modo si ottiene una lista con un solo valore, quello che è mappato al nodo padre.
          */
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
 
