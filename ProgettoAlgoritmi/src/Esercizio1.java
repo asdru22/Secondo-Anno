@@ -20,70 +20,59 @@ public class Esercizio1 {
 
     private static List<Object> parseNestedList(String str) {
         /*
-        Si itera su ogni carattere della lista per costruire un costrutto del tipo
-        (int, lista di oggetti). La lista di oggetti conterrà a sua volta un altro
-        costrutto del genere. Ha costo computazionale O(n) dove n è la lunghezza della stringa
+        Converte una stringa in una lista di oggetti. Ha costo computazionale O(n),
+        dove n è la lunghezza della stringa.
+
+        Lo stack tiene traccia delle liste in base al livello di nesting.
+        Lo stringBuilder viene usato per creare i numeri (in particolare se hanno più di
+        una cifra). Viene resettato ogni volta che si incontra una virgola o una ].
+        currentList indica la lista che è stata prelevata in cima allo stack.
         */
 
-        // Quando si incontra un nuovo livello di nesting
-        // (indicato dal carattere '['), una nuova lista viene aggiunta allo stack.
-        // Quando si incontra il carattere ']', si torna al livello di annidamento precedente,
-        // rimuovendo la lista dal top dello stack.
-
         Stack<List<Object>> stack = new Stack<>();
-        List<Object> currentList = new ArrayList<>(), newList;
+        List<Object> currentList = new ArrayList<>(), nestedList;
         StringBuilder stringBuilder = new StringBuilder();
 
-        for (char c : str.toCharArray()) {
-            if (c == '[') {
-                /*
-                Quando si incontra '[', viene creata una nuova lista. Se c'è già una lista nello stack
-                (ovvero c'è un livello di annidamento superiore), questa nuova lista viene
-                aggiunta alla lista in cima allo stack. Successivamente, la nuova lista
-                viene spinta nello stack, diventando la lista corrente.
-                */
-                newList = new ArrayList<>();
-                if (!stack.isEmpty()) {
-                    // se lo stack contiene già liste, si mette la nuova in cima
-                    stack.peek().add(newList);
+        for (char ch : str.toCharArray()) {
+
+            if (ch == '[') {
+                // Crea un nuovo livello di nesting, aggiungendo alla lista nel livello superiore
+                // quella nuova. La lista nuova poi viene messa in cima allo stack,
+                // indicando il nuovo livello di nesting.
+                nestedList = new ArrayList<>();
+                if (!stack.isEmpty()) stack.peek().add(nestedList);
+                stack.push(nestedList);
+
+            } else if (Character.isDigit(ch)) {
+                // Lo string builder serve ad assicurarsi che numeri con
+                // più di una cifra vengano gestiti correttamente. Lo string builder
+                // viene resettato ogni volta che incontra una ',' o una ']'
+                stringBuilder.append(ch);
+
+            } else if (ch == ',' || ch == ']') {
+                if (!stringBuilder.isEmpty()) {
+                    // viene fatto il parsing del numero costruito e aggiunto alla lista
+                    stack.peek().add(Integer.parseInt(stringBuilder.toString()));
+                    stringBuilder.setLength(0);
                 }
-                // la lista corrente viene messa in cima allo stack (è il livello di nesting più esterno)
-                stack.push(newList);
 
-            } else if (Character.isDigit(c)) {
-                // caso numero reale, viene definito come nodo padre di quelli
-                // della lista a seguire
-                stringBuilder.append(c);
-            } else if (c == ',' && !stringBuilder.isEmpty()) { // gestione virgole separatrici
-                // come nel caso ']', l'int che si ottiene facendo il parsing del builder
-                // viene messo all'inizio della nuova lista come nodo padre
-                stack.peek().add(Integer.parseInt(stringBuilder.toString()));
-                stringBuilder.setLength(0);
-
-            } else if (c == ']' && !stringBuilder.isEmpty()) {
-                // Termina la lista e viene rimossa dallo stack,
-                // tornando al livello di annidamento precedente.
-                // se la lista non è vuota si prova a convertire la stringa costruita
-                // in un intero e poi si resetta lo stringBuilder
-                // l'int appena creato viene messo all'inizio della nuova lista come nodo padre
-                stack.peek().add(Integer.parseInt(stringBuilder.toString()));
-                stringBuilder.setLength(0);
-
+            } if (ch == ']') {
+                // si torna al livello di nesting precedente/superiore
                 currentList = stack.pop();
-
             }
         }
+        // alla fine dell'esecuzione, currentList indica la lista più esterna,
+        // ovvero quella che contiene tutto l'albero.
         return currentList;
     }
 
     private static Tree readNestedList(String filename) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
-            while ((line = reader.readLine()) != null) {
-                // c'è solo una riga da leggere
-                List<Object> list = parseNestedList(line);
-                return new Tree(treeFromNestedList(list));
-            }
+            line = reader.readLine();
+            List<Object> list = parseNestedList(line);
+            return new Tree(treeFromNestedList(list));
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -194,15 +183,17 @@ public class Esercizio1 {
         }
 
         private void isEqualTo(Tree other) {
+            // il costo di visit è O(n) con n numero di nodi
+            // il costo di equals è O(l) con l lunghezza di una delle due stringhe
+            // quindi il costo di questa funzione è O((n1+n2)*(l))-> O(n*l)
+            // dato che l è proporzionale al numero di nodi si può semplificare in O(n^2)
             String t1 = visit(), t2 = other.visit();
             if (Objects.equals(t1, t2)) {
                 System.out.println("I due alberi sono uguali.");
             } else {
                 System.out.println("I due alberi sono diversi.");
-
             }
         }
-
     }
 
     public static class Node {

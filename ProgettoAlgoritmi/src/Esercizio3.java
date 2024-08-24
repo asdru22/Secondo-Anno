@@ -265,7 +265,7 @@ public class Esercizio3 {
          * Prints the shortest path from |source| to |dst|
          */
         protected void printPath(int dst){
-            System.out.println(time[dst]);
+            System.out.printf("%.2f%n", time[dst]);
             printPathRecursive(dst);
         }
         protected void printPathRecursive(int dst) {
@@ -368,7 +368,7 @@ public class Esercizio3 {
         }
 
         public double waitRandom(int id, double arrivalTime) {
-            return arrivalTime + random.nextDouble();
+            return arrivalTime + random.nextDouble()*0.525;
         }
     }
 }
