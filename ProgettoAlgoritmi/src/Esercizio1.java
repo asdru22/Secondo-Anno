@@ -22,7 +22,7 @@ public class Esercizio1 {
         /*
         Si itera su ogni carattere della lista per costruire un costrutto del tipo
         (int, lista di oggetti). La lista di oggetti conterrà a sua volta un altro
-        costrutto del genere.
+        costrutto del genere. Ha costo computazionale O(n) dove n è la lunghezza della stringa
         */
         Stack<List<Object>> stack = new Stack<>();
         List<Object> currentList = new ArrayList<>();
@@ -71,6 +71,7 @@ public class Esercizio1 {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line;
             while ((line = reader.readLine()) != null) {
+                // c'è solo una riga da leggere
                 List<Object> list = parseNestedList(line);
                 return new Tree(treeFromNestedList(list));
             }
@@ -81,6 +82,7 @@ public class Esercizio1 {
     }
 
     private static Node treeFromNestedList(List<Object> children) {
+        // Questo algoritmo ha costo computazionale O(n^2), dove n è il numero di nodi nell'albero
         // Caso base: se la lista contiene un solo elemento, questo è un nodo dell'albero
         if (children.size() == 1) return new Node((Integer) children.get(0));
         else {
@@ -107,9 +109,12 @@ public class Esercizio1 {
             String line;
             Node parent, child;
             String[] pairs;
+            // dizionario che contiene il valore e il nodo corrispondente a quel valore
             HashMap<Integer, Node> nodes = new HashMap<>();
+            // lista dei nodi genitori, ovvero quelli che hanno parent = null
             ArrayList<Integer> parents = new ArrayList<>();
             int parentValue, childValue;
+
             while ((line = reader.readLine()) != null) {
                 pairs = line.split(",");
                 // Ottengo valore numerico del padre e del figlio
@@ -125,8 +130,8 @@ public class Esercizio1 {
                     parents.add(parentValue);
                 }
 
-                // Se il nodo figlio è già presente, viene aggiunto
-                // alla dizionario, altrimenti viene cercato
+                // Se il valore del nodo figlio è già presente nel dizionario,
+                // viene prelevato, altrimenti viene aggiunto
                 if (nodes.containsKey(childValue)) {
                     child = nodes.get(childValue);
                 } else {
@@ -179,7 +184,7 @@ public class Esercizio1 {
 
         private void isEqualTo(Tree other) {
             String t1 = visit(), t2 = other.visit();
-            if (Objects.equals(t1, t2)){
+            if (Objects.equals(t1, t2)) {
                 System.out.println("I due alberi sono uguali.");
             } else {
                 System.out.println("I due alberi sono diversi.");
@@ -209,6 +214,8 @@ public class Esercizio1 {
         public void addChild(Node child) {
             this.children.add(child);
             // ogni volta che viene aggiunto un figlio si riordina la lista
+            // questa funzione di sorting ha costo computazionale O(n*log(n)),
+            // dove n è la dimensione della lista
             children.sort(Comparator.comparingInt(Node::getValue));
         }
     }

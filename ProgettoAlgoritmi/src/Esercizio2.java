@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
 
 /*
  * Nanni Alessandro
@@ -25,11 +26,14 @@ public class Esercizio2 {
 
     public static List<String> decode(String binaryString, HashMap<String, Character> codes) {
         /*
-        Complessità: O(n*b)
+        Complessità: O(n*k)
         n: lunghezza della stringa
-        b: dimensione del dizionario
+        k: numero di elementi nel dizionario
         */
-        int n = binaryString.length();
+
+        // se il file di input è vuoto, c'è solo una combinazione possibile: la stringa vuota "".
+        int n = Objects.equals(binaryString, "") ? binaryString.length() : 0;
+
         int keyLength;
         // Lista di liste per memorizzare le sequenze di caratteri per ogni prefisso
         List<String>[] paths = new ArrayList[n + 1];
@@ -80,6 +84,8 @@ public class Esercizio2 {
     }
 
     static HashMap<String, Character> getInvDict() {
+        // Questa funzione restituisce un dizionario inverso.
+        // F^-1 della tabella fornita nella consegna
         HashMap<String, Character> dict = new HashMap<>();
         dict.put("0", 'a');
         dict.put("00", 'b');
@@ -89,19 +95,6 @@ public class Esercizio2 {
         dict.put("0100", 'f');
         dict.put("0110", 'g');
         dict.put("0001", 'h');
-        return dict;
-    }
-
-    static HashMap<Character, String> getDict() {
-        HashMap<Character, String> dict = new HashMap<>();
-        dict.put('a',"0");
-        dict.put('b',"00");
-        dict.put('c',"001");
-        dict.put('d',"010");
-        dict.put('e',"0010");
-        dict.put('f',"0100");
-        dict.put('g',"0110");
-        dict.put('h',"0001");
         return dict;
     }
 }

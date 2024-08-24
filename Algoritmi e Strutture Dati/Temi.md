@@ -202,11 +202,11 @@ I **grafi** sono una delle strutture dati più generali e potenti in informatica
 #### 4. Algoritmi sui Grafi
 - **Ricerca in Ampiezza (BFS - Breadth-First Search)**:
     - **Descrizione**: Esplora i nodi di un grafo a partire da un nodo sorgente, visitando prima tutti i nodi vicini al livello corrente prima di passare al livello successivo.
-    - **Complessità**: O(V + E), dove v è il numero di vertici e E il numero di archi.
+    - **Complessità**: $O(V + E)$, dove $V$ è il numero di vertici ed $E$ il numero di archi.
     - **Utilizzo**: Trovare il percorso più breve in un grafo non ponderato, trovare componenti connesse, ecc.
 - **Ricerca in Profondità (DFS - Depth-First Search)**:
     - **Descrizione**: Esplora un grafo partendo da un nodo sorgente e segue un cammino il più a lungo possibile prima di fare backtracking.
-    - **Complessità**: O(V + E).
+    - **Complessità**: $O(V + E)$.
     - **Utilizzo**: Rilevamento di cicli, ordinamento topologico, trovare componenti fortemente connesse in grafi orientati.
 - **Dijkstra**:
     - **Descrizione**: Trova il percorso più breve da un nodo sorgente a tutti gli altri nodi in un grafo ponderato con pesi non negativi.
@@ -295,7 +295,6 @@ Una **priority queue** (coda a priorità) è una struttura dati astratta simile 
 - **Decrease-Key/Increase-Key**: Modifica la priorità di un elemento già presente nella coda. È un'operazione comune in algoritmi come Dijkstra.
 - **Delete**: Rimuove un elemento specifico dalla coda (anche se non è la radice).
 #### 3. Implementazione della Priority Queue
-
 Le priority queue possono essere implementate in vari modi, ognuno con vantaggi e svantaggi in termini di complessità temporale delle operazioni.
 - **Heap Binario**:
     - **Descrizione**: Una delle implementazioni più comuni delle priority queue è tramite un **heap binario**. In un Min-Heap, la radice (l'elemento con la priorità più alta) è sempre il valore minimo, mentre in un Max-Heap è sempre il valore massimo.
@@ -326,7 +325,7 @@ Le priority queue possono essere implementate in vari modi, ognuno con vantaggi 
         - Estrazione del minimo/massimo: O(1).
 #### 4. Applicazioni delle Priority Queue
 - **Algoritmo di Dijkstra**: Utilizza una priority queue per selezionare il nodo successivo con la distanza minima non ancora processato.
-- **Algoritmo di Prim**: Utilizzato per trovare l'albero ricoprente minimo, la priority queue gestisce i bordi di taglio (cut edges) per scegliere quello con il peso minimo.
+- **Algoritmo di Prim**: Utilizzato per trovare l'albero ricoprente minimo, la priority queue gestisce i archi di taglio (cut edges) per scegliere quello con il peso minimo.
 - **Gestione dei Processi in Sistemi Operativi**: Le priority queue possono essere utilizzate per gestire i processi, assicurando che quelli con la priorità più alta vengano eseguiti per primi.
 - **Schedulazione dei Lavori (Job Scheduling)**: Per gestire le code di lavori nei sistemi di elaborazione distribuita o nei server di stampa.
 - **Simulazioni Discrete Event**: Le priority queue gestiscono eventi in cui l'evento con la data/ora più bassa deve essere elaborato per primo.
@@ -369,7 +368,6 @@ Ci sono due algoritmi classici e molto utilizzati per trovare un MST in un grafo
     4. Ripeti finché tutti i nodi non sono inclusi nell'MST.
 - **Complessità**: Può variare da $O(E \log V)$ a $O(V^2)$ a seconda dell'implementazione, con il più efficiente che utilizza un Min-Heap (priority queue) per gestire i vertici.
 #### 4. Applicazioni del Minimum Spanning Tree
-
 - **Progettazione di Reti**: Per minimizzare il costo di cablaggio in reti elettriche, reti di comunicazione, o reti idriche.
 - **Clusterizzazione**: Nell'analisi dei dati, il MST può essere utilizzato per raggruppare punti in cluster minimizzando la distanza interna al cluster.
 - **Progettazione di Circuiti**: Per minimizzare la lunghezza totale del filo in un circuito stampato.
@@ -418,8 +416,87 @@ Un **cammino di costo minimo** (o **cammino minimo**), in un grafo ponderato, è
 #### 4. Proprietà Teoriche
 - **Ottimalità dei Cammini Minimi**: Un cammino di costo minimo trovato da un algoritmo corretto è garantito essere il cammino ottimale, ossia non esiste un altro cammino con un costo inferiore tra due nodi dati.
 - **Sottostruttura Ottimale**: Un cammino minimo tra due nodi A e B include tutti i cammini minimi intermedi tra i nodi lungo questo percorso.
-### Divide et impera
-### Algoritmi greedy
-### Programmazione dinamica
-### Analisi ammortizzata
-### Macchina di Turing
+### Algoritmi MST
+>**Taglio**: dato un grafo non orientato, un taglio in esso è una partizione dell'insieme dei vertici in due. Un arco $u$ attraversa il taglio tra i due insiemi se un nodo dell'arco è contenuto in un insieme e l'altro nodo nell'altro insieme.
+
+>**Regola del taglio**: scegli un taglio che non contiene archi blu. Tra tutti gli archi non colorati del taglio, seleziona quello di costo minimo e coloralo di blu.
+
+>**Regola del ciclo**: scegli un ciclo semplice che non contiene archi rossi. Tra tutti gli archi non colorati del ciclo, seleziona un arco di costo massimo e coloralo di rosso.
+
+>**Algoritmo generico Greedy**: esiste sempre un MST che contiene tutti gli archi blu, e nessun arco rosso.
+#### Algoritmo di Kruskal
+Si parte da una foresta di $n$ alberi blu che hanno un solo elemento nella radice, ed $n$ è il numero dei nodi. Per ogni arco del grafo (da quello con costo minore, a quello con costo maggiore) viene applicato il seguente passo:
+> **Kruskal**: se l'arco ha entrambi i vertici nello stesso albero blu, coloralo di rosso, altrimenti coloralo di blu.
+
+Alla fine verrà restituito un MST fatto di archi blu.
+Kruskal può essere implementato più efficacemente con le strutture union-find. L'operazione di unione verine usata per unire due alberi blu, e quella di find per verificare se i due estremi dell'arco appartengono allo stesso albero blu.
+#### Algoritmo di Prim
+Si parte da un unico albero blu $T$ radicato in un solo vertice, algoritmo di Prim applica $n-1$ volte il seguente passo:
+>**Prim**: scegli un arco di costo minimo incidente su $T$ e coloralo di blu. (regola del taglio)
+
+L'algoritmo di Prim termina quando non è più possibile applicare la regola del taglio.
+Prim può essere implementato più efficacemente con code di priorità.
+### Cammini Minimi
+Sia $G=(V,E)$ un grafo orientato con funzione di costo $w:E\to\mathbb R$. Il costo $w(\pi)$ di un cammino $\pi=\langle v_0,v_1,\ldots,v_k\rangle$ in $G$ è dato da
+$$w(\pi)=\sum^k_{i=1}w(v_{i-1},v_i)$$
+Un cammino minimo tra due vertici $x$ e $y$ si indica $\pi^*_{xy}$  
+>**Distanza**:$$d_{xy}=\left\{\begin{array}{l} \pi^*_{xy}\text{ se x e y sono connessi}\\+\infty\text{ altrimenti} \end{array}\right.$$
+
+> **Appartenenza ad un cammino minimo**: $d_{su}+w(u,v)= d_{sv}$ se e solo se $(u,v)$ appartiene al cammino minimo.
+
+> **Condizione di Bellman**: Per ogni arco $(u,v)$ e vertice $s$, le distanze tra vertici soddisfano la seguente disuguaglianza: $d_{su}+w(u,v)\ge d_{sv}$. *(la distanza tra s e u + il peso di u, v è maggiore della distanza tra s e v). Allora il valore della distanza è minore di quello del peso.*
+
+> **Tecnica del rilassamento**: $d_{xv}+w(\pi_{xv})<d_{xy}\implies d_{xy} = d_{xv}+w(\pi_{xv})$ . *se la distanza tra xv + il peso del cammino vy è minore della distanza xy, si rende quella la nuova distanza xy.*
+
+#### Algoritmo di Bellman-Ford
+```
+BellmanFord(G, S):
+	Inizializza dist[] con infinito per tutti i nodi eccetto dist[S] = 0
+	
+		Per ogni nodo i da 1 a |V|-1:
+			Per ogni arco (u, v) con peso w: 
+				Se dist[u] + w < dist[v]: 
+					dist[v] = dist[u] + w 
+					
+	Per ogni arco (u, v) con peso w:
+		Se dist[u] + w < dist[v]:
+			Riporta "Ciclo negativo rilevato"
+	Restituisci dist[]
+```
+
+La complessità temporale dell'algoritmo di Bellman-Ford è $O(V \times E)$, dove $V$ è il numero di nodi e $E$ è il numero di archi.
+Note:
+- Funziona con cicli negativi
+- Nodi non raggiungibili avranno distanza infinita
+- Si itera $V-1$ volte
+### Algoritmo di Dijkstra
+L'algoritmo è costituito da due operazioni principali:
+- Rilassamento dei nodi adiacenti
+- Scelta del prossimo nodo, ovvero quello inesplorato con distanza minima
+
+Dato un grafo e un nodo sorgente
+```
+inizalizza tutte le distanze a infinito
+imposta la distanza del nodo sorgente a 0
+imposta il nodo sorgente come visitato
+
+rilassa i nodi adiacenti al nodo sorgente
+	(nota, per tenere traccia del percorso dal nodo sorgente alla destinazione,
+	ogni volta che si effettua un rilassamento indicare anche il nodo precedente)
+scegli il nodo non visitato con distanza minore
+esegui l'operazione di rilassamento su di esso e ripeti
+```
+### Algoritmo di Floyd-Warshall
+Usa la programmazione dinamica
+$d_{uv}^k$ è la distanza minima da u a v, nell'ipotesi che eventuali nodi intermedi possono appartenere solo a $\{1,\ldots,k\}$.
+$$d_{uv}^0=\left\{\begin{array}{l}0 \text{ se } u=v\\ w(u,v) \text{ se } (u,v)\in E\\ +\infty \text{ se } (u,v)\notin E \end{array}\right.$$
+$d_{uv}^0$ è la distanza minima nel ipotesi di non poter passare da alcun nodo intermedio.
+Caso generale: $D_{uv}^k=\min(D_{uv}^{k-1},D^{k-1}_{uk}+D^{k-1}_{kv})$
+
+```FloydWarshall(n, dist[][]):
+    Per ogni k da 1 a n:
+        Per ogni i da 1 a n:
+            Per ogni j da 1 a n:
+                Se dist[i][j] > dist[i][k] + dist[k][j] allora:
+                    dist[i][j] = dist[i][k] + dist[k][j]
+    Restituisci dist[][]```

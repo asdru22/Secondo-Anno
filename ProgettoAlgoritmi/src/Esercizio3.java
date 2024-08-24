@@ -12,10 +12,7 @@ public class Esercizio3 {
     public static final long SEED = 10000;
     public static Random random = new Random(SEED);
 
-    /**
-     * The main procedure creates a Dijkstra object, invokes
-     * Dijkstra's algorithm, and prints the shortest paths tree.
-     */
+    // viene creato un grafo pesato dal file in input.
     public static void main(String[] args) {
         RoadGraph roadGraph = new RoadGraph(args[0]);
 
@@ -41,7 +38,6 @@ public class Esercizio3 {
             this.pos = new int[maxSize];
             Arrays.fill(this.pos, -1);
         }
-
 
         /**
          * Return true iff index i is a valid index in the heap,
@@ -70,7 +66,7 @@ public class Esercizio3 {
          */
         private int parent(int i) {
             assert (valid(i));
-
+            // -1 perché il primo elemento in un array ha indice 0
             return (i + 1) / 2 - 1;
         }
 
@@ -108,7 +104,7 @@ public class Esercizio3 {
         }
 
         /**
-         * Return the data of the element with lowest priority
+         * Return the data of the element with the lowest priority
          */
         public int min() {
             assert (!isEmpty());
@@ -117,7 +113,7 @@ public class Esercizio3 {
 
         /**
          * Return the position of the child of i (if any) with minimum
-         * priority. If i has no childs, return -1.
+         * priority. If i has no children, return -1.
          */
         private int minChild(int i) {
             assert (valid(i));
@@ -150,7 +146,7 @@ public class Esercizio3 {
         }
 
         /**
-         * Exchange heap[i] with the child with lowest priority, if any
+         * Exchange heap[i] with the child with the lowest priority, if any
          * exists, until it reaches the correct position into the heap.
          * This method requires time O(log intersections).
          */
@@ -198,7 +194,7 @@ public class Esercizio3 {
         }
 
         /**
-         * Chenage the priority associated to |data|. This method requires
+         * Change the priority associated to |data|. This method requires
          * time O(log intersections).
          */
         public void changePriority(int data, double newprio) {
@@ -215,7 +211,7 @@ public class Esercizio3 {
     }
 
     /**
-     * An heap element is a pair (id, priority), where
+     * A heap element is a pair (id, priority), where
      * id is an integer in 0..(maxSize-1)
      */
     public static class heapElem {
@@ -259,11 +255,7 @@ public class Esercizio3 {
         double[] time; // array of distances from the source
         LinkedList<Edge> shortestTimeIntersections;  // Edges belonging to the shortest path tree
 
-        /**
-         * Constructs a Dijkstra object; read input from inputf
-         *
-         * @param inputf the input file name
-         */
+        // crea il grafico dal file di input
         public RoadGraph(String inputf) {
             this.shortestTimeIntersections = new LinkedList<>();
             readGraph(inputf);
