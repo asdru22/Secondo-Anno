@@ -24,46 +24,55 @@ public class Esercizio1 {
         (int, lista di oggetti). La lista di oggetti conterrà a sua volta un altro
         costrutto del genere. Ha costo computazionale O(n) dove n è la lunghezza della stringa
         */
+
+        // Quando si incontra un nuovo livello di nesting
+        // (indicato dal carattere '['), una nuova lista viene aggiunta allo stack.
+        // Quando si incontra il carattere ']', si torna al livello di annidamento precedente,
+        // rimuovendo la lista dal top dello stack.
+
         Stack<List<Object>> stack = new Stack<>();
-        List<Object> currentList = new ArrayList<>();
+        List<Object> currentList = new ArrayList<>(), newList;
         StringBuilder stringBuilder = new StringBuilder();
 
-        for (char ch : str.toCharArray()) {
-            if (Character.isDigit(ch)) {
-                // caso numero reale, viene definito come nodo padre di quelli
-                // della lista a seguire
-                stringBuilder.append(ch);
-            } else if (ch == '[') {
-                // Si crea una nuova lista che corrisponde al livello di nesting
-                // se lo stack non è vuoto significa che c'è una lista ad livello superiore di nesting,
-                // quindi mettiamo in testa la nuova lista per indicare che è quella a profondità massima.
-                // Se lo stack è vuoto significa che siamo al livello di nesting massimo e possiamo
-                List<Object> newList = new ArrayList<>();
+        for (char c : str.toCharArray()) {
+            if (c == '[') {
+                /*
+                Quando si incontra '[', viene creata una nuova lista. Se c'è già una lista nello stack
+                (ovvero c'è un livello di annidamento superiore), questa nuova lista viene
+                aggiunta alla lista in cima allo stack. Successivamente, la nuova lista
+                viene spinta nello stack, diventando la lista corrente.
+                */
+                newList = new ArrayList<>();
                 if (!stack.isEmpty()) {
+                    // se lo stack contiene già liste, si mette la nuova in cima
                     stack.peek().add(newList);
                 }
+                // la lista corrente viene messa in cima allo stack (è il livello di nesting più esterno)
                 stack.push(newList);
-            } else if (ch == ']') {
-                // caso fine lista
-                if (stringBuilder.length() > 0) {
-                    // se la lista non è vuota si prova a convertire la stringa costruita
-                    // in un intero e poi si resetta lo stringBuilder
-                    // l'int appena creato viene messo all'inizio della nuova lista come nodo padre
-                    stack.peek().add(Integer.parseInt(stringBuilder.toString()));
-                    stringBuilder.setLength(0);
-                }
-                // si ritorna al livello di nesting precedente
+
+            } else if (Character.isDigit(c)) {
+                // caso numero reale, viene definito come nodo padre di quelli
+                // della lista a seguire
+                stringBuilder.append(c);
+            } else if (c == ',' && !stringBuilder.isEmpty()) { // gestione virgole separatrici
+                // come nel caso ']', l'int che si ottiene facendo il parsing del builder
+                // viene messo all'inizio della nuova lista come nodo padre
+                stack.peek().add(Integer.parseInt(stringBuilder.toString()));
+                stringBuilder.setLength(0);
+
+            } else if (c == ']' && !stringBuilder.isEmpty()) {
+                // Termina la lista e viene rimossa dallo stack,
+                // tornando al livello di annidamento precedente.
+                // se la lista non è vuota si prova a convertire la stringa costruita
+                // in un intero e poi si resetta lo stringBuilder
+                // l'int appena creato viene messo all'inizio della nuova lista come nodo padre
+                stack.peek().add(Integer.parseInt(stringBuilder.toString()));
+                stringBuilder.setLength(0);
+
                 currentList = stack.pop();
-            } else if (ch == ',') { // gestione virgole separatrici
-                if (stringBuilder.length() > 0) {
-                    // come nel caso ']', l'int che si ottiene facendo il parsing del builder
-                    // viene messo all'inizio della nuova lista come nodo padre
-                    stack.peek().add(Integer.parseInt(stringBuilder.toString()));
-                    stringBuilder.setLength(0);
-                }
+
             }
         }
-
         return currentList;
     }
 
@@ -133,6 +142,8 @@ public class Esercizio1 {
                 // Se il valore del nodo figlio è già presente nel dizionario,
                 // viene prelevato, altrimenti viene aggiunto
                 if (nodes.containsKey(childValue)) {
+                    // questa assegnazione garantisce di lavorare sul nodo giusto
+                    // se un nodo figlio con lo stesso valore era già presente
                     child = nodes.get(childValue);
                 } else {
                     nodes.put(childValue, child);
@@ -147,7 +158,7 @@ public class Esercizio1 {
                     parents.remove((Integer) childValue);
                 }
             }
-
+            // si crea un nuovo albero che ha come radice l'unico nodo dalla lista dei padri
             return new Tree(nodes.get(parents.get(0)));
 
         } catch (IOException e) {
@@ -167,7 +178,7 @@ public class Esercizio1 {
             return root;
         }
 
-        String visit() {
+        public String visit() {
             return visit(this.getRoot());
         }
 
