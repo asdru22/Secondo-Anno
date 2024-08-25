@@ -30,8 +30,10 @@ public class Esercizio2 {
         k: numero di elementi nel dizionario
         */
 
-        // Se il file di input è vuoto, c'è solo una combinazione possibile: la stringa vuota "".
-        int n = (binaryString == null) ? 0 : binaryString.length();
+        // caso stringa vuota
+        if (binaryString == null) return new ArrayList<>();
+
+        int n = binaryString.length();
 
         // Mappa per memorizzare le sequenze di caratteri per ogni prefisso.
         // Integer corrisponde alla lunghezza della stringa e la lista sono
@@ -39,25 +41,26 @@ public class Esercizio2 {
         HashMap<Integer, List<String>> sequences = new HashMap<>();
         sequences.put(0, new ArrayList<>());
         sequences.get(0).add("");  // La stringa vuota corrisponde a una sola sequenza di caratteri
-
+        int keyLength, startIndex;
         // Itera su ogni posizione della stringa binaria
         for (int i = 1; i <= n; i++) {
-            // Aggiunge una lista vuota per la posizione i, se non esiste
+            // Aggiunge una lista vuota alla chiave i
             sequences.put(i, new ArrayList<>());
 
             // Controlla tutti i codici disponibili
             for (String key : codes.keySet()) {
-                int keyLength = key.length();
-                // Se "key" è sottostringa di "binaryString" ed esiste una sottostringa nell'intervallo
+                keyLength = key.length();
+                startIndex = i - keyLength;
+                // Se "key" è sotto-stringa di "binaryString" ed esiste una sotto-stringa nell'intervallo
                 // [i-keyLength, i] che corrisponde a un carattere del dizionario, creo una nuova
-                // sottostringa che è formata da tutte quelle precedenti e quella nuova (con
+                // sotto-stringa che è formata da tutte quelle precedenti e quella nuova (con
                 // lunghezze compatibili).
-                if (i >= keyLength && binaryString.substring(i - keyLength, i).equals(key)) {
+                if (i >= keyLength &&
+                        binaryString.substring(startIndex, i).equals(key) &&
+                        sequences.containsKey(startIndex)) {
                     // Aggiunge le sequenze precedenti a quelle correnti
-                    if (sequences.containsKey(i - keyLength)) {
-                        for (String prefix : sequences.get(i - keyLength)) {
-                            sequences.get(i).add(prefix + codes.get(key));
-                        }
+                    for (String prefix : sequences.get(startIndex)) {
+                        sequences.get(i).add(prefix + codes.get(key));
                     }
                 }
             }
@@ -86,8 +89,7 @@ public class Esercizio2 {
     }
 
     static HashMap<String, Character> getInvDict() {
-        // Questa funzione restituisce un dizionario inverso.
-        // F^-1 della tabella fornita nella consegna
+        // Tabella inversa di quella fornita nella consegna
         HashMap<String, Character> dict = new HashMap<>();
         dict.put("0", 'a');
         dict.put("00", 'b');

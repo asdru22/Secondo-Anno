@@ -493,10 +493,24 @@ $$d_{uv}^0=\left\{\begin{array}{l}0 \text{ se } u=v\\ w(u,v) \text{ se } (u,v)\i
 $d_{uv}^0$ è la distanza minima nel ipotesi di non poter passare da alcun nodo intermedio.
 Caso generale: $D_{uv}^k=\min(D_{uv}^{k-1},D^{k-1}_{uk}+D^{k-1}_{kv})$
 
-```FloydWarshall(n, dist[][]):
+```
+FloydWarshall(n, dist[][]):
     Per ogni k da 1 a n:
         Per ogni i da 1 a n:
             Per ogni j da 1 a n:
                 Se dist[i][j] > dist[i][k] + dist[k][j] allora:
                     dist[i][j] = dist[i][k] + dist[k][j]
-    Restituisci dist[][]```
+    Restituisci dist[][]
+```
+### Strutture Merge-Find
+Le strutture _merge-find_, spesso chiamate anche _Union-Find_ o _Disjoint Set Union (DSU)_, sono strutture dati utilizzate per gestire un insieme di elementi partizionati in insiemi disgiunti. Questa struttura è particolarmente utile in algoritmi che richiedono di gestire e unire gruppi di oggetti, come negli algoritmi per il calcolo delle componenti connesse di un grafo, nell'algoritmo di Kruskal per il calcolo del Minimum Spanning Tree, e in problemi simili.
+#### Operazioni principali
+Le operazioni fondamentali supportate dalle strutture merge-find sono due:
+1. **Find (Trova)**: Determina a quale insieme appartiene un elemento. Questa operazione restituisce un identificatore rappresentativo (un "leader") del set a cui appartiene l'elemento. Se due elementi hanno lo stesso leader, allora appartengono allo stesso insieme.
+2. **Union (Unisci)**: Unisce due insiemi. Questa operazione prende due elementi come input e unisce gli insiemi a cui appartengono. Dopo questa operazione, i due insiemi saranno trattati come uno solo.
+#### Ottimizzazioni
+Le strutture merge-find sono tipicamente ottimizzate con due tecniche principali:
+1. **Union by Rank/Size**: Quando si uniscono due insiemi, l'insieme più piccolo (in termini di profondità dell'albero o numero di elementi) viene attaccato all'insieme più grande. Questo aiuta a mantenere l'altezza dell'albero piccola, riducendo il tempo di ricerca.
+2. **Path Compression**: Durante l'operazione di Find, ogni nodo attraversato ha il suo leader aggiornato direttamente al leader principale del set. Questo appiattisce la struttura dell'albero, riducendo ulteriormente i tempi delle future operazioni Find.
+#### Efficienza
+Grazie a queste ottimizzazioni, le operazioni Find e Union hanno un tempo di esecuzione ammortizzato molto efficiente. Usando la notazione di Tarjan, l'operazione ha un costo ammortizzato di $O(\alpha(n))$, dove $\alpha$ è la funzione inversa dell'Ackermann, che cresce estremamente lentamente (per valori pratici di $n$, $\alpha(n)$ è al massimo 4 o 5). Quindi, per scopi pratici, queste operazioni sono quasi costanti.

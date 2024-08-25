@@ -81,7 +81,7 @@ public class Esercizio1 {
                 stringBuilder.append(ch);
 
             } else if (ch == ',' || ch == ']') {
-                if (!stringBuilder.isEmpty()) {
+                if (!(stringBuilder.length() == 0)) {
                     // viene fatto il parsing del numero costruito e aggiunto alla lista
                     // si aggiorna il valore del contesto corrente.
                     stack.peek().value = Integer.parseInt(stringBuilder.toString());

@@ -248,7 +248,7 @@ public class Esercizio3 {
 
     public static class RoadGraph {
         int intersections;      // number of nodes in the graph
-        int roads;      // number of edges in the graph
+        int roads;  // number of edges in the graph
         Vector<LinkedList<Edge>> adjList; // adjacency list
         int source; // the source node
         int[] parents;    // array of parents
@@ -261,9 +261,7 @@ public class Esercizio3 {
             readGraph(inputf);
         }
 
-        /**
-         * Prints the shortest path from |source| to |dst|
-         */
+        // Stampa il percorso più corto dalla sorgente alla destinazione
         protected void printPath(int dst){
             System.out.printf("%.2f%n", time[dst]);
             printPathRecursive(dst);
@@ -368,7 +366,7 @@ public class Esercizio3 {
         }
 
         public double waitRandom(int id, double arrivalTime) {
-            return arrivalTime + random.nextDouble()*0.525;
+            return arrivalTime + random.nextDouble();
         }
     }
 }
