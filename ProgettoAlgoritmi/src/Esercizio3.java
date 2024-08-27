@@ -8,8 +8,8 @@ import java.util.*;
  * alessandro.nanni17@studio.unibo.it
  */
 public class Esercizio3 {
-    public static final boolean USE_RANDOM = true;
-    public static final long SEED = 10000;
+    public static final boolean USE_RANDOM = false;
+    public static final long SEED = 1027757;
     public static Random random = new Random(SEED);
 
     // viene creato un grafo pesato dal file in input.
@@ -17,6 +17,7 @@ public class Esercizio3 {
         RoadGraph roadGraph = new RoadGraph(args[0]);
 
         roadGraph.shortestPaths(0);
+        // roadGraph.intersections-1 è l'ultimo nodo
         roadGraph.printPath(roadGraph.intersections-1);
     }
 
@@ -197,12 +198,12 @@ public class Esercizio3 {
          * Change the priority associated to |data|. This method requires
          * time O(log intersections).
          */
-        public void changePriority(int data, double newprio) {
+        public void changePriority(int data, double newPriority) {
             int j = pos[data];
             assert (valid(j));
-            final double oldprio = heap[j].priority;
-            heap[j].priority = newprio;
-            if (newprio > oldprio) {
+            final double oldPriority = heap[j].priority;
+            heap[j].priority = newPriority;
+            if (newPriority > oldPriority) {
                 moveDown(j);
             } else {
                 moveUp(j);
@@ -247,8 +248,10 @@ public class Esercizio3 {
     }
 
     public static class RoadGraph {
-        int intersections;      // number of nodes in the graph
-        int roads;  // number of edges in the graph
+        // numero di incroci/nodi
+        int intersections;
+        // numero di strade/edge
+        int roads;
         Vector<LinkedList<Edge>> adjList; // adjacency list
         int source; // the source node
         int[] parents;    // array of parents
@@ -289,9 +292,10 @@ public class Esercizio3 {
                 Scanner f = new Scanner(new FileReader(inputf));
                 intersections = f.nextInt();
                 roads = f.nextInt();
-
+                // vettore di linkedList di Edge
                 adjList = new Vector<>();
 
+                // inizializza la lista di adiacenza
                 for (int i = 0; i < intersections; i++) {
                     adjList.add(i, new LinkedList<>());
                 }
@@ -301,6 +305,8 @@ public class Esercizio3 {
                     final int dst = f.nextInt();
                     final double weight = f.nextDouble();
                     assert (weight >= 0.0);
+                    // al nodo a indice della sorgente, aggiunge alla
+                    // lista di adiacenza un edge che va da se stesso (src) a un altro (dst)
                     adjList.get(src).add(new Edge(src, dst, weight));
                 }
             } catch (IOException ex) {
@@ -312,50 +318,53 @@ public class Esercizio3 {
         /**
          * Execute Dijkstra's shortest paths algorithm starting from node s
          *
-         * @param s source node
+         * @param source source node
          */
-        public void shortestPaths(int s) {
+        public void shortestPaths(int source) {
             Edge[] sp_edges = new Edge[intersections];
             boolean[] visited = new boolean[intersections];
-            MinHeap q = new MinHeap(intersections);
+            MinHeap priorityQueue = new MinHeap(intersections);
 
             time = new double[intersections];
+            // usato per visitare il percorso più breve partendo dalla destinazione
             parents = new int[intersections];
 
             Arrays.fill(time, Double.POSITIVE_INFINITY);
             Arrays.fill(parents, -1);
             Arrays.fill(visited, false);
-            time[s] = 0.0;
+            time[source] = 0.0;
 
-            for (int v = 0; v < intersections; v++) {
-                q.insert(v, time[v]);
+            for (int node = 0; node < intersections; node++) {
+                priorityQueue.insert(node, time[node]);
             }
 
-            while (!q.isEmpty()) {
-                final int u = q.min();
-                q.deleteMin();
-                visited[u] = true;
+            while (!priorityQueue.isEmpty()) {
+                final int minNode = priorityQueue.min();
+                priorityQueue.deleteMin();
+                visited[minNode] = true;
 
-                if (sp_edges[u] != null) {
-                    shortestTimeIntersections.add(sp_edges[u]);
+                if (sp_edges[minNode] != null) {
+                    shortestTimeIntersections.add(sp_edges[minNode]);
                 }
 
-                for (Edge e : adjList.get(u)) {
-                    final int v = e.dst;
+                // rilassamento degli edge (che portano a nodi adiacenti a minNode)
+                for (Edge road : adjList.get(minNode)) {
+                    final int dstNode = road.dst;
 
                     // Nuovo tempo considerando il tempo di attesa del semaforo
-                    double waitTime = time[u] + e.w;
+                    double waitTime = time[minNode] + road.w;
                     if (USE_RANDOM) {
-                        waitTime = waitRandom(u, waitTime);
+                        waitTime = waitRandom(minNode, waitTime);
                     } else {
-                        waitTime = waitConst(u, waitTime);
+                        waitTime = waitConst(minNode, waitTime);
                     }
 
-                    if (!visited[v] && (waitTime < time[v])) {
-                        time[v] = waitTime;
-                        q.changePriority(v, time[v]);
-                        parents[v] = u;
-                        sp_edges[v] = e;
+                    // aggiornamento del tempo minimo
+                    if (!visited[dstNode] && (waitTime < time[dstNode])) {
+                        time[dstNode] = waitTime;
+                        priorityQueue.changePriority(dstNode, time[dstNode]);
+                        parents[dstNode] = minNode;
+                        sp_edges[dstNode] = road;
                     }
                 }
             }

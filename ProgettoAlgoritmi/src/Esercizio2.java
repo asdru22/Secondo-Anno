@@ -74,18 +74,10 @@ public class Esercizio2 {
 
     static String readBinary(String filename) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
-            String line;
-            StringBuilder out = new StringBuilder();
-            if ((line = reader.readLine()) != null) {
-                for (int i = 0; i < line.length(); i++) {
-                    out.append(line.charAt(i));
-                }
-                return out.toString();
-            }
+            return reader.readLine();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return null;
     }
 
     static HashMap<String, Character> getInvDict() {
