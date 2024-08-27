@@ -40,17 +40,14 @@ public class Esercizio3 {
             Arrays.fill(this.pos, -1);
         }
 
-        /**
-         * Return true iff index i is a valid index in the heap,
-         * i.e., i>=0 and i<size
-         */
+
+        //controlla se è un indice valido ovvero i>=0 and i<size
+
         private boolean valid(int i) {
             return ((i >= 0) && (i < size));
         }
 
-        /**
-         * swap heap[i] with heap[j]
-         */
+        // scambia heap[i] with heap[j]
         private void swap(int i, int j) {
             assert (pos[heap[i].data] == i);
             assert (pos[heap[j].data] == j);
@@ -62,60 +59,44 @@ public class Esercizio3 {
             pos[heap[j].data] = j;
         }
 
-        /**
-         * Return the index of the parent of heap[i]
-         */
+        // restituisce l'indice del genitore di heap[i]
         private int parent(int i) {
             assert (valid(i));
             // -1 perché il primo elemento in un array ha indice 0
             return (i + 1) / 2 - 1;
         }
 
-        /**
-         * Return the index of the left child of heap[i]
-         */
+        // restituisce l'indice del figlio sinistro di heap[i]
         private int leftChild(int i) {
             assert (valid(i));
 
             return (i + 1) * 2 - 1;
         }
 
-        /**
-         * Return the index of the right child of heap[i]
-         */
+        // restituisce l'indice del figlio destro di heap[i]
         private int rightChild(int i) {
             assert (valid(i));
 
             return leftChild(i) + 1;
         }
 
-        /**
-         * Return true iff the heap is empty
-         */
         public boolean isEmpty() {
             return (size == 0);
         }
 
-        /**
-         * Return true iff the heap is full, i.e., no more available slots
-         * are available.
-         */
+        // controlla se non ci sono più posti disponibili nel heap
         public boolean isFull() {
             return (size > maxSize);
         }
 
-        /**
-         * Return the data of the element with the lowest priority
-         */
+        // restituisce il valore dell'elemento con priorità minore
         public int min() {
             assert (!isEmpty());
             return heap[0].data;
         }
 
-        /**
-         * Return the position of the child of i (if any) with minimum
-         * priority. If i has no children, return -1.
-         */
+        // restituisce l'indice del figlio di i con priorità minima
+        // se non ne ha restituisce -1
         private int minChild(int i) {
             assert (valid(i));
 
@@ -131,10 +112,10 @@ public class Esercizio3 {
             return result;
         }
 
-        /**
-         * Exchange heap[i] with the parent element until it reaches the
-         * correct position into the heap. This method requires time O(log intersections).
-         */
+        // Scambia heap[i] con il genitore fino a quando si trova nella posizione giusta
+        // nel heap. Richiede tempo O(log n) con n numero di elementi nello heap.
+        // Questa funzione viene chiamata quando si inserisce un nuovo elemento o viene diminuita
+        // la priorità di un heap.
         private void moveUp(int i) {
             assert (valid(i));
 
@@ -146,11 +127,9 @@ public class Esercizio3 {
             }
         }
 
-        /**
-         * Exchange heap[i] with the child with the lowest priority, if any
-         * exists, until it reaches the correct position into the heap.
-         * This method requires time O(log intersections).
-         */
+        // Scambia heap[i] con il figlio di priorità minore fino a quando si trova nella
+        // posizione corretta nello heap. Richiede tempo O(log n) con n numero di elementi nello heap.
+        // Viene usata quando si rimuove l'elemento minimo (la radice) o viene diminuita la priorità.
         private void moveDown(int i) {
             assert (valid(i));
 
@@ -225,12 +204,11 @@ public class Esercizio3 {
         }
     }
 
-    // strada direzionata con peso
+    // arco direzionato pesato
     public static class Road {
         final int src;
         final int dst;
         final double time;
-
 
         public Road(int src, int dst, double time) {
             // Dijkstra può essere utilizzato solo con pesi positivi
