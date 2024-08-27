@@ -225,25 +225,20 @@ public class Esercizio3 {
         }
     }
 
-    /**
-     * Edge of a weighted, directed graph
-     */
-    public static class Edge {
+    // strada direzionata con peso
+    public static class Road {
         final int src;
         final int dst;
-        final double w;
+        final double time;
 
-        /**
-         * Build a directed edge (src, dst) with weight w
-         */
-        public Edge(int src, int dst, double w) {
-            /* Dijkstra's algorithm requires that weights are
-               non-negative */
-            assert (w >= 0.0);
+
+        public Road(int src, int dst, double time) {
+            // Dijkstra può essere utilizzato solo con pesi positivi
+            assert (time >= 0.0);
 
             this.src = src;
             this.dst = dst;
-            this.w = w;
+            this.time = time;
         }
     }
 
@@ -252,15 +247,20 @@ public class Esercizio3 {
         int intersections;
         // numero di strade/edge
         int roads;
-        Vector<LinkedList<Edge>> adjList; // adjacency list
-        int source; // the source node
-        int[] parents;    // array of parents
-        double[] time; // array of distances from the source
-        LinkedList<Edge> shortestTimeIntersections;  // Edges belonging to the shortest path tree
+        // lista di adiacenza
+        Vector<LinkedList<Road>> adjList;
+        // nodo sorgente
+        int source;
+        // genitori
+        int[] parents;
+        // distanza dal nodo sorgente
+        double[] time;
+        // strade che appartengono al cammino di costo minimo
+        LinkedList<Road> shortestTimeRoads;
 
         // crea il grafico dal file di input
         public RoadGraph(String inputf) {
-            this.shortestTimeIntersections = new LinkedList<>();
+            this.shortestTimeRoads = new LinkedList<>();
             readGraph(inputf);
         }
 
@@ -280,11 +280,6 @@ public class Esercizio3 {
             }
         }
 
-        /**
-         * Read the input graph from file inputf.
-         *
-         * @param inputf file name
-         */
         private void readGraph(String inputf) {
             Locale.setDefault(Locale.US);
 
@@ -292,7 +287,7 @@ public class Esercizio3 {
                 Scanner f = new Scanner(new FileReader(inputf));
                 intersections = f.nextInt();
                 roads = f.nextInt();
-                // vettore di linkedList di Edge
+                // vettore di linkedList di Road
                 adjList = new Vector<>();
 
                 // inizializza la lista di adiacenza
@@ -306,8 +301,8 @@ public class Esercizio3 {
                     final double weight = f.nextDouble();
                     assert (weight >= 0.0);
                     // al nodo a indice della sorgente, aggiunge alla
-                    // lista di adiacenza un edge che va da se stesso (src) a un altro (dst)
-                    adjList.get(src).add(new Edge(src, dst, weight));
+                    // lista di adiacenza una strada che va da se stesso (src) a un altro (dst)
+                    adjList.get(src).add(new Road(src, dst, weight));
                 }
             } catch (IOException ex) {
                 System.err.println(ex);
@@ -315,56 +310,73 @@ public class Esercizio3 {
             }
         }
 
-        /**
-         * Execute Dijkstra's shortest paths algorithm starting from node s
-         *
-         * @param source source node
-         */
+        /*
+        Algoritmo di Dijkstra per trovare il cammino minimo dal nodo sorgente
+        */
         public void shortestPaths(int source) {
-            Edge[] sp_edges = new Edge[intersections];
-            boolean[] visited = new boolean[intersections];
+            // strade che appartengono al cammino minimo
+            Road[] shortestRoads = new Road[intersections];
+            // incroci processati/visitati
+            boolean[] visitedIntersections = new boolean[intersections];
+            // coda di priorità che indica il prossimo nodo da esplorare
             MinHeap priorityQueue = new MinHeap(intersections);
-
+            // tempo dal nodo sorgente a tutti gli altri
             time = new double[intersections];
             // usato per visitare il percorso più breve partendo dalla destinazione
             parents = new int[intersections];
 
+            // inizializzazione valori
             Arrays.fill(time, Double.POSITIVE_INFINITY);
             Arrays.fill(parents, -1);
-            Arrays.fill(visited, false);
+            Arrays.fill(visitedIntersections, false);
             time[source] = 0.0;
 
-            for (int node = 0; node < intersections; node++) {
-                priorityQueue.insert(node, time[node]);
+            // si inseriscono i nodi nella coda, dove la priorità
+            // per i nodi diversi da quello sorgente sarà infinito
+            for (int n = 0; n < intersections; n++) {
+                priorityQueue.insert(n, time[n]);
             }
 
+            // finché la coda ha elementi
             while (!priorityQueue.isEmpty()) {
+
+                // prendi il nodo con priorità minore, ovvero quello più
+                // vicino alla sorgente che ancora non è stato visitato,
+                // e segnalo come visitato
+                // (alla prima iterazione sarà il nodo sorgente)
                 final int minNode = priorityQueue.min();
                 priorityQueue.deleteMin();
-                visited[minNode] = true;
+                visitedIntersections[minNode] = true;
 
-                if (sp_edges[minNode] != null) {
-                    shortestTimeIntersections.add(sp_edges[minNode]);
+                // alla prima iterazione sarà null
+                if (shortestRoads[minNode] != null) {
+                    shortestTimeRoads.add(shortestRoads[minNode]);
                 }
 
                 // rilassamento degli edge (che portano a nodi adiacenti a minNode)
-                for (Edge road : adjList.get(minNode)) {
+                for (Road road : adjList.get(minNode)) {
                     final int dstNode = road.dst;
 
                     // Nuovo tempo considerando il tempo di attesa del semaforo
-                    double waitTime = time[minNode] + road.w;
+                    double newTime = time[minNode] + road.time;
                     if (USE_RANDOM) {
-                        waitTime = waitRandom(minNode, waitTime);
+                        newTime = waitRandom(minNode, newTime);
                     } else {
-                        waitTime = waitConst(minNode, waitTime);
+                        newTime = waitConst(minNode, newTime);
                     }
 
-                    // aggiornamento del tempo minimo
-                    if (!visited[dstNode] && (waitTime < time[dstNode])) {
-                        time[dstNode] = waitTime;
+                    // Aggiornamento del tempo minimo se il nodo non è stato
+                    // visitato ed è soddisfatta la condizione di rilassamento
+                    // newTime minore del tempo attualmente memorizzato per raggiungere dstNode
+                    // time[minNode] + road.time + wait < time[dstNode]
+                    if (!visitedIntersections[dstNode] && (newTime < time[dstNode])) {
+                        // aggiornamento del nuovo tempo, cambio di priorità del nodo destinazione
+                        // aggiornamento del nuovo genitore
+                        time[dstNode] = newTime;
                         priorityQueue.changePriority(dstNode, time[dstNode]);
                         parents[dstNode] = minNode;
-                        sp_edges[dstNode] = road;
+                        // road viene messo come percorso più breve per andare da minNode a dstNode
+                        shortestRoads[dstNode] = road;
                     }
                 }
             }
