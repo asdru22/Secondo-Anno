@@ -469,7 +469,7 @@ Note:
 - Funziona con cicli negativi
 - Nodi non raggiungibili avranno distanza infinita
 - Si itera $V-1$ volte
-### Algoritmo di Dijkstra
+#### Algoritmo di Dijkstra
 L'algoritmo è costituito da due operazioni principali:
 - Rilassamento dei nodi adiacenti
 - Scelta del prossimo nodo, ovvero quello inesplorato con distanza minima
@@ -486,7 +486,7 @@ rilassa i nodi adiacenti al nodo sorgente
 scegli il nodo non visitato con distanza minore
 esegui l'operazione di rilassamento su di esso e ripeti
 ```
-### Algoritmo di Floyd-Warshall
+#### Algoritmo di Floyd-Warshall
 Usa la programmazione dinamica
 $d_{uv}^k$ è la distanza minima da u a v, nell'ipotesi che eventuali nodi intermedi possono appartenere solo a $\{1,\ldots,k\}$.
 $$d_{uv}^0=\left\{\begin{array}{l}0 \text{ se } u=v\\ w(u,v) \text{ se } (u,v)\in E\\ +\infty \text{ se } (u,v)\notin E \end{array}\right.$$
@@ -514,3 +514,43 @@ Le strutture merge-find sono tipicamente ottimizzate con due tecniche principali
 2. **Path Compression**: Durante l'operazione di Find, ogni nodo attraversato ha il suo leader aggiornato direttamente al leader principale del set. Questo appiattisce la struttura dell'albero, riducendo ulteriormente i tempi delle future operazioni Find.
 #### Efficienza
 Grazie a queste ottimizzazioni, le operazioni Find e Union hanno un tempo di esecuzione ammortizzato molto efficiente. Usando la notazione di Tarjan, l'operazione ha un costo ammortizzato di $O(\alpha(n))$, dove $\alpha$ è la funzione inversa dell'Ackermann, che cresce estremamente lentamente (per valori pratici di $n$, $\alpha(n)$ è al massimo 4 o 5). Quindi, per scopi pratici, queste operazioni sono quasi costanti.
+### Visite Grafi
+#### BFS
+Visita espansiva dalla sorgente, livello per livello
+```
+marked = [false]*G.size
+def bfs(G,s):
+	queue = [s]
+	while len(queue)>0:
+		v = queue.dequeue()
+		if !marked[v]:
+			visit(v)
+			marked[v] = true
+			for w in G.neighbors(v)
+				if !marked[w]:
+					queue.enqueue(v)
+```
+
+#### DFS
+Visita verso i nodi più lontani dalla sorgente
+##### Pre-order
+Vengono vistati subito i nodi non marcati
+```
+marked = [false]*G.size
+def dfs(G,s):
+	visit(s)
+	marked[s] = true
+	for w in G.neighbors(s):
+		if !marked[w]:
+			dfs(G,w)
+```
+##### Post-order
+Vengono visitati prima i nodi senza figli
+```
+marked = [false]*G.size
+def dfs(G,s):
+	marked[s] = true
+	for w in G.neighbors(s):
+		if !marked[w]:
+			dfs(G,w)
+	visit(s)

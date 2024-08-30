@@ -15,7 +15,7 @@ public class Esercizio2 {
 
         HashMap<String, Character> dict = getInvDict();
 
-        String binaryString = readBinary(args[0]);
+        String binaryString = readFile(args[0]);
 
         List<String> l = decode(binaryString, dict);
         System.out.println(l.size());
@@ -28,6 +28,8 @@ public class Esercizio2 {
         Complessità: O(n*k)
         n: lunghezza della stringa
         k: numero di elementi nel dizionario
+
+        Se non ci sono combinazioni possibili verrà restituito una lista vuota
         */
 
         // caso stringa vuota
@@ -72,7 +74,7 @@ public class Esercizio2 {
         return sequences.get(n);
     }
 
-    static String readBinary(String filename) {
+    static String readFile(String filename) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             return reader.readLine();
         } catch (IOException e) {

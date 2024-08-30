@@ -18,20 +18,18 @@ public class Esercizio3 {
 
         roadGraph.shortestPaths(0);
         // roadGraph.intersections-1 è l'ultimo nodo
-        roadGraph.printPath(roadGraph.intersections-1);
+        roadGraph.printPath(roadGraph.intersections - 1);
     }
 
     public static class MinHeap {
+        // pos[id] indica la posizione del heapElem nello heap.
+        // heap[pos[id]] è l'elemento heapElem che ha valore id uguale a id.
+        // heap[x] = y, pos[y] = x, heap[pos[x]].id = x
+        // Questo array è usato per eseguire la funzione decreaseKey in tempo log(n).
         heapElem[] heap;
-        /* pos[id] is the position of "id" inside the heap. Specifically,
-           heap[pos[id]].key == id. This array is required to make
-           decreaseKey() run in log(intersections) time. */
         int[] pos;
         int size, maxSize;
 
-        /**
-         * Build an empty heap with at most maxSize elements
-         */
         public MinHeap(int maxSize) {
             this.heap = new heapElem[maxSize];
             this.maxSize = maxSize;
@@ -40,23 +38,21 @@ public class Esercizio3 {
             Arrays.fill(this.pos, -1);
         }
 
-
-        //controlla se è un indice valido ovvero i>=0 and i<size
-
+        //controlla se è un indice valido ovvero 0<i<size
         private boolean valid(int i) {
             return ((i >= 0) && (i < size));
         }
 
-        // scambia heap[i] with heap[j]
+        // scambia heap[i] con heap[j]
         private void swap(int i, int j) {
-            assert (pos[heap[i].data] == i);
-            assert (pos[heap[j].data] == j);
+            assert (pos[heap[i].id] == i);
+            assert (pos[heap[j].id] == j);
 
             heapElem elemTmp = heap[i];
             heap[i] = heap[j];
             heap[j] = elemTmp;
-            pos[heap[i].data] = i;
-            pos[heap[j].data] = j;
+            pos[heap[i].id] = i;
+            pos[heap[j].id] = j;
         }
 
         // restituisce l'indice del genitore di heap[i]
@@ -92,7 +88,7 @@ public class Esercizio3 {
         // restituisce il valore dell'elemento con priorità minore
         public int min() {
             assert (!isEmpty());
-            return heap[0].data;
+            return heap[0].id;
         }
 
         // restituisce l'indice del figlio di i con priorità minima
@@ -113,7 +109,7 @@ public class Esercizio3 {
         }
 
         // Scambia heap[i] con il genitore fino a quando si trova nella posizione giusta
-        // nel heap. Richiede tempo O(log n) con n numero di elementi nello heap.
+        // nel heap con tempo O(log n), dove n è il numero di elementi nello heap.
         // Questa funzione viene chiamata quando si inserisce un nuovo elemento o viene diminuita
         // la priorità di un heap.
         private void moveUp(int i) {
@@ -128,8 +124,9 @@ public class Esercizio3 {
         }
 
         // Scambia heap[i] con il figlio di priorità minore fino a quando si trova nella
-        // posizione corretta nello heap. Richiede tempo O(log n) con n numero di elementi nello heap.
-        // Viene usata quando si rimuove l'elemento minimo (la radice) o viene diminuita la priorità.
+        // posizione corretta nello heap con tempo O(log n), dove n è il numero di elementi nello heap.
+        // Viene usata quando si rimuove l'elemento minimo (la radice) o viene diminuita la priorità di
+        // un elemento.
         private void moveDown(int i) {
             assert (valid(i));
 
@@ -145,38 +142,29 @@ public class Esercizio3 {
             } while (!done);
         }
 
-        /**
-         * Insert a new pair (data, prio) into the queue.
-         * This method requires time O(log intersections).
-         */
-        public void insert(int data, double prio) {
+        // inserisce un valore con priorità nello heap con tempo O(log n)
+        public void insert(int data, double priority) {
             assert ((data >= 0) && (data < maxSize));
             assert (pos[data] == -1);
             assert (!isFull());
 
             final int i = size++;
             pos[data] = i;
-            heap[i] = new heapElem(data, prio);
+            heap[i] = new heapElem(data, priority);
             moveUp(i);
         }
 
-        /**
-         * Delete the element with minimum priority. This method requires
-         * time O(log intersections).
-         */
+        // rimuove l'elemento con priorità minore con tempo O(log n)
         public void deleteMin() {
             assert (!isEmpty());
 
             swap(0, size - 1);
-            pos[heap[size - 1].data] = -1;
+            pos[heap[size - 1].id] = -1;
             size--;
             if (size > 0) moveDown(0);
         }
 
-        /**
-         * Change the priority associated to |data|. This method requires
-         * time O(log intersections).
-         */
+        // cambia la priorità di id in tempo O(log n)
         public void changePriority(int data, double newPriority) {
             int j = pos[data];
             assert (valid(j));
@@ -190,16 +178,15 @@ public class Esercizio3 {
         }
     }
 
-    /**
-     * A heap element is a pair (id, priority), where
-     * id is an integer in 0..(maxSize-1)
-     */
+
+    // un heapElem è una coppia (id, priorità),
+    // con 0< id <maxSize-1
     public static class heapElem {
-        public final int data;
+        public final int id;
         public double priority;
 
-        public heapElem(int data, double priority) {
-            this.data = data;
+        public heapElem(int id, double priority) {
+            this.id = id;
             this.priority = priority;
         }
     }
@@ -217,6 +204,10 @@ public class Esercizio3 {
             this.src = src;
             this.dst = dst;
             this.time = time;
+        }
+        @Override
+        public String toString(){
+            return src+" -> "+dst;
         }
     }
 
@@ -239,14 +230,15 @@ public class Esercizio3 {
         // crea il grafico dal file di input
         public RoadGraph(String inputf) {
             this.shortestTimeRoads = new LinkedList<>();
-            readGraph(inputf);
+            makeGraph(inputf);
         }
 
         // Stampa il percorso più corto dalla sorgente alla destinazione
-        protected void printPath(int dst){
+        protected void printPath(int dst) {
             System.out.printf("%.2f%n", time[dst]);
             printPathRecursive(dst);
         }
+
         protected void printPathRecursive(int dst) {
             if (dst == source)
                 System.out.print(dst);
@@ -258,7 +250,7 @@ public class Esercizio3 {
             }
         }
 
-        private void readGraph(String inputf) {
+        private void makeGraph(String inputf) {
             Locale.setDefault(Locale.US);
 
             try {
@@ -282,15 +274,18 @@ public class Esercizio3 {
                     // lista di adiacenza una strada che va da se stesso (src) a un altro (dst)
                     adjList.get(src).add(new Road(src, dst, weight));
                 }
+                System.out.println(adjList);
             } catch (IOException ex) {
                 System.err.println(ex);
                 System.exit(1);
             }
         }
 
-        /*
-        Algoritmo di Dijkstra per trovare il cammino minimo dal nodo sorgente
-        */
+
+        // Algoritmo di Dijkstra per trovare il cammino minimo dal nodo sorgente.
+        // Implementato con code di priorità ha costo O((n+m)*log(n)),
+        // con n edge e m archi. Costo di estrazione dallo heap O(n*log(n))
+        // costo di aggiornamento O(m*log(n)).
         public void shortestPaths(int source) {
             // strade che appartengono al cammino minimo
             Road[] shortestRoads = new Road[intersections];
@@ -302,6 +297,7 @@ public class Esercizio3 {
             time = new double[intersections];
             // usato per visitare il percorso più breve partendo dalla destinazione
             parents = new int[intersections];
+            double newTime;
 
             // inizializzazione valori
             Arrays.fill(time, Double.POSITIVE_INFINITY);
@@ -323,6 +319,8 @@ public class Esercizio3 {
                 // e segnalo come visitato
                 // (alla prima iterazione sarà il nodo sorgente)
                 final int minNode = priorityQueue.min();
+                // nel caso peggiore questa funzione viene chiamata n volte,
+                // quindi ha costo totale O(n*log(n))
                 priorityQueue.deleteMin();
                 visitedIntersections[minNode] = true;
 
@@ -331,12 +329,15 @@ public class Esercizio3 {
                     shortestTimeRoads.add(shortestRoads[minNode]);
                 }
 
-                // rilassamento degli edge (che portano a nodi adiacenti a minNode)
+                // Rilassamento degli edge (che portano a nodi adiacenti a minNode)
+                // ogni arco viene visitato solo una volta dato che ci si trova in
+                // un grafo direzionato.
+                // Questo ciclo for ha un costo trascurabile dato che
+                // il numero di strade adiacenti non dipende da n ed è un sottoinsieme di m.
                 for (Road road : adjList.get(minNode)) {
                     final int dstNode = road.dst;
-
                     // Nuovo tempo considerando il tempo di attesa del semaforo
-                    double newTime = time[minNode] + road.time;
+                    newTime = time[minNode] + road.time;
                     if (USE_RANDOM) {
                         newTime = waitRandom(minNode, newTime);
                     } else {
@@ -351,6 +352,8 @@ public class Esercizio3 {
                         // aggiornamento del nuovo tempo, cambio di priorità del nodo destinazione
                         // aggiornamento del nuovo genitore
                         time[dstNode] = newTime;
+                        // nel caso peggiore in cui ogni strada deve essere rilassata, questa funzione
+                        // viene eseguita m volte, quindi il costo totale è O(m*log(n))
                         priorityQueue.changePriority(dstNode, time[dstNode]);
                         parents[dstNode] = minNode;
                         // road viene messo come percorso più breve per andare da minNode a dstNode
