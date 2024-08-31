@@ -18,60 +18,57 @@ public class Esercizio2 {
         String binaryString = readFile(args[0]);
 
         List<String> l = decode(binaryString, dict);
+        int len = l.size();
         System.out.println(l.size());
-        System.out.println(l);
+        if(len>=1) System.out.println(l);
 
     }
 
     public static List<String> decode(String binaryString, HashMap<String, Character> codes) {
         /*
         Complessità: O(n*k)
-        n: lunghezza della stringa
+        n: numero di caratteri nella stringa
         k: numero di elementi nel dizionario
-
-        Se non ci sono combinazioni possibili verrà restituito una lista vuota
+        Se non ci sono combinazioni possibili verrà restituita una lista vuota
         */
 
         // caso stringa vuota
         if (binaryString == null) return new ArrayList<>();
 
-        int n = binaryString.length();
+        int stringLength = binaryString.length();
 
         // Mappa per memorizzare le sequenze di caratteri per ogni prefisso.
         // Integer corrisponde alla lunghezza della stringa e la lista sono
         // tutte le combinazioni possibili.
         HashMap<Integer, List<String>> sequences = new HashMap<>();
+        // caso base
         sequences.put(0, new ArrayList<>());
-        sequences.get(0).add("");  // La stringa vuota corrisponde a una sola sequenza di caratteri
-        int keyLength, startIndex;
-        // Itera su ogni posizione della stringa binaria
-        for (int i = 1; i <= n; i++) {
-            // Aggiunge una lista vuota alla chiave i
-            sequences.put(i, new ArrayList<>());
+        sequences.get(0).add("");  // La stringa vuota corrisponde a una sola sequenza di caratteri, quella nulla
+
+        int startIndex;
+        for (int substringLength = 1; substringLength <= stringLength; substringLength++) {
+            sequences.put(substringLength, new ArrayList<>());
 
             // Controlla tutti i codici disponibili
             for (String key : codes.keySet()) {
-                keyLength = key.length();
-                startIndex = i - keyLength;
+                startIndex = substringLength - key.length();
+
                 // Se "key" è sotto-stringa di "binaryString" ed esiste una sotto-stringa nell'intervallo
-                // [i-keyLength, i] che corrisponde a un carattere del dizionario, creo una nuova
-                // sotto-stringa che è formata da tutte quelle precedenti e quella nuova (con
-                // lunghezze compatibili).
-                if (i >= keyLength &&
-                        binaryString.substring(startIndex, i).equals(key) &&
+                // [substringLength-keyLength, substringLength] che corrisponde a un carattere del dizionario,
+                // aggiungo una nuova stringa che è formata da quelle precedenti e quella nuova.
+                if (startIndex >= 0 &&
+                        binaryString.substring(startIndex, substringLength).equals(key) &&
                         sequences.containsKey(startIndex)) {
                     // Aggiunge le sequenze precedenti a quelle correnti
                     for (String prefix : sequences.get(startIndex)) {
-                        sequences.get(i).add(prefix + codes.get(key));
+                        sequences.get(substringLength).add(prefix + codes.get(key));
                     }
                 }
             }
         }
 
-        // Ritorna tutte le sequenze di caratteri per il prefisso di lunghezza n,
-        // che corrisponde alla lunghezza della stringa in input. Quindi restituisce tutte
-        // le combinazioni per la stringa in input.
-        return sequences.get(n);
+        // Ritorna tutte le sequenze di caratteri per il prefisso di lunghezza uguale a quella della stringa in input
+        return sequences.get(stringLength);
     }
 
     static String readFile(String filename) {

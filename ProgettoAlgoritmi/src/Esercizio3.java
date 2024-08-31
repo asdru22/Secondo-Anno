@@ -23,7 +23,7 @@ public class Esercizio3 {
 
     public static class MinHeap {
         // pos[id] indica la posizione del heapElem nello heap.
-        // heap[pos[id]] è l'elemento heapElem che ha valore id uguale a id.
+        // heap[pos[id]] è l'elemento heapElem il cui id è uguale a id.
         // heap[x] = y, pos[y] = x, heap[pos[x]].id = x
         // Questo array è usato per eseguire la funzione decreaseKey in tempo log(n).
         heapElem[] heap;
@@ -45,12 +45,14 @@ public class Esercizio3 {
 
         // scambia heap[i] con heap[j]
         private void swap(int i, int j) {
+            // questi controlli vengono utilizzati per assicurarsi che ci
+            // sia coerenza tra gli oggetti dello heap prima di scambiarli.
             assert (pos[heap[i].id] == i);
             assert (pos[heap[j].id] == j);
 
-            heapElem elemTmp = heap[i];
+            heapElem tempElem = heap[i];
             heap[i] = heap[j];
-            heap[j] = elemTmp;
+            heap[j] = tempElem;
             pos[heap[i].id] = i;
             pos[heap[j].id] = j;
         }
@@ -77,12 +79,12 @@ public class Esercizio3 {
         }
 
         public boolean isEmpty() {
-            return (size == 0);
+            return size == 0;
         }
 
         // controlla se non ci sono più posti disponibili nel heap
         public boolean isFull() {
-            return (size > maxSize);
+            return size > maxSize;
         }
 
         // restituisce il valore dell'elemento con priorità minore
@@ -114,12 +116,13 @@ public class Esercizio3 {
         // la priorità di un heap.
         private void moveUp(int i) {
             assert (valid(i));
-
-            int p = parent(i);
-            while ((p >= 0) && (heap[i].priority < heap[p].priority)) {
-                swap(i, p);
-                i = p;
+            int p;
+            // finché i non è la radice o la priorità di i è minore di quella del padre
+            while (i > 0) {
                 p = parent(i);
+                if (heap[i].priority >= heap[p].priority) return;
+                swap(i, p);
+                i = p; // aggiorna l'indice per la prossima iterazione
             }
         }
 
@@ -129,17 +132,15 @@ public class Esercizio3 {
         // un elemento.
         private void moveDown(int i) {
             assert (valid(i));
+            int child;
 
-            boolean done = false;
             do {
-                int dst = minChild(i);
-                if (valid(dst) && (heap[dst].priority < heap[i].priority)) {
-                    swap(i, dst);
-                    i = dst;
-                } else {
-                    done = true;
-                }
-            } while (!done);
+                child = minChild(i);
+                if (valid(child) && (heap[child].priority < heap[i].priority)) {
+                    swap(i, child);
+                    i = child;
+                } else return;
+            } while (true);
         }
 
         // inserisce un valore con priorità nello heap con tempo O(log n)
@@ -180,7 +181,7 @@ public class Esercizio3 {
 
 
     // un heapElem è una coppia (id, priorità),
-    // con 0< id <maxSize-1
+    // con 0 < id < maxSize-1
     public static class heapElem {
         public final int id;
         public double priority;
@@ -274,7 +275,6 @@ public class Esercizio3 {
                     // lista di adiacenza una strada che va da se stesso (src) a un altro (dst)
                     adjList.get(src).add(new Road(src, dst, weight));
                 }
-                System.out.println(adjList);
             } catch (IOException ex) {
                 System.err.println(ex);
                 System.exit(1);

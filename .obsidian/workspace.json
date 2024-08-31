@@ -11,12 +11,8 @@
             "id": "3380276c165f2ac3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algoritmi e Strutture Dati/Temi.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -47,9 +43,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Algoritmi e Strutture Dati/Temi.md"
-              }
+              "state": {}
             }
           },
           {
@@ -96,7 +90,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Temi.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +132,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Temi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,6 +160,7 @@
   },
   "active": "3380276c165f2ac3",
   "lastOpenFiles": [
+    "Algoritmi e Strutture Dati/Temi.md",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio2.class",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio3.class",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio3$RoadGraph.class",
@@ -178,9 +171,7 @@
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio1$Node.class",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio1$Tree.class",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio1$NestedElement.class",
-    "ProgettoAlgoritmi/src/characters.txt~",
     "Algoritmi e Strutture Dati/Formulario.md",
-    "Algoritmi e Strutture Dati/Temi.md",
     "Statistica Numerica/relazione/Relazione Progetto Statistica Numerica.md",
     "Statistica Numerica/Difficili.md",
     "Statistica Numerica/Esercizi/progetto/q.md",

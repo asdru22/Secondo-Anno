@@ -17,13 +17,10 @@ public class Esercizio1 {
 
         assert t1 != null && t2 != null;
 
-        //System.out.println(t1.visit());
-        //System.out.println(t2.visit());
-
         t1.isEqualTo(t2);
     }
 
-    // classe di utilità per gestire la creazione di un albero da una "nested list"
+    // classe di utilità per gestire la creazione di un albero da una lista annidata
     public static class NestedElement {
         int value;
         List<NestedElement> children;
@@ -38,6 +35,7 @@ public class Esercizio1 {
         }
     }
 
+    // crea albero da lista annidata
     private static Tree readNestedList(String filename) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
             String line = reader.readLine();
@@ -57,7 +55,6 @@ public class Esercizio1 {
         Lo stack tiene traccia degli elementi in base al livello di nesting.
         Lo stringBuilder viene usato per creare i numeri (in particolare se hanno più di
         una cifra). Viene resettato ogni volta che si incontra una virgola o una ].
-        nestedElement indica l'elemento che si trova in cima allo stack.
         */
 
         Stack<NestedElement> stack = new Stack<>();
@@ -120,6 +117,7 @@ public class Esercizio1 {
         del nodo padre tramite il valore del padre usato nel dizionario.
         Se il figlio era stato messo in precedenza nella lista dei padri, si elimina.
         In questo modo si ottiene una lista con un solo valore, quello che è mappato al nodo padre.
+        Ha costo O(n) dove n è il numero di righe del file
          */
         try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
 
