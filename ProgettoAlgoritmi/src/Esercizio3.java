@@ -3,9 +3,14 @@ import java.io.IOException;
 import java.util.*;
 
 /*
- * Nanni Alessandro
- * Matricola 0001027757
- * alessandro.nanni17@studio.unibo.it
+ Nanni Alessandro
+ Matricola 0001027757
+ alessandro.nanni17@studio.unibo.it
+
+ Strutture usate:
+    minHeap, heapElem, Road, RoadGraph
+ Metodi usati:
+    shortestPath, richiede tempo O((n+m)*log(n))
  */
 public class Esercizio3 {
     public static final boolean USE_RANDOM = false;
@@ -30,6 +35,7 @@ public class Esercizio3 {
         int[] pos;
         int size, maxSize;
 
+        // costruttore
         public MinHeap(int maxSize) {
             this.heap = new heapElem[maxSize];
             this.maxSize = maxSize;
@@ -78,6 +84,7 @@ public class Esercizio3 {
             return leftChild(i) + 1;
         }
 
+        // controlla se lo heap è vuoto
         public boolean isEmpty() {
             return size == 0;
         }
@@ -140,10 +147,11 @@ public class Esercizio3 {
                     swap(i, child);
                     i = child;
                 } else return;
+                
             } while (true);
         }
 
-        // inserisce un valore con priorità nello heap con tempo O(log n)
+        // inserisce un valore con priorità nello heap in tempo O(log n)
         public void insert(int data, double priority) {
             assert ((data >= 0) && (data < maxSize));
             assert (pos[data] == -1);
@@ -155,7 +163,7 @@ public class Esercizio3 {
             moveUp(i);
         }
 
-        // rimuove l'elemento con priorità minore con tempo O(log n)
+        // rimuove l'elemento con priorità minore in tempo O(log n)
         public void deleteMin() {
             assert (!isEmpty());
 
@@ -165,7 +173,7 @@ public class Esercizio3 {
             if (size > 0) moveDown(0);
         }
 
-        // cambia la priorità di id in tempo O(log n)
+        // cambia la priorità di data in tempo O(log n)
         public void changePriority(int data, double newPriority) {
             int j = pos[data];
             assert (valid(j));
@@ -186,6 +194,7 @@ public class Esercizio3 {
         public final int id;
         public double priority;
 
+        // costruttore
         public heapElem(int id, double priority) {
             this.id = id;
             this.priority = priority;
@@ -198,6 +207,7 @@ public class Esercizio3 {
         final int dst;
         final double time;
 
+        // costruttore
         public Road(int src, int dst, double time) {
             // Dijkstra può essere utilizzato solo con pesi positivi
             assert (time >= 0.0);
@@ -206,6 +216,8 @@ public class Esercizio3 {
             this.dst = dst;
             this.time = time;
         }
+
+        // override del metodo toString usato per debug
         @Override
         public String toString(){
             return src+" -> "+dst;
@@ -228,20 +240,21 @@ public class Esercizio3 {
         // strade che appartengono al cammino di costo minimo
         LinkedList<Road> shortestTimeRoads;
 
-        // crea il grafico dal file di input
+        // costruttore
         public RoadGraph(String inputf) {
             this.shortestTimeRoads = new LinkedList<>();
             makeGraph(inputf);
         }
 
-        // Stampa il percorso più corto dalla sorgente alla destinazione
+        // stampa il percorso più corto dalla sorgente alla destinazione
         protected void printPath(int dst) {
             System.out.printf("%.2f%n", time[dst]);
             printPathRecursive(dst);
         }
-
+        // funzione ricorsiva che risale alla sorgente dalla destinazione
         protected void printPathRecursive(int dst) {
             if (dst == source)
+                // caso base
                 System.out.print(dst);
             else if (parents[dst] < 0)
                 System.out.print("Irraggiungibile");
@@ -251,6 +264,7 @@ public class Esercizio3 {
             }
         }
 
+        // crea grafo dal nome del file
         private void makeGraph(String inputf) {
             Locale.setDefault(Locale.US);
 
@@ -276,7 +290,7 @@ public class Esercizio3 {
                     adjList.get(src).add(new Road(src, dst, weight));
                 }
             } catch (IOException ex) {
-                System.err.println(ex);
+                System.err.println("File non trovato");
                 System.exit(1);
             }
         }
@@ -285,7 +299,7 @@ public class Esercizio3 {
         // Algoritmo di Dijkstra per trovare il cammino minimo dal nodo sorgente.
         // Implementato con code di priorità ha costo O((n+m)*log(n)),
         // con n edge e m archi. Costo di estrazione dallo heap O(n*log(n))
-        // costo di aggiornamento O(m*log(n)).
+        // costo di rilassamento O(m*log(n)).
         public void shortestPaths(int source) {
             // strade che appartengono al cammino minimo
             Road[] shortestRoads = new Road[intersections];
@@ -363,10 +377,12 @@ public class Esercizio3 {
             }
         }
 
+        // funzione di attesa costante, +5 al tempo di arrivo
         public double waitConst(int id, double arrivalTime) {
             return arrivalTime + 5;
         }
 
+        // funzione di attesa casuale
         public double waitRandom(int id, double arrivalTime) {
             return arrivalTime + random.nextDouble();
         }

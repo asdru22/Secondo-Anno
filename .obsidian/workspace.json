@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "3e62fe2aec09b401",
+        "id": "520c9b893597fcc3",
         "type": "tabs",
         "children": [
           {
-            "id": "3380276c165f2ac3",
+            "id": "346eb076f13126c7",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Algoritmi e Strutture Dati/Temi.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -43,7 +47,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Algoritmi e Strutture Dati/Temi.md"
+              }
             }
           },
           {
@@ -90,6 +96,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Algoritmi e Strutture Dati/Temi.md",
                 "linksCollapsed": true,
                 "unlinkedCollapsed": true
               }
@@ -132,6 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Algoritmi e Strutture Dati/Temi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -158,19 +166,20 @@
       "command-palette:Open command palette": true
     }
   },
-  "active": "3380276c165f2ac3",
+  "active": "346eb076f13126c7",
   "lastOpenFiles": [
-    "Algoritmi e Strutture Dati/Temi.md",
+    "ProgettoAlgoritmi/src/characters.txt~",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio2.class",
+    "ProgettoAlgoritmi/src/Esercizio2.java~",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio3.class",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio3$RoadGraph.class",
-    "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio3$Edge.class",
+    "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio3$Road.class",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio3$heapElem.class",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio3$MinHeap.class",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio1.class",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio1$Node.class",
     "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio1$Tree.class",
-    "ProgettoAlgoritmi/out/production/ProgettoAlgoritmi/Esercizio1$NestedElement.class",
+    "Algoritmi e Strutture Dati/Temi.md",
     "Algoritmi e Strutture Dati/Formulario.md",
     "Statistica Numerica/relazione/Relazione Progetto Statistica Numerica.md",
     "Statistica Numerica/Difficili.md",

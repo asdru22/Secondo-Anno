@@ -4,9 +4,14 @@ import java.io.IOException;
 import java.util.*;
 
 /*
- * Nanni Alessandro
- * Matricola 0001027757
- * alessandro.nanni17@studio.unibo.it
+ Nanni Alessandro
+ Matricola 0001027757
+ alessandro.nanni17@studio.unibo.it
+
+ Strutture usate:
+    Albero n-ario, oggetto NestedElement
+ Metodi usati:
+    isEqualTo, richiede tempo O(n^2)
  */
 
 public class Esercizio1 {
@@ -21,15 +26,18 @@ public class Esercizio1 {
     }
 
     // classe di utilità per gestire la creazione di un albero da una lista annidata
+    // inizialmente implementato con semplice lista di oggetti, questo rende il codice
+    // più chiaro ed evita casting
     public static class NestedElement {
         int value;
         List<NestedElement> children;
 
+        // costruttore
         NestedElement() {
             this.value = -1;
             this.children = new ArrayList<>();
         }
-
+        // aggiunge un figlio alla lista dei figli
         void addChild(NestedElement child) {
             children.add(child);
         }
@@ -47,6 +55,7 @@ public class Esercizio1 {
         return null;
     }
 
+    // lettura stringa fatta di liste annidate
     private static NestedElement parseNestedList(String str) {
         /*
         Converte una stringa in un NestedElement. Ha costo computazionale O(n),
@@ -96,8 +105,9 @@ public class Esercizio1 {
         return nestedElement;
     }
 
+    // costruisce albero da liste annidate
+    // ha costo computazionale O(n^2), dove n è il numero di nodi nell'albero
     private static Node treeFromNestedList(NestedElement element) {
-        // Questo algoritmo ha costo computazionale O(n^2), dove n è il numero di nodi nell'albero
         Node parent = new Node(element.value);
         // Per ogni figlio, la funzione chiama se stessa ricorsivamente,
         // il parametro child diventerà padre del suo sotto-albero (se ha figli).
@@ -108,6 +118,7 @@ public class Esercizio1 {
         return parent;
     }
 
+    // lettura file fatto di coppie di genitore e figlio
     private static Tree readParentChildPairs(String filename) {
         /*
         Legge ogni riga del file per trovare il valore dei due nodi.
@@ -168,7 +179,7 @@ public class Esercizio1 {
             return new Tree(nodes.get(parents.get(0)));
 
         } catch (IOException e) {
-            System.err.println("File not found");
+            System.err.println("File non trovato");
             return null;
         }
     }
@@ -176,18 +187,22 @@ public class Esercizio1 {
     public static class Tree {
         private Node root;
 
+        // costruttore
         public Tree(Node root) {
             this.root = root;
         }
 
+        // restituisce la radice dell'albero
         public Node getRoot() {
             return root;
         }
 
+        // visita albero dalla radice
         public String visit() {
             return visit(this.getRoot());
         }
 
+        // visita dfs pre order da un nodo dell'albero
         private String visit(Node node) {
             StringBuilder s = new StringBuilder();
             if (node != null) {
@@ -199,7 +214,8 @@ public class Esercizio1 {
             return s.toString();
         }
 
-        private void isEqualTo(Tree other) {
+        // controlla se due alberi sono uguali
+        public void isEqualTo(Tree other) {
             // il costo di visit è O(n) con n numero di nodi
             // il costo di equals è O(l) con l lunghezza di una delle due stringhe
             // quindi il costo di questa funzione è O((n1+n2)*(l))-> O(n*l)
@@ -217,19 +233,23 @@ public class Esercizio1 {
         private int value;
         private List<Node> children;
 
+        // costruttore
         public Node(int value) {
             this.value = value;
             this.children = new LinkedList<>();
         }
 
+        // restituisce il valore
         public int getValue() {
             return value;
         }
 
+        // restituisce la lista dei figli
         public List<Node> getChildren() {
             return children;
         }
 
+        // aggiunge un figlio alla lista dei figli
         public void addChild(Node child) {
             this.children.add(child);
             // ogni volta che viene aggiunto un figlio si riordina la lista
