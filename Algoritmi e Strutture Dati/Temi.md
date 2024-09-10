@@ -214,7 +214,7 @@ I **grafi** sono una delle strutture dati più generali e potenti in informatica
     - **Utilizzo**: Navigazione GPS, reti di comunicazione, routing nei grafi.
 - **Bellman-Ford**:
     - **Descrizione**: Trova il percorso più breve da un nodo sorgente a tutti gli altri nodi in un grafo ponderato, anche con pesi negativi.
-    - **Complessità**: O(VE).
+    - **Complessità**: O(VxE).
     - **Utilizzo**: Situazioni in cui gli archi possono avere pesi negativi, rilevamento di cicli di peso negativo.
 - **Floyd-Warshall**:
     - **Descrizione**: Trova il percorso più breve tra tutte le coppie di nodi in un grafo ponderato.
@@ -225,7 +225,6 @@ I **grafi** sono una delle strutture dati più generali e potenti in informatica
     - **Complessità**: O(E \log V).
     - **Utilizzo**: Costruzione di reti di comunicazione, ottimizzazione delle infrastrutture.
 #### 5. Applicazioni dei Grafi
-
 - **Reti di Comunicazione**: Modellano la topologia delle reti, come internet, reti sociali, e sistemi di trasporto.
 - **Navigazione e GPS**: Utilizzano grafi per calcolare il percorso più breve tra due punti su una mappa.
 - **Reti Sociali**: Rappresentano utenti come nodi e relazioni come archi, per analizzare connessioni, influenze e diffusione delle informazioni.
@@ -448,7 +447,7 @@ Un cammino minimo tra due vertici $x$ e $y$ si indica $\pi^*_{xy}$
 
 > **Tecnica del rilassamento**: $d_{xv}+w(\pi_{xv})<d_{xy}\implies d_{xy} = d_{xv}+w(\pi_{xv})$ . *se la distanza tra xv + il peso del cammino vy è minore della distanza xy, si rende quella la nuova distanza xy.*
 
-#### Algoritmo di Bellman-Ford
+ #### Algoritmo di Bellman-Ford
 ```
 BellmanFord(G, S):
 	Inizializza dist[] con infinito per tutti i nodi eccetto dist[S] = 0
@@ -554,3 +553,20 @@ def dfs(G,s):
 		if !marked[w]:
 			dfs(G,w)
 	visit(s)
+```
+
+**Minimo albero ricoprente**
+Kruskal generico $O(n*m)$
+Kruskal union-find $O(m*\log n)$
+Prim generico $O(n*m)$
+Prim con priority queue $O(m+n*\log n)$
+
+**Cammini minimi**
+Bellman-Ford $\Theta(n*m)$
+Dijkstra generico $O(n*m)$
+Dijkstra con priority queue $O((n+m)*\log n)$
+Floyd-Warshall $O(n^2)$
+
+Divide et impera: top-down 
+Programmazione dinamica: bottom-up
+Greedy: solo se è la soluzione ottimale

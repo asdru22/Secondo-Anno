@@ -303,10 +303,10 @@ public class Esercizio3 {
         public void shortestPaths(int source) {
             // strade che appartengono al cammino minimo
             Road[] shortestRoads = new Road[intersections];
-            // incroci processati/visitati
-            boolean[] visitedIntersections = new boolean[intersections];
             // coda di priorità che indica il prossimo nodo da esplorare
             MinHeap priorityQueue = new MinHeap(intersections);
+            // incroci processati/visi tati
+            boolean[] visitedIntersections = new boolean[intersections];
             // tempo dal nodo sorgente a tutti gli altri
             time = new double[intersections];
             // usato per visitare il percorso più breve partendo dalla destinazione

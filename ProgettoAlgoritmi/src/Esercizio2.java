@@ -27,6 +27,7 @@ public class Esercizio2 {
         int len = l.size();
         System.out.println(l.size()+((len==0) ? "" : ","));
         if(len>=1){
+            // sort ha costo O(n*log(n)  )
             Collections.sort(l);
             for(String s : l){
                 System.out.println(s+",");
@@ -38,9 +39,10 @@ public class Esercizio2 {
     // trova le combinazioni di caratteri possibili per la stringa in input
     public static List<String> decode(String binaryString, HashMap<String, Character> dict) {
         /*
-        Complessità: O(n*k)
+        Complessità: O(n*k*l)
         n: numero di caratteri nella stringa
         k: numero di elementi nel dizionario
+        l: lunghezza massima della chiave più lunga
         Se non ci sono combinazioni possibili verrà restituita una lista vuota
         */
 

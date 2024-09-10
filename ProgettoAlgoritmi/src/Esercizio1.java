@@ -17,9 +17,8 @@ import java.util.*;
 public class Esercizio1 {
 
     public static void main(String[] args) {
-        Tree t1 = readParentChildPairs(args[0]);
+        Tree t1 = readParentChildPairs(args[ 0]);
         Tree t2 = readNestedList(args[1]);
-
         assert t1 != null && t2 != null;
 
         t1.isEqualTo(t2);
@@ -106,7 +105,7 @@ public class Esercizio1 {
     }
 
     // costruisce albero da liste annidate
-    // ha costo computazionale O(n^2), dove n è il numero di nodi nell'albero
+    // ha costo computazionale O(n), dove n è il numero di nodi nell'albero
     private static Node treeFromNestedList(NestedElement element) {
         Node parent = new Node(element.value);
         // Per ogni figlio, la funzione chiama se stessa ricorsivamente,
@@ -218,8 +217,8 @@ public class Esercizio1 {
         public void isEqualTo(Tree other) {
             // il costo di visit è O(n) con n numero di nodi
             // il costo di equals è O(l) con l lunghezza di una delle due stringhe
-            // quindi il costo di questa funzione è O((n1+n2)*(l))-> O(n*l)
-            // dato che l è proporzionale al numero di nodi si può semplificare in O(n^2)
+            // quindi il costo di questa funzione è O((n1+n2)+(l1+l2))-> O(n+l)
+            // dato che l è proporzionale al numero di nodi si può semplificare in O(n)
             String t1 = visit(), t2 = other.visit();
             if (Objects.equals(t1, t2)) {
                 System.out.println("I due alberi sono uguali.");
